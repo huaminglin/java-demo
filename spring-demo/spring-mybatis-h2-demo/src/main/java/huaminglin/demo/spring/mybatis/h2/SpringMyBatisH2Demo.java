@@ -14,11 +14,11 @@ public class SpringMyBatisH2Demo {
         StudentMapper bean = context.getBean(StudentMapper.class);
         {
             List<Student> students = bean.getStudents("name1");
-            System.out.println(students);
+            System.out.println("Get name1: " + students);
         }
         {
             List<Student> students = bean.getStudents("name1");
-            System.out.println(students);
+            System.out.println("Get name1: " + students);
         }
     }
 
