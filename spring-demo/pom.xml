@@ -14,5 +14,6 @@
     <modules>
         <module>spring-boot-demo</module>
         <module>spring-mybatis-h2-demo</module>
+        <module>spring-bean-javac-demo</module>
     </modules>
 </project>

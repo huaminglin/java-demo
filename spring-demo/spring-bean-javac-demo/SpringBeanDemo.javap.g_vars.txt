@@ -1,0 +1,164 @@
+Classfile /home/user1/workspace/java-demo/spring-demo/spring-bean-demo/target/classes/huaminglin/demo/spring/bean/SpringBeanDemo.class
+  Last modified Jun 28, 2018; size 2319 bytes
+  MD5 checksum b0371f66a71263131283b47dd8a1c374
+public class huaminglin.demo.spring.bean.SpringBeanDemo
+  minor version: 0
+  major version: 52
+  flags: ACC_PUBLIC, ACC_SUPER
+Constant pool:
+    #1 = Methodref          #31.#62       // java/lang/Object."<init>":()V
+    #2 = Class              #63           // huaminglin/demo/spring/bean/SpringBeanDemo$MyConfiguration
+    #3 = String             #43           // myDate2
+    #4 = Class              #64           // java/lang/Class
+    #5 = Class              #65           // java/lang/String
+    #6 = Methodref          #4.#66        // java/lang/Class.getDeclaredMethod:(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    #7 = Class              #67           // java/lang/NoSuchMethodException
+    #8 = Methodref          #7.#68        // java/lang/NoSuchMethodException.printStackTrace:()V
+    #9 = Methodref          #69.#70       // java/lang/reflect/Method.getParameters:()[Ljava/lang/reflect/Parameter;
+   #10 = Fieldref           #71.#72       // java/lang/System.out:Ljava/io/PrintStream;
+   #11 = Class              #73           // java/lang/StringBuilder
+   #12 = Methodref          #11.#62       // java/lang/StringBuilder."<init>":()V
+   #13 = String             #74           // detectParameterNameByReflect:
+   #14 = Methodref          #11.#75       // java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   #15 = Methodref          #76.#77       // java/lang/reflect/Parameter.getName:()Ljava/lang/String;
+   #16 = Methodref          #11.#78       // java/lang/StringBuilder.toString:()Ljava/lang/String;
+   #17 = Methodref          #79.#80       // java/io/PrintStream.println:(Ljava/lang/String;)V
+   #18 = Class              #81           // org/springframework/core/DefaultParameterNameDiscoverer
+   #19 = Methodref          #18.#62       // org/springframework/core/DefaultParameterNameDiscoverer."<init>":()V
+   #20 = Methodref          #18.#82       // org/springframework/core/DefaultParameterNameDiscoverer.getParameterNames:(Ljava/lang/reflect/Method;)[Ljava/lang/String;
+   #21 = String             #83           // detectParameterNameBySpring:
+   #22 = String             #84           // detectParameterNameBySpring failed
+   #23 = Methodref          #30.#85       // huaminglin/demo/spring/bean/SpringBeanDemo.detectParameterNameByReflect:()V
+   #24 = Methodref          #30.#86       // huaminglin/demo/spring/bean/SpringBeanDemo.detectParameterNameBySpring:()V
+   #25 = Class              #87           // org/springframework/context/annotation/AnnotationConfigApplicationContext
+   #26 = Methodref          #25.#62       // org/springframework/context/annotation/AnnotationConfigApplicationContext."<init>":()V
+   #27 = String             #88           // huaminglin.demo.spring.bean
+   #28 = Methodref          #25.#89       // org/springframework/context/annotation/AnnotationConfigApplicationContext.scan:([Ljava/lang/String;)V
+   #29 = Methodref          #25.#90       // org/springframework/context/annotation/AnnotationConfigApplicationContext.refresh:()V
+   #30 = Class              #91           // huaminglin/demo/spring/bean/SpringBeanDemo
+   #31 = Class              #92           // java/lang/Object
+   #32 = Utf8               MyConfiguration
+   #33 = Utf8               InnerClasses
+   #34 = Utf8               <init>
+   #35 = Utf8               ()V
+   #36 = Utf8               Code
+   #37 = Utf8               LocalVariableTable
+   #38 = Utf8               this
+   #39 = Utf8               Lhuaminglin/demo/spring/bean/SpringBeanDemo;
+   #40 = Utf8               detectParameterNameByReflect
+   #41 = Utf8               e
+   #42 = Utf8               Ljava/lang/NoSuchMethodException;
+   #43 = Utf8               myDate2
+   #44 = Utf8               Ljava/lang/reflect/Method;
+   #45 = Utf8               parameter
+   #46 = Utf8               Ljava/lang/reflect/Parameter;
+   #47 = Utf8               StackMapTable
+   #48 = Class              #93           // java/lang/reflect/Method
+   #49 = Class              #67           // java/lang/NoSuchMethodException
+   #50 = Utf8               detectParameterNameBySpring
+   #51 = Utf8               discoverer
+   #52 = Utf8               Lorg/springframework/core/DefaultParameterNameDiscoverer;
+   #53 = Utf8               parameterNames
+   #54 = Utf8               [Ljava/lang/String;
+   #55 = Class              #81           // org/springframework/core/DefaultParameterNameDiscoverer
+   #56 = Class              #54           // "[Ljava/lang/String;"
+   #57 = Utf8               main
+   #58 = Utf8               ([Ljava/lang/String;)V
+   #59 = Utf8               args
+   #60 = Utf8               context
+   #61 = Utf8               Lorg/springframework/context/annotation/AnnotationConfigApplicationContext;
+   #62 = NameAndType        #34:#35       // "<init>":()V
+   #63 = Utf8               huaminglin/demo/spring/bean/SpringBeanDemo$MyConfiguration
+   #64 = Utf8               java/lang/Class
+   #65 = Utf8               java/lang/String
+   #66 = NameAndType        #94:#95       // getDeclaredMethod:(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+   #67 = Utf8               java/lang/NoSuchMethodException
+   #68 = NameAndType        #96:#35       // printStackTrace:()V
+   #69 = Class              #93           // java/lang/reflect/Method
+   #70 = NameAndType        #97:#98       // getParameters:()[Ljava/lang/reflect/Parameter;
+   #71 = Class              #99           // java/lang/System
+   #72 = NameAndType        #100:#101     // out:Ljava/io/PrintStream;
+   #73 = Utf8               java/lang/StringBuilder
+   #74 = Utf8               detectParameterNameByReflect:
+   #75 = NameAndType        #102:#103     // append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+   #76 = Class              #104          // java/lang/reflect/Parameter
+   #77 = NameAndType        #105:#106     // getName:()Ljava/lang/String;
+   #78 = NameAndType        #107:#106     // toString:()Ljava/lang/String;
+   #79 = Class              #108          // java/io/PrintStream
+   #80 = NameAndType        #109:#110     // println:(Ljava/lang/String;)V
+   #81 = Utf8               org/springframework/core/DefaultParameterNameDiscoverer
+   #82 = NameAndType        #111:#112     // getParameterNames:(Ljava/lang/reflect/Method;)[Ljava/lang/String;
+   #83 = Utf8               detectParameterNameBySpring:
+   #84 = Utf8               detectParameterNameBySpring failed
+   #85 = NameAndType        #40:#35       // detectParameterNameByReflect:()V
+   #86 = NameAndType        #50:#35       // detectParameterNameBySpring:()V
+   #87 = Utf8               org/springframework/context/annotation/AnnotationConfigApplicationContext
+   #88 = Utf8               huaminglin.demo.spring.bean
+   #89 = NameAndType        #113:#58      // scan:([Ljava/lang/String;)V
+   #90 = NameAndType        #114:#35      // refresh:()V
+   #91 = Utf8               huaminglin/demo/spring/bean/SpringBeanDemo
+   #92 = Utf8               java/lang/Object
+   #93 = Utf8               java/lang/reflect/Method
+   #94 = Utf8               getDeclaredMethod
+   #95 = Utf8               (Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+   #96 = Utf8               printStackTrace
+   #97 = Utf8               getParameters
+   #98 = Utf8               ()[Ljava/lang/reflect/Parameter;
+   #99 = Utf8               java/lang/System
+  #100 = Utf8               out
+  #101 = Utf8               Ljava/io/PrintStream;
+  #102 = Utf8               append
+  #103 = Utf8               (Ljava/lang/String;)Ljava/lang/StringBuilder;
+  #104 = Utf8               java/lang/reflect/Parameter
+  #105 = Utf8               getName
+  #106 = Utf8               ()Ljava/lang/String;
+  #107 = Utf8               toString
+  #108 = Utf8               java/io/PrintStream
+  #109 = Utf8               println
+  #110 = Utf8               (Ljava/lang/String;)V
+  #111 = Utf8               getParameterNames
+  #112 = Utf8               (Ljava/lang/reflect/Method;)[Ljava/lang/String;
+  #113 = Utf8               scan
+  #114 = Utf8               refresh
+{
+  public huaminglin.demo.spring.bean.SpringBeanDemo();
+    descriptor: ()V
+    flags: ACC_PUBLIC
+    Code:
+      stack=1, locals=1, args_size=1
+         0: aload_0
+         1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+         4: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0       5     0  this   Lhuaminglin/demo/spring/bean/SpringBeanDemo;
+
+  public static void main(java.lang.String[]);
+    descriptor: ([Ljava/lang/String;)V
+    flags: ACC_PUBLIC, ACC_STATIC
+    Code:
+      stack=5, locals=2, args_size=1
+         0: invokestatic  #23                 // Method detectParameterNameByReflect:()V
+         3: invokestatic  #24                 // Method detectParameterNameBySpring:()V
+         6: new           #25                 // class org/springframework/context/annotation/AnnotationConfigApplicationContext
+         9: dup
+        10: invokespecial #26                 // Method org/springframework/context/annotation/AnnotationConfigApplicationContext."<init>":()V
+        13: astore_1
+        14: aload_1
+        15: iconst_1
+        16: anewarray     #5                  // class java/lang/String
+        19: dup
+        20: iconst_0
+        21: ldc           #27                 // String huaminglin.demo.spring.bean
+        23: aastore
+        24: invokevirtual #28                 // Method org/springframework/context/annotation/AnnotationConfigApplicationContext.scan:([Ljava/lang/String;)V
+        27: aload_1
+        28: invokevirtual #29                 // Method org/springframework/context/annotation/AnnotationConfigApplicationContext.refresh:()V
+        31: return
+      LocalVariableTable:
+        Start  Length  Slot  Name   Signature
+            0      32     0  args   [Ljava/lang/String;
+           14      18     1 context   Lorg/springframework/context/annotation/AnnotationConfigApplicationContext;
+}
+InnerClasses:
+     public static #32= #2 of #30; //MyConfiguration=class huaminglin/demo/spring/bean/SpringBeanDemo$MyConfiguration of class huaminglin/demo/spring/bean/SpringBeanDemo
