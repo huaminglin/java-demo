@@ -16,5 +16,6 @@
     </properties>
     <modules>
         <module>spring-demo</module>
+        <module>avro-demo</module>
     </modules>
 </project>
