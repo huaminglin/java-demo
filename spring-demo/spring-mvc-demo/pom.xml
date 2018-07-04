@@ -5,16 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>huaminglin.demo</groupId>
-        <artifactId>java-demo</artifactId>
+        <artifactId>spring-demo</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>spring-demo</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>spring-mvc-demo</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>spring-boot-demo</module>
-        <module>spring-mybatis-h2-demo</module>
-        <module>spring-bean-javac-demo</module>
-        <module>spring-mvc-demo</module>
+        <module>spring-mvc-helloworld-demo</module>
     </modules>
 </project>
