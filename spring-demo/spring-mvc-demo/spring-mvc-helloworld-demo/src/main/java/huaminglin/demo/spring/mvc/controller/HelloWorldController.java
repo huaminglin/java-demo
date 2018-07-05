@@ -9,6 +9,6 @@ public class HelloWorldController {
     @RequestMapping(value = "/")
     @ResponseBody
     public Object helloworld() {
-        return "Hello World.";
+        return "Hello world.";
     }
 }
