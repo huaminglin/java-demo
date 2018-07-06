@@ -12,5 +12,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-mvc-helloworld-demo</module>
+        <module>spring-mvc-custom-demo</module>
     </modules>
 </project>
