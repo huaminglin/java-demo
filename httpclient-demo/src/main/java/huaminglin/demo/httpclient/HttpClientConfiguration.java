@@ -97,7 +97,7 @@ public class HttpClientConfiguration {
                 .setConnectTimeout(connectionTimeout)
                 .setSocketTimeout(socketTimeout).build();
 
-        return HttpClients.custom()
+        return HttpClients.custom().useSystemProperties()
                 .setDefaultRequestConfig(requestConfig)
                 .setConnectionManager(getPoolingConnectionManager())
                 .setKeepAliveStrategy(getConnectionKeepAliveStrategy())

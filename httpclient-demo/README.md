@@ -10,6 +10,7 @@ io.specto.hoverfly.junit.core.ProxyConfigurer: System.setProperty("http.proxyHos
 Using Hoverfly, we don't need a standalone running http server to run this demo.
 
 Hoverfly: http.proxyHost https.proxyHost http.nonProxyHosts http.proxyPort https.proxyPort
+HttpClients.custom().useSystemProperties() is required to enable customized http clients to support Hoverfly.
 
 ## Hoverfly capture
 hoverctl start
