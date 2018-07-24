@@ -18,5 +18,7 @@
         <module>spring-demo</module>
         <module>avro-demo</module>
         <module>httpclient-demo</module>
+        <module>jdk8-demo</module>
+        <module>servlet-demo</module>
     </modules>
 </project>
