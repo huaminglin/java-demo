@@ -20,5 +20,6 @@
         <module>httpclient-demo</module>
         <module>jdk8-demo</module>
         <module>servlet-demo</module>
+        <module>xml-demo</module>
     </modules>
 </project>
