@@ -1,12 +1,15 @@
 package huaminglin.demo.xslt;
 
+import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
+import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import java.io.IOException;
@@ -16,11 +19,18 @@ import java.io.StringWriter;
 public class XsltDemo {
     public static String xslt(InputStream style, InputStream model) throws TransformerException, ParserConfigurationException, IOException, SAXException {
         StreamSource styleSource = new StreamSource(style);
+
+        // The following codes can't be used as alternative for above code.
+//        Document documentStyle = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(style);
+//        DOMSource styleSource = new DOMSource(documentStyle);
+
         Transformer transformer = TransformerFactory.newInstance().newTransformer(styleSource);
         transformer.setOutputProperty(OutputKeys.METHOD, "html");
         transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 
-        StreamSource modelSource = new StreamSource(model);
+        // StreamSource modelSource = new StreamSource(model); // This can be used as the alternative for the below code.
+        Document documentModel = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(model);
+        DOMSource modelSource = new DOMSource(documentModel);
         StringWriter sw = new StringWriter();
         StreamResult streamResult = new StreamResult(sw);
 
@@ -34,6 +44,5 @@ public class XsltDemo {
         InputStream inputStreamModel = XsltDemo.class.getClassLoader().getResourceAsStream("xml/input.xml");
         String result = xslt(inputStreamStyle, inputStreamModel);
         System.out.println(result);
-        // TODO No XSLT is executed actually, the style.xls content is printed.
     }
 }
