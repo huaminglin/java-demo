@@ -12,5 +12,6 @@
     <packaging>pom</packaging>
 	<modules>
 		<module>xslt-demo</module>
+        <module>xpath-demo</module>
 	</modules>
 </project>

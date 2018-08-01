@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!-- This is XML stylesheet processing instruction for browsers. -->
+<?xml-stylesheet type="text/xsl" href="../stylesheet/style.xsl"?>
+<School>
+    <Student>
+        <Name>name1</Name>
+        <Age>18</Age>
+    </Student>
+    <Student>
+        <Name>name2</Name>
+        <Age>19</Age>
+    </Student>
+</School>
