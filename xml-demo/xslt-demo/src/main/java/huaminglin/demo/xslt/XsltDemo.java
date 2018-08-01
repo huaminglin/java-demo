@@ -39,10 +39,15 @@ public class XsltDemo {
         return sw.toString();
     }
 
+
+    public static String executeXslt(String styleResourcePath, String modelResourcePath) throws TransformerException, ParserConfigurationException, IOException, SAXException {
+        InputStream inputStreamStyle = XsltDemo.class.getClassLoader().getResourceAsStream(styleResourcePath);
+        InputStream inputStreamModel = XsltDemo.class.getClassLoader().getResourceAsStream(modelResourcePath);
+        return xslt(inputStreamStyle, inputStreamModel);
+    }
+
     public static void main(String[] args) throws TransformerException, ParserConfigurationException, IOException, SAXException {
-        InputStream inputStreamStyle = XsltDemo.class.getClassLoader().getResourceAsStream("stylesheet/style.xsl");
-        InputStream inputStreamModel = XsltDemo.class.getClassLoader().getResourceAsStream("xml/input.xml");
-        String result = xslt(inputStreamStyle, inputStreamModel);
+        String result = executeXslt("stylesheet/style.xsl", "xml/input.xml");
         System.out.println(result);
     }
 }
