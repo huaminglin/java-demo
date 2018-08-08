@@ -21,5 +21,6 @@
         <module>jdk8-demo</module>
         <module>servlet-demo</module>
         <module>xml-demo</module>
+        <module>jdk-demo</module>
     </modules>
 </project>
