@@ -22,5 +22,6 @@
         <module>servlet-demo</module>
         <module>xml-demo</module>
         <module>jdk-demo</module>
+        <module>aspectj-demo</module>
     </modules>
 </project>
