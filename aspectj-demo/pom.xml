@@ -68,7 +68,7 @@
 	</build>
 	<profiles>
 		<profile>
-			<id>compile_time</id>
+			<id>source</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
@@ -101,7 +101,7 @@
 								<artifactId>aspectjtools</artifactId>
 								<version>${aspectj.version}</version>
 							</dependency>
-						<dependencies>
+						</dependencies>
 					</plugin>
 				</plugins>
 			</build>
