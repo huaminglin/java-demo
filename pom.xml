@@ -23,5 +23,6 @@
         <module>xml-demo</module>
         <module>jdk-demo</module>
         <module>aspectj-demo</module>
+        <module>wsdl-demo</module>
     </modules>
 </project>
