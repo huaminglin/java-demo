@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
-    <endpoint name="HelloProvider" implementation="huaminglin.demo.wsdl.server.HelloProvider"
-              url-pattern="/helloProvider"></endpoint>
+    <endpoint name="HelloProvider"
+              implementation="huaminglin.demo.wsdl.server.HelloProvider"
+              url-pattern="/helloProvider"/>
+    <endpoint name="RestfulWSProvider"
+              implementation="huaminglin.demo.wsdl.server.RestWSProvider"
+              url-pattern="/rest/*"/>
 </endpoints>
