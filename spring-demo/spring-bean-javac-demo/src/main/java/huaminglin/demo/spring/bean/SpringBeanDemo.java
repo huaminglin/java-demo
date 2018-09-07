@@ -70,6 +70,7 @@ public class SpringBeanDemo {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
         context.scan("huaminglin.demo.spring.bean");
         context.refresh();
+        context.close();
     }
 
 }

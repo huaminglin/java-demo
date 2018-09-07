@@ -1,12 +1,13 @@
 package huaminglin.demo.jdk.jaas;
 
-import com.sun.security.auth.UserPrincipal;
+import java.security.Principal;
+import java.util.Map;
 
 import javax.security.auth.Subject;
 import javax.security.auth.callback.CallbackHandler;
 import javax.security.auth.login.LoginException;
 import javax.security.auth.spi.LoginModule;
-import java.util.Map;
+import javax.security.auth.x500.X500Principal;
 
 public class JaasDemoLoginModule implements LoginModule {
     protected Subject subject;
@@ -25,7 +26,7 @@ public class JaasDemoLoginModule implements LoginModule {
 
     @Override
     public boolean commit() throws LoginException {
-        UserPrincipal user = new UserPrincipal("Principal1");
+        Principal user = new X500Principal("CN=Duke, OU=JavaSoft, O=Sun Microsystems, C=US");
         subject.getPrincipals().add(user);
         return true;
     }

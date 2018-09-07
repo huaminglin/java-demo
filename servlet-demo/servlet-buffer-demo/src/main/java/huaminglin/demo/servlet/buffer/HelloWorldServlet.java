@@ -9,7 +9,11 @@ import java.io.IOException;
 
 @WebServlet("/HelloWorld")
 public class HelloWorldServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    private static final long serialVersionUID = -1523667278394341308L;
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         String queryString = request.getQueryString();
         boolean lengthSetted = queryString != null && queryString.contains("length");
         boolean flushSetted = queryString != null && queryString.contains("flush");

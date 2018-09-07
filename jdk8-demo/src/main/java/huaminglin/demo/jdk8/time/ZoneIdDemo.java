@@ -17,7 +17,7 @@ public class ZoneIdDemo  {
         } catch (ZoneRulesException e) {
             System.out.println("ZoneRulesException happens.");
         }
-        Set<String> availableIDs = new TreeSet(ZoneId.getAvailableZoneIds());
+        Set<String> availableIDs = new TreeSet<String>(ZoneId.getAvailableZoneIds());
         System.out.println("Zone ID, TimeZone(January), Daylight Savings First Shift, TimeZone(After Shift), Daylight Savings Second Shift");
         Instant january = ZonedDateTime.parse("2018-02-08T15:33:00+08:00[Asia/Shanghai]").toInstant();
         Instant afterFirstShift;

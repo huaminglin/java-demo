@@ -3,6 +3,7 @@ package huaminglin.demo.spring.mybatis.h2;
 import java.io.Serializable;
 
 public class Student implements Serializable {
+    private static final long serialVersionUID = -1330254167728480569L;
     private String name;
     private Integer age;
 

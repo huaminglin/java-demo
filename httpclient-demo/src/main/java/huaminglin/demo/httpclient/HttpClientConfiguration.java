@@ -57,7 +57,6 @@ public class HttpClientConfiguration {
     }
 
     public Runnable getIdleConnectionMonitor(final PoolingHttpClientConnectionManager connectionManager) {
-        // TODO This should run at a given interval repeatedly.
         return new Runnable() {
             public void run() {
                 try {

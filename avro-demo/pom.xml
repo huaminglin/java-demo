@@ -48,8 +48,12 @@
 							<goal>schema</goal>
 						</goals>
 						<configuration>
-							<sourceDirectory>${project.basedir}/src/main/avro/</sourceDirectory>
+							<sourceDirectory>${project.basedir}/src/main/avro</sourceDirectory>
+							<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+							<!-- 
+							It seems vs-code doesn't recognize generated-sources as source folder.
 							<outputDirectory>${project.build.directory}/generated-sources/avro</outputDirectory>
+							-->
 						</configuration>
 					</execution>
 				</executions>

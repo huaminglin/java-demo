@@ -20,6 +20,7 @@ public class SpringMyBatisH2Demo {
             List<Student> students = bean.getStudents("name1");
             System.out.println("Get name1: " + students);
         }
+        context.close();
     }
 
 }
