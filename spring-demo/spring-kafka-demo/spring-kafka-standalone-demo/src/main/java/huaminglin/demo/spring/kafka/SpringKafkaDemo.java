@@ -24,6 +24,7 @@ import org.springframework.kafka.listener.config.ContainerProperties;
 
 public class SpringKafkaDemo {
     private static final Logger logger = LoggerFactory.getLogger(SpringKafkaDemo.class);
+
     public static void main(String[] args) throws Exception {
         new SpringKafkaDemo().testAutoCommit();
     }
