@@ -13,5 +13,6 @@
     <modules>
         <module>spring-kafka-standalone-demo</module>
         <module>spring-kafka-container-demo</module>
+        <module>spring-kafka-boot-demo</module>
     </modules>
 </project>
