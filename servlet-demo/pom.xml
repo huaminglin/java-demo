@@ -12,7 +12,8 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
+        <module>servlet-auth-demo</module>
         <module>servlet-buffer-demo</module>
+        <module>servlet-slash-encode-demo</module>
     </modules>
 </project>
-
