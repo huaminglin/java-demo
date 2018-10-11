@@ -13,5 +13,6 @@
 	<modules>
 		<module>xslt-demo</module>
         <module>xpath-demo</module>
+        <module>jaxb-demo</module>
 	</modules>
 </project>
