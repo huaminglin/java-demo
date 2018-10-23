@@ -46,6 +46,7 @@
                             <bindingFiles>
                                 <bindingFile>${basedir}/src/main/binding/binding-hello.xml</bindingFile>
                                 <bindingFile>${basedir}/src/main/binding/binding-hello-jaxb.xml</bindingFile>
+                                <bindingFile>${basedir}/src/main/binding/handlerChain-hello.xml</bindingFile>
                             </bindingFiles>
                             <staleFile>${basedir}/target/generated/emptyfile/hello</staleFile>
                             <wsdlLocation>wsdl/hello.wsdl</wsdlLocation>
