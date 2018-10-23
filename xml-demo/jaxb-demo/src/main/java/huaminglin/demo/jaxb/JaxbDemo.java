@@ -19,6 +19,7 @@ import javax.xml.transform.TransformerException;
 
 import javax.xml.transform.Transformer;
 import java.io.InputStream;
+import com.sun.xml.bind.marshaller.NamespacePrefixMapper;
 
 public class JaxbDemo {
     private static Document createXmlDocument() throws ParserConfigurationException {
@@ -31,6 +32,17 @@ public class JaxbDemo {
     private static Marshaller createJaxbMarshaller(Class... classesToBeBound) throws JAXBException {
         JAXBContext jc = JAXBContext.newInstance(classesToBeBound);
         Marshaller m = jc.createMarshaller();
+		m.setProperty("com.sun.xml.bind.namespacePrefixMapper", new NamespacePrefixMapper() {
+            @Override
+            public String getPreferredPrefix(String namespaceUri, String suggestion, boolean requirePrefix) {
+                System.out.println(namespaceUri + " -> " + suggestion);
+                if ("https://www.w3schools.com/note".equals(namespaceUri)) {
+                    return "note";
+                }
+                return suggestion;
+            }
+        });
+		m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
         return m;
     }
 
@@ -51,6 +63,9 @@ public class JaxbDemo {
         {
             Note note = new Note();
             note.setTo("to1");
+            note.setFrom("from1");
+            note.setHeading("heading1");
+            note.setBody("body1");
             Marshaller m = createJaxbMarshaller(Note.class);
             Document doc = createXmlDocument();
             m.marshal(note, doc);

@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>wsdl-server-demo</module>
+        <module>wsdl-client-demo</module>
     </modules>
 </project>
 

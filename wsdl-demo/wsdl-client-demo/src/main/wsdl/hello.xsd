@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.1.3-b02-. -->
+<xs:schema xmlns:tns="http://server.wsdl.demo.huaminglin/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://server.wsdl.demo.huaminglin/">
+
+	<xs:complexType name="helloRequest">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="helloResponse">
+		<xs:sequence>
+			<xs:element name="message" type="xs:string" minOccurs="0"/>
+			<xs:element name="status" type="tns:helloStatus" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="helloStatus">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="SUCCESS"/>
+			<xs:enumeration value="FAILURE"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
