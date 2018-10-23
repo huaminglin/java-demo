@@ -9,12 +9,9 @@ import javax.jws.soap.SOAPBinding;
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 public class HelloProvider {
     @WebMethod(operationName = "sayHello")
-    public String sayHello(@WebParam(name = "guestname") String guestname) {
-
-        if (guestname == null) {
-            return "Hello";
-        }
-        return "Hello " + guestname;
-
+    public HelloResponse sayHello(@WebParam(name = "guestname") HelloRequest guestname) {
+        HelloResponse response = new HelloResponse();
+        response.setMessage("Hello " + guestname.getName());
+        return response;
     }
 }
