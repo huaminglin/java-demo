@@ -1,5 +1,6 @@
 package huaminglin.demo.wsdl.client;
 
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Map;
 import javax.xml.namespace.QName;
@@ -30,7 +31,9 @@ public class HelloClientDemo {
 
     public static void initRequestContext(BindingProvider bindingProvider, String url) {
         Map<String, Object> ctx = bindingProvider.getRequestContext();
-        ctx.put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, url);
+        if (url != null) {
+            ctx.put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY, url);
+        }
         ctx.put(BindingProvider.USERNAME_PROPERTY, "user");
         ctx.put(BindingProvider.PASSWORD_PROPERTY, "password");
         ctx.put(BindingProvider.SESSION_MAINTAIN_PROPERTY, Boolean.TRUE);
@@ -38,12 +41,19 @@ public class HelloClientDemo {
         ctx.put(JAXWSProperties.REQUEST_TIMEOUT, 15 * 1000);
     }
 
-    public static void main(String[] args) {
-        URL url = getLocalWsdl(HelloProviderService.class);
-        System.out.println("WSDL:" + url);
+    public static void main(String[] args) throws MalformedURLException {
+        HelloProvider port;
         QName qName = getQName(HelloProviderService.class);
-        HelloProvider port = new HelloProviderService(url, qName).getHelloProviderPort();
-        initRequestContext((BindingProvider) port, "http://127.0.0.1:9999/hello/helloProvider");
+        if ("local".equals(System.getProperty("wsdl.location"))) {
+            URL url = getLocalWsdl(HelloProviderService.class);
+            System.out.println("WSDL:" + url);
+            port = new HelloProviderService(url, qName).getHelloProviderPort();
+            initRequestContext((BindingProvider) port, "http://127.0.0.1:9999/hello/helloProvider");
+        } else {
+            URL url = new URL("http://127.0.0.1:9999/hello/helloProvider");
+            port = new HelloProviderService(url, qName).getHelloProviderPort();
+            initRequestContext((BindingProvider) port, null);
+        }
         HelloRequest request = new HelloRequest();
         request.setName("name1");
         HelloResponse response = port.sayHi(request);

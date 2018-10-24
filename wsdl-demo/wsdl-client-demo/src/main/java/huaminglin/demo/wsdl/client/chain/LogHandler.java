@@ -9,7 +9,6 @@ import javax.xml.soap.SOAPBody;
 import javax.xml.soap.SOAPException;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
 import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
@@ -66,19 +65,18 @@ public class LogHandler implements SOAPHandler<SOAPMessageContext> {
     }
 
     private String getSoapPartXML(SOAPMessageContext context) {
-        TransformerFactory factory = TransformerFactory.newInstance();
-        StreamResult result = new StreamResult(new StringWriter());
         try {
+            TransformerFactory factory = TransformerFactory.newInstance();
+            StreamResult result = new StreamResult(new StringWriter());
             Transformer transformer = factory.newTransformer();
             transformer.setOutputProperty(OutputKeys.METHOD, "xml");
             transformer.setOutputProperty(OutputKeys.INDENT, "yes");
-            SOAPBody body = context.getMessage().getSOAPBody();
-            DOMSource source = new DOMSource(body);
-            transformer.transform(source, result);
+            transformer.transform(context.getMessage().getSOAPPart().getContent(), result);
+            return result.getWriter().toString();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return result.getWriter().toString();
+        return null;
     }
 
     public boolean handleFault(SOAPMessageContext context) {
