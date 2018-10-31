@@ -24,5 +24,6 @@
         <module>jdk-demo</module>
         <module>aspectj-demo</module>
         <module>wsdl-demo</module>
+        <module>jamon-demo</module>
     </modules>
 </project>
