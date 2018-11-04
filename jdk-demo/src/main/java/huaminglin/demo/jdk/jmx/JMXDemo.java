@@ -1,0 +1,18 @@
+package huaminglin.demo.jdk.jmx;
+
+import javax.management.MBeanServer;
+import javax.management.ObjectName;
+import java.lang.management.ManagementFactory;
+
+public class JMXDemo {
+
+    public static void main(String[] args) throws Exception {
+        MBeanServer mbs = ManagementFactory.getPlatformMBeanServer();
+        ObjectName name = new ObjectName("MyJMXPackage:type=MyJMXType");
+        Calculator mbean = new Calculator();
+        mbs.registerMBean(mbean, name);
+        int seconds = Integer.parseInt(System.getProperty("sleep.seconds", "60"));
+        System.out.println("Sleeping " + seconds + " seconds...");
+        Thread.currentThread().sleep(seconds * 1000);
+    }
+}
