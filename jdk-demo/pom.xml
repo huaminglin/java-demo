@@ -11,7 +11,38 @@
     <artifactId>jdk-demo</artifactId>
     <profiles>
         <profile>
-            <id>default</id>
+            <id>jmxbean</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>1.6.0</version>
+                        <configuration><executable>java</executable>
+                        <arguments>
+                            <argument>-Dsun.management.jmxremote.level=FINEST</argument>
+                            <argument>-Dsun.management.jmxremote.handlers=java.util.logging.ConsoleHandler</argument>
+                            <argument>-Djava.util.logging.ConsoleHandler.level=FINEST</argument>
+                            <argument>-Dcom.sun.management.jmxremote.local.only=false</argument>
+                            <argument>-Dcom.sun.management.jmxremote.ssl=false</argument>
+                            <argument>-Dcom.sun.management.jmxremote.authenticate=false</argument>
+                            <argument>-Dcom.sun.management.jmxremote.port=9999</argument>
+                            <argument>-Dcom.sun.management.jmxremote.rmi.port=9999</argument>
+                            <argument>-Dcom.sun.management.jmxremote.host=${env.MY_HOST_IP}</argument>
+                            <argument>-Djava.rmi.server.hostname=${env.MY_HOST_IP}</argument>
+                            <argument>-Dsleep.seconds=600</argument>
+                            <argument>-classpath</argument>
+                            <classpath/>
+                            <argument>huaminglin.demo.jdk.jmx.JMXDemo</argument>
+                        </arguments>
+                            <mainClass></mainClass>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+        <profile>
+            <id>jmxclient</id>
             <build>
                 <plugins>
                     <plugin>
@@ -19,7 +50,7 @@
                         <artifactId>exec-maven-plugin</artifactId>
                         <version>1.6.0</version>
                         <configuration>
-                            <mainClass>huaminglin.demo.jdk.jmx.JMXDemo</mainClass>
+                            <mainClass>huaminglin.demo.jdk.jmx.client.JMXClientDemo</mainClass>
                         </configuration>
                     </plugin>
                 </plugins>
