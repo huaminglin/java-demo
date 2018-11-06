@@ -20,9 +20,7 @@
                         <version>1.6.0</version>
                         <configuration><executable>java</executable>
                         <arguments>
-                            <argument>-Dsun.management.jmxremote.level=FINEST</argument>
-                            <argument>-Dsun.management.jmxremote.handlers=java.util.logging.ConsoleHandler</argument>
-                            <argument>-Djava.util.logging.ConsoleHandler.level=FINEST</argument>
+                            <argument>-Djava.util.logging.config.file=target/classes/logging.properties</argument>
                             <argument>-Dcom.sun.management.jmxremote.local.only=false</argument>
                             <argument>-Dcom.sun.management.jmxremote.ssl=false</argument>
                             <argument>-Dcom.sun.management.jmxremote.authenticate=false</argument>

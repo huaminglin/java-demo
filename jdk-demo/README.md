@@ -3,11 +3,13 @@ Add LocalHostDemo to show how to get computer name
 ## Expose a customized standard JMX bean
 export MY_HOST_IP=<my host ip>
 mvn -P jmxbean exec:exec
+Nov 06, 2018 6:09:11 AM ConnectorBootstrap startRemoteConnectorServer
+CONFIG: JMX Connector ready at: service:jmx:rmi:///jndi/rmi://<my host ip>:9999/jmxrmi
 
 ## Then open JConsole to view the JMX bean in the running process.
 
 ## Run a customized JMX client
-export TARGET_HOST=10.175.5.83
+export TARGET_HOST=<my host ip>
 mvn -P jmxclient exec:java
 
         Domain = JMImplementation
