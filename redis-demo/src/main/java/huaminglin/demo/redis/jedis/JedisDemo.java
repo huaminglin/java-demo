@@ -3,6 +3,9 @@ package huaminglin.demo.redis.jedis;
 import java.util.Map;
 import java.util.Set;
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.Pipeline;
+import redis.clients.jedis.Transaction;
+import redis.clients.jedis.Response;
 
 public class JedisDemo {
     private static void demoString(Jedis jedis) {
@@ -40,6 +43,25 @@ public class JedisDemo {
         System.out.println(members);
     }
 
+    private static void demoTransaction(Jedis jedis) {
+        jedis.watch("a"); // WATCH inside MULTI is not allowed
+        Transaction t = jedis.multi();
+        t.zadd("zt", 0.5, "item2");
+        t.zadd("zt", 2.5, "item3");
+        Object result = t.exec();
+        System.out.println(result);
+    }
+
+    private static void demoPipeline(Jedis jedis) {
+        jedis.watch("a"); // WATCH inside MULTI is not allowed
+        Pipeline p = jedis.pipelined();
+        p.zadd("zp", 0.5, "item2");
+        Response<Set<String>> pipedMembers = p.zrevrange("zp", 0, 1);
+        p.zadd("zp", 2.5, "item3");
+        p.sync();
+        System.out.println(pipedMembers.get());
+    }
+
     public static void main(String[] args) {
         Jedis jedis = new Jedis("127.0.0.1", 6379);
         demoString(jedis);
@@ -47,5 +69,7 @@ public class JedisDemo {
         demoSet(jedis);
         demoHash(jedis);
         demoSortedSet(jedis);
+        demoTransaction(jedis);
+        demoPipeline(jedis);
     }
 }
