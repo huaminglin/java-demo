@@ -6,6 +6,7 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.Pipeline;
 import redis.clients.jedis.Transaction;
 import redis.clients.jedis.Response;
+import redis.clients.jedis.JedisPubSub;
 
 public class JedisDemo {
     private static void demoString(Jedis jedis) {
@@ -62,7 +63,23 @@ public class JedisDemo {
         System.out.println(pipedMembers.get());
     }
 
-    public static void main(String[] args) {
+    private static void demoSubscriber(Jedis jedis) {
+        String channel = "channel1";
+        System.out.println("Subscribe channel on main thread, wait for the message \"quit\" to exit.");
+        // subscribe() is a blocking method.
+        JedisPubSub subscriber = new JedisPubSub() {
+            @Override
+            public void onMessage(String channel, String message) {
+                System.out.println("Thread/" + Thread.currentThread() + "Got message from channel/" + channel + ": " + message);
+                if ("quit".equals(message)) {
+                    this.unsubscribe(channel);
+                }
+            }
+        };
+        jedis.subscribe(subscriber, channel);
+    }
+
+    public static void main(String[] args) throws InterruptedException {
         Jedis jedis = new Jedis("127.0.0.1", 6379);
         demoString(jedis);
         demoList(jedis);
@@ -71,5 +88,6 @@ public class JedisDemo {
         demoSortedSet(jedis);
         demoTransaction(jedis);
         demoPipeline(jedis);
+        demoSubscriber(jedis);
     }
 }
