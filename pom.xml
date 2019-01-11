@@ -26,5 +26,6 @@
         <module>wsdl-demo</module>
         <module>jamon-demo</module>
         <module>redis-demo</module>
+        <module>mysql-demo</module>
     </modules>
 </project>
