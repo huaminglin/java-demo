@@ -87,6 +87,10 @@ public class MySQLDemo {
     }
 
     public static void main(String[] args) throws InterruptedException {
+        String initialSQL = "/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout";
+        executeSql("jdbc:mysql://localhost:6603/mysql?" +
+        "user=root&password=demo&useSSL=false", initialSQL);
+
         String charsetSQL = "SELECT @@SESSION.character_set_client, @@SESSION.character_set_connection, @@SESSION.character_set_results";
 
         System.out.println("Default:");

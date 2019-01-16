@@ -1,0 +1,114 @@
+==> /var/log/mysql.general.log <==
+2019-01-15T11:12:10.678876Z	  756 Connect	healthchecker@localhost on  using Socket
+2019-01-15T11:12:10.679160Z	  756 Quit	
+2019-01-15T11:12:40.827474Z	  757 Connect	healthchecker@localhost on  using Socket
+2019-01-15T11:12:40.827897Z	  757 Quit	
+2019-01-15T11:13:10.975957Z	  758 Connect	healthchecker@localhost on  using Socket
+2019-01-15T11:13:10.976364Z	  758 Quit	
+2019-01-15T11:13:41.136662Z	  759 Connect	healthchecker@localhost on  using Socket
+2019-01-15T11:13:41.136886Z	  759 Quit	
+2019-01-15T11:14:11.332123Z	  760 Connect	healthchecker@localhost on  using Socket
+2019-01-15T11:14:11.333958Z	  760 Quit	
+
+==> /var/log/mysqld.log <==
+2019-01-15T05:33:35.982405Z 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.13'  socket: '/var/lib/mysql/mysql.sock'  port: 3306  MySQL Community Server - GPL.
+2019-01-15T05:33:36.041206Z 0 [Note] [MY-011240] [Server] Plugin mysqlx reported: 'Using SSL configuration from MySQL Server'
+2019-01-15T05:33:36.042115Z 0 [Note] [MY-011243] [Server] Plugin mysqlx reported: 'Using OpenSSL for TLS connections'
+2019-01-15T05:33:36.042206Z 0 [Note] [MY-011332] [Server] Plugin mysqlx reported: 'IPv6 is available'
+2019-01-15T05:33:36.057112Z 0 [Note] [MY-011323] [Server] Plugin mysqlx reported: 'X Plugin ready for connections. bind-address: '::' port: 33060'
+2019-01-15T05:33:36.057152Z 0 [Note] [MY-011323] [Server] Plugin mysqlx reported: 'X Plugin ready for connections. socket: '/var/run/mysqld/mysqlx.sock''
+2019-01-15T05:33:36.057195Z 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: '/var/run/mysqld/mysqlx.sock' bind-address: '::' port: 33060
+2019-01-15T05:35:18.434011Z 20 [Warning] [MY-010058] [Server] Hostname 'user1-VirtualBox' does not resolve to '172.30.0.1'.
+2019-01-15T05:35:18.434104Z 20 [Note] [MY-010059] [Server] Hostname 'user1-VirtualBox' has the following IP addresses:
+2019-01-15T05:35:18.434190Z 20 [Note] [MY-010060] [Server]  - 127.0.1.1
+
+==> /var/log/mysql.general.log <==
+2019-01-15T11:14:40.732159Z	  761 Connect	root@172.30.0.1 on mysql using TCP/IP
+2019-01-15T11:14:40.784716Z	  761 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2019-01-15T11:14:40.841623Z	  761 Query	SET character_set_results = NULL
+2019-01-15T11:14:40.847290Z	  761 Query	SET autocommit=1
+2019-01-15T11:14:40.869712Z	  761 Query	SELECT @@SESSION.character_set_client, @@SESSION.character_set_connection, @@SESSION.character_set_results
+2019-01-15T11:14:40.886696Z	  761 Query	SELECT '是'
+2019-01-15T11:14:40.888284Z	  761 Quit	
+2019-01-15T11:14:40.902359Z	  762 Connect	root@172.30.0.1 on mysql using TCP/IP
+2019-01-15T11:14:40.903525Z	  762 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2019-01-15T11:14:40.914650Z	  762 Query	SET character_set_results = NULL
+2019-01-15T11:14:40.915652Z	  762 Query	SET autocommit=1
+2019-01-15T11:14:40.916700Z	  762 Query	SELECT @@SESSION.character_set_client, @@SESSION.character_set_connection, @@SESSION.character_set_results
+2019-01-15T11:14:40.922989Z	  762 Query	SELECT '?'
+2019-01-15T11:14:40.924332Z	  762 Quit	
+2019-01-15T11:14:40.927867Z	  763 Connect	root@172.30.0.1 on mysql using TCP/IP
+2019-01-15T11:14:40.928639Z	  763 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2019-01-15T11:14:40.932001Z	  763 Query	SET NAMES latin1 COLLATE latin1_swedish_ci
+2019-01-15T11:14:40.932584Z	  763 Query	SET character_set_results = NULL
+2019-01-15T11:14:40.933720Z	  763 Query	SET autocommit=1
+2019-01-15T11:14:40.934662Z	  763 Query	SELECT @@SESSION.character_set_client, @@SESSION.character_set_connection, @@SESSION.character_set_results
+2019-01-15T11:14:40.937408Z	  763 Query	SELECT '?'
+2019-01-15T11:14:40.939149Z	  763 Quit	
+2019-01-15T11:14:40.942504Z	  764 Connect	root@172.30.0.1 on mysql using TCP/IP
+2019-01-15T11:14:40.943339Z	  764 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2019-01-15T11:14:40.944867Z	  764 Query	SET character_set_results = latin1
+2019-01-15T11:14:40.945594Z	  764 Query	SET autocommit=1
+2019-01-15T11:14:40.946345Z	  764 Query	SELECT @@SESSION.character_set_client, @@SESSION.character_set_connection, @@SESSION.character_set_results
+2019-01-15T11:14:40.949188Z	  764 Query	SELECT '是'
+2019-01-15T11:14:40.951738Z	  764 Quit	
+2019-01-15T11:14:40.971212Z	  765 Connect	root@172.30.0.1 on mysql using TCP/IP
+2019-01-15T11:14:40.982100Z	  765 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2019-01-15T11:14:40.984723Z	  765 Query	SET autocommit=1
+2019-01-15T11:14:40.985688Z	  765 Query	SELECT @@SESSION.character_set_client, @@SESSION.character_set_connection, @@SESSION.character_set_results
+2019-01-15T11:14:40.987840Z	  765 Query	SELECT '?'
+2019-01-15T11:14:40.988873Z	  765 Quit	
+2019-01-15T11:14:40.992620Z	  766 Connect	root@172.30.0.1 on mysql using TCP/IP
+2019-01-15T11:14:40.993532Z	  766 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2019-01-15T11:14:40.999411Z	  766 Query	SET NAMES utf8 COLLATE utf8_general_ci
+2019-01-15T11:14:41.000208Z	  766 Query	SET autocommit=1
+2019-01-15T11:14:41.001486Z	  766 Query	SELECT @@SESSION.character_set_client, @@SESSION.character_set_connection, @@SESSION.character_set_results
+2019-01-15T11:14:41.003755Z	  766 Query	SELECT '是'
+2019-01-15T11:14:41.004761Z	  766 Quit	
+2019-01-15T11:14:41.009242Z	  767 Connect	root@172.30.0.1 on mysql using TCP/IP
+2019-01-15T11:14:41.010055Z	  767 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2019-01-15T11:14:41.011934Z	  767 Query	SET NAMES latin1 COLLATE latin1_swedish_ci
+2019-01-15T11:14:41.012448Z	  767 Query	SET character_set_results = latin1
+2019-01-15T11:14:41.013269Z	  767 Query	SET autocommit=1
+2019-01-15T11:14:41.014210Z	  767 Query	SELECT @@SESSION.character_set_client, @@SESSION.character_set_connection, @@SESSION.character_set_results
+2019-01-15T11:14:41.016359Z	  767 Query	SELECT '?'
+2019-01-15T11:14:41.017965Z	  767 Quit	
+2019-01-15T11:14:41.022639Z	  768 Connect	root@172.30.0.1 on mysql using TCP/IP
+2019-01-15T11:14:41.023473Z	  768 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2019-01-15T11:14:41.025525Z	  768 Query	SET NAMES utf8 COLLATE utf8_general_ci
+2019-01-15T11:14:41.026134Z	  768 Query	SET character_set_results = latin1
+2019-01-15T11:14:41.026649Z	  768 Query	SET autocommit=1
+2019-01-15T11:14:41.027485Z	  768 Query	SELECT @@SESSION.character_set_client, @@SESSION.character_set_connection, @@SESSION.character_set_results
+2019-01-15T11:14:41.029739Z	  768 Query	SELECT '是'
+2019-01-15T11:14:41.030665Z	  768 Quit	
+2019-01-15T11:14:41.033949Z	  769 Connect	root@172.30.0.1 on mysql using TCP/IP
+2019-01-15T11:14:41.034661Z	  769 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2019-01-15T11:14:41.036092Z	  769 Query	SET character_set_results = utf8
+2019-01-15T11:14:41.036703Z	  769 Query	SET autocommit=1
+2019-01-15T11:14:41.037697Z	  769 Query	SELECT @@SESSION.character_set_client, @@SESSION.character_set_connection, @@SESSION.character_set_results
+2019-01-15T11:14:41.040259Z	  769 Query	SELECT '?'
+2019-01-15T11:14:41.041355Z	  769 Quit	
+2019-01-15T11:14:41.044546Z	  770 Connect	root@172.30.0.1 on mysql using TCP/IP
+2019-01-15T11:14:41.049037Z	  770 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2019-01-15T11:14:41.050671Z	  770 Query	SET NAMES utf8 COLLATE utf8_general_ci
+2019-01-15T11:14:41.051495Z	  770 Query	SET character_set_results = utf8
+2019-01-15T11:14:41.052090Z	  770 Query	SET autocommit=1
+2019-01-15T11:14:41.052899Z	  770 Query	SELECT @@SESSION.character_set_client, @@SESSION.character_set_connection, @@SESSION.character_set_results
+2019-01-15T11:14:41.055358Z	  770 Query	SELECT '是'
+2019-01-15T11:14:41.056746Z	  770 Quit	
+2019-01-15T11:14:41.061271Z	  771 Connect	root@172.30.0.1 on mysql using TCP/IP
+2019-01-15T11:14:41.062109Z	  771 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2019-01-15T11:14:41.063691Z	  771 Query	SET NAMES latin1 COLLATE latin1_swedish_ci
+2019-01-15T11:14:41.064234Z	  771 Query	SET autocommit=1
+2019-01-15T11:14:41.065353Z	  771 Query	SELECT @@SESSION.character_set_client, @@SESSION.character_set_connection, @@SESSION.character_set_results
+2019-01-15T11:14:41.068247Z	  771 Query	SELECT '?'
+2019-01-15T11:14:41.069501Z	  771 Quit	
+2019-01-15T11:14:41.072791Z	  772 Connect	root@172.30.0.1 on mysql using TCP/IP
+2019-01-15T11:14:41.073566Z	  772 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2019-01-15T11:14:41.074975Z	  772 Query	SET NAMES utf8 COLLATE utf8_general_ci
+2019-01-15T11:14:41.075501Z	  772 Query	SET autocommit=1
+2019-01-15T11:14:41.076197Z	  772 Query	SELECT @@SESSION.character_set_client, @@SESSION.character_set_connection, @@SESSION.character_set_results
+2019-01-15T11:14:41.078347Z	  772 Query	SELECT '是'
+2019-01-15T11:14:41.079436Z	  772 Quit	
+2019-01-15T11:14:41.861176Z	  773 Connect	healthchecker@localhost on  using Socket
+2019-01-15T11:14:41.861476Z	  773 Quit	
