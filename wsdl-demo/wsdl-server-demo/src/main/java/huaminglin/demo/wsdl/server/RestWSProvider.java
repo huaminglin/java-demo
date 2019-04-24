@@ -1,6 +1,15 @@
 package huaminglin.demo.wsdl.server;
 
+import java.io.StringReader;
+import java.io.StringWriter;
+import java.util.Map;
+
 import javax.xml.transform.Source;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.ws.BindingType;
 import javax.xml.ws.Provider;
@@ -8,14 +17,6 @@ import javax.xml.ws.WebServiceContext;
 import javax.xml.ws.WebServiceProvider;
 import javax.xml.ws.handler.MessageContext;
 import javax.xml.ws.http.HTTPBinding;
-import java.io.StringReader;
-import java.io.StringWriter;
-import javax.xml.transform.stream.StreamResult;
-import javax.xml.transform.Transformer;
-import javax.xml.transform.TransformerConfigurationException;
-import javax.xml.transform.TransformerException;
-import javax.xml.transform.TransformerFactory;
-import java.util.Map;
 
 @WebServiceProvider
 @BindingType(value= HTTPBinding.HTTP_BINDING)
