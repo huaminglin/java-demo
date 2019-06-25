@@ -13,6 +13,6 @@ public class JMXDemo {
         mbs.registerMBean(mbean, name);
         int seconds = Integer.parseInt(System.getProperty("sleep.seconds", "60"));
         System.out.println("Sleeping " + seconds + " seconds...");
-        Thread.currentThread().sleep(seconds * 1000);
+        Thread.sleep(seconds * 1000);
     }
 }

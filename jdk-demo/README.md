@@ -47,3 +47,6 @@ Query MBeanServer MBeans:
         ObjectName = java.nio:type=BufferPool,name=direct
         ObjectName = java.nio:type=BufferPool,name=mapped
         ObjectName = java.util.logging:type=Logging
+
+## DateTimeDemo
+mvn exec:java -Dexec.mainClass="huaminglin.demo.jdk.datetime.DateTimeDemo"
