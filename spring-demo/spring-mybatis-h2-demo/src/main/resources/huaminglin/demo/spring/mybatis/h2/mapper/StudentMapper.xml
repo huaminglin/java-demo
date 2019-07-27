@@ -7,4 +7,7 @@
     <select id="getStudents" resultType="huaminglin.demo.spring.mybatis.h2.Student" useCache="true" flushCache="false">
         select name, age from student where name = #{name}
     </select>
+    <update id="updateAge">
+        update student set age = #{age} where name = #{name}
+    </update>
 </mapper>

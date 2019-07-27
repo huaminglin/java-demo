@@ -7,5 +7,6 @@ import java.util.List;
 
 public interface StudentMapper {
     List<Student> getStudents(@Param("name") String name);
+    int updateAge(@Param("name") String name, @Param("age") Integer age);
 }
 

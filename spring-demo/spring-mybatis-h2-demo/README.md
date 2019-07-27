@@ -2,6 +2,7 @@ mvn exec:java
 
 mvn exec:java -Dexec.mainClass="huaminglin.demo.spring.mybatis.h2.cache.SpringMyBatisH2CacheDemo"
 
+mvn exec:java -Dexec.mainClass="huaminglin.demo.spring.mybatis.h2.transaction.SpringMyBatisH2TransactionDemo"
 
 MyBatis Cache Setup:
 a. Model Class must be serializable
