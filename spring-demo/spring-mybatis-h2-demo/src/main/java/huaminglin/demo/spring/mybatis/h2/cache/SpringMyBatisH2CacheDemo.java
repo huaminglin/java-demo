@@ -1,17 +1,18 @@
-package huaminglin.demo.spring.mybatis.h2;
+package huaminglin.demo.spring.mybatis.h2.cache;
 
+import huaminglin.demo.spring.mybatis.h2.Student;
 import huaminglin.demo.spring.mybatis.h2.mapper.StudentMapper;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.List;
 
-public class SpringMyBatisH2Demo {
+public class SpringMyBatisH2CacheDemo {
     private static AnnotationConfigApplicationContext createMyContext() {
         return new AnnotationConfigApplicationContext();
     }
 
     private static void scanMyBean(AnnotationConfigApplicationContext context) {
-        context.scan("huaminglin.demo.spring.mybatis.h2");
+        context.scan("huaminglin.demo.spring.mybatis.h2.datasource", "huaminglin.demo.spring.mybatis.h2.mapper");
     }
 
     private static void refreshMyContext(AnnotationConfigApplicationContext context) {

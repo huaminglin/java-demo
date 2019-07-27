@@ -52,9 +52,6 @@
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.6.0</version>
-                <configuration>
-                    <mainClass>huaminglin.demo.spring.mybatis.h2.SpringMyBatisH2Demo</mainClass>
-                </configuration>
             </plugin>
         </plugins>
     </build>

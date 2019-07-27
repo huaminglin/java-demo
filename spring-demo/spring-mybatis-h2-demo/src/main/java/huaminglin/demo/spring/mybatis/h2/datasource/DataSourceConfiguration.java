@@ -1,4 +1,4 @@
-package huaminglin.demo.spring.mybatis.h2;
+package huaminglin.demo.spring.mybatis.h2.datasource;
 
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.h2.jdbcx.JdbcDataSource;
