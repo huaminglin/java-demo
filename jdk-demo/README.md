@@ -50,3 +50,14 @@ Query MBeanServer MBeans:
 
 ## DateTimeDemo
 mvn exec:java -Dexec.mainClass="huaminglin.demo.jdk.datetime.DateTimeDemo"
+
+## AnnotationDemo
+mvn exec:java -Dexec.mainClass="huaminglin.demo.jdk.annotation.AnnotationDemo"
+mvn exec:java -Dexec.mainClass="huaminglin.demo.jdk.datetime.DateTimeDemo"
+
+huaminglin.demo.jdk.annotation.$Proxy32.<clinit> {
+      huaminglin.demo.jdk.annotation.Transactional.<clinit> {
+      }
+}
+Note: The annotation interface class is loaded with a proxy class.
+
