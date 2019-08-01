@@ -24,9 +24,15 @@ public class StudentDao {
     }
 
     @Transactional
+    public void tryAndRollbackWithRuntimeExceptionAddOneAge(String name) throws Exception {
+        addOneAge(name);
+        throw new Exception("Force roll back by RuntimeException");
+    }
+
+    @Transactional
     public void tryAndRollbackWithExceptionAddOneAge(String name) {
         addOneAge(name);
-        throw new RuntimeException("Force roll back by exception");
+        throw new RuntimeException("Force roll back by Exception");
     }
 
     @Transactional

@@ -52,3 +52,7 @@ Generic bean: class [huaminglin.demo.spring.mybatis.h2.mapper.StudentMapper]; sc
 
 Generic bean: class [org.mybatis.spring.mapper.MapperFactoryBean]; scope=singleton; abstract=false; lazyInit=false; autowireMode=2; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/home/user1/workspace/java-demo/spring-demo/spring-mybatis-h2-demo/target/classes/huaminglin/demo/spring/mybatis/h2/mapper/StudentMapper.class]]
 
+#################################################################################################
+## How does Spring Transaction API work?
+getStudentDao: class huaminglin.demo.spring.mybatis.h2.transaction.StudentDao$$EnhancerBySpringCGLIB$$b277e1c9/huaminglin.demo.spring.mybatis.h2.transaction.StudentDao@128db84f
+
