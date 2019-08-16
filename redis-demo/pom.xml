@@ -15,6 +15,11 @@
 		    <artifactId>jedis</artifactId>
 		    <version>3.0.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.redisson</groupId>
+			<artifactId>redisson</artifactId>
+			<version>3.11.2</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -22,9 +27,6 @@
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
 				<version>1.6.0</version>
-				<configuration>
-					<mainClass>huaminglin.demo.redis.jedis.JedisDemo</mainClass>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
