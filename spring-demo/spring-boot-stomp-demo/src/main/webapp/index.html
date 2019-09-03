@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>Courier WebSocket</title>
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <script type="text/javascript">
+            var stompClient = null;
+
+            function setConnected(connected) {
+                document.getElementById('connect').disabled = connected;
+                document.getElementById('disconnect').disabled = !connected;
+                document.getElementById('response').innerHTML = '';
+            }
+
+            function connect() {
+                var loc = window.location, new_uri;
+                if (loc.protocol === "https:") {
+                    new_uri = "wss:";
+                } else {
+                    new_uri = "ws:";
+                }
+                new_uri += "//" + loc.host;
+                stompClient = Stomp.client(new_uri + '/spring-boot-stomp-demo/courier');
+                stompClient.connect({}, function(frame) {
+                    setConnected(true);
+                    console.log('Connected: ' + frame);
+                    stompClient.subscribe('/topic/messages', function(messageOutput) {
+                        showMessageOutput(JSON.parse(messageOutput.body));
+                    });
+                });
+            }
+
+            function disconnect() {
+                if(stompClient != null) {
+                    stompClient.disconnect();
+                }
+                setConnected(false);
+                console.log("Disconnected");
+            }
+
+            function startQuery() {
+                var courierId = document.getElementById('courierId').value;
+                stompClient.send("/app/courier", {},
+                  JSON.stringify({'courierId':courierId}));
+            }
+
+            function showMessageOutput(messageOutput) {
+                var response = document.getElementById('response');
+                var p = document.createElement('p');
+                p.style.wordWrap = 'break-word';
+                p.appendChild(document.createTextNode(messageOutput.courierId + ": "
+                  + messageOutput.location));
+                response.appendChild(p);
+            }
+        </script>
+</head>
+<body onload="disconnect()">
+<div>
+    <div>
+        <button id="connect" onclick="connect();">Connect</button>
+        <button id="disconnect" disabled="disabled" onclick="disconnect();">
+            Disconnect
+        </button>
+    </div>
+    <br />
+    <div><input type="text" id="courierId" placeholder="Input a courierId"/>
+        <button id="startQuery" onclick="startQuery();">Query</button>
+        <p id="response"></p>
+    </div>
+</div>
+
+</body>
+</html>
