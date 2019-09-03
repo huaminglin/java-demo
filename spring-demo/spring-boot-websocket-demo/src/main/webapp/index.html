@@ -1,0 +1,78 @@
+<html>
+<head>
+    <title>Courier WebSocket</title>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">
+	var ws;
+	function setConnected(connected) {
+		$("#connect").prop("disabled", connected);
+		$("#disconnect").prop("disabled", !connected);
+		$("#qeury").prop("disabled", !connected);
+	}
+
+	function connect() {
+		var loc = window.location, new_uri;
+		if (loc.protocol === "https:") {
+		    new_uri = "wss:";
+		} else {
+		    new_uri = "ws:";
+		}
+		new_uri += "//" + loc.host;
+		new_uri += "/courier";
+
+		ws = new WebSocket(new_uri);
+		ws.onmessage = function(data) {
+			locationStatus(data.data);
+		}
+		setConnected(true);
+		console.log(new_uri);
+	}
+
+	function disconnect() {
+		if (ws != null) {
+			ws.close();
+		}
+		setConnected(false);
+		console.log("Websocket is in disconnected state");
+	}
+
+	function sendData() {
+		var data = $("#courierId").val();
+		ws.send(data);
+	}
+
+	function locationStatus(message) {
+		$("#courierLocation").html("" + message + "");
+	}
+
+	$(function() {
+		$("form").on('submit', function(e) {
+			e.preventDefault();
+		});
+		$("#connect").click(function() {
+			connect();
+		});
+		$("#disconnect").click(function() {
+			disconnect();
+		});
+		$("#qeury").click(function() {
+			sendData();
+		});
+	});
+    </script>
+</head>
+<body onload="disconnect()">
+<div>
+    <div id="courierLocation"></div>
+    <button id="connect" type="button">Connect</button>
+    <button id="disconnect" type="button" disabled="disabled">Disconnect</button>
+    <br/>
+    <input id="courierId" placeholder="Input the target courier id" required></input>
+    <button id="qeury" type="submit">Qeury</button>
+</div>
+
+</body>
+</html>
