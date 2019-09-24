@@ -7,6 +7,7 @@
         <xs:element name="from" type="xs:string"/>
         <xs:element name="heading" type="xs:string"/>
         <xs:element name="body" type="xs:string"/>
+        <xs:element name="balance" type="xs:decimal"/>
         </xs:sequence>
     </xs:complexType>
     </xs:element>

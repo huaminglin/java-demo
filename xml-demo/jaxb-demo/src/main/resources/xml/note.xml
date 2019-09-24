@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><note:note xmlns:note="https://www.w3schools.com/note"><to>to1</to><from>from1</from><heading>heading1</heading><body>body1</body></note:note>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><note:note xmlns:note="https://www.w3schools.com/note"><to>to1</to><from>from1</from><heading>heading1</heading><body>body1</body><balance>0.1</balance></note:note>

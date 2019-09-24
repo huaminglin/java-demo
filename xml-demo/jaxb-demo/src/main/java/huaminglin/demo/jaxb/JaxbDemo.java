@@ -66,6 +66,7 @@ public class JaxbDemo {
             note.setFrom("from1");
             note.setHeading("heading1");
             note.setBody("body1");
+            note.setBalance(new java.math.BigDecimal("0.1"));
             Marshaller m = createJaxbMarshaller(Note.class);
             Document doc = createXmlDocument();
             m.marshal(note, doc);
@@ -76,6 +77,7 @@ public class JaxbDemo {
             InputStream inputStream = JaxbDemo.class.getResourceAsStream("/xml/note.xml");
             Note note = (Note) u.unmarshal(inputStream);
             System.out.println(note.getTo());
+            System.out.println(note.getBalance());
         }
     }
 }
