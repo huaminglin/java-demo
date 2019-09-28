@@ -1,4 +1,8 @@
 mvn -Dserver.address=0.0.0.0 spring-boot:run
+
+Since Spring Boot relies on Spring Security’s defaults, CSRF protection is turned on by default.
+This means that the actuator endpoints that require a POST (shutdown and loggers endpoints), PUT or DELETE will get a 403 forbidden error when the default security configuration is in use.
+
 #######################################################
 ## audit
 http://127.0.0.1:8080/actuator/auditevents
@@ -102,6 +106,10 @@ http://127.0.0.1:8080/actuator/sessions?username=admin
 http://127.0.0.1:8080/actuator/sessions/788681e5-d76f-49ca-bbe8-195f80ac3227
 http://127.0.0.1:8080/h2-console
 TODO: check h2-console username and password
+
+#######################################################
+## threaddump
+POST http://127.0.0.1:8080/actuator/shutdown
 
 #######################################################
 ## threaddump
