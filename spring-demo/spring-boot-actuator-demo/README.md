@@ -1,5 +1,8 @@
 mvn -Dserver.address=0.0.0.0 spring-boot:run
 
+mvn dockerfile:build
+docker run -p 8080:8080 --rm huaminglin/spring-boot-actuator-demo:1.0-SNAPSHOT
+
 Since Spring Boot relies on Spring Security’s defaults, CSRF protection is turned on by default.
 This means that the actuator endpoints that require a POST (shutdown and loggers endpoints), PUT or DELETE will get a 403 forbidden error when the default security configuration is in use.
 
