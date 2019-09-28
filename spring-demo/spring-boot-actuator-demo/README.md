@@ -17,3 +17,10 @@ Clearing a Log Level
 POST http://127.0.0.1:8080/actuator/loggers/huaminglin.demo.spring.boot.SpringBootActuatorDemo
 "Content-Type": "application/json"
 {}
+
+#######################################################
+## audit
+http://127.0.0.1:8080/actuator/auditevents
+Authorization: Basic YWRtaW46YWRtaW4=
+
+http://127.0.0.1:8080/actuator/auditevents?after=2019-09-28T06:23:23.986Z
