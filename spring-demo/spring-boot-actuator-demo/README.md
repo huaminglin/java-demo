@@ -28,3 +28,27 @@ http://127.0.0.1:8080/actuator/auditevents?after=2019-09-28T06:23:23.986Z
 #######################################################
 ## beans
 http://127.0.0.1:8080/actuator/beans
+
+#######################################################
+## caches
+http://127.0.0.1:8080/actuator/caches
+{
+    "cacheManagers": {
+        "cacheManager": {
+            "caches": {
+                "ids": {
+                    "target": "java.util.concurrent.ConcurrentHashMap"
+                }
+            }
+        }
+    }
+}
+
+http://127.0.0.1:8080/actuator/caches/ids
+{
+    "target": "java.util.concurrent.ConcurrentHashMap",
+    "name": "ids",
+    "cacheManager": "cacheManager"
+}
+
+curl --user admin:admin 'http://127.0.0.1:8080/actuator/caches' -i -X DELETE
