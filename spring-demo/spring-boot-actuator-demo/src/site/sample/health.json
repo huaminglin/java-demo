@@ -1,0 +1,19 @@
+{
+    "status": "DOWN",
+    "details": {
+        "random": {
+            "status": "DOWN",
+            "details": {
+                "Error Code": "my error code"
+            }
+        },
+        "diskSpace": {
+            "status": "UP",
+            "details": {
+                "total": 40231051264,
+                "free": 4136398848,
+                "threshold": 10485760
+            }
+        }
+    }
+}
