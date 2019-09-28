@@ -1,0 +1,316 @@
+{
+    "traces": [
+        {
+            "timestamp": "2019-09-28T09:00:27.787Z",
+            "principal": null,
+            "session": null,
+            "request": {
+                "method": "GET",
+                "uri": "http://127.0.0.1:8080/actuator/heapdump",
+                "headers": {
+                    "content-length": [
+                        "2"
+                    ],
+                    "cookie": [
+                        "JSESSIONID=269D0E3438DD8704700866BACADE2623"
+                    ],
+                    "postman-token": [
+                        "5b6774bb-1a33-46ae-9e1c-3480fbbb4481"
+                    ],
+                    "host": [
+                        "127.0.0.1:8080"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "content-type": [
+                        "application/json"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "accept-encoding": [
+                        "gzip, deflate"
+                    ],
+                    "accept": [
+                        "*/*"
+                    ],
+                    "user-agent": [
+                        "PostmanRuntime/7.17.1"
+                    ]
+                },
+                "remoteAddress": null
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "X-Frame-Options": [
+                        "DENY"
+                    ],
+                    "Accept-Ranges": [
+                        "bytes"
+                    ],
+                    "Cache-Control": [
+                        "no-cache, no-store, max-age=0, must-revalidate"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Expires": [
+                        "0"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "Content-Length": [
+                        "78380697"
+                    ],
+                    "X-XSS-Protection": [
+                        "1; mode=block"
+                    ],
+                    "Date": [
+                        "Sat, 28 Sep 2019 09:00:28 GMT"
+                    ],
+                    "Content-Type": [
+                        "application/octet-stream"
+                    ]
+                }
+            },
+            "timeTaken": 1769
+        },
+        {
+            "timestamp": "2019-09-28T09:00:12.698Z",
+            "principal": null,
+            "session": null,
+            "request": {
+                "method": "GET",
+                "uri": "http://127.0.0.1:8080/actuator/heapdump",
+                "headers": {
+                    "content-length": [
+                        "2"
+                    ],
+                    "cookie": [
+                        "JSESSIONID=269D0E3438DD8704700866BACADE2623"
+                    ],
+                    "postman-token": [
+                        "17d692fb-f1e2-44f4-a18d-52124b66a0c0"
+                    ],
+                    "host": [
+                        "127.0.0.1:8080"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "content-type": [
+                        "application/json"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "accept-encoding": [
+                        "gzip, deflate"
+                    ],
+                    "accept": [
+                        "*/*"
+                    ],
+                    "user-agent": [
+                        "PostmanRuntime/7.17.1"
+                    ]
+                },
+                "remoteAddress": null
+            },
+            "response": {
+                "status": 500,
+                "headers": {
+                    "X-Frame-Options": [
+                        "DENY"
+                    ],
+                    "Accept-Ranges": [
+                        "bytes"
+                    ],
+                    "Cache-Control": [
+                        "no-cache, no-store, max-age=0, must-revalidate"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Expires": [
+                        "0"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "Content-Length": [
+                        "79485894"
+                    ],
+                    "X-XSS-Protection": [
+                        "1; mode=block"
+                    ],
+                    "Date": [
+                        "Sat, 28 Sep 2019 09:00:14 GMT"
+                    ],
+                    "Content-Type": [
+                        "application/octet-stream"
+                    ]
+                }
+            },
+            "timeTaken": 2149
+        },
+        {
+            "timestamp": "2019-09-28T08:52:42.549Z",
+            "principal": null,
+            "session": null,
+            "request": {
+                "method": "GET",
+                "uri": "http://127.0.0.1:8080/actuator/health",
+                "headers": {
+                    "content-length": [
+                        "2"
+                    ],
+                    "cookie": [
+                        "JSESSIONID=269D0E3438DD8704700866BACADE2623"
+                    ],
+                    "postman-token": [
+                        "a58736f9-7978-4d8d-8ee3-f2d1404415e3"
+                    ],
+                    "host": [
+                        "127.0.0.1:8080"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "content-type": [
+                        "application/json"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "accept-encoding": [
+                        "gzip, deflate"
+                    ],
+                    "accept": [
+                        "*/*"
+                    ],
+                    "user-agent": [
+                        "PostmanRuntime/7.17.1"
+                    ]
+                },
+                "remoteAddress": null
+            },
+            "response": {
+                "status": 503,
+                "headers": {
+                    "Transfer-Encoding": [
+                        "chunked"
+                    ],
+                    "X-Frame-Options": [
+                        "DENY"
+                    ],
+                    "Cache-Control": [
+                        "no-cache, no-store, max-age=0, must-revalidate"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Connection": [
+                        "close"
+                    ],
+                    "Expires": [
+                        "0"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "X-XSS-Protection": [
+                        "1; mode=block"
+                    ],
+                    "Date": [
+                        "Sat, 28 Sep 2019 08:52:42 GMT"
+                    ],
+                    "Content-Type": [
+                        "application/vnd.spring-boot.actuator.v2+json;charset=UTF-8"
+                    ]
+                }
+            },
+            "timeTaken": 9
+        },
+        {
+            "timestamp": "2019-09-28T08:52:40.940Z",
+            "principal": null,
+            "session": null,
+            "request": {
+                "method": "GET",
+                "uri": "http://127.0.0.1:8080/actuator/health",
+                "headers": {
+                    "content-length": [
+                        "2"
+                    ],
+                    "cookie": [
+                        "JSESSIONID=45566509D1D449A3EFACA92627491065"
+                    ],
+                    "postman-token": [
+                        "a2f89650-7395-4896-88df-02ec24962667"
+                    ],
+                    "host": [
+                        "127.0.0.1:8080"
+                    ],
+                    "connection": [
+                        "keep-alive"
+                    ],
+                    "content-type": [
+                        "application/json"
+                    ],
+                    "cache-control": [
+                        "no-cache"
+                    ],
+                    "accept-encoding": [
+                        "gzip, deflate"
+                    ],
+                    "accept": [
+                        "*/*"
+                    ],
+                    "user-agent": [
+                        "PostmanRuntime/7.17.1"
+                    ]
+                },
+                "remoteAddress": null
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Transfer-Encoding": [
+                        "chunked"
+                    ],
+                    "X-Frame-Options": [
+                        "DENY"
+                    ],
+                    "Cache-Control": [
+                        "no-cache, no-store, max-age=0, must-revalidate"
+                    ],
+                    "X-Content-Type-Options": [
+                        "nosniff"
+                    ],
+                    "Set-Cookie": [
+                        "JSESSIONID=269D0E3438DD8704700866BACADE2623; Path=/; HttpOnly"
+                    ],
+                    "Expires": [
+                        "0"
+                    ],
+                    "Pragma": [
+                        "no-cache"
+                    ],
+                    "X-XSS-Protection": [
+                        "1; mode=block"
+                    ],
+                    "Date": [
+                        "Sat, 28 Sep 2019 08:52:41 GMT"
+                    ],
+                    "Content-Type": [
+                        "application/vnd.spring-boot.actuator.v2+json;charset=UTF-8"
+                    ]
+                }
+            },
+            "timeTaken": 217
+        }
+    ]
+}
