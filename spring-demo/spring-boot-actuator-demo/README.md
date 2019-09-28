@@ -80,3 +80,10 @@ POST http://127.0.0.1:8080/actuator/loggers/huaminglin.demo.spring.boot.SpringBo
 #######################################################
 ## mappings
 http://127.0.0.1:8080/actuator/mappings
+
+#######################################################
+## metrics
+http://127.0.0.1:8080/actuator/metrics
+
+http://127.0.0.1:8080/actuator/metrics/jvm.memory.max
+
