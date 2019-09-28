@@ -102,3 +102,7 @@ http://127.0.0.1:8080/actuator/sessions?username=admin
 http://127.0.0.1:8080/actuator/sessions/788681e5-d76f-49ca-bbe8-195f80ac3227
 http://127.0.0.1:8080/h2-console
 TODO: check h2-console username and password
+
+#######################################################
+## threaddump
+http://127.0.0.1:8080/actuator/threaddump
