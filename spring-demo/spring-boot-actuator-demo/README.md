@@ -87,7 +87,10 @@ http://127.0.0.1:8080/actuator/metrics
 
 http://127.0.0.1:8080/actuator/metrics/jvm.memory.max
 
-
 #######################################################
 ## prometheus
 http://127.0.0.1:8080/actuator/prometheus
+
+#######################################################
+## scheduledtasks
+http://127.0.0.1:8080/actuator/scheduledtasks
