@@ -10,6 +10,7 @@ public class RandomScheduledTask {
 
     @Scheduled(fixedRate = 5000)
     public void randomId() {
-        System.out.println(rand.nextInt(50));
+        rand.nextInt(50);
+        // System.out.println(rand.nextInt(50));
     }
 }

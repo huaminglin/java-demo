@@ -1,5 +1,6 @@
-mvn -Dserver.address=0.0.0.0 spring-boot:run
+mvn -Dserver.address=0.0.0.0 -Dserver.port=8080  spring-boot:run
 
+docker rmi huaminglin/spring-boot-actuator-demo:1.0-SNAPSHOT
 mvn dockerfile:build
 docker run -p 8080:8080 --rm huaminglin/spring-boot-actuator-demo:1.0-SNAPSHOT
 
