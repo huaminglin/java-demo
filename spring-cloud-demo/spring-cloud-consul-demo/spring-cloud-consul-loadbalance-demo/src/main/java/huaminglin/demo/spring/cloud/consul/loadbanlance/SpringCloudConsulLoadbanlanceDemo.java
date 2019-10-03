@@ -1,0 +1,23 @@
+package huaminglin.demo.spring.cloud.consul.loadbanlance;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.web.client.RestTemplate;
+
+@SpringBootApplication
+public class SpringCloudConsulLoadbanlanceDemo implements CommandLineRunner {
+    @Autowired
+    private RestTemplate restTemplate;
+
+    public static void main(String[] args) {
+        SpringApplication.run(SpringCloudConsulLoadbanlanceDemo.class, args);
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+        String result = this.restTemplate.getForObject("http://spring-cloud-consul-server-demo/hello", String.class);
+        System.out.println("Response: " + result);
+    }
+}
