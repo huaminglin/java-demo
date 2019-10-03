@@ -1,3 +1,8 @@
 spring:
   application:
     name: spring-cloud-consul-client-demo
+  cloud:
+    consul:
+      discovery:
+        catalogServicesWatch:
+          enabled: false
