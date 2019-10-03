@@ -21,7 +21,7 @@ public class SpringCloudConsulClientDemo implements CommandLineRunner {
     public void run(String... args) throws Exception {
         System.out.println("Services:");
         discoveryClient.getServices().forEach(System.out::println);
-        System.out.println("spring-cloud-consul-demo:");
-        discoveryClient.getInstances("spring-cloud-consul-demo").forEach(System.out::println);
+        System.out.println("spring-cloud-consul-server-demo:");
+        discoveryClient.getInstances("spring-cloud-consul-server-demo").forEach(System.out::println);
     }
 }

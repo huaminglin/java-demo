@@ -4,11 +4,11 @@ mvn spring-boot:run
 ## Output:
 Services:
 consul
-spring-cloud-consul-demo
-spring-cloud-consul-demo-management
+spring-cloud-consul-server-demo
+spring-cloud-consul-server-demo-management
 web
-spring-cloud-consul-demo:
-DefaultServiceInstance{instanceId='spring-cloud-consul-demo-8080', serviceId='spring-cloud-consul-demo', host='x.x.x.x', port=8080, secure=false, metadata={secure=false}}
+spring-cloud-consul-server-demo:
+DefaultServiceInstance{instanceId='spring-cloud-consul-server-demo-8080', serviceId='spring-cloud-consul-server-demo', host='x.x.x.x', port=8080, secure=false, metadata={secure=false}}
 
 #####################################################
 ## spring.cloud.consul.discovery.catalogServicesWatch.enabled=false to disable the following thread

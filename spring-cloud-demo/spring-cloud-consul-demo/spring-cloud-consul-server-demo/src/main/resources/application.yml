@@ -1,6 +1,6 @@
 spring:
   application:
-    name: spring-cloud-consul-demo
+    name: spring-cloud-consul-server-demo
 management:
   server:
     port: 4452

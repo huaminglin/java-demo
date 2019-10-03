@@ -13,7 +13,5 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-cloud-consul-demo</module>
-        <module>spring-cloud-consul-client-demo</module>
     </modules>
 </project>
-
