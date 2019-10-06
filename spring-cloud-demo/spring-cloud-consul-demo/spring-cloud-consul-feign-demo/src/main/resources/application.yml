@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: spring-cloud-consul-feign-demo
+  cloud:
+    consul:
+      discovery:
+        catalogServicesWatch:
+          enabled: false
