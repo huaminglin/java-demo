@@ -13,5 +13,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-cloud-consul-demo</module>
+        <module>spring-cloud-ribbon-demo</module>
     </modules>
 </project>

@@ -14,7 +14,7 @@
     <modules>
         <module>spring-cloud-consul-server-demo</module>
         <module>spring-cloud-consul-client-demo</module>
-        <module>spring-cloud-consul-loadbanlance-demo</module>
+        <module>spring-cloud-consul-loadbalance-demo</module>
         <module>spring-cloud-consul-feign-demo</module>
     </modules>
 </project>
