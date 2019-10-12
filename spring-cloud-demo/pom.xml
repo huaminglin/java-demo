@@ -15,6 +15,7 @@
         <module>spring-cloud-consul-demo</module>
         <module>spring-cloud-ribbon-demo</module>
         <module>spring-cloud-hystrix-demo</module>
+        <module>spring-cloud-gateway-demo</module>
     </modules>
 </project>
 
