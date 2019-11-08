@@ -1,0 +1,23 @@
+http://localhost:8888/config/client1/dev
+{
+	"name" : "client1",
+	"profiles" : ["dev"],
+	"label" : null,
+	"version" : "876dbd6cbb3ad90ddd6a3bef74ae9f7fe22c5d52",
+	"state" : null,
+	"propertySources" : [{
+			"name" : "/home/user1/spring-cloud-config-git/client1-dev.properties",
+			"source" : {
+				"a" : "b"
+			}
+		}, {
+			"name" : "/home/user1/spring-cloud-config-git/client1.properties",
+			"source" : {
+				"a" : "b"
+			}
+		}
+	]
+}
+
+http://localhost:8888/config/client1-dev.properties
+a: b
