@@ -1,0 +1,51 @@
+version: '3.3'
+services:
+    rabbitmq:
+        image: rabbitmq:3-management
+        network_mode: "host"
+        environment:
+            RABBITMQ_DEFAULT_USER: guest
+            RABBITMQ_DEFAULT_PASS: guest
+        ports:
+            - 5672:5672
+            - 15672:15672
+    config-server:
+        image: openjdk:8-jdk-alpine
+        network_mode: "host"
+        volumes:
+            - ../spring-cloud-config-server-demo/target/spring-cloud-config-server-demo-1.0-SNAPSHOT.jar:/app.jar
+            - /home/user1/spring-cloud-config-git:/home/user1/spring-cloud-config-git
+        entrypoint: java -Xms256m -Xmx512m -Djava.security.egd=file:/dev/./urandom -jar /app.jar
+        ports:
+            - 8888:8888
+        depends_on:
+            - rabbitmq
+    config-client-a:
+        image: openjdk:8-jdk-alpine
+        network_mode: "host"
+        volumes:
+            - ../spring-cloud-config-client-demo/target/spring-cloud-config-client-demo-1.0-SNAPSHOT.jar:/app.jar
+        entrypoint: java -Xms256m -Xmx512m -Dserver.port=38180 -Dspring.cloud.config.uri=http://localhost:38080/config -Djava.security.egd=file:/dev/./urandom -jar /app.jar
+        ports:
+            - 38180:38180
+        depends_on:
+            - config-server-proxy
+    config-client-b:
+        image: openjdk:8-jdk-alpine
+        network_mode: "host"
+        volumes:
+            - ../spring-cloud-config-client-demo/target/spring-cloud-config-client-demo-1.0-SNAPSHOT.jar:/app.jar
+        entrypoint: java -Xms256m -Xmx512m -Dserver.port=38280 -Dspring.cloud.config.uri=http://localhost:38080/config -Djava.security.egd=file:/dev/./urandom -jar /app.jar
+        ports:
+            - 38280:38280
+        depends_on:
+            - config-server-proxy
+    config-server-proxy:
+        image: "mitmproxy/mitmproxy:4.0.4"
+        network_mode: "host"
+        ports:
+            - "38080:38080"
+            - "8081:8081"
+        command: mitmweb --mode reverse:http://127.0.0.1:8888 --listen-host 0.0.0.0 --listen-port 38080 --no-web-open-browser --web-iface 0.0.0.0
+        depends_on:
+            - config-server
