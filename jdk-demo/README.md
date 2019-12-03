@@ -61,3 +61,23 @@ huaminglin.demo.jdk.annotation.$Proxy32.<clinit> {
 }
 Note: The annotation interface class is loaded with a proxy class.
 
+## HotSpotDiagnostic.getDiagnosticOptions()
+java -cp ./target/classes huaminglin.demo.jdk.mbean.DiagnosticOptionsPrinter
+HeapDumpBeforeFullGC = false
+HeapDumpAfterFullGC = false
+HeapDumpOnOutOfMemoryError = false
+HeapDumpPath =
+CMSAbortablePrecleanWaitMillis = 100
+CMSWaitDuration = 2000
+CMSTriggerInterval = -1
+PrintGC = false
+PrintGCDetails = false
+PrintGCDateStamps = false
+PrintGCTimeStamps = false
+PrintGCID = false
+PrintClassHistogramBeforeFullGC = false
+PrintClassHistogramAfterFullGC = false
+PrintClassHistogram = false
+MinHeapFreeRatio = 0
+MaxHeapFreeRatio = 100
+PrintConcurrentLocks = false
