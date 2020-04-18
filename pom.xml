@@ -23,7 +23,7 @@
         <module>xml-demo</module>
         <module>jdk-demo</module>
         <module>aspectj-demo</module>
-        <module>wsdl-demo</module>
+<!--        <module>wsdl-demo</module>-->
         <module>jamon-demo</module>
         <module>redis-demo</module>
         <module>mysql-demo</module>

@@ -3,7 +3,7 @@ package huaminglin.demo.jdk.mbean;
 import java.util.List;
 
 import com.sun.management.VMOption;
-import sun.management.HotSpotDiagnostic;
+import com.sun.management.internal.HotSpotDiagnostic;
 
 public class DiagnosticOptionsPrinter {
 
