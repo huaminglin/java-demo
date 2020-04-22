@@ -30,5 +30,6 @@
         <module>junit-demo</module>
         <module>datatype-demo</module>
         <module>spring-cloud-demo</module>
+        <module>tool-demo</module>
     </modules>
 </project>
