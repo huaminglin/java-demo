@@ -31,5 +31,6 @@
         <module>datatype-demo</module>
         <module>spring-cloud-demo</module>
         <module>tool-demo</module>
+        <module>encoding-demo</module>
     </modules>
 </project>
