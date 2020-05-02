@@ -47,3 +47,4 @@ So use URI variable and encodeTemplate=true to encode '+' in the query string.
 3. this.variableEncoder is set only by encodeTemplate();
 it means UriComponentsBuilder encode() is required to expand() with encoding.
 
+## Extract HierarchicalUriComponents.EncodeState.java and HierarchicalUriComponents.Type.java to understand URI component and encoding better
