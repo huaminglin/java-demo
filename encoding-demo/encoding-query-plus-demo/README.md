@@ -9,15 +9,15 @@ mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Dserver.tomcat.basedir=tomc
 mvn spring-boot:run -Dspring-boot.run.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005"
 
 
-## curl --proxy http://127.0.0.1:6080 "http://10.0.0.211:8080/?name=a+b"
+## curl --proxy http://127.0.0.1:6080 "http://10.0.0.211:8080/servlet?name=a+b"
 
 hello: a b
 
-## curl --proxy http://127.0.0.1:6080 "http://10.0.0.211:8080/?name=a%20b"
+## curl --proxy http://127.0.0.1:6080 "http://10.0.0.211:8080/servlet?name=a%20b"
 
 hello: a b
 
-## curl "http://10.0.0.211:8080/?name=a b"
+## curl "http://10.0.0.211:8080/servlet?name=a b"
 
 <!doctype html><html lang="en"><head><title>HTTP Status 400 – Bad Request</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 400 – Bad Request</h1></body></html>
 
@@ -114,3 +114,12 @@ int idx= ByteChunk.findByte( buff, start, end, (byte) '%' );
 if( query ) { idx2= ByteChunk.findByte( buff, start, (idx >= 0 ? idx : end), (byte) '+' ); }
 if( buff[ j ] == '+' && query) { buff[idx]= (byte)' ' ; }
 
+##  curl "http://10.0.0.211:8080/request?name=a+b%20c"
+
+   hello: a b c
+   
+## curl "http://10.0.0.211:8080/path/a+b%20c"
+
+   hello: a+b c
+
+Note: the '+' character in path variable is not decoded.
