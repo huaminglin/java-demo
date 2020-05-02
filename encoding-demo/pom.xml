@@ -14,5 +14,6 @@
     <modules>
         <module>encoding-query-plus-demo</module>
         <module>encoding-client-query-plus-demo</module>
+        <module>encoding-client-webclient-demo</module>
     </modules>
 </project>
