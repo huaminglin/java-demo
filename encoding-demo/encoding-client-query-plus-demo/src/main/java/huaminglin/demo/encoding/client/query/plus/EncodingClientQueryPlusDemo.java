@@ -4,6 +4,7 @@ package huaminglin.demo.encoding.client.query.plus;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import java.net.URI;
 import java.util.Collections;
 
 public class EncodingClientQueryPlusDemo {
@@ -103,6 +104,19 @@ public class EncodingClientQueryPlusDemo {
         System.out.println("Note: the \"+\" in the URI variable is encoded, but '+' outside URI variable is not encoded.");
     }
 
+    private static void buildAndImplicitExpand() {
+        System.out.println("\nbuildAndImplicitExpand():");
+        URI uri = UriComponentsBuilder.newInstance()
+                .scheme("http").host("127.0.0.1").port(8080)
+                .path("/junit-5{p1}?p2=a+b c")
+                .queryParam("p3", "{p1}")
+                .build(Collections.singletonMap("p1", "a+b c"));
+        System.out.println(uri);
+        // http://127.0.0.1:8080/junit-5a%2Bb%20c%3Fp2=a+b%20c?p3=a%2Bb%20c
+        System.out.println("Note: URI variable is expanded with encoding");
+        System.out.println("Note: the \"+\" in the URI variable is encoded, but '+' outside URI variable is not encoded.");
+    }
+
     private static void buildWithTemplateEncodingNoExapnd() {
         System.out.println("\nbuildWithTemplateEncodingNoExapnd():");
         UriComponents component = UriComponentsBuilder.newInstance()
@@ -161,6 +175,8 @@ public class EncodingClientQueryPlusDemo {
         buildWithFullEncoding();
 
         buildWithTemplateEncodingAndImplicitExpand();
+
+        buildAndImplicitExpand();
 
         buildWithTemplateEncodingNoExapnd();
 

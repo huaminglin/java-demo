@@ -48,3 +48,12 @@ So use URI variable and encodeTemplate=true to encode '+' in the query string.
 it means UriComponentsBuilder encode() is required to expand() with encoding.
 
 ## Extract HierarchicalUriComponents.EncodeState.java and HierarchicalUriComponents.Type.java to understand URI component and encoding better
+
+## org.springframework.web.util.UriComponentsBuilder: URI build(Map<String, ?> uriVariables)
+
+	public URI build(Map<String, ?> uriVariables) {
+		return buildInternal(EncodingHint.ENCODE_TEMPLATE).expand(uriVariables).toUri();
+	}
+
+Note: This is a shortcut to use EncodingHint.ENCODE_TEMPLATE directly.
+
