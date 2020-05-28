@@ -14,5 +14,6 @@
     </properties>
     <modules>
         <module>spring-aop-demo</module>
+        <module>spring-aop-autoproxy-demo</module>
     </modules>
 </project>
