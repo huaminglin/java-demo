@@ -7,3 +7,4 @@ INFO: Bean 'myConfiguration' of type [huaminglin.demo.aop.spring.autoproxy.MyCon
 
 Note: Not sure how to avoid this kind of error.
 It seems DefaultAdvisorAutoProxyCreator should not be created through Java config.
+Solution: Use BeanDefinitionRegistryPostProcessor to create the bean.
