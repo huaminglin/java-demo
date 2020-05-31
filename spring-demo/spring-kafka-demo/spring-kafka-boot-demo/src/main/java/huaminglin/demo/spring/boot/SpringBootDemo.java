@@ -24,6 +24,7 @@ public class SpringBootDemo {
     public void listen(String message) {
         logger.info("Received Messasge in group demo: " + message);
         kafkaTemplate.send("test", "triggered by listener");
+        // Shutdown this application; it seems that the consumer never has chance to send the ack to Kafka server.
         context.close();
     }
 

@@ -1,0 +1,307 @@
+/usr/lib/jvm/java-11-openjdk-amd64/bin/java -javaagent:/snap/intellij-idea-community/231/lib/idea_rt.jar=39987:/snap/intellij-idea-community/231/bin -Dfile.encoding=UTF-8 -classpath /home/myname/workspace/java-demo/spring-demo/spring-kafka-demo/spring-kafka-boot-demo/target/classes:/home/myname/.m2/repository/org/springframework/boot/spring-boot-starter/2.0.5.RELEASE/spring-boot-starter-2.0.5.RELEASE.jar:/home/myname/.m2/repository/org/springframework/boot/spring-boot/2.0.5.RELEASE/spring-boot-2.0.5.RELEASE.jar:/home/myname/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.0.5.RELEASE/spring-boot-autoconfigure-2.0.5.RELEASE.jar:/home/myname/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.0.5.RELEASE/spring-boot-starter-logging-2.0.5.RELEASE.jar:/home/myname/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/home/myname/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/home/myname/.m2/repository/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar:/home/myname/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.10.0/log4j-to-slf4j-2.10.0.jar:/home/myname/.m2/repository/org/apache/logging/log4j/log4j-api/2.10.0/log4j-api-2.10.0.jar:/home/myname/.m2/repository/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar:/home/myname/.m2/repository/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar:/home/myname/.m2/repository/org/springframework/spring-core/5.0.9.RELEASE/spring-core-5.0.9.RELEASE.jar:/home/myname/.m2/repository/org/springframework/spring-jcl/5.0.9.RELEASE/spring-jcl-5.0.9.RELEASE.jar:/home/myname/.m2/repository/org/yaml/snakeyaml/1.19/snakeyaml-1.19.jar:/home/myname/.m2/repository/org/springframework/kafka/spring-kafka/2.1.10.RELEASE/spring-kafka-2.1.10.RELEASE.jar:/home/myname/.m2/repository/org/springframework/spring-context/5.0.9.RELEASE/spring-context-5.0.9.RELEASE.jar:/home/myname/.m2/repository/org/springframework/spring-aop/5.0.9.RELEASE/spring-aop-5.0.9.RELEASE.jar:/home/myname/.m2/repository/org/springframework/spring-beans/5.0.9.RELEASE/spring-beans-5.0.9.RELEASE.jar:/home/myname/.m2/repository/org/springframework/spring-expression/5.0.9.RELEASE/spring-expression-5.0.9.RELEASE.jar:/home/myname/.m2/repository/org/springframework/spring-messaging/5.0.9.RELEASE/spring-messaging-5.0.9.RELEASE.jar:/home/myname/.m2/repository/org/springframework/spring-tx/5.0.9.RELEASE/spring-tx-5.0.9.RELEASE.jar:/home/myname/.m2/repository/org/springframework/retry/spring-retry/1.2.2.RELEASE/spring-retry-1.2.2.RELEASE.jar:/home/myname/.m2/repository/org/apache/kafka/kafka-clients/1.0.2/kafka-clients-1.0.2.jar:/home/myname/.m2/repository/org/lz4/lz4-java/1.4/lz4-java-1.4.jar:/home/myname/.m2/repository/org/xerial/snappy/snappy-java/1.1.4/snappy-java-1.1.4.jar huaminglin.demo.spring.boot.SpringBootDemo
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.5.RELEASE)
+
+2020-05-31 21:53:26.496  INFO 19058 --- [           main] h.demo.spring.boot.SpringBootDemo        : Starting SpringBootDemo on myname-MS-7850 with PID 19058 (/home/myname/workspace/java-demo/spring-demo/spring-kafka-demo/spring-kafka-boot-demo/target/classes started by myname in /home/myname/workspace/java-demo)
+2020-05-31 21:53:26.499  INFO 19058 --- [           main] h.demo.spring.boot.SpringBootDemo        : No active profile set, falling back to default profiles: default
+2020-05-31 21:53:26.535  INFO 19058 --- [           main] s.c.a.AnnotationConfigApplicationContext : Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@5aa9e4eb: startup date [Sun May 31 21:53:26 CST 2020]; root of context hierarchy
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.springframework.cglib.core.ReflectUtils$1 (file:/home/myname/.m2/repository/org/springframework/spring-core/5.0.9.RELEASE/spring-core-5.0.9.RELEASE.jar) to method java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain)
+WARNING: Please consider reporting this to the maintainers of org.springframework.cglib.core.ReflectUtils$1
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2020-05-31 21:53:26.959  INFO 19058 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.kafka.annotation.KafkaBootstrapConfiguration' of type [org.springframework.kafka.annotation.KafkaBootstrapConfiguration$$EnhancerBySpringCGLIB$$775a33e6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-31 21:53:26.986 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.context.event.EventListenerMethodProcessor
+2020-05-31 21:53:26.989 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.context.event.DefaultEventListenerFactory
+2020-05-31 21:53:27.012 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.boot.context.properties.ConversionServiceDeducer$Factory
+2020-05-31 21:53:27.041 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.boot.autoconfigure.kafka.KafkaProperties
+2020-05-31 21:53:27.049 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration$$EnhancerBySpringCGLIB$$a9b3b0dd
+2020-05-31 21:53:27.074 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.kafka.core.DefaultKafkaProducerFactory
+2020-05-31 21:53:27.079 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.kafka.support.LoggingProducerListener
+2020-05-31 21:53:27.089 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.kafka.core.KafkaTemplate
+2020-05-31 21:53:27.096 DEBUG 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : 1 @KafkaListener methods processed on bean 'springBootDemo': {public void huaminglin.demo.spring.boot.SpringBootDemo.listen(java.lang.String)=[@org.springframework.kafka.annotation.KafkaListener(topicPattern="", containerGroup="", idIsGroup=true, beanRef="__listener", containerFactory="", topics={"test"}, groupId="demo", errorHandler="", clientIdPrefix="", topicPartitions={}, id="")]}
+2020-05-31 21:53:27.099 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.boot.autoconfigure.AutoConfigurationPackages$BasePackages
+2020-05-31 21:53:27.102 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.boot.autoconfigure.context.PropertyPlaceholderAutoConfiguration$$EnhancerBySpringCGLIB$$a45e949c
+2020-05-31 21:53:27.110 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration$$EnhancerBySpringCGLIB$$2313917f
+2020-05-31 21:53:27.116 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.boot.autoconfigure.jmx.ParentAwareNamingStrategy
+2020-05-31 21:53:27.195 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class com.sun.jmx.mbeanserver.JmxMBeanServer
+2020-05-31 21:53:27.204 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.jmx.export.annotation.AnnotationMBeanExporter
+2020-05-31 21:53:27.207 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.boot.autoconfigure.context.ConfigurationPropertiesAutoConfiguration$$EnhancerBySpringCGLIB$$9331adb1
+2020-05-31 21:53:27.209 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.boot.autoconfigure.dao.PersistenceExceptionTranslationAutoConfiguration$$EnhancerBySpringCGLIB$$68072676
+2020-05-31 21:53:27.212 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.boot.autoconfigure.info.ProjectInfoProperties
+2020-05-31 21:53:27.215 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.boot.autoconfigure.info.ProjectInfoAutoConfiguration$$EnhancerBySpringCGLIB$$dfa22f7c
+2020-05-31 21:53:27.220 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.kafka.config.KafkaListenerEndpointRegistry
+2020-05-31 21:53:27.223 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration$EnableKafkaConfiguration$$EnhancerBySpringCGLIB$$5eca97ce
+2020-05-31 21:53:27.227 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration$$EnhancerBySpringCGLIB$$c719359
+2020-05-31 21:53:27.234 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.boot.autoconfigure.kafka.ConcurrentKafkaListenerContainerFactoryConfigurer
+2020-05-31 21:53:27.246 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.kafka.core.DefaultKafkaConsumerFactory
+2020-05-31 21:53:27.265 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory
+2020-05-31 21:53:27.270 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.kafka.core.KafkaAdmin
+2020-05-31 21:53:27.274 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration$$EnhancerBySpringCGLIB$$381c1d6d
+2020-05-31 21:53:27.284 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.boot.autoconfigure.transaction.TransactionProperties
+2020-05-31 21:53:27.288 TRACE 19058 --- [           main] KafkaListenerAnnotationBeanPostProcessor : No @KafkaListener annotations found on bean type: class org.springframework.boot.autoconfigure.transaction.TransactionManagerCustomizers
+2020-05-31 21:53:27.306  INFO 19058 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2020-05-31 21:53:27.329  INFO 19058 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483547
+2020-05-31 21:53:27.347  INFO 19058 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values:
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [127.0.0.1:9092]
+	check.crcs = true
+	client.id =
+	connections.max.idle.ms = 540000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = demo
+	heartbeat.interval.ms = 3000
+	interceptor.classes = null
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 305000
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2020-05-31 21:53:27.386  INFO 19058 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.2
+2020-05-31 21:53:27.386  INFO 19058 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : 2a121f7b1d402825
+2020-05-31 21:53:27.390  INFO 19058 --- [           main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2020-05-31 21:53:27.399  INFO 19058 --- [           main] h.demo.spring.boot.SpringBootDemo        : Started SpringBootDemo in 1.188 seconds (JVM running for 1.455)
+2020-05-31 21:53:27.400  INFO 19058 --- [           main] h.demo.spring.boot.SpringBootDemo        : Main Thread exits: 1, main
+2020-05-31 21:53:27.452  INFO 19058 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=demo] Discovered group coordinator 127.0.0.1:9092 (id: 2147482646 rack: null)
+2020-05-31 21:53:27.454  INFO 19058 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=demo] Revoking previously assigned partitions []
+2020-05-31 21:53:27.455  INFO 19058 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : partitions revoked: []
+2020-05-31 21:53:27.455 DEBUG 19058 --- [ntainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Commit list: {}
+2020-05-31 21:53:27.455  INFO 19058 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=demo] (Re-)joining group
+2020-05-31 21:53:30.472  INFO 19058 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.AbstractCoordinator  : [Consumer clientId=consumer-1, groupId=demo] Successfully joined group with generation 11
+2020-05-31 21:53:30.474  INFO 19058 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-1, groupId=demo] Setting newly assigned partitions [test-0]
+2020-05-31 21:53:30.475  INFO 19058 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : partitions assigned: [test-0]
+2020-05-31 21:53:30.478 DEBUG 19058 --- [ntainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Received: 0 records
+2020-05-31 21:53:30.492 DEBUG 19058 --- [ntainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Received: 8 records
+2020-05-31 21:53:30.493 TRACE 19058 --- [ntainer#0-0-C-1] essageListenerContainer$ListenerConsumer : [test-0@0, test-0@1, test-0@2, test-0@3, test-0@4, test-0@5, test-0@6, test-0@7]
+2020-05-31 21:53:30.494 TRACE 19058 --- [ntainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Processing ConsumerRecord(topic = test, partition = 0, offset = 0, CreateTime = 1590910929990, serialized key size = -1, serialized value size = 1, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = a)
+2020-05-31 21:53:30.499 DEBUG 19058 --- [ntainer#0-0-C-1] o.s.k.s.c.MessagingMessageConverter      : No header mapper is available; Jackson is required for the default mapper; headers (if present) are not mapped but provided raw in kafka_nativeHeaders
+2020-05-31 21:53:30.500 DEBUG 19058 --- [ntainer#0-0-C-1] .a.RecordMessagingMessageListenerAdapter : Processing [GenericMessage [payload=a, headers={kafka_offset=0, kafka_nativeHeaders=RecordHeaders(headers = [], isReadOnly = false), kafka_consumer=org.apache.kafka.clients.consumer.KafkaConsumer@43f36257, kafka_timestampType=CREATE_TIME, kafka_receivedMessageKey=null, kafka_receivedPartitionId=0, kafka_receivedTopic=test, kafka_receivedTimestamp=1590910929990}]]
+2020-05-31 21:53:30.501  INFO 19058 --- [ntainer#0-0-C-1] h.demo.spring.boot.SpringBootDemo        : Received Messasge in group demo: a
+2020-05-31 21:53:30.504  INFO 19058 --- [ntainer#0-0-C-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values:
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [127.0.0.1:9092]
+	buffer.memory = 33554432
+	client.id =
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2020-05-31 21:53:30.514  INFO 19058 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.2
+2020-05-31 21:53:30.514  INFO 19058 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : 2a121f7b1d402825
+2020-05-31 21:53:30.514 TRACE 19058 --- [ntainer#0-0-C-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=null, value=triggered by listener, timestamp=null)
+2020-05-31 21:53:30.522 TRACE 19058 --- [ntainer#0-0-C-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=null, value=triggered by listener, timestamp=null)
+2020-05-31 21:53:30.522  INFO 19058 --- [ntainer#0-0-C-1] s.c.a.AnnotationConfigApplicationContext : Closing org.springframework.context.annotation.AnnotationConfigApplicationContext@5aa9e4eb: startup date [Sun May 31 21:53:26 CST 2020]; root of context hierarchy
+2020-05-31 21:53:30.524  INFO 19058 --- [ntainer#0-0-C-1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 2147483547
+2020-05-31 21:53:30.530 TRACE 19058 --- [ad | producer-1] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=null, value=triggered by listener, timestamp=null), metadata: test-0@8
+2020-05-31 21:54:00.526  WARN 19058 --- [ntainer#0-0-C-1] o.s.c.support.DefaultLifecycleProcessor  : Failed to shut down 1 bean with phase value 2147483547 within timeout of 30000: [org.springframework.kafka.config.internalKafkaListenerEndpointRegistry]
+2020-05-31 21:54:00.526  INFO 19058 --- [ntainer#0-0-C-1] o.s.c.support.DefaultLifecycleProcessor  : Stopping beans in phase 0
+2020-05-31 21:54:00.526  INFO 19058 --- [ntainer#0-0-C-1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2020-05-31 21:54:00.527  INFO 19058 --- [ntainer#0-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2020-05-31 21:54:00.533 TRACE 19058 --- [ntainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Processing ConsumerRecord(topic = test, partition = 0, offset = 1, CreateTime = 1590910931068, serialized key size = -1, serialized value size = 21, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = triggered by listener)
+2020-05-31 21:54:00.533 DEBUG 19058 --- [ntainer#0-0-C-1] o.s.k.s.c.MessagingMessageConverter      : No header mapper is available; Jackson is required for the default mapper; headers (if present) are not mapped but provided raw in kafka_nativeHeaders
+2020-05-31 21:54:00.533 DEBUG 19058 --- [ntainer#0-0-C-1] .a.RecordMessagingMessageListenerAdapter : Processing [GenericMessage [payload=triggered by listener, headers={kafka_offset=1, kafka_nativeHeaders=RecordHeaders(headers = [], isReadOnly = false), kafka_consumer=org.apache.kafka.clients.consumer.KafkaConsumer@43f36257, kafka_timestampType=CREATE_TIME, kafka_receivedMessageKey=null, kafka_receivedPartitionId=0, kafka_receivedTopic=test, kafka_receivedTimestamp=1590910931068}]]
+2020-05-31 21:54:00.534  INFO 19058 --- [ntainer#0-0-C-1] h.demo.spring.boot.SpringBootDemo        : Received Messasge in group demo: triggered by listener
+2020-05-31 21:54:00.534  INFO 19058 --- [ntainer#0-0-C-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values:
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [127.0.0.1:9092]
+	buffer.memory = 33554432
+	client.id =
+	compression.type = none
+	connections.max.idle.ms = 540000
+	enable.idempotence = false
+	interceptor.classes = null
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 0
+	retry.backoff.ms = 100
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.apache.kafka.common.serialization.StringSerializer
+
+2020-05-31 21:54:00.540  INFO 19058 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version : 1.0.2
+2020-05-31 21:54:00.540  INFO 19058 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId : 2a121f7b1d402825
+2020-05-31 21:54:00.540 TRACE 19058 --- [ntainer#0-0-C-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=null, value=triggered by listener, timestamp=null)
+2020-05-31 21:54:00.544 TRACE 19058 --- [ntainer#0-0-C-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=null, value=triggered by listener, timestamp=null)
+2020-05-31 21:54:00.545 TRACE 19058 --- [ntainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Processing ConsumerRecord(topic = test, partition = 0, offset = 2, CreateTime = 1590912889354, serialized key size = -1, serialized value size = 21, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = triggered by listener)
+2020-05-31 21:54:00.545 DEBUG 19058 --- [ntainer#0-0-C-1] o.s.k.s.c.MessagingMessageConverter      : No header mapper is available; Jackson is required for the default mapper; headers (if present) are not mapped but provided raw in kafka_nativeHeaders
+2020-05-31 21:54:00.545 DEBUG 19058 --- [ntainer#0-0-C-1] .a.RecordMessagingMessageListenerAdapter : Processing [GenericMessage [payload=triggered by listener, headers={kafka_offset=2, kafka_nativeHeaders=RecordHeaders(headers = [], isReadOnly = false), kafka_consumer=org.apache.kafka.clients.consumer.KafkaConsumer@43f36257, kafka_timestampType=CREATE_TIME, kafka_receivedMessageKey=null, kafka_receivedPartitionId=0, kafka_receivedTopic=test, kafka_receivedTimestamp=1590912889354}]]
+2020-05-31 21:54:00.545  INFO 19058 --- [ntainer#0-0-C-1] h.demo.spring.boot.SpringBootDemo        : Received Messasge in group demo: triggered by listener
+2020-05-31 21:54:00.545 TRACE 19058 --- [ntainer#0-0-C-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=null, value=triggered by listener, timestamp=null)
+2020-05-31 21:54:00.545 TRACE 19058 --- [ntainer#0-0-C-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=null, value=triggered by listener, timestamp=null)
+2020-05-31 21:54:00.545 TRACE 19058 --- [ntainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Processing ConsumerRecord(topic = test, partition = 0, offset = 3, CreateTime = 1590931691002, serialized key size = -1, serialized value size = 21, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = triggered by listener)
+2020-05-31 21:54:00.545 DEBUG 19058 --- [ntainer#0-0-C-1] o.s.k.s.c.MessagingMessageConverter      : No header mapper is available; Jackson is required for the default mapper; headers (if present) are not mapped but provided raw in kafka_nativeHeaders
+2020-05-31 21:54:00.545 DEBUG 19058 --- [ntainer#0-0-C-1] .a.RecordMessagingMessageListenerAdapter : Processing [GenericMessage [payload=triggered by listener, headers={kafka_offset=3, kafka_nativeHeaders=RecordHeaders(headers = [], isReadOnly = false), kafka_consumer=org.apache.kafka.clients.consumer.KafkaConsumer@43f36257, kafka_timestampType=CREATE_TIME, kafka_receivedMessageKey=null, kafka_receivedPartitionId=0, kafka_receivedTopic=test, kafka_receivedTimestamp=1590931691002}]]
+2020-05-31 21:54:00.545  INFO 19058 --- [ntainer#0-0-C-1] h.demo.spring.boot.SpringBootDemo        : Received Messasge in group demo: triggered by listener
+2020-05-31 21:54:00.545 TRACE 19058 --- [ntainer#0-0-C-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=null, value=triggered by listener, timestamp=null)
+2020-05-31 21:54:00.546 TRACE 19058 --- [ntainer#0-0-C-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=null, value=triggered by listener, timestamp=null)
+2020-05-31 21:54:00.546 TRACE 19058 --- [ntainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Processing ConsumerRecord(topic = test, partition = 0, offset = 4, CreateTime = 1590932319026, serialized key size = -1, serialized value size = 21, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = triggered by listener)
+2020-05-31 21:54:00.546 DEBUG 19058 --- [ntainer#0-0-C-1] o.s.k.s.c.MessagingMessageConverter      : No header mapper is available; Jackson is required for the default mapper; headers (if present) are not mapped but provided raw in kafka_nativeHeaders
+2020-05-31 21:54:00.546 DEBUG 19058 --- [ntainer#0-0-C-1] .a.RecordMessagingMessageListenerAdapter : Processing [GenericMessage [payload=triggered by listener, headers={kafka_offset=4, kafka_nativeHeaders=RecordHeaders(headers = [], isReadOnly = false), kafka_consumer=org.apache.kafka.clients.consumer.KafkaConsumer@43f36257, kafka_timestampType=CREATE_TIME, kafka_receivedMessageKey=null, kafka_receivedPartitionId=0, kafka_receivedTopic=test, kafka_receivedTimestamp=1590932319026}]]
+2020-05-31 21:54:00.546  INFO 19058 --- [ntainer#0-0-C-1] h.demo.spring.boot.SpringBootDemo        : Received Messasge in group demo: triggered by listener
+2020-05-31 21:54:00.546 TRACE 19058 --- [ntainer#0-0-C-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=null, value=triggered by listener, timestamp=null)
+2020-05-31 21:54:00.546 TRACE 19058 --- [ntainer#0-0-C-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=null, value=triggered by listener, timestamp=null)
+2020-05-31 21:54:00.546 TRACE 19058 --- [ntainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Processing ConsumerRecord(topic = test, partition = 0, offset = 5, CreateTime = 1590932349051, serialized key size = -1, serialized value size = 21, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = triggered by listener)
+2020-05-31 21:54:00.546 DEBUG 19058 --- [ntainer#0-0-C-1] o.s.k.s.c.MessagingMessageConverter      : No header mapper is available; Jackson is required for the default mapper; headers (if present) are not mapped but provided raw in kafka_nativeHeaders
+2020-05-31 21:54:00.546 DEBUG 19058 --- [ntainer#0-0-C-1] .a.RecordMessagingMessageListenerAdapter : Processing [GenericMessage [payload=triggered by listener, headers={kafka_offset=5, kafka_nativeHeaders=RecordHeaders(headers = [], isReadOnly = false), kafka_consumer=org.apache.kafka.clients.consumer.KafkaConsumer@43f36257, kafka_timestampType=CREATE_TIME, kafka_receivedMessageKey=null, kafka_receivedPartitionId=0, kafka_receivedTopic=test, kafka_receivedTimestamp=1590932349051}]]
+2020-05-31 21:54:00.546  INFO 19058 --- [ntainer#0-0-C-1] h.demo.spring.boot.SpringBootDemo        : Received Messasge in group demo: triggered by listener
+2020-05-31 21:54:00.546 TRACE 19058 --- [ntainer#0-0-C-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=null, value=triggered by listener, timestamp=null)
+2020-05-31 21:54:00.546 TRACE 19058 --- [ntainer#0-0-C-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=null, value=triggered by listener, timestamp=null)
+2020-05-31 21:54:00.546 TRACE 19058 --- [ntainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Processing ConsumerRecord(topic = test, partition = 0, offset = 6, CreateTime = 1590932349051, serialized key size = -1, serialized value size = 21, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = triggered by listener)
+2020-05-31 21:54:00.547 DEBUG 19058 --- [ntainer#0-0-C-1] o.s.k.s.c.MessagingMessageConverter      : No header mapper is available; Jackson is required for the default mapper; headers (if present) are not mapped but provided raw in kafka_nativeHeaders
+2020-05-31 21:54:00.547 DEBUG 19058 --- [ntainer#0-0-C-1] .a.RecordMessagingMessageListenerAdapter : Processing [GenericMessage [payload=triggered by listener, headers={kafka_offset=6, kafka_nativeHeaders=RecordHeaders(headers = [], isReadOnly = false), kafka_consumer=org.apache.kafka.clients.consumer.KafkaConsumer@43f36257, kafka_timestampType=CREATE_TIME, kafka_receivedMessageKey=null, kafka_receivedPartitionId=0, kafka_receivedTopic=test, kafka_receivedTimestamp=1590932349051}]]
+2020-05-31 21:54:00.547  INFO 19058 --- [ntainer#0-0-C-1] h.demo.spring.boot.SpringBootDemo        : Received Messasge in group demo: triggered by listener
+2020-05-31 21:54:00.547 TRACE 19058 --- [ntainer#0-0-C-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=null, value=triggered by listener, timestamp=null)
+2020-05-31 21:54:00.547 TRACE 19058 --- [ntainer#0-0-C-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=null, value=triggered by listener, timestamp=null)
+2020-05-31 21:54:00.547 TRACE 19058 --- [ntainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Processing ConsumerRecord(topic = test, partition = 0, offset = 7, CreateTime = 1590932349052, serialized key size = -1, serialized value size = 21, headers = RecordHeaders(headers = [], isReadOnly = false), key = null, value = triggered by listener)
+2020-05-31 21:54:00.547 DEBUG 19058 --- [ntainer#0-0-C-1] o.s.k.s.c.MessagingMessageConverter      : No header mapper is available; Jackson is required for the default mapper; headers (if present) are not mapped but provided raw in kafka_nativeHeaders
+2020-05-31 21:54:00.547 DEBUG 19058 --- [ntainer#0-0-C-1] .a.RecordMessagingMessageListenerAdapter : Processing [GenericMessage [payload=triggered by listener, headers={kafka_offset=7, kafka_nativeHeaders=RecordHeaders(headers = [], isReadOnly = false), kafka_consumer=org.apache.kafka.clients.consumer.KafkaConsumer@43f36257, kafka_timestampType=CREATE_TIME, kafka_receivedMessageKey=null, kafka_receivedPartitionId=0, kafka_receivedTopic=test, kafka_receivedTimestamp=1590932349052}]]
+2020-05-31 21:54:00.547  INFO 19058 --- [ntainer#0-0-C-1] h.demo.spring.boot.SpringBootDemo        : Received Messasge in group demo: triggered by listener
+2020-05-31 21:54:00.547 TRACE 19058 --- [ntainer#0-0-C-1] o.s.kafka.core.KafkaTemplate             : Sending: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = false), key=null, value=triggered by listener, timestamp=null)
+2020-05-31 21:54:00.548 TRACE 19058 --- [ntainer#0-0-C-1] o.s.kafka.core.KafkaTemplate             : Sent: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=null, value=triggered by listener, timestamp=null)
+2020-05-31 21:54:00.548 TRACE 19058 --- [ad | producer-2] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=null, value=triggered by listener, timestamp=null), metadata: test-0@9
+2020-05-31 21:54:00.549 TRACE 19058 --- [ad | producer-2] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=null, value=triggered by listener, timestamp=null), metadata: test-0@10
+2020-05-31 21:54:00.549 TRACE 19058 --- [ad | producer-2] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=null, value=triggered by listener, timestamp=null), metadata: test-0@11
+2020-05-31 21:54:00.549 DEBUG 19058 --- [ntainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Commit list: {}
+2020-05-31 21:54:00.550 TRACE 19058 --- [ad | producer-2] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=null, value=triggered by listener, timestamp=null), metadata: test-0@12
+2020-05-31 21:54:00.550 TRACE 19058 --- [ad | producer-2] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=null, value=triggered by listener, timestamp=null), metadata: test-0@13
+2020-05-31 21:54:00.550  INFO 19058 --- [ntainer#0-0-C-1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2020-05-31 21:54:00.550 TRACE 19058 --- [ad | producer-2] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=null, value=triggered by listener, timestamp=null), metadata: test-0@14
+2020-05-31 21:54:00.551 TRACE 19058 --- [ad | producer-2] o.s.kafka.core.KafkaTemplate             : Sent ok: ProducerRecord(topic=test, partition=null, headers=RecordHeaders(headers = [], isReadOnly = true), key=null, value=triggered by listener, timestamp=null), metadata: test-0@15
+2020-05-31 21:54:00.553  INFO 19058 --- [ntainer#0-0-C-1] essageListenerContainer$ListenerConsumer : Consumer stopped
+2020-05-31 21:54:00.553 DEBUG 19058 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : KafkaMessageListenerContainer [id=org.springframework.kafka.KafkaListenerEndpointContainer#0-0, clientIndex=-0, topicPartitions=[test-0]] stopped normally
+
+Process finished with exit code 0
