@@ -1,0 +1,32 @@
+# Learn BeanDefinitionRegistryPostProcessor, BeanFactoryPostProcessor and BeanPostProcessor
+
+## Run the application with mvn
+
+mvn exec:java
+
+## BeanDefinitionRegistryPostProcessor can be used to register BeanDefinitionRegistryPostProcessor and BeanFactoryPostProcessor
+
+CustomBeanDefinitionRegistryPostProcessor.static
+CustomBeanDefinitionRegistryPostProcessor()
+CustomBeanDefinitionRegistryPostProcessor.postProcessBeanDefinitionRegistry {
+registerBeanDefinition: secondBeanDefinitionRegistryPostProcessor
+} CustomBeanDefinitionRegistryPostProcessor.postProcessBeanDefinitionRegistry
+SecondBeanDefinitionRegistryPostProcessor.static
+SecondBeanDefinitionRegistryPostProcessor()
+SecondBeanDefinitionRegistryPostProcessor.postProcessBeanDefinitionRegistry {
+registerBeanDefinition: secondBeanFactoryPostProcessor
+} SecondBeanDefinitionRegistryPostProcessor.postProcessBeanDefinitionRegistry
+CustomBeanPostProcessor.static
+CustomBeanDefinitionRegistryPostProcessor.postProcessBeanFactory
+SecondBeanDefinitionRegistryPostProcessor.postProcessBeanFactory
+CustomBeanFactoryPostProcessor.static
+CustomBeanFactoryPostProcessor()
+SecondBeanFactoryPostProcessor.static
+SecondBeanFactoryPostProcessor()
+CustomBeanFactoryPostProcessor.postProcessBeanFactory
+SecondBeanFactoryPostProcessor.postProcessBeanFactory
+CustomBeanPostProcessor()
+MyBean.static
+MyBean()
+Called CustomBeanPostProcessor.postProcessBeforeInitialization() for : myBean
+Called CustomBeanPostProcessor.postProcessAfterInitialization() for : myBean
