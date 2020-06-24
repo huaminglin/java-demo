@@ -1,6 +1,8 @@
 # Demo Micrometer
 
-## mvn exec:java
+## Run the application
+
+mvn spring-boot:run or mvn exec:java
 
 http://127.0.0.1:8080/actuator/metrics/
 
@@ -18,7 +20,7 @@ sudo docker images
 
 huaminglin/micrometer-demo:1.0-SNAPSHOT
 
-## Use jmeter to same a lot of http requests 
+## Use jmeter to send a lot of http requests
 
 $JMETER_HOME/bin/jmeter -Jthread_count=10 -Jthread_loop=100 -n -t requests.jmx -l /tmp/micrometer.result -e -o /tmp/micrometer
 
@@ -70,3 +72,19 @@ summary +    241 in 00:00:15 =   16.6/s Avg:     1 Min:     0 Max:     8 Err:   
 summary =  10000 in 00:10:00 =   16.7/s Avg:     1 Min:     0 Max:    35 Err:     0 (0.00%)
 Tidying up ...    xxx
 ... end of run
+
+## Add spring-boot-starter-aop to support @Aspect for @Timed and TimedAspect
+
+```/actuator/prometheus
+# HELP micrometer_demo_timed_sleep_seconds_max  
+# TYPE micrometer_demo_timed_sleep_seconds_max gauge
+micrometer_demo_timed_sleep_seconds_max{application="micrometer-demo",class="huaminglin.demo.metrics.micrometer.SleepService",exception="none",method="sleep",} 3.326713232
+# HELP micrometer_demo_timed_sleep_seconds  
+# TYPE micrometer_demo_timed_sleep_seconds summary
+micrometer_demo_timed_sleep_seconds_count{application="micrometer-demo",class="huaminglin.demo.metrics.micrometer.SleepService",exception="none",method="sleep",} 1.0
+micrometer_demo_timed_sleep_seconds_sum{application="micrometer-demo",class="huaminglin.demo.metrics.micrometer.SleepService",exception="none",method="sleep",} 3.326713232
+```
+
+## Check active configuration 
+
+http://127.0.0.1:8080/actuator/configprops
