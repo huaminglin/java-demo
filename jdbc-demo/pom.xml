@@ -13,5 +13,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>hikari-jdbc-demo</module>
+        <module>spring-transaction-demo</module>
     </modules>
 </project>
