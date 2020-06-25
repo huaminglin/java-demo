@@ -217,3 +217,9 @@ sql2()
 2020-06-25 18:09:05.754  INFO 19253 --- [           main] n.t.d.l.l.SLF4JQueryLoggingListener      : Name:, Connection:6, Time:1, Success:True, Type:Statement, Batch:False, QuerySize:1, BatchSize:0, Query:["SELECT txid_current()"], Params:[]
 622
 ```
+
+## Enable postgres driver messages with slf4j: jul-to-slf4j
+
+ch.qos.logback.classic.Logger.info(java.lang.String)
+
+jul-to-slf4j is used to forward JUL message to SLF4J.

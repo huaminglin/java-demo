@@ -1,0 +1,556 @@
+2020-06-25 21:20:10,131 INFO [main] h.d.j.s.t.SpringTransactionDemo [StartupInfoLogger.java:50] Starting SpringTransactionDemo v1.0-SNAPSHOT on myname-MS-7850 with PID 25981 (/home/myname/workspace/java-demo/jdbc-demo/spring-transaction-demo/target/spring-transaction-demo-1.0-SNAPSHOT.jar started by myname in /home/myname/workspace/java-demo/jdbc-demo/spring-transaction-demo/target)
+2020-06-25 21:20:10,133 INFO [main] h.d.j.s.t.SpringTransactionDemo [SpringApplication.java:648] No active profile set, falling back to default profiles: default
+2020-06-25 21:20:10,623 TRACE [main] o.s.t.a.AnnotationTransactionAttributeSource [AbstractFallbackTransactionAttributeSource.java:123] Adding transactional method 'huaminglin.demo.jdbc.spring.transaction.TransactionService.sql1' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2020-06-25 21:20:10,631 TRACE [main] o.s.t.a.AnnotationTransactionAttributeSource [AbstractFallbackTransactionAttributeSource.java:123] Adding transactional method 'huaminglin.demo.jdbc.spring.transaction.TransactionService.sql2' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2020-06-25 21:20:10,631 TRACE [main] o.s.t.a.AnnotationTransactionAttributeSource [AbstractFallbackTransactionAttributeSource.java:123] Adding transactional method 'huaminglin.demo.jdbc.spring.transaction.TransactionService.sql3' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2020-06-25 21:20:10,631 TRACE [main] o.s.t.a.AnnotationTransactionAttributeSource [AbstractFallbackTransactionAttributeSource.java:123] Adding transactional method 'huaminglin.demo.jdbc.spring.transaction.TransactionService.sql5' with attribute: PROPAGATION_REQUIRED,ISOLATION_DEFAULT
+2020-06-25 21:20:10,789 INFO [main] h.d.j.s.t.SpringTransactionDemo [StartupInfoLogger.java:59] Started SpringTransactionDemo in 0.859 seconds (JVM running for 1.214)
+2020-06-25 21:20:10,796 DEBUG [main] o.p.Driver [Driver.java:133] Loading driver configuration via classloader org.springframework.boot.loader.LaunchedURLClassLoader@685f4c2e
+2020-06-25 21:20:10,797 DEBUG [main] o.p.Driver [Driver.java:248] Connecting with URL: jdbc:postgresql://localhost:5432/pgdb
+2020-06-25 21:20:10,801 DEBUG [main] o.p.j.PgConnection [PgConnection.java:197] PostgreSQL JDBC Driver 42.2.9
+2020-06-25 21:20:10,802 DEBUG [main] o.p.j.PgConnection [PgConnection.java:1110]   setDefaultFetchSize = 0
+2020-06-25 21:20:10,802 DEBUG [main] o.p.j.PgConnection [PgConnection.java:1119]   setPrepareThreshold = 5
+2020-06-25 21:20:10,806 DEBUG [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:170] Trying to establish a protocol version 3 connection to localhost:5432
+2020-06-25 21:20:10,812 TRACE [main] o.p.c.Encoding [Encoding.java:103] Creating new Encoding UTF-8 with fastASCIINumbers true
+2020-06-25 21:20:10,812 TRACE [main] o.p.c.Encoding [Encoding.java:103] Creating new Encoding UTF-8 with fastASCIINumbers true
+2020-06-25 21:20:10,812 TRACE [main] o.p.c.Encoding [Encoding.java:103] Creating new Encoding UTF-8 with fastASCIINumbers true
+2020-06-25 21:20:10,813 DEBUG [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:130] Receive Buffer Size is 65,536
+2020-06-25 21:20:10,813 DEBUG [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:131] Send Buffer Size is 1,313,280
+2020-06-25 21:20:10,813 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:402]  FE=> SSLRequest
+2020-06-25 21:20:10,814 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:427]  <=BE SSLRefused
+2020-06-25 21:20:10,816 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:462]  FE=> StartupPacket(user=pgdemo, database=pgdb, client_encoding=UTF8, DateStyle=ISO, TimeZone=Asia/Harbin, extra_float_digits=2)
+2020-06-25 21:20:10,817 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:535]  <=BE AuthenticationReqMD5(salt=c5b59d77)
+2020-06-25 21:20:10,822 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:549]  FE=> Password(md5digest=md5b72cf45451eeff761e738ac69b9ecd07)
+2020-06-25 21:20:10,823 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:695]  <=BE AuthenticationOk
+2020-06-25 21:20:10,844 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(application_name = )
+2020-06-25 21:20:10,845 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(client_encoding = UTF8)
+2020-06-25 21:20:10,845 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(DateStyle = ISO, MDY)
+2020-06-25 21:20:10,845 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(integer_datetimes = on)
+2020-06-25 21:20:10,845 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(IntervalStyle = postgres)
+2020-06-25 21:20:10,846 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(is_superuser = on)
+2020-06-25 21:20:10,846 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(server_encoding = UTF8)
+2020-06-25 21:20:10,846 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(server_version = 12.1 (Debian 12.1-1.pgdg100+1))
+2020-06-25 21:20:10,846 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(session_authorization = pgdemo)
+2020-06-25 21:20:10,846 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(standard_conforming_strings = on)
+2020-06-25 21:20:10,846 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(TimeZone = Asia/Harbin)
+2020-06-25 21:20:10,850 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2609]  <=BE BackendKeyData(pid=1,246,ckey=1,376,438,598)
+2020-06-25 21:20:10,851 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,853 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@2bec854f, maxRows=0, fetchSize=0, flags=1,047
+2020-06-25 21:20:10,854 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SET extra_float_digits = 3",oids={})
+2020-06-25 21:20:10,854 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,855 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=1)
+2020-06-25 21:20:10,855 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,856 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,856 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,856 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SET)
+2020-06-25 21:20:10,857 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,857 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@3336e6b6, maxRows=0, fetchSize=0, flags=1,047
+2020-06-25 21:20:10,857 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SET application_name = 'PostgreSQL JDBC Driver'",oids={})
+2020-06-25 21:20:10,857 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,858 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=1)
+2020-06-25 21:20:10,858 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,858 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,858 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,858 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(application_name = PostgreSQL JDBC Driver)
+2020-06-25 21:20:10,858 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SET)
+2020-06-25 21:20:10,859 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,860 TRACE [main] o.p.j.PgConnection [PgConnection.java:245]     types using binary send = TIMESTAMPTZ,UUID,INT2_ARRAY,INT4_ARRAY,BYTEA,TEXT_ARRAY,TIMETZ,INT8,INT2,INT4,VARCHAR_ARRAY,INT8_ARRAY,POINT,TIMESTAMP,TIME,BOX,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+2020-06-25 21:20:10,860 TRACE [main] o.p.j.PgConnection [PgConnection.java:246]     types using binary receive = TIMESTAMPTZ,UUID,INT2_ARRAY,INT4_ARRAY,BYTEA,TEXT_ARRAY,TIMETZ,INT8,INT2,INT4,VARCHAR_ARRAY,INT8_ARRAY,POINT,DATE,TIMESTAMP,TIME,BOX,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+2020-06-25 21:20:10,860 TRACE [main] o.p.j.PgConnection [PgConnection.java:247]     integer date/time = true
+2020-06-25 21:20:10,873 DEBUG [main] o.p.j.PgConnection [PgConnection.java:812]   setAutoCommit = false
+2020-06-25 21:20:10,873 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:196] Bound value [org.springframework.jdbc.datasource.ConnectionHolder@7354b8c5] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] to thread [main]
+2020-06-25 21:20:10,873 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:277] Initializing transaction synchronization
+2020-06-25 21:20:10,873 TRACE [main] o.s.t.i.TransactionInterceptor [TransactionAspectSupport.java:503] Getting transaction for [huaminglin.demo.jdbc.spring.transaction.TransactionService.sql1]
+2020-06-25 21:20:10,879 INFO [main] h.d.j.s.t.TransactionService [TransactionService.java:18] sql1()
+2020-06-25 21:20:10,882 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:142] Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@7354b8c5] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] bound to thread [main]
+2020-06-25 21:20:10,889 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:142] Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@7354b8c5] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] bound to thread [main]
+2020-06-25 21:20:10,893 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.jdbc.PgStatement$StatementResultHandler@421e361, maxRows=0, fetchSize=0, flags=1
+2020-06-25 21:20:10,893 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="BEGIN",oids={})
+2020-06-25 21:20:10,893 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,894 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=0)
+2020-06-25 21:20:10,894 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SELECT txid_current()",oids={})
+2020-06-25 21:20:10,894 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,894 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1657]  FE=> Describe(portal=null)
+2020-06-25 21:20:10,895 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=0)
+2020-06-25 21:20:10,895 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,895 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,896 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,896 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(BEGIN)
+2020-06-25 21:20:10,896 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,896 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,896 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2454]  <=BE RowDescription(1)
+2020-06-25 21:20:10,897 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2469]         Field(txid_current,INT8,8,T)
+2020-06-25 21:20:10,897 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2234]  <=BE DataRow(len=3)
+2020-06-25 21:20:10,897 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SELECT 1)
+2020-06-25 21:20:10,901 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(T)
+2020-06-25 21:20:10,902 INFO [main] n.t.d.l.l.SLF4JQueryLoggingListener [SLF4JLogUtils.java:20] Name:, Connection:1, Time:10, Success:True, Type:Statement, Batch:False, QuerySize:1, BatchSize:0, Query:["SELECT txid_current()"], Params:[]
+2020-06-25 21:20:10,904 TRACE [main] o.p.j.PgConnection [PgResultSet.java:2072]   getLong columnIndex: 1
+2020-06-25 21:20:10,905 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:142] Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@7354b8c5] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] bound to thread [main]
+2020-06-25 21:20:10,906 INFO [main] h.d.j.s.t.TransactionService [TransactionService.java:22] sql1(): 779
+2020-06-25 21:20:10,906 TRACE [main] o.s.t.i.TransactionInterceptor [TransactionAspectSupport.java:532] Completing transaction for [huaminglin.demo.jdbc.spring.transaction.TransactionService.sql1]
+2020-06-25 21:20:10,907 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.jdbc.PgConnection$TransactionCommandHandler@2a3888c1, maxRows=0, fetchSize=0, flags=22
+2020-06-25 21:20:10,907 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=S_1,query="COMMIT",oids={})
+2020-06-25 21:20:10,907 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=S_1,portal=null)
+2020-06-25 21:20:10,907 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=1)
+2020-06-25 21:20:10,907 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,907 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [S_1]
+2020-06-25 21:20:10,908 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,908 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(COMMIT)
+2020-06-25 21:20:10,908 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,908 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:337] Clearing transaction synchronization
+2020-06-25 21:20:10,908 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:248] Removed value [org.springframework.jdbc.datasource.ConnectionHolder@7354b8c5] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] from thread [main]
+2020-06-25 21:20:10,908 DEBUG [main] o.p.j.PgConnection [PgConnection.java:812]   setAutoCommit = true
+2020-06-25 21:20:10,909 TRACE [main] o.p.c.QueryExecutorBase [QueryExecutorBase.java:147]  FE=> Terminate
+2020-06-25 21:20:10,909 DEBUG [main] o.p.Driver [Driver.java:248] Connecting with URL: jdbc:postgresql://localhost:5432/pgdb
+2020-06-25 21:20:10,910 DEBUG [main] o.p.j.PgConnection [PgConnection.java:197] PostgreSQL JDBC Driver 42.2.9
+2020-06-25 21:20:10,910 DEBUG [main] o.p.j.PgConnection [PgConnection.java:1110]   setDefaultFetchSize = 0
+2020-06-25 21:20:10,910 DEBUG [main] o.p.j.PgConnection [PgConnection.java:1119]   setPrepareThreshold = 5
+2020-06-25 21:20:10,910 DEBUG [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:170] Trying to establish a protocol version 3 connection to localhost:5432
+2020-06-25 21:20:10,910 TRACE [main] o.p.c.Encoding [Encoding.java:103] Creating new Encoding UTF-8 with fastASCIINumbers true
+2020-06-25 21:20:10,911 DEBUG [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:130] Receive Buffer Size is 65,536
+2020-06-25 21:20:10,911 DEBUG [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:131] Send Buffer Size is 1,313,280
+2020-06-25 21:20:10,911 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:402]  FE=> SSLRequest
+2020-06-25 21:20:10,911 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:427]  <=BE SSLRefused
+2020-06-25 21:20:10,911 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:462]  FE=> StartupPacket(user=pgdemo, database=pgdb, client_encoding=UTF8, DateStyle=ISO, TimeZone=Asia/Harbin, extra_float_digits=2)
+2020-06-25 21:20:10,912 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:535]  <=BE AuthenticationReqMD5(salt=bd12df4f)
+2020-06-25 21:20:10,912 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:549]  FE=> Password(md5digest=md54d571b828fd248ccc2ebae39aa3bfe6f)
+2020-06-25 21:20:10,913 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:695]  <=BE AuthenticationOk
+2020-06-25 21:20:10,914 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(application_name = )
+2020-06-25 21:20:10,914 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(client_encoding = UTF8)
+2020-06-25 21:20:10,914 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(DateStyle = ISO, MDY)
+2020-06-25 21:20:10,914 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(integer_datetimes = on)
+2020-06-25 21:20:10,914 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(IntervalStyle = postgres)
+2020-06-25 21:20:10,914 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(is_superuser = on)
+2020-06-25 21:20:10,914 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(server_encoding = UTF8)
+2020-06-25 21:20:10,914 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(server_version = 12.1 (Debian 12.1-1.pgdg100+1))
+2020-06-25 21:20:10,914 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(session_authorization = pgdemo)
+2020-06-25 21:20:10,914 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(standard_conforming_strings = on)
+2020-06-25 21:20:10,915 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(TimeZone = Asia/Harbin)
+2020-06-25 21:20:10,915 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2609]  <=BE BackendKeyData(pid=1,247,ckey=-544,162,479)
+2020-06-25 21:20:10,915 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,915 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@14fa86ae, maxRows=0, fetchSize=0, flags=1,047
+2020-06-25 21:20:10,915 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SET extra_float_digits = 3",oids={})
+2020-06-25 21:20:10,915 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,915 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=1)
+2020-06-25 21:20:10,916 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,916 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,916 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,916 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SET)
+2020-06-25 21:20:10,916 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,916 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@6e15fe2, maxRows=0, fetchSize=0, flags=1,047
+2020-06-25 21:20:10,916 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SET application_name = 'PostgreSQL JDBC Driver'",oids={})
+2020-06-25 21:20:10,917 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,917 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=1)
+2020-06-25 21:20:10,917 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,917 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,917 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,917 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(application_name = PostgreSQL JDBC Driver)
+2020-06-25 21:20:10,917 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SET)
+2020-06-25 21:20:10,918 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,918 TRACE [main] o.p.j.PgConnection [PgConnection.java:245]     types using binary send = TIMESTAMPTZ,UUID,INT2_ARRAY,INT4_ARRAY,BYTEA,TEXT_ARRAY,TIMETZ,INT8,INT2,INT4,VARCHAR_ARRAY,INT8_ARRAY,POINT,TIMESTAMP,TIME,BOX,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+2020-06-25 21:20:10,918 TRACE [main] o.p.j.PgConnection [PgConnection.java:246]     types using binary receive = TIMESTAMPTZ,UUID,INT2_ARRAY,INT4_ARRAY,BYTEA,TEXT_ARRAY,TIMETZ,INT8,INT2,INT4,VARCHAR_ARRAY,INT8_ARRAY,POINT,DATE,TIMESTAMP,TIME,BOX,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+2020-06-25 21:20:10,918 TRACE [main] o.p.j.PgConnection [PgConnection.java:247]     integer date/time = true
+2020-06-25 21:20:10,919 DEBUG [main] o.p.j.PgConnection [PgConnection.java:812]   setAutoCommit = false
+2020-06-25 21:20:10,919 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:196] Bound value [org.springframework.jdbc.datasource.ConnectionHolder@68f1b17f] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] to thread [main]
+2020-06-25 21:20:10,919 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:277] Initializing transaction synchronization
+2020-06-25 21:20:10,919 TRACE [main] o.s.t.i.TransactionInterceptor [TransactionAspectSupport.java:503] Getting transaction for [huaminglin.demo.jdbc.spring.transaction.TransactionService.sql2]
+2020-06-25 21:20:10,919 INFO [main] h.d.j.s.t.TransactionService [TransactionService.java:28] sql2()
+2020-06-25 21:20:10,919 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:142] Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@68f1b17f] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] bound to thread [main]
+2020-06-25 21:20:10,919 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:142] Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@68f1b17f] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] bound to thread [main]
+2020-06-25 21:20:10,920 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.jdbc.PgStatement$StatementResultHandler@1722011b, maxRows=0, fetchSize=0, flags=1
+2020-06-25 21:20:10,920 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="BEGIN",oids={})
+2020-06-25 21:20:10,920 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,920 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=0)
+2020-06-25 21:20:10,920 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SELECT txid_current()",oids={})
+2020-06-25 21:20:10,921 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,921 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1657]  FE=> Describe(portal=null)
+2020-06-25 21:20:10,921 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=0)
+2020-06-25 21:20:10,921 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,922 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,922 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,922 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(BEGIN)
+2020-06-25 21:20:10,922 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,922 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,922 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2454]  <=BE RowDescription(1)
+2020-06-25 21:20:10,923 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2469]         Field(txid_current,INT8,8,T)
+2020-06-25 21:20:10,923 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2234]  <=BE DataRow(len=3)
+2020-06-25 21:20:10,923 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SELECT 1)
+2020-06-25 21:20:10,923 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(T)
+2020-06-25 21:20:10,923 INFO [main] n.t.d.l.l.SLF4JQueryLoggingListener [SLF4JLogUtils.java:20] Name:, Connection:2, Time:3, Success:True, Type:Statement, Batch:False, QuerySize:1, BatchSize:0, Query:["SELECT txid_current()"], Params:[]
+2020-06-25 21:20:10,923 TRACE [main] o.p.j.PgConnection [PgResultSet.java:2072]   getLong columnIndex: 1
+2020-06-25 21:20:10,924 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:142] Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@68f1b17f] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] bound to thread [main]
+2020-06-25 21:20:10,924 INFO [main] h.d.j.s.t.TransactionService [TransactionService.java:32] sql2(): 780
+2020-06-25 21:20:10,924 TRACE [main] o.s.t.i.TransactionInterceptor [TransactionAspectSupport.java:532] Completing transaction for [huaminglin.demo.jdbc.spring.transaction.TransactionService.sql2]
+2020-06-25 21:20:10,924 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.jdbc.PgConnection$TransactionCommandHandler@57ad2aa7, maxRows=0, fetchSize=0, flags=22
+2020-06-25 21:20:10,924 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=S_1,query="COMMIT",oids={})
+2020-06-25 21:20:10,924 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=S_1,portal=null)
+2020-06-25 21:20:10,924 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=1)
+2020-06-25 21:20:10,925 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,925 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [S_1]
+2020-06-25 21:20:10,925 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,925 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(COMMIT)
+2020-06-25 21:20:10,925 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,926 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:337] Clearing transaction synchronization
+2020-06-25 21:20:10,926 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:248] Removed value [org.springframework.jdbc.datasource.ConnectionHolder@68f1b17f] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] from thread [main]
+2020-06-25 21:20:10,926 DEBUG [main] o.p.j.PgConnection [PgConnection.java:812]   setAutoCommit = true
+2020-06-25 21:20:10,926 TRACE [main] o.p.c.QueryExecutorBase [QueryExecutorBase.java:147]  FE=> Terminate
+2020-06-25 21:20:10,926 DEBUG [main] o.p.Driver [Driver.java:248] Connecting with URL: jdbc:postgresql://localhost:5432/pgdb
+2020-06-25 21:20:10,927 DEBUG [main] o.p.j.PgConnection [PgConnection.java:197] PostgreSQL JDBC Driver 42.2.9
+2020-06-25 21:20:10,927 DEBUG [main] o.p.j.PgConnection [PgConnection.java:1110]   setDefaultFetchSize = 0
+2020-06-25 21:20:10,927 DEBUG [main] o.p.j.PgConnection [PgConnection.java:1119]   setPrepareThreshold = 5
+2020-06-25 21:20:10,927 DEBUG [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:170] Trying to establish a protocol version 3 connection to localhost:5432
+2020-06-25 21:20:10,928 TRACE [main] o.p.c.Encoding [Encoding.java:103] Creating new Encoding UTF-8 with fastASCIINumbers true
+2020-06-25 21:20:10,928 DEBUG [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:130] Receive Buffer Size is 65,536
+2020-06-25 21:20:10,928 DEBUG [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:131] Send Buffer Size is 1,313,280
+2020-06-25 21:20:10,928 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:402]  FE=> SSLRequest
+2020-06-25 21:20:10,928 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:427]  <=BE SSLRefused
+2020-06-25 21:20:10,928 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:462]  FE=> StartupPacket(user=pgdemo, database=pgdb, client_encoding=UTF8, DateStyle=ISO, TimeZone=Asia/Harbin, extra_float_digits=2)
+2020-06-25 21:20:10,929 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:535]  <=BE AuthenticationReqMD5(salt=b7f6fb6b)
+2020-06-25 21:20:10,929 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:549]  FE=> Password(md5digest=md59e7b5fef168c6b0546d7a8a303eb6e82)
+2020-06-25 21:20:10,930 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:695]  <=BE AuthenticationOk
+2020-06-25 21:20:10,930 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(application_name = )
+2020-06-25 21:20:10,931 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(client_encoding = UTF8)
+2020-06-25 21:20:10,931 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(DateStyle = ISO, MDY)
+2020-06-25 21:20:10,931 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(integer_datetimes = on)
+2020-06-25 21:20:10,931 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(IntervalStyle = postgres)
+2020-06-25 21:20:10,931 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(is_superuser = on)
+2020-06-25 21:20:10,931 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(server_encoding = UTF8)
+2020-06-25 21:20:10,931 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(server_version = 12.1 (Debian 12.1-1.pgdg100+1))
+2020-06-25 21:20:10,931 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(session_authorization = pgdemo)
+2020-06-25 21:20:10,931 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(standard_conforming_strings = on)
+2020-06-25 21:20:10,931 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(TimeZone = Asia/Harbin)
+2020-06-25 21:20:10,932 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2609]  <=BE BackendKeyData(pid=1,248,ckey=-1,168,383,632)
+2020-06-25 21:20:10,932 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,932 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@3e2059ae, maxRows=0, fetchSize=0, flags=1,047
+2020-06-25 21:20:10,932 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SET extra_float_digits = 3",oids={})
+2020-06-25 21:20:10,932 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,932 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=1)
+2020-06-25 21:20:10,932 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,933 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,933 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,933 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SET)
+2020-06-25 21:20:10,933 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,933 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@398dada8, maxRows=0, fetchSize=0, flags=1,047
+2020-06-25 21:20:10,933 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SET application_name = 'PostgreSQL JDBC Driver'",oids={})
+2020-06-25 21:20:10,933 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,933 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=1)
+2020-06-25 21:20:10,933 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,934 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,934 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,934 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(application_name = PostgreSQL JDBC Driver)
+2020-06-25 21:20:10,934 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SET)
+2020-06-25 21:20:10,934 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,934 TRACE [main] o.p.j.PgConnection [PgConnection.java:245]     types using binary send = TIMESTAMPTZ,UUID,INT2_ARRAY,INT4_ARRAY,BYTEA,TEXT_ARRAY,TIMETZ,INT8,INT2,INT4,VARCHAR_ARRAY,INT8_ARRAY,POINT,TIMESTAMP,TIME,BOX,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+2020-06-25 21:20:10,934 TRACE [main] o.p.j.PgConnection [PgConnection.java:246]     types using binary receive = TIMESTAMPTZ,UUID,INT2_ARRAY,INT4_ARRAY,BYTEA,TEXT_ARRAY,TIMETZ,INT8,INT2,INT4,VARCHAR_ARRAY,INT8_ARRAY,POINT,DATE,TIMESTAMP,TIME,BOX,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+2020-06-25 21:20:10,934 TRACE [main] o.p.j.PgConnection [PgConnection.java:247]     integer date/time = true
+2020-06-25 21:20:10,935 DEBUG [main] o.p.j.PgConnection [PgConnection.java:812]   setAutoCommit = false
+2020-06-25 21:20:10,935 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:196] Bound value [org.springframework.jdbc.datasource.ConnectionHolder@7cb502c] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] to thread [main]
+2020-06-25 21:20:10,935 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:277] Initializing transaction synchronization
+2020-06-25 21:20:10,935 TRACE [main] o.s.t.i.TransactionInterceptor [TransactionAspectSupport.java:503] Getting transaction for [huaminglin.demo.jdbc.spring.transaction.TransactionService.sql3]
+2020-06-25 21:20:10,935 INFO [main] h.d.j.s.t.TransactionService [TransactionService.java:38] sql3()
+2020-06-25 21:20:10,935 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:142] Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@7cb502c] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] bound to thread [main]
+2020-06-25 21:20:10,935 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:142] Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@7cb502c] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] bound to thread [main]
+2020-06-25 21:20:10,935 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.jdbc.PgStatement$StatementResultHandler@275bf9b3, maxRows=0, fetchSize=0, flags=1
+2020-06-25 21:20:10,935 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="BEGIN",oids={})
+2020-06-25 21:20:10,935 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,936 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=0)
+2020-06-25 21:20:10,936 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SELECT txid_current()",oids={})
+2020-06-25 21:20:10,936 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,936 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1657]  FE=> Describe(portal=null)
+2020-06-25 21:20:10,936 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=0)
+2020-06-25 21:20:10,936 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,936 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,936 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,937 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(BEGIN)
+2020-06-25 21:20:10,937 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,937 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,937 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2454]  <=BE RowDescription(1)
+2020-06-25 21:20:10,937 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2469]         Field(txid_current,INT8,8,T)
+2020-06-25 21:20:10,937 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2234]  <=BE DataRow(len=3)
+2020-06-25 21:20:10,937 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SELECT 1)
+2020-06-25 21:20:10,937 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(T)
+2020-06-25 21:20:10,937 INFO [main] n.t.d.l.l.SLF4JQueryLoggingListener [SLF4JLogUtils.java:20] Name:, Connection:3, Time:2, Success:True, Type:Statement, Batch:False, QuerySize:1, BatchSize:0, Query:["SELECT txid_current()"], Params:[]
+2020-06-25 21:20:10,937 TRACE [main] o.p.j.PgConnection [PgResultSet.java:2072]   getLong columnIndex: 1
+2020-06-25 21:20:10,937 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:142] Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@7cb502c] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] bound to thread [main]
+2020-06-25 21:20:10,937 INFO [main] h.d.j.s.t.TransactionService [TransactionService.java:42] sql3(): 781
+2020-06-25 21:20:10,937 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:142] Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@7cb502c] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] bound to thread [main]
+2020-06-25 21:20:10,938 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:142] Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@7cb502c] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] bound to thread [main]
+2020-06-25 21:20:10,938 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.jdbc.PgStatement$StatementResultHandler@1b8a29df, maxRows=0, fetchSize=0, flags=1
+2020-06-25 21:20:10,938 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SELECT txid_current()",oids={})
+2020-06-25 21:20:10,938 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,938 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1657]  FE=> Describe(portal=null)
+2020-06-25 21:20:10,938 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=0)
+2020-06-25 21:20:10,939 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,939 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,939 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,939 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2454]  <=BE RowDescription(1)
+2020-06-25 21:20:10,939 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2469]         Field(txid_current,INT8,8,T)
+2020-06-25 21:20:10,939 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2234]  <=BE DataRow(len=3)
+2020-06-25 21:20:10,939 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SELECT 1)
+2020-06-25 21:20:10,939 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(T)
+2020-06-25 21:20:10,939 INFO [main] n.t.d.l.l.SLF4JQueryLoggingListener [SLF4JLogUtils.java:20] Name:, Connection:3, Time:1, Success:True, Type:Statement, Batch:False, QuerySize:1, BatchSize:0, Query:["SELECT txid_current()"], Params:[]
+2020-06-25 21:20:10,940 TRACE [main] o.p.j.PgConnection [PgResultSet.java:2072]   getLong columnIndex: 1
+2020-06-25 21:20:10,940 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:142] Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@7cb502c] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] bound to thread [main]
+2020-06-25 21:20:10,940 INFO [main] h.d.j.s.t.TransactionService [TransactionService.java:47] sql3(): 781
+2020-06-25 21:20:10,940 TRACE [main] o.s.t.i.TransactionInterceptor [TransactionAspectSupport.java:532] Completing transaction for [huaminglin.demo.jdbc.spring.transaction.TransactionService.sql3]
+2020-06-25 21:20:10,940 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.jdbc.PgConnection$TransactionCommandHandler@4fbe37eb, maxRows=0, fetchSize=0, flags=22
+2020-06-25 21:20:10,940 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=S_1,query="COMMIT",oids={})
+2020-06-25 21:20:10,940 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=S_1,portal=null)
+2020-06-25 21:20:10,940 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=1)
+2020-06-25 21:20:10,940 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,941 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [S_1]
+2020-06-25 21:20:10,941 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,941 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(COMMIT)
+2020-06-25 21:20:10,941 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,941 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:337] Clearing transaction synchronization
+2020-06-25 21:20:10,941 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:248] Removed value [org.springframework.jdbc.datasource.ConnectionHolder@7cb502c] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] from thread [main]
+2020-06-25 21:20:10,941 DEBUG [main] o.p.j.PgConnection [PgConnection.java:812]   setAutoCommit = true
+2020-06-25 21:20:10,941 TRACE [main] o.p.c.QueryExecutorBase [QueryExecutorBase.java:147]  FE=> Terminate
+2020-06-25 21:20:10,941 INFO [main] h.d.j.s.t.TransactionService [TransactionService.java:52] sql4()
+2020-06-25 21:20:10,942 DEBUG [main] o.p.Driver [Driver.java:248] Connecting with URL: jdbc:postgresql://localhost:5432/pgdb
+2020-06-25 21:20:10,942 DEBUG [main] o.p.j.PgConnection [PgConnection.java:197] PostgreSQL JDBC Driver 42.2.9
+2020-06-25 21:20:10,942 DEBUG [main] o.p.j.PgConnection [PgConnection.java:1110]   setDefaultFetchSize = 0
+2020-06-25 21:20:10,942 DEBUG [main] o.p.j.PgConnection [PgConnection.java:1119]   setPrepareThreshold = 5
+2020-06-25 21:20:10,942 DEBUG [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:170] Trying to establish a protocol version 3 connection to localhost:5432
+2020-06-25 21:20:10,942 TRACE [main] o.p.c.Encoding [Encoding.java:103] Creating new Encoding UTF-8 with fastASCIINumbers true
+2020-06-25 21:20:10,942 DEBUG [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:130] Receive Buffer Size is 65,536
+2020-06-25 21:20:10,942 DEBUG [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:131] Send Buffer Size is 1,313,280
+2020-06-25 21:20:10,943 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:402]  FE=> SSLRequest
+2020-06-25 21:20:10,943 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:427]  <=BE SSLRefused
+2020-06-25 21:20:10,943 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:462]  FE=> StartupPacket(user=pgdemo, database=pgdb, client_encoding=UTF8, DateStyle=ISO, TimeZone=Asia/Harbin, extra_float_digits=2)
+2020-06-25 21:20:10,944 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:535]  <=BE AuthenticationReqMD5(salt=2eae3f1d)
+2020-06-25 21:20:10,944 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:549]  FE=> Password(md5digest=md5f2754e05ca31dd6513e530bfbb760316)
+2020-06-25 21:20:10,945 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:695]  <=BE AuthenticationOk
+2020-06-25 21:20:10,945 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(application_name = )
+2020-06-25 21:20:10,945 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(client_encoding = UTF8)
+2020-06-25 21:20:10,945 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(DateStyle = ISO, MDY)
+2020-06-25 21:20:10,945 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(integer_datetimes = on)
+2020-06-25 21:20:10,945 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(IntervalStyle = postgres)
+2020-06-25 21:20:10,945 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(is_superuser = on)
+2020-06-25 21:20:10,945 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(server_encoding = UTF8)
+2020-06-25 21:20:10,945 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(server_version = 12.1 (Debian 12.1-1.pgdg100+1))
+2020-06-25 21:20:10,945 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(session_authorization = pgdemo)
+2020-06-25 21:20:10,946 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(standard_conforming_strings = on)
+2020-06-25 21:20:10,946 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(TimeZone = Asia/Harbin)
+2020-06-25 21:20:10,946 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2609]  <=BE BackendKeyData(pid=1,249,ckey=544,824,891)
+2020-06-25 21:20:10,946 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,946 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@6a47b187, maxRows=0, fetchSize=0, flags=1,047
+2020-06-25 21:20:10,946 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SET extra_float_digits = 3",oids={})
+2020-06-25 21:20:10,946 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,946 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=1)
+2020-06-25 21:20:10,946 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,947 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,947 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,947 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SET)
+2020-06-25 21:20:10,947 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,947 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@2049a9c1, maxRows=0, fetchSize=0, flags=1,047
+2020-06-25 21:20:10,947 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SET application_name = 'PostgreSQL JDBC Driver'",oids={})
+2020-06-25 21:20:10,947 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,947 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=1)
+2020-06-25 21:20:10,947 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,948 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,948 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,948 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(application_name = PostgreSQL JDBC Driver)
+2020-06-25 21:20:10,948 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SET)
+2020-06-25 21:20:10,948 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,948 TRACE [main] o.p.j.PgConnection [PgConnection.java:245]     types using binary send = TIMESTAMPTZ,UUID,INT2_ARRAY,INT4_ARRAY,BYTEA,TEXT_ARRAY,TIMETZ,INT8,INT2,INT4,VARCHAR_ARRAY,INT8_ARRAY,POINT,TIMESTAMP,TIME,BOX,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+2020-06-25 21:20:10,948 TRACE [main] o.p.j.PgConnection [PgConnection.java:246]     types using binary receive = TIMESTAMPTZ,UUID,INT2_ARRAY,INT4_ARRAY,BYTEA,TEXT_ARRAY,TIMETZ,INT8,INT2,INT4,VARCHAR_ARRAY,INT8_ARRAY,POINT,DATE,TIMESTAMP,TIME,BOX,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+2020-06-25 21:20:10,948 TRACE [main] o.p.j.PgConnection [PgConnection.java:247]     integer date/time = true
+2020-06-25 21:20:10,949 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.jdbc.PgStatement$StatementResultHandler@1ef6d34c, maxRows=0, fetchSize=0, flags=17
+2020-06-25 21:20:10,949 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SELECT txid_current()",oids={})
+2020-06-25 21:20:10,949 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,949 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1657]  FE=> Describe(portal=null)
+2020-06-25 21:20:10,949 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=0)
+2020-06-25 21:20:10,949 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,949 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,949 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,949 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2454]  <=BE RowDescription(1)
+2020-06-25 21:20:10,950 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2469]         Field(txid_current,INT8,8,T)
+2020-06-25 21:20:10,950 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2234]  <=BE DataRow(len=3)
+2020-06-25 21:20:10,950 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SELECT 1)
+2020-06-25 21:20:10,950 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,950 INFO [main] n.t.d.l.l.SLF4JQueryLoggingListener [SLF4JLogUtils.java:20] Name:, Connection:4, Time:2, Success:True, Type:Statement, Batch:False, QuerySize:1, BatchSize:0, Query:["SELECT txid_current()"], Params:[]
+2020-06-25 21:20:10,950 TRACE [main] o.p.j.PgConnection [PgResultSet.java:2072]   getLong columnIndex: 1
+2020-06-25 21:20:10,950 TRACE [main] o.p.c.QueryExecutorBase [QueryExecutorBase.java:147]  FE=> Terminate
+2020-06-25 21:20:10,950 INFO [main] h.d.j.s.t.TransactionService [TransactionService.java:56] sql4(): 782
+2020-06-25 21:20:10,950 DEBUG [main] o.p.Driver [Driver.java:248] Connecting with URL: jdbc:postgresql://localhost:5432/pgdb
+2020-06-25 21:20:10,950 DEBUG [main] o.p.j.PgConnection [PgConnection.java:197] PostgreSQL JDBC Driver 42.2.9
+2020-06-25 21:20:10,951 DEBUG [main] o.p.j.PgConnection [PgConnection.java:1110]   setDefaultFetchSize = 0
+2020-06-25 21:20:10,951 DEBUG [main] o.p.j.PgConnection [PgConnection.java:1119]   setPrepareThreshold = 5
+2020-06-25 21:20:10,951 DEBUG [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:170] Trying to establish a protocol version 3 connection to localhost:5432
+2020-06-25 21:20:10,951 TRACE [main] o.p.c.Encoding [Encoding.java:103] Creating new Encoding UTF-8 with fastASCIINumbers true
+2020-06-25 21:20:10,951 DEBUG [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:130] Receive Buffer Size is 65,536
+2020-06-25 21:20:10,951 DEBUG [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:131] Send Buffer Size is 1,313,280
+2020-06-25 21:20:10,951 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:402]  FE=> SSLRequest
+2020-06-25 21:20:10,952 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:427]  <=BE SSLRefused
+2020-06-25 21:20:10,952 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:462]  FE=> StartupPacket(user=pgdemo, database=pgdb, client_encoding=UTF8, DateStyle=ISO, TimeZone=Asia/Harbin, extra_float_digits=2)
+2020-06-25 21:20:10,952 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:535]  <=BE AuthenticationReqMD5(salt=e09043ad)
+2020-06-25 21:20:10,953 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:549]  FE=> Password(md5digest=md5a7a76df4268177cd74faea0e9477b325)
+2020-06-25 21:20:10,954 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:695]  <=BE AuthenticationOk
+2020-06-25 21:20:10,954 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(application_name = )
+2020-06-25 21:20:10,954 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(client_encoding = UTF8)
+2020-06-25 21:20:10,954 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(DateStyle = ISO, MDY)
+2020-06-25 21:20:10,954 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(integer_datetimes = on)
+2020-06-25 21:20:10,954 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(IntervalStyle = postgres)
+2020-06-25 21:20:10,954 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(is_superuser = on)
+2020-06-25 21:20:10,954 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(server_encoding = UTF8)
+2020-06-25 21:20:10,954 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(server_version = 12.1 (Debian 12.1-1.pgdg100+1))
+2020-06-25 21:20:10,954 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(session_authorization = pgdemo)
+2020-06-25 21:20:10,954 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(standard_conforming_strings = on)
+2020-06-25 21:20:10,954 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(TimeZone = Asia/Harbin)
+2020-06-25 21:20:10,955 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2609]  <=BE BackendKeyData(pid=1,250,ckey=-112,002,533)
+2020-06-25 21:20:10,955 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,955 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@46271dd6, maxRows=0, fetchSize=0, flags=1,047
+2020-06-25 21:20:10,955 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SET extra_float_digits = 3",oids={})
+2020-06-25 21:20:10,955 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,955 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=1)
+2020-06-25 21:20:10,955 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,955 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,956 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,956 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SET)
+2020-06-25 21:20:10,956 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,956 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@11bb571c, maxRows=0, fetchSize=0, flags=1,047
+2020-06-25 21:20:10,956 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SET application_name = 'PostgreSQL JDBC Driver'",oids={})
+2020-06-25 21:20:10,956 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,956 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=1)
+2020-06-25 21:20:10,956 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,956 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,956 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,957 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(application_name = PostgreSQL JDBC Driver)
+2020-06-25 21:20:10,957 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SET)
+2020-06-25 21:20:10,957 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,957 TRACE [main] o.p.j.PgConnection [PgConnection.java:245]     types using binary send = TIMESTAMPTZ,UUID,INT2_ARRAY,INT4_ARRAY,BYTEA,TEXT_ARRAY,TIMETZ,INT8,INT2,INT4,VARCHAR_ARRAY,INT8_ARRAY,POINT,TIMESTAMP,TIME,BOX,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+2020-06-25 21:20:10,957 TRACE [main] o.p.j.PgConnection [PgConnection.java:246]     types using binary receive = TIMESTAMPTZ,UUID,INT2_ARRAY,INT4_ARRAY,BYTEA,TEXT_ARRAY,TIMETZ,INT8,INT2,INT4,VARCHAR_ARRAY,INT8_ARRAY,POINT,DATE,TIMESTAMP,TIME,BOX,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+2020-06-25 21:20:10,957 TRACE [main] o.p.j.PgConnection [PgConnection.java:247]     integer date/time = true
+2020-06-25 21:20:10,957 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.jdbc.PgStatement$StatementResultHandler@7c51f34b, maxRows=0, fetchSize=0, flags=17
+2020-06-25 21:20:10,958 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SELECT txid_current()",oids={})
+2020-06-25 21:20:10,958 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,958 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1657]  FE=> Describe(portal=null)
+2020-06-25 21:20:10,958 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=0)
+2020-06-25 21:20:10,958 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,958 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,958 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,958 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2454]  <=BE RowDescription(1)
+2020-06-25 21:20:10,959 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2469]         Field(txid_current,INT8,8,T)
+2020-06-25 21:20:10,959 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2234]  <=BE DataRow(len=3)
+2020-06-25 21:20:10,959 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SELECT 1)
+2020-06-25 21:20:10,959 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,959 INFO [main] n.t.d.l.l.SLF4JQueryLoggingListener [SLF4JLogUtils.java:20] Name:, Connection:5, Time:2, Success:True, Type:Statement, Batch:False, QuerySize:1, BatchSize:0, Query:["SELECT txid_current()"], Params:[]
+2020-06-25 21:20:10,959 TRACE [main] o.p.j.PgConnection [PgResultSet.java:2072]   getLong columnIndex: 1
+2020-06-25 21:20:10,959 TRACE [main] o.p.c.QueryExecutorBase [QueryExecutorBase.java:147]  FE=> Terminate
+2020-06-25 21:20:10,959 INFO [main] h.d.j.s.t.TransactionService [TransactionService.java:61] sql4(): 783
+2020-06-25 21:20:10,959 DEBUG [main] o.p.Driver [Driver.java:248] Connecting with URL: jdbc:postgresql://localhost:5432/pgdb
+2020-06-25 21:20:10,960 DEBUG [main] o.p.j.PgConnection [PgConnection.java:197] PostgreSQL JDBC Driver 42.2.9
+2020-06-25 21:20:10,960 DEBUG [main] o.p.j.PgConnection [PgConnection.java:1110]   setDefaultFetchSize = 0
+2020-06-25 21:20:10,960 DEBUG [main] o.p.j.PgConnection [PgConnection.java:1119]   setPrepareThreshold = 5
+2020-06-25 21:20:10,960 DEBUG [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:170] Trying to establish a protocol version 3 connection to localhost:5432
+2020-06-25 21:20:10,960 TRACE [main] o.p.c.Encoding [Encoding.java:103] Creating new Encoding UTF-8 with fastASCIINumbers true
+2020-06-25 21:20:10,960 DEBUG [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:130] Receive Buffer Size is 65,536
+2020-06-25 21:20:10,960 DEBUG [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:131] Send Buffer Size is 1,313,280
+2020-06-25 21:20:10,960 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:402]  FE=> SSLRequest
+2020-06-25 21:20:10,961 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:427]  <=BE SSLRefused
+2020-06-25 21:20:10,961 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:462]  FE=> StartupPacket(user=pgdemo, database=pgdb, client_encoding=UTF8, DateStyle=ISO, TimeZone=Asia/Harbin, extra_float_digits=2)
+2020-06-25 21:20:10,962 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:535]  <=BE AuthenticationReqMD5(salt=1961b6a0)
+2020-06-25 21:20:10,962 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:549]  FE=> Password(md5digest=md55ce2828b7219da926737246b165f088f)
+2020-06-25 21:20:10,963 TRACE [main] o.p.c.v.ConnectionFactoryImpl [ConnectionFactoryImpl.java:695]  <=BE AuthenticationOk
+2020-06-25 21:20:10,963 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(application_name = )
+2020-06-25 21:20:10,963 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(client_encoding = UTF8)
+2020-06-25 21:20:10,963 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(DateStyle = ISO, MDY)
+2020-06-25 21:20:10,963 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(integer_datetimes = on)
+2020-06-25 21:20:10,963 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(IntervalStyle = postgres)
+2020-06-25 21:20:10,963 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(is_superuser = on)
+2020-06-25 21:20:10,963 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(server_encoding = UTF8)
+2020-06-25 21:20:10,963 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(server_version = 12.1 (Debian 12.1-1.pgdg100+1))
+2020-06-25 21:20:10,963 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(session_authorization = pgdemo)
+2020-06-25 21:20:10,963 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(standard_conforming_strings = on)
+2020-06-25 21:20:10,964 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(TimeZone = Asia/Harbin)
+2020-06-25 21:20:10,964 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2609]  <=BE BackendKeyData(pid=1,251,ckey=-1,470,581,655)
+2020-06-25 21:20:10,964 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,964 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@5495333e, maxRows=0, fetchSize=0, flags=1,047
+2020-06-25 21:20:10,964 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SET extra_float_digits = 3",oids={})
+2020-06-25 21:20:10,964 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,964 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=1)
+2020-06-25 21:20:10,964 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,965 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,965 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,965 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SET)
+2020-06-25 21:20:10,965 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,965 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.core.SetupQueryRunner$SimpleResultHandler@2a225dd7, maxRows=0, fetchSize=0, flags=1,047
+2020-06-25 21:20:10,965 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SET application_name = 'PostgreSQL JDBC Driver'",oids={})
+2020-06-25 21:20:10,965 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,965 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=1)
+2020-06-25 21:20:10,965 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,965 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,966 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,966 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2649]  <=BE ParameterStatus(application_name = PostgreSQL JDBC Driver)
+2020-06-25 21:20:10,966 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SET)
+2020-06-25 21:20:10,966 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,966 TRACE [main] o.p.j.PgConnection [PgConnection.java:245]     types using binary send = TIMESTAMPTZ,UUID,INT2_ARRAY,INT4_ARRAY,BYTEA,TEXT_ARRAY,TIMETZ,INT8,INT2,INT4,VARCHAR_ARRAY,INT8_ARRAY,POINT,TIMESTAMP,TIME,BOX,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+2020-06-25 21:20:10,966 TRACE [main] o.p.j.PgConnection [PgConnection.java:246]     types using binary receive = TIMESTAMPTZ,UUID,INT2_ARRAY,INT4_ARRAY,BYTEA,TEXT_ARRAY,TIMETZ,INT8,INT2,INT4,VARCHAR_ARRAY,INT8_ARRAY,POINT,DATE,TIMESTAMP,TIME,BOX,FLOAT4,FLOAT8,FLOAT4_ARRAY,FLOAT8_ARRAY
+2020-06-25 21:20:10,966 TRACE [main] o.p.j.PgConnection [PgConnection.java:247]     integer date/time = true
+2020-06-25 21:20:10,966 DEBUG [main] o.p.j.PgConnection [PgConnection.java:812]   setAutoCommit = false
+2020-06-25 21:20:10,966 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:196] Bound value [org.springframework.jdbc.datasource.ConnectionHolder@61eaec38] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] to thread [main]
+2020-06-25 21:20:10,966 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:277] Initializing transaction synchronization
+2020-06-25 21:20:10,967 TRACE [main] o.s.t.i.TransactionInterceptor [TransactionAspectSupport.java:503] Getting transaction for [huaminglin.demo.jdbc.spring.transaction.TransactionService.sql5]
+2020-06-25 21:20:10,967 INFO [main] h.d.j.s.t.TransactionService [TransactionService.java:67] sql5()
+2020-06-25 21:20:10,967 INFO [main] h.d.j.s.t.TransactionService [TransactionService.java:18] sql1()
+2020-06-25 21:20:10,967 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:142] Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@61eaec38] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] bound to thread [main]
+2020-06-25 21:20:10,967 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:142] Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@61eaec38] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] bound to thread [main]
+2020-06-25 21:20:10,967 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.jdbc.PgStatement$StatementResultHandler@125290e5, maxRows=0, fetchSize=0, flags=1
+2020-06-25 21:20:10,967 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="BEGIN",oids={})
+2020-06-25 21:20:10,967 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,967 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=0)
+2020-06-25 21:20:10,967 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SELECT txid_current()",oids={})
+2020-06-25 21:20:10,967 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,967 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1657]  FE=> Describe(portal=null)
+2020-06-25 21:20:10,968 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=0)
+2020-06-25 21:20:10,968 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,968 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,968 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,968 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(BEGIN)
+2020-06-25 21:20:10,968 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,968 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,969 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2454]  <=BE RowDescription(1)
+2020-06-25 21:20:10,969 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2469]         Field(txid_current,INT8,8,T)
+2020-06-25 21:20:10,969 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2234]  <=BE DataRow(len=3)
+2020-06-25 21:20:10,969 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SELECT 1)
+2020-06-25 21:20:10,969 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(T)
+2020-06-25 21:20:10,969 INFO [main] n.t.d.l.l.SLF4JQueryLoggingListener [SLF4JLogUtils.java:20] Name:, Connection:6, Time:2, Success:True, Type:Statement, Batch:False, QuerySize:1, BatchSize:0, Query:["SELECT txid_current()"], Params:[]
+2020-06-25 21:20:10,969 TRACE [main] o.p.j.PgConnection [PgResultSet.java:2072]   getLong columnIndex: 1
+2020-06-25 21:20:10,969 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:142] Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@61eaec38] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] bound to thread [main]
+2020-06-25 21:20:10,969 INFO [main] h.d.j.s.t.TransactionService [TransactionService.java:22] sql1(): 784
+2020-06-25 21:20:10,969 INFO [main] h.d.j.s.t.TransactionService [TransactionService.java:28] sql2()
+2020-06-25 21:20:10,969 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:142] Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@61eaec38] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] bound to thread [main]
+2020-06-25 21:20:10,969 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:142] Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@61eaec38] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] bound to thread [main]
+2020-06-25 21:20:10,970 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.jdbc.PgStatement$StatementResultHandler@6fa34d52, maxRows=0, fetchSize=0, flags=1
+2020-06-25 21:20:10,970 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=null,query="SELECT txid_current()",oids={})
+2020-06-25 21:20:10,970 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=null,portal=null)
+2020-06-25 21:20:10,970 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1657]  FE=> Describe(portal=null)
+2020-06-25 21:20:10,970 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=0)
+2020-06-25 21:20:10,970 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,970 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [null]
+2020-06-25 21:20:10,970 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,970 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2454]  <=BE RowDescription(1)
+2020-06-25 21:20:10,970 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2469]         Field(txid_current,INT8,8,T)
+2020-06-25 21:20:10,971 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2234]  <=BE DataRow(len=3)
+2020-06-25 21:20:10,971 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(SELECT 1)
+2020-06-25 21:20:10,971 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(T)
+2020-06-25 21:20:10,971 INFO [main] n.t.d.l.l.SLF4JQueryLoggingListener [SLF4JLogUtils.java:20] Name:, Connection:6, Time:2, Success:True, Type:Statement, Batch:False, QuerySize:1, BatchSize:0, Query:["SELECT txid_current()"], Params:[]
+2020-06-25 21:20:10,971 TRACE [main] o.p.j.PgConnection [PgResultSet.java:2072]   getLong columnIndex: 1
+2020-06-25 21:20:10,971 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:142] Retrieved value [org.springframework.jdbc.datasource.ConnectionHolder@61eaec38] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] bound to thread [main]
+2020-06-25 21:20:10,971 INFO [main] h.d.j.s.t.TransactionService [TransactionService.java:32] sql2(): 784
+2020-06-25 21:20:10,971 TRACE [main] o.s.t.i.TransactionInterceptor [TransactionAspectSupport.java:532] Completing transaction for [huaminglin.demo.jdbc.spring.transaction.TransactionService.sql5]
+2020-06-25 21:20:10,971 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:278]   simple execute, handler=org.postgresql.jdbc.PgConnection$TransactionCommandHandler@57576994, maxRows=0, fetchSize=0, flags=22
+2020-06-25 21:20:10,971 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1474]  FE=> Parse(stmt=S_1,query="COMMIT",oids={})
+2020-06-25 21:20:10,971 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1526]  FE=> Bind(stmt=S_1,portal=null)
+2020-06-25 21:20:10,971 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1709]  FE=> Execute(portal=null,limit=1)
+2020-06-25 21:20:10,971 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:1419]  FE=> Sync
+2020-06-25 21:20:10,972 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2020]  <=BE ParseComplete [S_1]
+2020-06-25 21:20:10,972 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2067]  <=BE BindComplete [unnamed]
+2020-06-25 21:20:10,972 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2535]  <=BE CommandStatus(COMMIT)
+2020-06-25 21:20:10,972 TRACE [main] o.p.c.v.QueryExecutorImpl [QueryExecutorImpl.java:2560]  <=BE ReadyForQuery(I)
+2020-06-25 21:20:10,972 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:337] Clearing transaction synchronization
+2020-06-25 21:20:10,972 TRACE [main] o.s.t.s.TransactionSynchronizationManager [TransactionSynchronizationManager.java:248] Removed value [org.springframework.jdbc.datasource.ConnectionHolder@61eaec38] for key [net.ttddyy.dsproxy.support.ProxyDataSource@329dbdbf] from thread [main]
+2020-06-25 21:20:10,972 DEBUG [main] o.p.j.PgConnection [PgConnection.java:812]   setAutoCommit = true
+2020-06-25 21:20:10,972 TRACE [main] o.p.c.QueryExecutorBase [QueryExecutorBase.java:147]  FE=> Terminate
+2020-06-25 21:20:10,972 INFO [main] h.d.j.s.t.SpringTransactionDemo [SpringTransactionDemo.java:49] Main Thread exits: 1, main

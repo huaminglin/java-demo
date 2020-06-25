@@ -25,6 +25,11 @@
 			<artifactId>datasource-proxy</artifactId>
 			<version>1.6</version>
 		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jul-to-slf4j</artifactId>
+			<version>1.7.28</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -38,14 +43,6 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<version>1.6.0</version>
-				<configuration>
-					<mainClass>huaminglin.demo.jdbc.hikari.HikariJdbcDemo</mainClass>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
