@@ -2,6 +2,8 @@ package huaminglin.demo.jdbc.spring.transaction;
 
 import java.util.Properties;
 import javax.sql.DataSource;
+import net.ttddyy.dsproxy.listener.logging.SLF4JLogLevel;
+import net.ttddyy.dsproxy.support.ProxyDataSourceBuilder;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -19,7 +21,10 @@ public class SpringTransactionDemo {
         dataSource.setDriverClassName("org.postgresql.Driver");
         dataSource.setUsername("pgdemo");
         dataSource.setPassword("123456");
-        return dataSource;
+
+        DataSource dataSourceProxy = ProxyDataSourceBuilder.create(dataSource).logQueryBySlf4j(
+            SLF4JLogLevel.INFO).build();
+        return dataSourceProxy;
     }
 
     public static void main(String[] args) {

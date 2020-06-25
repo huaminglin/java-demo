@@ -189,3 +189,31 @@ If no @Transactional, each query runs in a separate transaction;
 				cleanupTransactionInfo(txInfo);
 			commitTransactionAfterReturning(txInfo);
 ```
+
+## datasource-proxy logging
+
+```log
+sql1()
+2020-06-25 18:09:05.718  INFO 19253 --- [           main] n.t.d.l.l.SLF4JQueryLoggingListener      : Name:, Connection:1, Time:6, Success:True, Type:Statement, Batch:False, QuerySize:1, BatchSize:0, Query:["SELECT txid_current()"], Params:[]
+617
+sql2()
+2020-06-25 18:09:05.728  INFO 19253 --- [           main] n.t.d.l.l.SLF4JQueryLoggingListener      : Name:, Connection:2, Time:1, Success:True, Type:Statement, Batch:False, QuerySize:1, BatchSize:0, Query:["SELECT txid_current()"], Params:[]
+618
+sql3()
+2020-06-25 18:09:05.733  INFO 19253 --- [           main] n.t.d.l.l.SLF4JQueryLoggingListener      : Name:, Connection:3, Time:0, Success:True, Type:Statement, Batch:False, QuerySize:1, BatchSize:0, Query:["SELECT txid_current()"], Params:[]
+619
+2020-06-25 18:09:05.734  INFO 19253 --- [           main] n.t.d.l.l.SLF4JQueryLoggingListener      : Name:, Connection:3, Time:0, Success:True, Type:Statement, Batch:False, QuerySize:1, BatchSize:0, Query:["SELECT txid_current()"], Params:[]
+619
+sql4()
+2020-06-25 18:09:05.740  INFO 19253 --- [           main] n.t.d.l.l.SLF4JQueryLoggingListener      : Name:, Connection:4, Time:1, Success:True, Type:Statement, Batch:False, QuerySize:1, BatchSize:0, Query:["SELECT txid_current()"], Params:[]
+620
+2020-06-25 18:09:05.745  INFO 19253 --- [           main] n.t.d.l.l.SLF4JQueryLoggingListener      : Name:, Connection:5, Time:0, Success:True, Type:Statement, Batch:False, QuerySize:1, BatchSize:0, Query:["SELECT txid_current()"], Params:[]
+621
+sql5()
+sql1()
+2020-06-25 18:09:05.753  INFO 19253 --- [           main] n.t.d.l.l.SLF4JQueryLoggingListener      : Name:, Connection:6, Time:1, Success:True, Type:Statement, Batch:False, QuerySize:1, BatchSize:0, Query:["SELECT txid_current()"], Params:[]
+622
+sql2()
+2020-06-25 18:09:05.754  INFO 19253 --- [           main] n.t.d.l.l.SLF4JQueryLoggingListener      : Name:, Connection:6, Time:1, Success:True, Type:Statement, Batch:False, QuerySize:1, BatchSize:0, Query:["SELECT txid_current()"], Params:[]
+622
+```
