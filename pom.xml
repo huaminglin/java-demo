@@ -22,15 +22,14 @@
         <module>servlet-demo</module>
         <module>xml-demo</module>
         <module>jdk-demo</module>
-        <module>aspectj-demo</module>
 <!--        <module>wsdl-demo</module>-->
         <module>jamon-demo</module>
-        <module>redis-demo</module>
         <module>mysql-demo</module>
         <module>junit-demo</module>
         <module>datatype-demo</module>
         <module>spring-cloud-demo</module>
         <module>tool-demo</module>
         <module>encoding-demo</module>
+        <module>distributed-demo</module>
     </modules>
 </project>

@@ -9,7 +9,7 @@ import org.redisson.config.Config;
 
 public class RedissonDemo {
     private static void demoKeys(RedissonClient client) {
-        System.out.println("demoKeys");
+        System.out.println("demoKeys()");
         RKeys keys = client.getKeys();
         System.out.println("Count: " + keys.count());
         for (String key: keys.getKeys()) {
@@ -18,7 +18,7 @@ public class RedissonDemo {
     }
 
     private static void demoAtomicLong(RedissonClient client) {
-        System.out.println("demoAtomicLong");
+        System.out.println("demoAtomicLong()");
         RAtomicLong myLong = client.getAtomicLong("rlong");
         myLong.set(6);
         boolean compareAndSet = myLong.compareAndSet(6, 27);
@@ -28,7 +28,7 @@ public class RedissonDemo {
     }
 
     private static void demoRBucket(RedissonClient client) {
-        System.out.println("demoRBucket");
+        System.out.println("demoRBucket()");
         {
             RBucket<MyEntity> bucket = client.getBucket("rbucket");
             MyEntity myEntity = new MyEntity();
@@ -52,6 +52,7 @@ public class RedissonDemo {
             System.out.println(myEntity.getName());
         }
     }
+
     public static void main(String[] args) throws InterruptedException {
         Config config = new Config();
         config.useSingleServer().setAddress("redis://127.0.0.1:6379");
