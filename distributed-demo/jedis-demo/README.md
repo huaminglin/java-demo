@@ -14,9 +14,9 @@ docker exec redis-demo_server_1 redis-cli PUBLISH channel1 quit
 
 ```log
 demoInteger()
-9
+11
 demoFloat()
-984.98765431298759992
+1231.23456789123449995
 demoString()
 value1
 demoBytes()
@@ -30,10 +30,12 @@ demoHash()
 {item2=value2, item1=value1}
 demoSortedSet()
 [item3, item1]
-demoTransaction()
-[0, 0]
 demoPipeline()
 [item3, item2]
+demoTransaction()
+[0, 0]
+demoCas()
+null
 demoSubscriber()
 Subscribe channel on main thread, wait for the message "quit" to exit.
 ```

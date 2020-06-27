@@ -129,6 +129,20 @@ public class JedisDemo {
         }
     }
 
+    private static void demoCas(Jedis jedis, Jedis jedis2) {
+        System.out.println("demoCas()");
+        jedis.set("a", "a1");
+        jedis.watch("a"); // WATCH inside MULTI is not allowed
+        Transaction t = jedis.multi();
+        t.zadd("zt", 0.5, "item2");
+        t.zadd("zt", 2.5, "item3");
+
+        jedis2.set("a", "a2");
+
+        Object result = t.exec(); // null indicates a failure.
+        System.out.println(result);
+    }
+
     public static void main(String[] args) throws InterruptedException {
         Jedis jedis = new Jedis("127.0.0.1", 6379);
         demoInteger(jedis);
@@ -139,9 +153,12 @@ public class JedisDemo {
         demoSet(jedis);
         demoHash(jedis);
         demoSortedSet(jedis);
-        demoTransaction(jedis);
         demoPipeline(jedis);
+        demoTransaction(jedis);
+        {
+            Jedis jedis2 = new Jedis("127.0.0.1", 6379);
+            demoCas(jedis, jedis2);
+        }
         demoSubscriber(jedis);
-
     }
 }
