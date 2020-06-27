@@ -14,9 +14,9 @@ docker exec redis-demo_server_1 redis-cli PUBLISH channel1 quit
 
 ```log
 demoInteger()
-11
+25
 demoFloat()
-1231.23456789123449995
+2954.96296293896279961
 demoString()
 value1
 demoBytes()
@@ -30,6 +30,9 @@ demoHash()
 {item2=value2, item1=value1}
 demoSortedSet()
 [item3, item1]
+demoHyperLogLog()
+100
+10009
 demoPipeline()
 [item3, item2]
 demoTransaction()

@@ -143,6 +143,31 @@ public class JedisDemo {
         System.out.println(result);
     }
 
+    private static void demoHyperLogLog(Jedis jedis) {
+        System.out.println("demoHyperLogLog()");
+        {
+            String key = "hll-small-v3";
+            int count = 100;
+            for (int i = 0; i < count; i++) {
+                jedis.pfadd(key, key + i);
+            }
+            for (int i = 0; i < count; i++) {// duplicate key test
+                jedis.pfadd(key, key + i);
+            }
+            long pfcount = jedis.pfcount(key);
+            System.out.println(pfcount);
+        }
+        {
+            String key = "hll-huge-v3";
+            int count = 10000;
+            for (int i = 0; i < count; i++) {
+                jedis.pfadd(key, key + i);
+            }
+            long pfcount = jedis.pfcount(key);
+            System.out.println(pfcount);
+        }
+    }
+
     public static void main(String[] args) throws InterruptedException {
         Jedis jedis = new Jedis("127.0.0.1", 6379);
         demoInteger(jedis);
@@ -153,6 +178,7 @@ public class JedisDemo {
         demoSet(jedis);
         demoHash(jedis);
         demoSortedSet(jedis);
+        demoHyperLogLog(jedis);
         demoPipeline(jedis);
         demoTransaction(jedis);
         {
