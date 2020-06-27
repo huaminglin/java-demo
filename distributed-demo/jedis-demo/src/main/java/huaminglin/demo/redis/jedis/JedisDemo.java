@@ -1,5 +1,6 @@
 package huaminglin.demo.redis.jedis;
 
+import java.math.BigInteger;
 import java.util.Map;
 import java.util.Set;
 import redis.clients.jedis.Jedis;
@@ -9,10 +10,25 @@ import redis.clients.jedis.Response;
 import redis.clients.jedis.JedisPubSub;
 
 public class JedisDemo {
+
+    private static void demoInteger(Jedis jedis) {
+        System.out.println("demoInteger()");
+        jedis.incr("int1");
+        String value = jedis.get("int1");
+        System.out.println(value);
+    }
+
+    private static void demoFloat(Jedis jedis) {
+        System.out.println("demoFloat()");
+        jedis.incrByFloat("float1", 123.123456789123456789);
+        String value = jedis.get("float1");
+        System.out.println(value);
+    }
+
     private static void demoString(Jedis jedis) {
         System.out.println("demoString()");
-        jedis.set("key1", "value1");
-        String value = jedis.get("key1");
+        jedis.set("str1", "value1");
+        String value = jedis.get("str1");
         System.out.println(value);
     }
 
@@ -87,9 +103,38 @@ public class JedisDemo {
         jedis.subscribe(subscriber, channel);
     }
 
+    private static void demoBytes(Jedis jedis) {
+        System.out.println("demoBytes()");
+        {
+            byte[] bytes = new byte[4];
+            bytes[0] = 0b001_0101;
+            bytes[1] = -0b0010_0101;
+            bytes[2] = 0b0110_0101;
+            bytes[3] = -0b0110_0101;
+            jedis.set(bytes, bytes);
+            byte[] value = jedis.get(bytes);
+            BigInteger bi = new BigInteger(1, value);
+            System.out.println(String.format("%0" + (bytes.length << 1) + "X", bi));
+        }
+        {
+            byte[] bytes = new byte[4];
+            bytes[0] = (byte)122;
+            bytes[1] = (byte)122;
+            bytes[2] = (byte)122;
+            bytes[3] = (byte)122;
+            jedis.lpush(bytes, bytes);
+            byte[] value = jedis.rpop(bytes);
+            BigInteger bi = new BigInteger(1, value);
+            System.out.println(String.format("%0" + (bytes.length << 1) + "X", bi));
+        }
+    }
+
     public static void main(String[] args) throws InterruptedException {
         Jedis jedis = new Jedis("127.0.0.1", 6379);
+        demoInteger(jedis);
+        demoFloat(jedis);
         demoString(jedis);
+        demoBytes(jedis);
         demoList(jedis);
         demoSet(jedis);
         demoHash(jedis);
@@ -97,5 +142,6 @@ public class JedisDemo {
         demoTransaction(jedis);
         demoPipeline(jedis);
         demoSubscriber(jedis);
+
     }
 }
