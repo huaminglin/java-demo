@@ -64,7 +64,7 @@ org.springframework.data.redis.listener.RedisMessageListenerContainer$DispatchMe
 	}
 ```
 
-Note: 
+Note:
 
 RedisMessageListenerContainer$DispatchMessageListener runs the target message listener with task executor.
 
