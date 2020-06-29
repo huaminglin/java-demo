@@ -83,3 +83,31 @@ xxx.408185 [0 172.21.0.1:39460] "PUBLISH" "channel1" "Hello world"
 xxx.408370 [0 172.21.0.1:39460] "PUBLISH" "channel1" "quit"
 xxx.408542 [0 172.21.0.1:39460] "SUBSCRIBE" "channel1"
 
+## HyperLogLog: small cardinality
+
+Even for small cardinality, the gap can still happen.
+
+Redis HyperLogLog doesn't have special logic for small cardinality.
+
+```
+findFirstCardinalityUnEqual()
+9 - 8: hll-huge-v7-798
+8 - 7: hll-huge-v7-1594
+8 - 7: hll-huge-v7-1711
+8 - 7: hll-huge-v7-2744
+5 - 4: hll-huge-v7-3190
+5 - 4: hll-huge-v7-3529
+3 - 2: hll-huge-v7-3865
+9 - 8: hll-huge-v7-4284
+6 - 5: hll-huge-v7-4525
+7 - 6: hll-huge-v7-5464
+5 - 4: hll-huge-v7-5751
+5 - 4: hll-huge-v7-5858
+7 - 6: hll-huge-v7-6180
+6 - 5: hll-huge-v7-7227
+8 - 7: hll-huge-v7-7720
+6 - 5: hll-huge-v7-8314
+5 - 4: hll-huge-v7-8673
+8 - 7: hll-huge-v7-9054
+8 - 7: hll-huge-v7-9463
+```
