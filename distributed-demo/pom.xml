@@ -15,6 +15,8 @@
     <modules>
         <module>jedis-demo</module>
         <module>spring-redis-demo</module>
+        <module>spring-redis-mq-demo</module>
         <module>redisson-demo</module>
+        <module>hazelcast-client-demo</module>
     </modules>
 </project>

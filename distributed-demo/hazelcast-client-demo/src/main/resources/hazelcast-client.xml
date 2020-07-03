@@ -1,0 +1,8 @@
+<hazelcast-client xmlns="http://www.hazelcast.com/schema/client-config">
+  <network>
+    <smart-routing>false</smart-routing>
+    <cluster-members>
+      <address>127.0.0.1:15701</address>
+    </cluster-members>
+  </network>
+</hazelcast-client>
