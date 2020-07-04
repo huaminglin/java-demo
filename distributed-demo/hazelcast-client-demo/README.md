@@ -163,3 +163,9 @@ tcp              ESTAB                  0                   0                   
 The connection is between port 57929 and 15701.
 
 The 15701 forwards data to the hazelcast cluster as "172.28.0.1", which is the network gateway.
+
+## Hazelcast as Message Queue
+
+On HMC Scripting page, publish a message to shutdown the hazelcast instance (client):
+
+hazelcast.getTopic("topic1").publish("quit")
