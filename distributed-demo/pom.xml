@@ -19,5 +19,6 @@
         <module>redisson-demo</module>
         <module>hazelcast-client-demo</module>
         <module>hazelcast-scheduler-demo</module>
+        <module>hazelcast-queue-demo</module>
     </modules>
 </project>
