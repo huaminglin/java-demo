@@ -1,4 +1,4 @@
-Add LocalHostDemo to show how to get computer name
+# Demo Java Language Features
 
 ## Expose a customized standard JMX bean
 export MY_HOST_IP=<my host ip>

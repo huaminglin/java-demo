@@ -1,4 +1,4 @@
-package huaminglin.demo.jdk.net;
+package huaminglin.demo.network.jdk.localhost;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

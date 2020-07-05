@@ -1,4 +1,4 @@
-package huaminglin.demo.jdk.net;
+package huaminglin.demo.network.jdk.url;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
