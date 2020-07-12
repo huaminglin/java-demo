@@ -744,3 +744,38 @@ Conclusion: We can find '2020-07-12 17:46:28.773102+08' and the oid 1184 in the 
   public static final int TIMESTAMP = 1114;
 
 Conclusion: We can find '2020-07-12 17:46:28.773102' and the oid 1114 in the package.
+
+## Insert data as timestamp without time zone and timestamp with time zone
+
+```
+0000   02 42 ac 18 00 03 02 42 a1 8e ba 2f 08 00 45 00   .B¬....B¡.º/..E.
+0010   00 c7 b9 5e 40 00 40 06 28 9e ac 18 00 01 ac 18   .Ç¹^@.@.(.¬...¬.
+0020   00 03 e8 64 15 38 fa d4 cf e2 bd 38 7a be 80 18   ..èd.8úÔÏâ½8z¾..
+0030   01 f5 58 ee 00 00 01 01 08 0a 3f 79 94 8e ff 53   .õXî......?y..ÿS
+0040   e2 65 50 00 00 00 2f 00 69 6e 73 65 72 74 20 69   âeP.../.insert i
+0050   6e 74 6f 20 74 73 74 7a 20 76 61 6c 75 65 73 28   nto tstz values(
+0060   24 31 2c 20 24 32 29 00 00 02 00 00 00 00 00 00   $1, $2).........
+0070   00 00 42 00 00 00 4c 00 00 00 02 00 00 00 00 00   ..B...L.........
+0080   02 00 00 00 1a 32 30 32 30 2d 30 37 2d 31 32 20   .....2020-07-12 
+0090   32 32 3a 34 33 3a 33 33 2e 31 31 34 2b 30 38 00   22:43:33.114+08.
+00a0   00 00 1a 32 30 32 30 2d 30 37 2d 31 32 20 32 32   ...2020-07-12 22
+00b0   3a 34 33 3a 33 33 2e 31 31 34 2b 30 38 00 00 44   :43:33.114+08..D
+00c0   00 00 00 06 50 00 45 00 00 00 09 00 00 00 00 01   ....P.E.........
+00d0   53 00 00 00 04                                    S....
+```
+
+```
+select * from tstz;
+           ts            |             tz             
+-------------------------+----------------------------
+ 2020-07-12 22:36:04.151 | 2020-07-12 14:36:04.151+00
+ 2020-07-12 22:36:04.18  | 2020-07-12 14:36:04.18+00
+```
+
+Conclusion:
+
+JDBC doesn't know the column type, use "2020-07-12 22:43:33.114+08" for both fields.
+
+Use JVM timezone to format the date; the session timezone doesn't matter.
+
+On the server size, it drops the timezone info in the string then save it as timestamp without time zone.

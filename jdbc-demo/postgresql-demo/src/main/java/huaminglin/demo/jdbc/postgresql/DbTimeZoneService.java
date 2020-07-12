@@ -69,4 +69,19 @@ public class DbTimeZoneService {
     }
   }
 
+  @Transactional
+  public void insertRows(String timezone) {
+    if (timezone != null) {
+      jdbcTemplate.execute("set timezone to '" + timezone + "'");
+      logger.info("set timezone to " + timezone);
+    }
+    {
+      String result = jdbcTemplate.queryForObject(
+          "show time zone", String.class);
+      logger.info("show time zone: " + result);
+    }
+    Date instant = new Date();
+    jdbcTemplate.update("insert into tstz values(?, ?)", instant, instant);
+  }
+
 }
