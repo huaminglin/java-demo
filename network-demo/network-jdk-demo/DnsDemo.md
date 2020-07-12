@@ -54,3 +54,26 @@ Unknown host: server0123, time: 1610260
 Unknown host: server0123, time: 1647940
 Unknown host: server0123, time: 1357274
 ```
+
+## Use strace to capture related system calls
+
+strace -o /tmp/java.dns.strace java -cp target/classes/ huaminglin.demo.network.jdk.dns.DnsDemo
+
+It seems we can't capture the network related system calls from Java.
+
+Python is a wrapper of native C; try strace with Python to get host name related system call
+
+strace -o /tmp/python.dns.strace python -c "import socket; print(socket.gethostbyname('usa.gov'))"
+
+```strace
+823: stat("/etc/resolv.conf", {st_mode=S_IFREG|0644, st_size=715, ...}) = 0
+830: openat(AT_FDCWD, "/etc/resolv.conf", O_RDONLY|O_CLOEXEC) = 3
+837: connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+840: connect(3, {sa_family=AF_UNIX, sun_path="/var/run/nscd/socket"}, 110) = -1 ENOENT (No such file or directory)
+842: openat(AT_FDCWD, "/etc/nsswitch.conf", O_RDONLY|O_CLOEXEC) = 3
+852: openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_files.so.2", O_RDONLY|O_CLOEXEC) = 3
+862: openat(AT_FDCWD, "/etc/hosts", O_RDONLY|O_CLOEXEC) = 3
+872: openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2", O_RDONLY|O_CLOEXEC) = 3
+886: openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libnss_dns.so.2", O_RDONLY|O_CLOEXEC) = 3
+906: connect(3, {sa_family=AF_INET, sin_port=htons(53), sin_addr=inet_addr("127.0.0.53")}, 16) = 0
+```
