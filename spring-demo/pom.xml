@@ -21,8 +21,6 @@
         <module>spring-mvc-demo</module>
         <module>spring-kafka-demo</module>
         <module>spring-boot-amqp-demo</module>
-        <module>spring-boot-websocket-demo</module>
-        <module>spring-boot-stomp-demo</module>
         <module>spring-boot-actuator-demo</module>
         <module>spring-boot-resttemplate-demo</module>
         <module>spring-post-processor-demo</module>

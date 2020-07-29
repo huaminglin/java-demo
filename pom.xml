@@ -31,5 +31,6 @@
         <module>tool-demo</module>
         <module>encoding-demo</module>
         <module>distributed-demo</module>
+        <module>websocket-demo</module>
     </modules>
 </project>
