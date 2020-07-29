@@ -10,7 +10,11 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 @Component
-public class SocketTextHandler extends TextWebSocketHandler {
+public class MySocketTextHandler extends TextWebSocketHandler {
+
+    public MySocketTextHandler() {
+
+    }
 
     @Override
     public void handleTextMessage(WebSocketSession session, TextMessage message)

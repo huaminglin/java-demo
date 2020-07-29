@@ -11,7 +11,7 @@ public class WebSocketConfig implements WebSocketConfigurer {
 
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry webSocketHandlerRegistry) {
-        webSocketHandlerRegistry.addHandler(new SocketTextHandler(), "/courier");
+        webSocketHandlerRegistry.addHandler(new MySocketTextHandler(), "/courier");
     }
 }
 
