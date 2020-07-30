@@ -380,3 +380,126 @@ TomcatRequestUpgradeStrategy calls WsServerContainer.
 	  at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	  at java.lang.Thread.run(Thread.java:834)
 ```
+
+## Thread dump: WsHttpUpgradeHandler
+
+WsHttpUpgradeHandler.preInit
+
+```
+"http-nio-8080-exec-2@5668" daemon prio=5 tid=0x17 nid=NA runnable
+  java.lang.Thread.State: RUNNABLE
+	  at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.preInit(WsHttpUpgradeHandler.java:88)
+	  at org.apache.tomcat.websocket.server.UpgradeUtil.doUpgrade(UpgradeUtil.java:236)
+	  at org.apache.tomcat.websocket.server.WsServerContainer.doUpgrade(WsServerContainer.java:294)
+	  at org.springframework.web.socket.server.standard.TomcatRequestUpgradeStrategy.upgradeInternal(TomcatRequestUpgradeStrategy.java:72)
+	  at org.springframework.web.socket.server.standard.AbstractStandardUpgradeStrategy.upgrade(AbstractStandardUpgradeStrategy.java:136)
+	  at org.springframework.web.socket.server.support.AbstractHandshakeHandler.doHandshake(AbstractHandshakeHandler.java:290)
+	  at org.springframework.web.socket.server.support.WebSocketHttpRequestHandler.handleRequest(WebSocketHttpRequestHandler.java:167)
+	  at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:53)
+	  at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1038)
+	  at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	  at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	  at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897)
+	  at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	  at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	  at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	  at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	  at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	  at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	  at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	  at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	  at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	  at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	  at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	  at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	  at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	  at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	  at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	  at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	  at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	  at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	  at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	  at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	  at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	  at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	  at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	  at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	  at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	  at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	  at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	  at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	  at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	  at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	  at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	  at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	  at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	  at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	  at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	  at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	  - locked <0x1d78> (a org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper)
+	  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	  at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	  at java.lang.Thread.run(Thread.java:834)
+```
+
+WsHttpUpgradeHandler.init
+
+```
+init:102, WsHttpUpgradeHandler (org.apache.tomcat.websocket.server)
+process:880, AbstractProtocol$ConnectionHandler (org.apache.coyote)
+doRun:1415, NioEndpoint$SocketProcessor (org.apache.tomcat.util.net)
+run:49, SocketProcessorBase (org.apache.tomcat.util.net)
+runWorker:1128, ThreadPoolExecutor (java.util.concurrent)
+run:628, ThreadPoolExecutor$Worker (java.util.concurrent)
+run:61, TaskThread$WrappingRunnable (org.apache.tomcat.util.threads)
+run:834, Thread (java.lang)
+```
+
+Use "Copy Stack" of Intellij Debugger View; Thread Dump doesn't work for unknown reason.
+
+org.apache.coyote.AbstractProtocol.ConnectionHandler.process
+                    state = processor.process(wrapper, status);
+                    if (state == SocketState.UPGRADING) {
+                        UpgradeToken upgradeToken = processor.getUpgradeToken();
+                            HttpUpgradeHandler httpUpgradeHandler = upgradeToken.getHttpUpgradeHandler();
+                            // Release the Http11 processor to be re-used
+                            release(processor);
+                            // Create the upgrade processor
+                            processor = getProtocol().createUpgradeProcessor(wrapper, upgradeToken);
+                            // Associate with the processor with the connection
+                            connections.put(socket, processor);
+                            httpUpgradeHandler.init((WebConnection) processor);
+
+
+"state = processor.process(wrapper, status);" creates UpgradeToken and WsHttpUpgradeHandler.preInit;
+After upgrade, it calls WsHttpUpgradeHandler.init(), and associate processor with websocket.
+
+Question: What actually does "processor = getProtocol().createUpgradeProcessor(wrapper, upgradeToken);" do?
+Does it associate websocket connection and the MySocketTextHandler?
+Answer:
+```
+  org.apache.coyote.http11.AbstractHttp11Protocol.createUpgradeProcessor
+  HttpUpgradeHandler httpUpgradeHandler = upgradeToken.getHttpUpgradeHandler();
+  WsHttpUpgradeHandler: private ServerEndpointConfig serverEndpointConfig;
+  WsPerSessionServerEndpointConfig: private final ServerEndpointConfig perEndpointConfig
+  ServerEndpointRegistration: private final String path; private final Endpoint endpoint;
+  In this way, a websocket connection can find StandardWebSocketHandlerAdapter (this is an endpoint).
+```
+
+## Save org.apache.coyote.UpgradeToken to Http11Processor
+
+org.apache.catalina.connector.Request.upgrade
+UpgradeToken upgradeToken = new UpgradeToken(handler, getContext(), instanceManager);
+coyoteRequest.action(ActionCode.UPGRADE, upgradeToken);
+
+org.apache.coyote.Request.action
+hook.action(actionCode, param);
+private volatile ActionHook hook -> org.apache.coyote.http11.Http11Processor
+
+org.apache.coyote.AbstractProcessor.action
+
+org.apache.coyote.http11.Http11Processor
+private UpgradeToken upgradeToken = null;
+this.upgradeToken = upgradeToken;
+
