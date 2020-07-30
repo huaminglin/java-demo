@@ -54,7 +54,51 @@ There is only one TCP handshake package.
 The TCP connect sends the http request, and then upgrade to websocket connection.
 
 
-## Thread dump: registerWebSocketHandlers
+## Thread dump: MySocketTextHandler processes request
+
+MySocketTextHandler is the first place to look into the system.
+
+```
+"http-nio-8080-exec-3@5671" daemon prio=5 tid=0x18 nid=NA runnable
+  java.lang.Thread.State: RUNNABLE
+	  at huaminglin.demo.spring.websocket.MySocketTextHandler.handleTextMessage(SocketTextHandler.java:23)
+	  at org.springframework.web.socket.handler.AbstractWebSocketHandler.handleMessage(AbstractWebSocketHandler.java:43)
+	  at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
+	  at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
+	  at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
+	  at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
+	  at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.access$000(StandardWebSocketHandlerAdapter.java:42)
+	  at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
+	  at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
+	  at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:395)
+	  at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:119)
+	  at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:495)
+	  at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:294)
+	  at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:133)
+	  at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:82)
+	  at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:171)
+	  at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:151)
+	  at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:148)
+	  at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:54)
+	  at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:53)
+	  at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	  at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	  at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	  - locked <0x1db5> (a org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper)
+	  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	  at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	  at java.lang.Thread.run(Thread.java:834)
+```
+
+org.apache.coyote.http11.upgrade.UpgradeProcessorInternal
+
+org.apache.tomcat.websocket.server.WsFrameServer
+
+org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter
+
+
+## Thread dump: Register MySocketTextHandler instance
 
 ```
 "main@1" prio=5 tid=0x1 nid=NA runnable
@@ -72,7 +116,7 @@ The TCP connect sends the http request, and then upgrade to websocket connection
 	  at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	  at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	  at java.lang.reflect.Method.invoke(Method.java:566)
-	  at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	  at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SiWebSocketHandlerMappingmpleInstantiationStrategy.java:154)
 	  at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
 	  at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
 	  at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
@@ -98,9 +142,75 @@ The TCP connect sends the http request, and then upgrade to websocket connection
 	  at huaminglin.demo.spring.websocket.SpringWebSocketDemo.main(SpringWebSocketDemo.java:10)
 ```
 
+org.springframework.web.socket.config.annotation.DelegatingWebSocketConfiguration
+
+@EnableWebSocket configures class DelegatingWebSocketConfiguration.
+
+DelegatingWebSocketConfiguration invokes all WebSocketConfigurer instances.
+
+
+## Thread dump: Where is MySocketTextHandler mapping stored?
+
+org.springframework.web.socket.server.support.WebSocketHandlerMapping
+
+```
+"main@1" prio=5 tid=0x1 nid=NA runnable
+  java.lang.Thread.State: RUNNABLE
+	  at org.springframework.web.socket.server.support.WebSocketHandlerMapping.<init>(WebSocketHandlerMapping.java:35)
+	  at org.springframework.web.socket.config.annotation.ServletWebSocketHandlerRegistry.getHandlerMapping(ServletWebSocketHandlerRegistry.java:125)
+	  at org.springframework.web.socket.config.annotation.WebSocketConfigurationSupport.webSocketHandlerMapping(WebSocketConfigurationSupport.java:49)
+	  at org.springframework.web.socket.config.annotation.DelegatingWebSocketConfiguration$$EnhancerBySpringCGLIB$$b30afae9.CGLIB$webSocketHandlerMapping$2(<generated>:-1)
+	  at org.springframework.web.socket.config.annotation.DelegatingWebSocketConfiguration$$EnhancerBySpringCGLIB$$b30afae9$$FastClassBySpringCGLIB$$8e7d450c.invoke(<generated>:-1)
+	  at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	  at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	  at org.springframework.web.socket.config.annotation.DelegatingWebSocketConfiguration$$EnhancerBySpringCGLIB$$b30afae9.webSocketHandlerMapping(<generated>:-1)
+	  at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(NativeMethodAccessorImpl.java:-1)
+	  at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	  at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	  at java.lang.reflect.Method.invoke(Method.java:566)
+	  at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	  at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	  at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	  at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	  at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	  at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	  at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	  at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	  at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$151.1201466784.getObject(Unknown Source:-1)
+	  at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	  - locked <0x1495> (a java.util.concurrent.ConcurrentHashMap)
+	  at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	  at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	  at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849)
+	  at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	  at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	  - locked <0x1496> (a java.lang.Object)
+	  at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	  at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	  at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	  at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	  at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	  at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	  at huaminglin.demo.spring.websocket.SpringWebSocketDemo.main(SpringWebSocketDemo.java:10)
+```
+
+```
+0 = {SimpleUrlHandlerMapping@7511}
+1 = {RequestMappingHandlerMapping@7512}
+2 = {WebSocketHandlerMapping@7513}
+3 = {BeanNameUrlHandlerMapping@7514}
+4 = {WelcomePageHandlerMapping@7515}
+5 = {SimpleUrlHandlerMapping@7516}
+
+WebSocketHandlerMapping
+handlerMap = {LinkedHashMap@7518}  size = 1
+ "/courier" -> {WebSocketHttpRequestHandler@7534}
+```
+
 ## Thread dump: connect (Locate MySocketTextHandler and register it to the tomcat container)
 
 Track StandardWebSocketHandlerAdapter construction to check when our MySocketTextHandler is located for web socket request
+
 ```
 "http-nio-8080-exec-2@6993" daemon prio=5 tid=0x17 nid=NA runnable
   java.lang.Thread.State: RUNNABLE
@@ -209,20 +319,8 @@ org.springframework.web.servlet.DispatcherServlet.doDispatch
 	  at java.lang.Thread.run(Thread.java:834)
 ```
 
-```
-0 = {SimpleUrlHandlerMapping@7511}
-1 = {RequestMappingHandlerMapping@7512}
-2 = {WebSocketHandlerMapping@7513}
-3 = {BeanNameUrlHandlerMapping@7514}
-4 = {WelcomePageHandlerMapping@7515}
-5 = {SimpleUrlHandlerMapping@7516}
 
-WebSocketHandlerMapping
-handlerMap = {LinkedHashMap@7518}  size = 1
- "/courier" -> {WebSocketHttpRequestHandler@7534}
-```
-
-How does the Spring WebSocketHandlerMapping inject into container behavior?
+How does the Spring WebSocketHandlerMapping inject into Tomcat container behavior?
 
 TomcatRequestUpgradeStrategy calls WsServerContainer.
 
@@ -282,44 +380,3 @@ TomcatRequestUpgradeStrategy calls WsServerContainer.
 	  at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	  at java.lang.Thread.run(Thread.java:834)
 ```
-
-## Thread dump: MySocketTextHandler processes request
-
-```
-"http-nio-8080-exec-3@5671" daemon prio=5 tid=0x18 nid=NA runnable
-  java.lang.Thread.State: RUNNABLE
-	  at huaminglin.demo.spring.websocket.MySocketTextHandler.handleTextMessage(SocketTextHandler.java:23)
-	  at org.springframework.web.socket.handler.AbstractWebSocketHandler.handleMessage(AbstractWebSocketHandler.java:43)
-	  at org.springframework.web.socket.handler.WebSocketHandlerDecorator.handleMessage(WebSocketHandlerDecorator.java:75)
-	  at org.springframework.web.socket.handler.LoggingWebSocketHandlerDecorator.handleMessage(LoggingWebSocketHandlerDecorator.java:56)
-	  at org.springframework.web.socket.handler.ExceptionWebSocketHandlerDecorator.handleMessage(ExceptionWebSocketHandlerDecorator.java:58)
-	  at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.handleTextMessage(StandardWebSocketHandlerAdapter.java:113)
-	  at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter.access$000(StandardWebSocketHandlerAdapter.java:42)
-	  at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:84)
-	  at org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter$3.onMessage(StandardWebSocketHandlerAdapter.java:81)
-	  at org.apache.tomcat.websocket.WsFrameBase.sendMessageText(WsFrameBase.java:395)
-	  at org.apache.tomcat.websocket.server.WsFrameServer.sendMessageText(WsFrameServer.java:119)
-	  at org.apache.tomcat.websocket.WsFrameBase.processDataText(WsFrameBase.java:495)
-	  at org.apache.tomcat.websocket.WsFrameBase.processData(WsFrameBase.java:294)
-	  at org.apache.tomcat.websocket.WsFrameBase.processInputBuffer(WsFrameBase.java:133)
-	  at org.apache.tomcat.websocket.server.WsFrameServer.onDataAvailable(WsFrameServer.java:82)
-	  at org.apache.tomcat.websocket.server.WsFrameServer.doOnDataAvailable(WsFrameServer.java:171)
-	  at org.apache.tomcat.websocket.server.WsFrameServer.notifyDataAvailable(WsFrameServer.java:151)
-	  at org.apache.tomcat.websocket.server.WsHttpUpgradeHandler.upgradeDispatch(WsHttpUpgradeHandler.java:148)
-	  at org.apache.coyote.http11.upgrade.UpgradeProcessorInternal.dispatch(UpgradeProcessorInternal.java:54)
-	  at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:53)
-	  at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
-	  at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
-	  at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	  - locked <0x1db5> (a org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper)
-	  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	  at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	  at java.lang.Thread.run(Thread.java:834)
-```
-
-org.apache.coyote.http11.upgrade.UpgradeProcessorInternal
-
-org.apache.tomcat.websocket.server.WsFrameServer
-
-org.springframework.web.socket.adapter.standard.StandardWebSocketHandlerAdapter
