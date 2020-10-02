@@ -3,7 +3,7 @@ networks:
   mysql:
     driver: bridge
 services:
-  server:
+  mysql:
     image: mysql/mysql-server:8.0
     environment:
       - MYSQL_DATABASE=quartz_demo
@@ -16,10 +16,21 @@ services:
       - /tmp/spring-quartz-demo-mysql.general.log:/var/log/mysql.general.log
     networks:
       - mysql
-  client:
-    image: mysql/mysql-server:8.0
-    entrypoint: /bin/bash
-    stdin_open: true
-    tty: true
+  java01:
+    image: openjdk:8-jdk-alpine
+    volumes:
+      - ../target/spring-quartz-demo-1.0-SNAPSHOT.jar:/app.jar
+    entrypoint: java -Xms256m -Xmx512m -Djava.security.egd=file:/dev/./urandom -jar /app.jar
+    depends_on:
+      - mysql
+    networks:
+      - mysql
+  java02:
+    image: openjdk:8-jdk-alpine
+    volumes:
+      - ../target/spring-quartz-demo-1.0-SNAPSHOT.jar:/app.jar
+    entrypoint: java -Xms256m -Xmx512m -Djava.security.egd=file:/dev/./urandom -jar /app.jar
+    depends_on:
+      - mysql
     networks:
       - mysql

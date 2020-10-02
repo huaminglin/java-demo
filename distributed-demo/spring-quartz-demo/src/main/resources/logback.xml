@@ -14,13 +14,13 @@
       <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
     </encoder>
   </appender>
-  <logger name="org.springframework.scheduling" level="trace"/>
-  <logger name="org.springframework.jdbc" level="trace"/>
-  <logger name="org.quartz" level="trace"/>
+  <logger name="org.springframework.scheduling" level="error"/>
+  <logger name="org.springframework.jdbc" level="error"/>
+  <logger name="org.quartz" level="error"/>
   <logger name="com.mysql" level="trace"/>
   <logger name="MySQL" level="trace"/>
   <root level="info">
     <appender-ref ref="STDOUT" />
-    <appender-ref ref="FILE" />
+<!--    <appender-ref ref="FILE" />-->
   </root>
 </configuration>
