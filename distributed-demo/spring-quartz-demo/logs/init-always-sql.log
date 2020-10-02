@@ -1,0 +1,255 @@
+2020-10-02T13:48:02.080662Z	    8 Connect	root@172.26.0.1 on quartz_demo using SSL/TLS
+2020-10-02T13:48:02.082577Z	    8 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T13:48:02.088916Z	    8 Query	SET character_set_results = NULL
+2020-10-02T13:48:02.089770Z	    8 Query	SET autocommit=1
+2020-10-02T13:48:02.092772Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.093440Z	    8 Query	SELECT @@session.transaction_isolation
+2020-10-02T13:48:02.105135Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.106087Z	    8 Query	DROP TABLE IF EXISTS QRTZ_FIRED_TRIGGERS
+2020-10-02T13:48:02.113849Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.124669Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.125291Z	    8 Query	DROP TABLE IF EXISTS QRTZ_PAUSED_TRIGGER_GRPS
+2020-10-02T13:48:02.126962Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.127747Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.128106Z	    8 Query	DROP TABLE IF EXISTS QRTZ_SCHEDULER_STATE
+2020-10-02T13:48:02.129192Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.130040Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.130331Z	    8 Query	DROP TABLE IF EXISTS QRTZ_LOCKS
+2020-10-02T13:48:02.131508Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.132283Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.132589Z	    8 Query	DROP TABLE IF EXISTS QRTZ_SIMPLE_TRIGGERS
+2020-10-02T13:48:02.133763Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.134648Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.134954Z	    8 Query	DROP TABLE IF EXISTS QRTZ_SIMPROP_TRIGGERS
+2020-10-02T13:48:02.136042Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.136957Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.137231Z	    8 Query	DROP TABLE IF EXISTS QRTZ_CRON_TRIGGERS
+2020-10-02T13:48:02.138171Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.139153Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.139497Z	    8 Query	DROP TABLE IF EXISTS QRTZ_BLOB_TRIGGERS
+2020-10-02T13:48:02.141420Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.142525Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.142838Z	    8 Query	DROP TABLE IF EXISTS QRTZ_TRIGGERS
+2020-10-02T13:48:02.144214Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.145452Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.145781Z	    8 Query	DROP TABLE IF EXISTS QRTZ_JOB_DETAILS
+2020-10-02T13:48:02.147320Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.149127Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.149501Z	    8 Query	DROP TABLE IF EXISTS QRTZ_CALENDARS
+2020-10-02T13:48:02.150917Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.152417Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.152832Z	    8 Query	CREATE TABLE QRTZ_JOB_DETAILS( SCHED_NAME VARCHAR(120) NOT NULL, JOB_NAME VARCHAR(190) NOT NULL, JOB_GROUP VARCHAR(190) NOT NULL, DESCRIPTION VARCHAR(250) NULL, JOB_CLASS_NAME VARCHAR(250) NOT NULL, IS_DURABLE VARCHAR(1) NOT NULL, IS_NONCONCURRENT VARCHAR(1) NOT NULL, IS_UPDATE_DATA VARCHAR(1) NOT NULL, REQUESTS_RECOVERY VARCHAR(1) NOT NULL, JOB_DATA BLOB NULL, PRIMARY KEY (SCHED_NAME,JOB_NAME,JOB_GROUP)) ENGINE=InnoDB
+2020-10-02T13:48:02.161731Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.163405Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.163900Z	    8 Query	CREATE TABLE QRTZ_TRIGGERS ( SCHED_NAME VARCHAR(120) NOT NULL, TRIGGER_NAME VARCHAR(190) NOT NULL, TRIGGER_GROUP VARCHAR(190) NOT NULL, JOB_NAME VARCHAR(190) NOT NULL, JOB_GROUP VARCHAR(190) NOT NULL, DESCRIPTION VARCHAR(250) NULL, NEXT_FIRE_TIME BIGINT(13) NULL, PREV_FIRE_TIME BIGINT(13) NULL, PRIORITY INTEGER NULL, TRIGGER_STATE VARCHAR(16) NOT NULL, TRIGGER_TYPE VARCHAR(8) NOT NULL, START_TIME BIGINT(13) NOT NULL, END_TIME BIGINT(13) NULL, CALENDAR_NAME VARCHAR(190) NULL, MISFIRE_INSTR SMALLINT(2) NULL, JOB_DATA BLOB NULL, PRIMARY KEY (SCHED_NAME,TRIGGER_NAME,TRIGGER_GROUP), FOREIGN KEY (SCHED_NAME,JOB_NAME,JOB_GROUP) REFERENCES QRTZ_JOB_DETAILS(SCHED_NAME,JOB_NAME,JOB_GROUP)) ENGINE=InnoDB
+2020-10-02T13:48:02.174149Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.175966Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.176353Z	    8 Query	CREATE TABLE QRTZ_SIMPLE_TRIGGERS ( SCHED_NAME VARCHAR(120) NOT NULL, TRIGGER_NAME VARCHAR(190) NOT NULL, TRIGGER_GROUP VARCHAR(190) NOT NULL, REPEAT_COUNT BIGINT(7) NOT NULL, REPEAT_INTERVAL BIGINT(12) NOT NULL, TIMES_TRIGGERED BIGINT(10) NOT NULL, PRIMARY KEY (SCHED_NAME,TRIGGER_NAME,TRIGGER_GROUP), FOREIGN KEY (SCHED_NAME,TRIGGER_NAME,TRIGGER_GROUP) REFERENCES QRTZ_TRIGGERS(SCHED_NAME,TRIGGER_NAME,TRIGGER_GROUP)) ENGINE=InnoDB
+2020-10-02T13:48:02.185163Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.187994Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.188546Z	    8 Query	CREATE TABLE QRTZ_CRON_TRIGGERS ( SCHED_NAME VARCHAR(120) NOT NULL, TRIGGER_NAME VARCHAR(190) NOT NULL, TRIGGER_GROUP VARCHAR(190) NOT NULL, CRON_EXPRESSION VARCHAR(120) NOT NULL, TIME_ZONE_ID VARCHAR(80), PRIMARY KEY (SCHED_NAME,TRIGGER_NAME,TRIGGER_GROUP), FOREIGN KEY (SCHED_NAME,TRIGGER_NAME,TRIGGER_GROUP) REFERENCES QRTZ_TRIGGERS(SCHED_NAME,TRIGGER_NAME,TRIGGER_GROUP)) ENGINE=InnoDB
+2020-10-02T13:48:02.199740Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.201464Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.201937Z	    8 Query	CREATE TABLE QRTZ_SIMPROP_TRIGGERS ( SCHED_NAME VARCHAR(120) NOT NULL, TRIGGER_NAME VARCHAR(190) NOT NULL, TRIGGER_GROUP VARCHAR(190) NOT NULL, STR_PROP_1 VARCHAR(512) NULL, STR_PROP_2 VARCHAR(512) NULL, STR_PROP_3 VARCHAR(512) NULL, INT_PROP_1 INT NULL, INT_PROP_2 INT NULL, LONG_PROP_1 BIGINT NULL, LONG_PROP_2 BIGINT NULL, DEC_PROP_1 NUMERIC(13,4) NULL, DEC_PROP_2 NUMERIC(13,4) NULL, BOOL_PROP_1 VARCHAR(1) NULL, BOOL_PROP_2 VARCHAR(1) NULL, PRIMARY KEY (SCHED_NAME,TRIGGER_NAME,TRIGGER_GROUP), FOREIGN KEY (SCHED_NAME,TRIGGER_NAME,TRIGGER_GROUP) REFERENCES QRTZ_TRIGGERS(SCHED_NAME,TRIGGER_NAME,TRIGGER_GROUP)) ENGINE=InnoDB
+2020-10-02T13:48:02.215036Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.215969Z	    9 Connect	root@172.26.0.1 on quartz_demo using SSL/TLS
+2020-10-02T13:48:02.216354Z	    9 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T13:48:02.216579Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.216878Z	    9 Query	SET character_set_results = NULL
+2020-10-02T13:48:02.216987Z	    8 Query	CREATE TABLE QRTZ_BLOB_TRIGGERS ( SCHED_NAME VARCHAR(120) NOT NULL, TRIGGER_NAME VARCHAR(190) NOT NULL, TRIGGER_GROUP VARCHAR(190) NOT NULL, BLOB_DATA BLOB NULL, PRIMARY KEY (SCHED_NAME,TRIGGER_NAME,TRIGGER_GROUP), INDEX (SCHED_NAME,TRIGGER_NAME, TRIGGER_GROUP), FOREIGN KEY (SCHED_NAME,TRIGGER_NAME,TRIGGER_GROUP) REFERENCES QRTZ_TRIGGERS(SCHED_NAME,TRIGGER_NAME,TRIGGER_GROUP)) ENGINE=InnoDB
+2020-10-02T13:48:02.217138Z	    9 Query	SET autocommit=1
+2020-10-02T13:48:02.217518Z	    9 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.226652Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.228135Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.228483Z	    8 Query	CREATE TABLE QRTZ_CALENDARS ( SCHED_NAME VARCHAR(120) NOT NULL, CALENDAR_NAME VARCHAR(190) NOT NULL, CALENDAR BLOB NOT NULL, PRIMARY KEY (SCHED_NAME,CALENDAR_NAME)) ENGINE=InnoDB
+2020-10-02T13:48:02.232311Z	   10 Connect	root@172.26.0.1 on quartz_demo using SSL/TLS
+2020-10-02T13:48:02.232860Z	   10 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T13:48:02.233487Z	   10 Query	SET character_set_results = NULL
+2020-10-02T13:48:02.233761Z	   10 Query	SET autocommit=1
+2020-10-02T13:48:02.234084Z	   10 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.235188Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.236736Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.237088Z	    8 Query	CREATE TABLE QRTZ_PAUSED_TRIGGER_GRPS ( SCHED_NAME VARCHAR(120) NOT NULL, TRIGGER_GROUP VARCHAR(190) NOT NULL, PRIMARY KEY (SCHED_NAME,TRIGGER_GROUP)) ENGINE=InnoDB
+2020-10-02T13:48:02.245825Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.246340Z	   11 Connect	root@172.26.0.1 on quartz_demo using SSL/TLS
+2020-10-02T13:48:02.246782Z	   11 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T13:48:02.247097Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.247355Z	   11 Query	SET character_set_results = NULL
+2020-10-02T13:48:02.247510Z	    8 Query	CREATE TABLE QRTZ_FIRED_TRIGGERS ( SCHED_NAME VARCHAR(120) NOT NULL, ENTRY_ID VARCHAR(95) NOT NULL, TRIGGER_NAME VARCHAR(190) NOT NULL, TRIGGER_GROUP VARCHAR(190) NOT NULL, INSTANCE_NAME VARCHAR(190) NOT NULL, FIRED_TIME BIGINT(13) NOT NULL, SCHED_TIME BIGINT(13) NOT NULL, PRIORITY INTEGER NOT NULL, STATE VARCHAR(16) NOT NULL, JOB_NAME VARCHAR(190) NULL, JOB_GROUP VARCHAR(190) NULL, IS_NONCONCURRENT VARCHAR(1) NULL, REQUESTS_RECOVERY VARCHAR(1) NULL, PRIMARY KEY (SCHED_NAME,ENTRY_ID)) ENGINE=InnoDB
+2020-10-02T13:48:02.247625Z	   11 Query	SET autocommit=1
+2020-10-02T13:48:02.247943Z	   11 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.254900Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.256338Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.256718Z	    8 Query	CREATE TABLE QRTZ_SCHEDULER_STATE ( SCHED_NAME VARCHAR(120) NOT NULL, INSTANCE_NAME VARCHAR(190) NOT NULL, LAST_CHECKIN_TIME BIGINT(13) NOT NULL, CHECKIN_INTERVAL BIGINT(13) NOT NULL, PRIMARY KEY (SCHED_NAME,INSTANCE_NAME)) ENGINE=InnoDB
+2020-10-02T13:48:02.262548Z	   12 Connect	root@172.26.0.1 on quartz_demo using SSL/TLS
+2020-10-02T13:48:02.263132Z	   12 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T13:48:02.263224Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.263719Z	   12 Query	SET character_set_results = NULL
+2020-10-02T13:48:02.264031Z	   12 Query	SET autocommit=1
+2020-10-02T13:48:02.264383Z	   12 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.264570Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.264876Z	    8 Query	CREATE TABLE QRTZ_LOCKS ( SCHED_NAME VARCHAR(120) NOT NULL, LOCK_NAME VARCHAR(40) NOT NULL, PRIMARY KEY (SCHED_NAME,LOCK_NAME)) ENGINE=InnoDB
+2020-10-02T13:48:02.271613Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.273396Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.273825Z	    8 Query	CREATE INDEX IDX_QRTZ_J_REQ_RECOVERY ON QRTZ_JOB_DETAILS(SCHED_NAME,REQUESTS_RECOVERY)
+2020-10-02T13:48:02.280637Z	   13 Connect	root@172.26.0.1 on quartz_demo using SSL/TLS
+2020-10-02T13:48:02.281686Z	   13 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T13:48:02.282482Z	   13 Query	SET character_set_results = NULL
+2020-10-02T13:48:02.282765Z	   13 Query	SET autocommit=1
+2020-10-02T13:48:02.283047Z	   13 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.295507Z	   14 Connect	root@172.26.0.1 on quartz_demo using SSL/TLS
+2020-10-02T13:48:02.295988Z	   14 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T13:48:02.296202Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.296648Z	   14 Query	SET character_set_results = NULL
+2020-10-02T13:48:02.296937Z	   14 Query	SET autocommit=1
+2020-10-02T13:48:02.297319Z	   14 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.298280Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.298687Z	    8 Query	CREATE INDEX IDX_QRTZ_J_GRP ON QRTZ_JOB_DETAILS(SCHED_NAME,JOB_GROUP)
+2020-10-02T13:48:02.313717Z	   15 Connect	root@172.26.0.1 on quartz_demo using SSL/TLS
+2020-10-02T13:48:02.314198Z	   15 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T13:48:02.314803Z	   15 Query	SET character_set_results = NULL
+2020-10-02T13:48:02.315041Z	   15 Query	SET autocommit=1
+2020-10-02T13:48:02.315360Z	   15 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.317132Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.318461Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.318859Z	    8 Query	CREATE INDEX IDX_QRTZ_T_J ON QRTZ_TRIGGERS(SCHED_NAME,JOB_NAME,JOB_GROUP)
+2020-10-02T13:48:02.325271Z	   16 Connect	root@172.26.0.1 on quartz_demo using SSL/TLS
+2020-10-02T13:48:02.325724Z	   16 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T13:48:02.326193Z	   16 Query	SET character_set_results = NULL
+2020-10-02T13:48:02.326404Z	   16 Query	SET autocommit=1
+2020-10-02T13:48:02.326671Z	   16 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.339183Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.341619Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.342389Z	    8 Query	CREATE INDEX IDX_QRTZ_T_JG ON QRTZ_TRIGGERS(SCHED_NAME,JOB_GROUP)
+2020-10-02T13:48:02.357071Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.358507Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.358853Z	    8 Query	CREATE INDEX IDX_QRTZ_T_C ON QRTZ_TRIGGERS(SCHED_NAME,CALENDAR_NAME)
+2020-10-02T13:48:02.368693Z	   17 Connect	root@172.26.0.1 on quartz_demo using SSL/TLS
+2020-10-02T13:48:02.369082Z	   17 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T13:48:02.369565Z	   17 Query	SET character_set_results = NULL
+2020-10-02T13:48:02.369792Z	   17 Query	SET autocommit=1
+2020-10-02T13:48:02.370047Z	   17 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.377770Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.380117Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.380777Z	    8 Query	CREATE INDEX IDX_QRTZ_T_G ON QRTZ_TRIGGERS(SCHED_NAME,TRIGGER_GROUP)
+2020-10-02T13:48:02.395512Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.396582Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.396919Z	    8 Query	CREATE INDEX IDX_QRTZ_T_STATE ON QRTZ_TRIGGERS(SCHED_NAME,TRIGGER_STATE)
+2020-10-02T13:48:02.415023Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.416528Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.416749Z	    8 Query	CREATE INDEX IDX_QRTZ_T_N_STATE ON QRTZ_TRIGGERS(SCHED_NAME,TRIGGER_NAME,TRIGGER_GROUP,TRIGGER_STATE)
+2020-10-02T13:48:02.431653Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.432817Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.433137Z	    8 Query	CREATE INDEX IDX_QRTZ_T_N_G_STATE ON QRTZ_TRIGGERS(SCHED_NAME,TRIGGER_GROUP,TRIGGER_STATE)
+2020-10-02T13:48:02.452164Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.453604Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.453953Z	    8 Query	CREATE INDEX IDX_QRTZ_T_NEXT_FIRE_TIME ON QRTZ_TRIGGERS(SCHED_NAME,NEXT_FIRE_TIME)
+2020-10-02T13:48:02.470466Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.473851Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.474334Z	    8 Query	CREATE INDEX IDX_QRTZ_T_NFT_ST ON QRTZ_TRIGGERS(SCHED_NAME,TRIGGER_STATE,NEXT_FIRE_TIME)
+2020-10-02T13:48:02.493743Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.495062Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.495332Z	    8 Query	CREATE INDEX IDX_QRTZ_T_NFT_MISFIRE ON QRTZ_TRIGGERS(SCHED_NAME,MISFIRE_INSTR,NEXT_FIRE_TIME)
+2020-10-02T13:48:02.517824Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.519157Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.519450Z	    8 Query	CREATE INDEX IDX_QRTZ_T_NFT_ST_MISFIRE ON QRTZ_TRIGGERS(SCHED_NAME,MISFIRE_INSTR,NEXT_FIRE_TIME,TRIGGER_STATE)
+2020-10-02T13:48:02.539395Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.542277Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.542844Z	    8 Query	CREATE INDEX IDX_QRTZ_T_NFT_ST_MISFIRE_GRP ON QRTZ_TRIGGERS(SCHED_NAME,MISFIRE_INSTR,NEXT_FIRE_TIME,TRIGGER_GROUP,TRIGGER_STATE)
+2020-10-02T13:48:02.564726Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.566086Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.566318Z	    8 Query	CREATE INDEX IDX_QRTZ_FT_TRIG_INST_NAME ON QRTZ_FIRED_TRIGGERS(SCHED_NAME,INSTANCE_NAME)
+2020-10-02T13:48:02.576231Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.577870Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.578735Z	    8 Query	CREATE INDEX IDX_QRTZ_FT_INST_JOB_REQ_RCVRY ON QRTZ_FIRED_TRIGGERS(SCHED_NAME,INSTANCE_NAME,REQUESTS_RECOVERY)
+2020-10-02T13:48:02.587664Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.588645Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.588903Z	    8 Query	CREATE INDEX IDX_QRTZ_FT_J_G ON QRTZ_FIRED_TRIGGERS(SCHED_NAME,JOB_NAME,JOB_GROUP)
+2020-10-02T13:48:02.595537Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.596515Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.596854Z	    8 Query	CREATE INDEX IDX_QRTZ_FT_JG ON QRTZ_FIRED_TRIGGERS(SCHED_NAME,JOB_GROUP)
+2020-10-02T13:48:02.608013Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.609714Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.610519Z	    8 Query	CREATE INDEX IDX_QRTZ_FT_T_G ON QRTZ_FIRED_TRIGGERS(SCHED_NAME,TRIGGER_NAME,TRIGGER_GROUP)
+2020-10-02T13:48:02.621149Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.623559Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.624234Z	    8 Query	CREATE INDEX IDX_QRTZ_FT_TG ON QRTZ_FIRED_TRIGGERS(SCHED_NAME,TRIGGER_GROUP)
+2020-10-02T13:48:02.643590Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.646342Z	    8 Query	SELECT @@session.transaction_read_only
+2020-10-02T13:48:02.646879Z	    8 Query	commit
+2020-10-02T13:48:02.647195Z	    8 Query	SHOW WARNINGS
+2020-10-02T13:48:02.695807Z	    8 Query	SET autocommit=0
+2020-10-02T13:48:02.704182Z	    8 Query	SELECT * FROM QRTZ_JOB_DETAILS WHERE SCHED_NAME = 'quartzScheduler' AND JOB_NAME = 'sample_job' AND JOB_GROUP = 'DEFAULT'
+2020-10-02T13:48:02.708679Z	    8 Query	SELECT * FROM QRTZ_LOCKS WHERE SCHED_NAME = 'quartzScheduler' AND LOCK_NAME = 'TRIGGER_ACCESS' FOR UPDATE
+2020-10-02T13:48:02.710127Z	    8 Query	INSERT INTO QRTZ_LOCKS(SCHED_NAME, LOCK_NAME) VALUES ('quartzScheduler', 'TRIGGER_ACCESS')
+2020-10-02T13:48:02.710785Z	    8 Query	SELECT JOB_NAME FROM QRTZ_JOB_DETAILS WHERE SCHED_NAME = 'quartzScheduler' AND JOB_NAME = 'sample_job' AND JOB_GROUP = 'DEFAULT'
+2020-10-02T13:48:02.717874Z	    8 Query	INSERT INTO QRTZ_JOB_DETAILS (SCHED_NAME, JOB_NAME, JOB_GROUP, DESCRIPTION, JOB_CLASS_NAME, IS_DURABLE, IS_NONCONCURRENT, IS_UPDATE_DATA, REQUESTS_RECOVERY, JOB_DATA)  VALUES('quartzScheduler', 'sample_job', 'DEFAULT', 'Sample job', 'huaminglin.demo.quartz.spring.SampleJob', 1, 0, 0, 0, x'ACED0005737200156F72672E71756172747A2E4A6F62446174614D61709FB083E8BFA9B0CB020000787200266F72672E71756172747A2E7574696C732E537472696E674B65794469727479466C61674D61708208E8C3FBC55D280200015A0013616C6C6F77735472616E7369656E74446174617872001D6F72672E71756172747A2E7574696C732E4469727479466C61674D617013E62EAD28760ACE0200025A000564697274794C00036D617074000F4C6A6176612F7574696C2F4D61703B787000737200116A6176612E7574696C2E486173684D61700507DAC1C31660D103000246000A6C6F6164466163746F724900097468726573686F6C6478703F40000000000010770800000010000000007800')
+2020-10-02T13:48:02.719971Z	    8 Query	SELECT * FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_NAME = 'trigger' AND TRIGGER_GROUP = 'DEFAULT'
+2020-10-02T13:48:02.721075Z	    8 Query	SELECT * FROM QRTZ_LOCKS WHERE SCHED_NAME = 'quartzScheduler' AND LOCK_NAME = 'TRIGGER_ACCESS' FOR UPDATE
+2020-10-02T13:48:02.721777Z	    8 Query	SELECT TRIGGER_NAME FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_NAME = 'trigger' AND TRIGGER_GROUP = 'DEFAULT'
+2020-10-02T13:48:02.722401Z	    8 Query	SELECT TRIGGER_GROUP FROM QRTZ_PAUSED_TRIGGER_GRPS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_GROUP = 'DEFAULT'
+2020-10-02T13:48:02.724738Z	    8 Query	SELECT TRIGGER_GROUP FROM QRTZ_PAUSED_TRIGGER_GRPS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_GROUP = '_$_ALL_GROUPS_PAUSED_$_'
+2020-10-02T13:48:02.725317Z	    8 Query	SELECT * FROM QRTZ_JOB_DETAILS WHERE SCHED_NAME = 'quartzScheduler' AND JOB_NAME = 'sample_job' AND JOB_GROUP = 'DEFAULT'
+2020-10-02T13:48:02.729475Z	    8 Query	INSERT INTO QRTZ_TRIGGERS (SCHED_NAME, TRIGGER_NAME, TRIGGER_GROUP, JOB_NAME, JOB_GROUP, DESCRIPTION, NEXT_FIRE_TIME, PREV_FIRE_TIME, TRIGGER_STATE, TRIGGER_TYPE, START_TIME, END_TIME, CALENDAR_NAME, MISFIRE_INSTR, JOB_DATA, PRIORITY)  VALUES('quartzScheduler', 'trigger', 'DEFAULT', 'sample_job', 'DEFAULT', null, 1601646481832, -1, 'WAITING', 'SIMPLE', 1601646481832, 0, null, 0, x'', 0)
+2020-10-02T13:48:02.730172Z	    8 Query	INSERT INTO QRTZ_SIMPLE_TRIGGERS (SCHED_NAME, TRIGGER_NAME, TRIGGER_GROUP, REPEAT_COUNT, REPEAT_INTERVAL, TIMES_TRIGGERED)  VALUES('quartzScheduler', 'trigger', 'DEFAULT', -1, 60000, 0)
+2020-10-02T13:48:02.731634Z	    8 Query	commit
+2020-10-02T13:48:02.732382Z	    8 Query	SET autocommit=1
+2020-10-02T13:48:02.744953Z	    8 Query	SET autocommit=0
+2020-10-02T13:48:02.746275Z	    8 Query	SELECT * FROM QRTZ_LOCKS WHERE SCHED_NAME = 'quartzScheduler' AND LOCK_NAME = 'TRIGGER_ACCESS' FOR UPDATE
+2020-10-02T13:48:02.747610Z	    8 Query	UPDATE QRTZ_TRIGGERS SET TRIGGER_STATE = 'WAITING' WHERE SCHED_NAME = 'quartzScheduler' AND (TRIGGER_STATE = 'ACQUIRED' OR TRIGGER_STATE = 'BLOCKED')
+2020-10-02T13:48:02.748579Z	    8 Query	UPDATE QRTZ_TRIGGERS SET TRIGGER_STATE = 'PAUSED' WHERE SCHED_NAME = 'quartzScheduler' AND (TRIGGER_STATE = 'PAUSED_BLOCKED' OR TRIGGER_STATE = 'PAUSED_BLOCKED')
+2020-10-02T13:48:02.749316Z	    8 Query	SELECT TRIGGER_NAME, TRIGGER_GROUP FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND NOT (MISFIRE_INSTR = -1) AND NEXT_FIRE_TIME < 1601646422749 AND TRIGGER_STATE = 'WAITING' ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC
+2020-10-02T13:48:02.751030Z	    8 Query	SELECT * FROM QRTZ_FIRED_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND INSTANCE_NAME = 'NON_CLUSTERED' AND REQUESTS_RECOVERY = 1
+2020-10-02T13:48:02.751766Z	    8 Query	SELECT TRIGGER_NAME, TRIGGER_GROUP FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_STATE = 'COMPLETE'
+2020-10-02T13:48:02.752284Z	    8 Query	DELETE FROM QRTZ_FIRED_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler'
+2020-10-02T13:48:02.752619Z	    8 Query	commit
+2020-10-02T13:48:02.752904Z	    8 Query	SET autocommit=1
+2020-10-02T13:48:02.753903Z	    8 Query	SET autocommit=0
+2020-10-02T13:48:02.754689Z	    8 Query	SELECT COUNT(TRIGGER_NAME) FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND NOT (MISFIRE_INSTR = -1) AND NEXT_FIRE_TIME < 1601646422754 AND TRIGGER_STATE = 'WAITING'
+2020-10-02T13:48:02.754775Z	    9 Query	SET autocommit=0
+2020-10-02T13:48:02.755248Z	    9 Query	SET SQL_SELECT_LIMIT=1
+2020-10-02T13:48:02.755533Z	    8 Query	commit
+2020-10-02T13:48:02.755805Z	    9 Query	SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_STATE = 'WAITING' AND NEXT_FIRE_TIME <= 1601646512753 AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR != -1 AND NEXT_FIRE_TIME >= 1601646422754)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC
+2020-10-02T13:48:02.755837Z	    8 Query	SET autocommit=1
+2020-10-02T13:48:02.757412Z	    9 Query	SET SQL_SELECT_LIMIT=DEFAULT
+2020-10-02T13:48:02.757676Z	    9 Query	SELECT * FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_NAME = 'trigger' AND TRIGGER_GROUP = 'DEFAULT'
+2020-10-02T13:48:02.758495Z	    9 Query	SELECT * FROM QRTZ_SIMPLE_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_NAME = 'trigger' AND TRIGGER_GROUP = 'DEFAULT'
+2020-10-02T13:48:02.762624Z	    9 Query	SELECT * FROM QRTZ_JOB_DETAILS WHERE SCHED_NAME = 'quartzScheduler' AND JOB_NAME = 'sample_job' AND JOB_GROUP = 'DEFAULT'
+2020-10-02T13:48:02.763962Z	    9 Query	UPDATE QRTZ_TRIGGERS SET TRIGGER_STATE = 'ACQUIRED' WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_NAME = 'trigger' AND TRIGGER_GROUP = 'DEFAULT' AND TRIGGER_STATE = 'WAITING'
+2020-10-02T13:48:02.764905Z	    9 Query	INSERT INTO QRTZ_FIRED_TRIGGERS (SCHED_NAME, ENTRY_ID, TRIGGER_NAME, TRIGGER_GROUP, INSTANCE_NAME, FIRED_TIME, SCHED_TIME, STATE, JOB_NAME, JOB_GROUP, IS_NONCONCURRENT, REQUESTS_RECOVERY, PRIORITY) VALUES('quartzScheduler', 'NON_CLUSTERED1601646482676', 'trigger', 'DEFAULT', 'NON_CLUSTERED', 1601646482764, 1601646481832, 'ACQUIRED', null, null, 0, 0, 0)
+2020-10-02T13:48:02.765275Z	    9 Query	commit
+2020-10-02T13:48:02.769328Z	    9 Query	SET autocommit=1
+2020-10-02T13:48:02.770280Z	    9 Query	SET autocommit=0
+2020-10-02T13:48:02.770760Z	    9 Query	SELECT * FROM QRTZ_LOCKS WHERE SCHED_NAME = 'quartzScheduler' AND LOCK_NAME = 'TRIGGER_ACCESS' FOR UPDATE
+2020-10-02T13:48:02.771444Z	    9 Query	SELECT TRIGGER_STATE FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_NAME = 'trigger' AND TRIGGER_GROUP = 'DEFAULT'
+2020-10-02T13:48:02.772075Z	    9 Query	SELECT * FROM QRTZ_JOB_DETAILS WHERE SCHED_NAME = 'quartzScheduler' AND JOB_NAME = 'sample_job' AND JOB_GROUP = 'DEFAULT'
+2020-10-02T13:48:02.773132Z	    9 Query	UPDATE QRTZ_FIRED_TRIGGERS SET INSTANCE_NAME = 'NON_CLUSTERED', FIRED_TIME = 1601646482772, SCHED_TIME = 1601646481832, STATE = 'EXECUTING', JOB_NAME = 'sample_job', JOB_GROUP = 'DEFAULT', IS_NONCONCURRENT = 0, REQUESTS_RECOVERY = 0 WHERE SCHED_NAME = 'quartzScheduler' AND ENTRY_ID = 'NON_CLUSTERED1601646482676'
+2020-10-02T13:48:02.773763Z	    9 Query	SELECT TRIGGER_NAME FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_NAME = 'trigger' AND TRIGGER_GROUP = 'DEFAULT'
+2020-10-02T13:48:02.774370Z	    9 Query	UPDATE QRTZ_TRIGGERS SET JOB_NAME = 'sample_job', JOB_GROUP = 'DEFAULT', DESCRIPTION = null, NEXT_FIRE_TIME = 1601646541832, PREV_FIRE_TIME = 1601646481832, TRIGGER_STATE = 'WAITING', TRIGGER_TYPE = 'SIMPLE', START_TIME = 1601646481832, END_TIME = 0, CALENDAR_NAME = null, MISFIRE_INSTR = 0, PRIORITY = 0 WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_NAME = 'trigger' AND TRIGGER_GROUP = 'DEFAULT'
+2020-10-02T13:48:02.774977Z	    9 Query	UPDATE QRTZ_SIMPLE_TRIGGERS SET REPEAT_COUNT = -1, REPEAT_INTERVAL = 60000, TIMES_TRIGGERED = 1 WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_NAME = 'trigger' AND TRIGGER_GROUP = 'DEFAULT'
+2020-10-02T13:48:02.775570Z	    9 Query	commit
+2020-10-02T13:48:02.776461Z	    9 Query	SET autocommit=1
+2020-10-02T13:48:02.779912Z	    9 Query	SET autocommit=0
+2020-10-02T13:48:02.781045Z	    9 Query	SET SQL_SELECT_LIMIT=1
+2020-10-02T13:48:02.781505Z	    9 Query	SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_STATE = 'WAITING' AND NEXT_FIRE_TIME <= 1601646512779 AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR != -1 AND NEXT_FIRE_TIME >= 1601646422780)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC
+2020-10-02T13:48:02.782935Z	    9 Query	commit
+2020-10-02T13:48:02.783313Z	    9 Query	SET autocommit=1
+2020-10-02T13:48:08.966256Z	   18 Connect	healthchecker@localhost on  using Socket
+2020-10-02T13:48:08.966503Z	   18 Quit
+2020-10-02T13:48:32.340585Z	    9 Query	SET autocommit=0
+2020-10-02T13:48:32.342630Z	    9 Query	SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_STATE = 'WAITING' AND NEXT_FIRE_TIME <= 1601646542338 AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR != -1 AND NEXT_FIRE_TIME >= 1601646452341)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC
+2020-10-02T13:48:32.344715Z	    9 Query	SET SQL_SELECT_LIMIT=DEFAULT
+2020-10-02T13:48:32.345384Z	    9 Query	SELECT * FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_NAME = 'trigger' AND TRIGGER_GROUP = 'DEFAULT'
+2020-10-02T13:48:32.347220Z	    9 Query	SELECT * FROM QRTZ_SIMPLE_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_NAME = 'trigger' AND TRIGGER_GROUP = 'DEFAULT'
+2020-10-02T13:48:32.348917Z	    9 Query	SELECT * FROM QRTZ_JOB_DETAILS WHERE SCHED_NAME = 'quartzScheduler' AND JOB_NAME = 'sample_job' AND JOB_GROUP = 'DEFAULT'
+2020-10-02T13:48:32.351457Z	    9 Query	UPDATE QRTZ_TRIGGERS SET TRIGGER_STATE = 'ACQUIRED' WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_NAME = 'trigger' AND TRIGGER_GROUP = 'DEFAULT' AND TRIGGER_STATE = 'WAITING'
+2020-10-02T13:48:32.353189Z	    9 Query	INSERT INTO QRTZ_FIRED_TRIGGERS (SCHED_NAME, ENTRY_ID, TRIGGER_NAME, TRIGGER_GROUP, INSTANCE_NAME, FIRED_TIME, SCHED_TIME, STATE, JOB_NAME, JOB_GROUP, IS_NONCONCURRENT, REQUESTS_RECOVERY, PRIORITY) VALUES('quartzScheduler', 'NON_CLUSTERED1601646482677', 'trigger', 'DEFAULT', 'NON_CLUSTERED', 1601646512352, 1601646541832, 'ACQUIRED', null, null, 0, 0, 0)
+2020-10-02T13:48:32.353485Z	    9 Query	commit
+2020-10-02T13:48:32.359768Z	    9 Query	SET autocommit=1
+2020-10-02T13:48:32.790773Z	    8 Query	SET autocommit=0
+2020-10-02T13:48:32.792460Z	    8 Query	SELECT * FROM QRTZ_LOCKS WHERE SCHED_NAME = 'quartzScheduler' AND LOCK_NAME = 'TRIGGER_ACCESS' FOR UPDATE
+2020-10-02T13:48:32.794977Z	    8 Query	DELETE FROM QRTZ_FIRED_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND ENTRY_ID = 'NON_CLUSTERED1601646482676'
+2020-10-02T13:48:32.795735Z	    8 Query	commit
+2020-10-02T13:48:32.802022Z	    8 Query	SET autocommit=1
+2020-10-02T13:48:39.083398Z	   19 Connect	healthchecker@localhost on  using Socket
+2020-10-02T13:48:39.083577Z	   19 Quit

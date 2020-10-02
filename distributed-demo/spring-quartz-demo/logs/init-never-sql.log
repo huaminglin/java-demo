@@ -1,0 +1,84 @@
+2020-10-02T11:15:01.934988Z	   30 Connect	root@172.21.0.1 on quartz_demo using SSL/TLS
+2020-10-02T11:15:01.936795Z	   30 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T11:15:01.943232Z	   30 Query	SET character_set_results = NULL
+2020-10-02T11:15:01.944098Z	   30 Query	SET autocommit=1
+2020-10-02T11:15:01.947142Z	   30 Query	SELECT @@session.transaction_read_only
+2020-10-02T11:15:01.947952Z	   30 Query	SELECT @@session.transaction_isolation
+2020-10-02T11:15:01.959353Z	   30 Query	SET autocommit=0
+2020-10-02T11:15:01.973970Z	   30 Query	SELECT * FROM QRTZ_JOB_DETAILS WHERE SCHED_NAME = 'quartzScheduler' AND JOB_NAME = 'sample_job' AND JOB_GROUP = 'DEFAULT'
+2020-10-02T11:15:01.988576Z	   30 Query	SELECT * FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_NAME = 'trigger' AND TRIGGER_GROUP = 'DEFAULT'
+2020-10-02T11:15:01.990218Z	   30 Query	SELECT * FROM QRTZ_SIMPLE_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_NAME = 'trigger' AND TRIGGER_GROUP = 'DEFAULT'
+2020-10-02T11:15:01.994017Z	   30 Query	commit
+2020-10-02T11:15:01.994697Z	   30 Query	SET autocommit=1
+2020-10-02T11:15:02.011438Z	   30 Query	SET autocommit=0
+2020-10-02T11:15:02.012463Z	   30 Query	SELECT * FROM QRTZ_LOCKS WHERE SCHED_NAME = 'quartzScheduler' AND LOCK_NAME = 'TRIGGER_ACCESS' FOR UPDATE
+2020-10-02T11:15:02.013529Z	   30 Query	UPDATE QRTZ_TRIGGERS SET TRIGGER_STATE = 'WAITING' WHERE SCHED_NAME = 'quartzScheduler' AND (TRIGGER_STATE = 'ACQUIRED' OR TRIGGER_STATE = 'BLOCKED')
+2020-10-02T11:15:02.014297Z	   30 Query	UPDATE QRTZ_TRIGGERS SET TRIGGER_STATE = 'PAUSED' WHERE SCHED_NAME = 'quartzScheduler' AND (TRIGGER_STATE = 'PAUSED_BLOCKED' OR TRIGGER_STATE = 'PAUSED_BLOCKED')
+2020-10-02T11:15:02.015325Z	   30 Query	SELECT TRIGGER_NAME, TRIGGER_GROUP FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND NOT (MISFIRE_INSTR = -1) AND NEXT_FIRE_TIME < 1601637242014 AND TRIGGER_STATE = 'WAITING' ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC
+2020-10-02T11:15:02.016397Z	   30 Query	SELECT * FROM QRTZ_FIRED_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND INSTANCE_NAME = 'NON_CLUSTERED' AND REQUESTS_RECOVERY = 1
+2020-10-02T11:15:02.017564Z	   30 Query	SELECT TRIGGER_NAME, TRIGGER_GROUP FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_STATE = 'COMPLETE'
+2020-10-02T11:15:02.018347Z	   30 Query	DELETE FROM QRTZ_FIRED_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler'
+2020-10-02T11:15:02.018966Z	   30 Query	commit
+2020-10-02T11:15:02.026724Z	   30 Query	SET autocommit=1
+2020-10-02T11:15:02.028253Z	   30 Query	SET autocommit=0
+2020-10-02T11:15:02.029582Z	   30 Query	SELECT COUNT(TRIGGER_NAME) FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND NOT (MISFIRE_INSTR = -1) AND NEXT_FIRE_TIME < 1601637242028 AND TRIGGER_STATE = 'WAITING'
+2020-10-02T11:15:02.031924Z	   30 Query	commit
+2020-10-02T11:15:02.032459Z	   30 Query	SET autocommit=1
+2020-10-02T11:15:02.033029Z	   30 Query	SET autocommit=0
+2020-10-02T11:15:02.033708Z	   30 Query	SET SQL_SELECT_LIMIT=1
+2020-10-02T11:15:02.034235Z	   30 Query	SELECT TRIGGER_NAME, TRIGGER_GROUP, NEXT_FIRE_TIME, PRIORITY FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_STATE = 'WAITING' AND NEXT_FIRE_TIME <= 1601637332027 AND (MISFIRE_INSTR = -1 OR (MISFIRE_INSTR != -1 AND NEXT_FIRE_TIME >= 1601637242033)) ORDER BY NEXT_FIRE_TIME ASC, PRIORITY DESC
+2020-10-02T11:15:02.037101Z	   30 Query	SET SQL_SELECT_LIMIT=DEFAULT
+2020-10-02T11:15:02.038142Z	   30 Query	SELECT * FROM QRTZ_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_NAME = 'trigger' AND TRIGGER_GROUP = 'DEFAULT'
+2020-10-02T11:15:02.040837Z	   30 Query	SELECT * FROM QRTZ_SIMPLE_TRIGGERS WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_NAME = 'trigger' AND TRIGGER_GROUP = 'DEFAULT'
+2020-10-02T11:15:02.044569Z	   30 Query	SELECT * FROM QRTZ_JOB_DETAILS WHERE SCHED_NAME = 'quartzScheduler' AND JOB_NAME = 'sample_job' AND JOB_GROUP = 'DEFAULT'
+2020-10-02T11:15:02.046285Z	   30 Query	UPDATE QRTZ_TRIGGERS SET TRIGGER_STATE = 'ACQUIRED' WHERE SCHED_NAME = 'quartzScheduler' AND TRIGGER_NAME = 'trigger' AND TRIGGER_GROUP = 'DEFAULT' AND TRIGGER_STATE = 'WAITING'
+2020-10-02T11:15:02.048701Z	   30 Query	INSERT INTO QRTZ_FIRED_TRIGGERS (SCHED_NAME, ENTRY_ID, TRIGGER_NAME, TRIGGER_GROUP, INSTANCE_NAME, FIRED_TIME, SCHED_TIME, STATE, JOB_NAME, JOB_GROUP, IS_NONCONCURRENT, REQUESTS_RECOVERY, PRIORITY) VALUES('quartzScheduler', 'NON_CLUSTERED1601637301729', 'trigger', 'DEFAULT', 'NON_CLUSTERED', 1601637302047, 1601637320619, 'ACQUIRED', null, null, 0, 0, 0)
+2020-10-02T11:15:02.049810Z	   30 Query	commit
+2020-10-02T11:15:02.050779Z	   30 Query	SET autocommit=1
+2020-10-02T11:15:02.051696Z	   31 Connect	root@172.21.0.1 on quartz_demo using SSL/TLS
+2020-10-02T11:15:02.052064Z	   31 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T11:15:02.052592Z	   31 Query	SET character_set_results = NULL
+2020-10-02T11:15:02.052841Z	   31 Query	SET autocommit=1
+2020-10-02T11:15:02.053141Z	   31 Query	SELECT @@session.transaction_read_only
+2020-10-02T11:15:02.063414Z	   32 Connect	root@172.21.0.1 on quartz_demo using SSL/TLS
+2020-10-02T11:15:02.063892Z	   32 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T11:15:02.064422Z	   32 Query	SET character_set_results = NULL
+2020-10-02T11:15:02.064662Z	   32 Query	SET autocommit=1
+2020-10-02T11:15:02.065010Z	   32 Query	SELECT @@session.transaction_read_only
+2020-10-02T11:15:02.077258Z	   33 Connect	root@172.21.0.1 on quartz_demo using SSL/TLS
+2020-10-02T11:15:02.077688Z	   33 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T11:15:02.078190Z	   33 Query	SET character_set_results = NULL
+2020-10-02T11:15:02.078427Z	   33 Query	SET autocommit=1
+2020-10-02T11:15:02.078731Z	   33 Query	SELECT @@session.transaction_read_only
+2020-10-02T11:15:02.087946Z	   34 Connect	root@172.21.0.1 on quartz_demo using SSL/TLS
+2020-10-02T11:15:02.088346Z	   34 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T11:15:02.088853Z	   34 Query	SET character_set_results = NULL
+2020-10-02T11:15:02.089105Z	   34 Query	SET autocommit=1
+2020-10-02T11:15:02.089413Z	   34 Query	SELECT @@session.transaction_read_only
+2020-10-02T11:15:02.100997Z	   35 Connect	root@172.21.0.1 on quartz_demo using SSL/TLS
+2020-10-02T11:15:02.102353Z	   35 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T11:15:02.103753Z	   35 Query	SET character_set_results = NULL
+2020-10-02T11:15:02.104400Z	   35 Query	SET autocommit=1
+2020-10-02T11:15:02.104854Z	   35 Query	SELECT @@session.transaction_read_only
+2020-10-02T11:15:02.117099Z	   36 Connect	root@172.21.0.1 on quartz_demo using SSL/TLS
+2020-10-02T11:15:02.117513Z	   36 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T11:15:02.117978Z	   36 Query	SET character_set_results = NULL
+2020-10-02T11:15:02.118191Z	   36 Query	SET autocommit=1
+2020-10-02T11:15:02.118448Z	   36 Query	SELECT @@session.transaction_read_only
+2020-10-02T11:15:02.128258Z	   37 Connect	root@172.21.0.1 on quartz_demo using SSL/TLS
+2020-10-02T11:15:02.128852Z	   37 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T11:15:02.129576Z	   37 Query	SET character_set_results = NULL
+2020-10-02T11:15:02.129913Z	   37 Query	SET autocommit=1
+2020-10-02T11:15:02.130309Z	   37 Query	SELECT @@session.transaction_read_only
+2020-10-02T11:15:02.143740Z	   38 Connect	root@172.21.0.1 on quartz_demo using SSL/TLS
+2020-10-02T11:15:02.144312Z	   38 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T11:15:02.145003Z	   38 Query	SET character_set_results = NULL
+2020-10-02T11:15:02.145316Z	   38 Query	SET autocommit=1
+2020-10-02T11:15:02.145684Z	   38 Query	SELECT @@session.transaction_read_only
+2020-10-02T11:15:02.155030Z	   39 Connect	root@172.21.0.1 on quartz_demo using SSL/TLS
+2020-10-02T11:15:02.155518Z	   39 Query	/* mysql-connector-java-8.0.13 (Revision: 66459e9d39c8fd09767992bc592acd2053279be6) */SELECT  @@session.auto_increment_increment AS auto_increment_increment, @@character_set_client AS character_set_client, @@character_set_connection AS character_set_connection, @@character_set_results AS character_set_results, @@character_set_server AS character_set_server, @@collation_server AS collation_server, @@collation_connection AS collation_connection, @@init_connect AS init_connect, @@interactive_timeout AS interactive_timeout, @@license AS license, @@lower_case_table_names AS lower_case_table_names, @@max_allowed_packet AS max_allowed_packet, @@net_write_timeout AS net_write_timeout, @@sql_mode AS sql_mode, @@system_time_zone AS system_time_zone, @@time_zone AS time_zone, @@transaction_isolation AS transaction_isolation, @@wait_timeout AS wait_timeout
+2020-10-02T11:15:02.156097Z	   39 Query	SET character_set_results = NULL
+2020-10-02T11:15:02.156461Z	   39 Query	SET autocommit=1
+2020-10-02T11:15:02.156756Z	   39 Query	SELECT @@session.transaction_read_only
+2020-10-02T11:15:06.337383Z	   40 Connect	healthchecker@localhost on  using Socket
+2020-10-02T11:15:06.337535Z	   40 Quit
