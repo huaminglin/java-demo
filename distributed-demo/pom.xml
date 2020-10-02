@@ -20,5 +20,6 @@
         <module>hazelcast-client-demo</module>
         <module>hazelcast-scheduler-demo</module>
         <module>hazelcast-queue-demo</module>
+        <module>spring-quartz-demo</module>
     </modules>
 </project>
