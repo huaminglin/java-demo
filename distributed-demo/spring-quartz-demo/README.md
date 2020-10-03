@@ -68,3 +68,7 @@ SampleJob: Fri Oct 02 15:48:00 GMT 2020, huaminglin.demo.quartz.spring.SampleJob
 From the log, it seems both CronTriggerImpl and SimpleTriggerImpl don't have duplicated triggered jobs.
 
 Question: what kind of problem does quartz cluster solve?
+
+## Use IntelliJ to debug org.quartz.core.QuartzSchedulerThread to learn how triggers work
+
+And monitor the MySQL general log to get what kind of SQL is used.

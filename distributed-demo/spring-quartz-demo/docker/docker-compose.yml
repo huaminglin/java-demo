@@ -20,7 +20,7 @@ services:
     image: openjdk:8-jdk-alpine
     volumes:
       - ../target/spring-quartz-demo-1.0-SNAPSHOT.jar:/app.jar
-    entrypoint: java -Xms256m -Xmx512m -Djava.security.egd=file:/dev/./urandom -jar /app.jar
+    entrypoint: java -Xms256m -Xmx512m -Dspring.profiles.active=docker -Dspring.quartz.jdbc.initialize-schema=always -Djava.security.egd=file:/dev/./urandom -jar /app.jar
     depends_on:
       - mysql
     networks:
@@ -29,7 +29,7 @@ services:
     image: openjdk:8-jdk-alpine
     volumes:
       - ../target/spring-quartz-demo-1.0-SNAPSHOT.jar:/app.jar
-    entrypoint: java -Xms256m -Xmx512m -Djava.security.egd=file:/dev/./urandom -jar /app.jar
+    entrypoint: java -Xms256m -Xmx512m -Dspring.profiles.active=docker -Dspring.quartz.jdbc.initialize-schema=never -Djava.security.egd=file:/dev/./urandom -jar /app.jar
     depends_on:
       - mysql
     networks:

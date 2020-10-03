@@ -11,7 +11,6 @@ import org.springframework.scheduling.quartz.CronTriggerFactoryBean;
 import org.springframework.scheduling.quartz.SimpleTriggerFactoryBean;
 
 @Configuration
-// @Profile("jobs")
 public class JobConfiguration {
 
   @Bean
@@ -26,6 +25,7 @@ public class JobConfiguration {
 
   @Bean
   @Qualifier("job2")
+  @Profile("docker")
   public JobDetail jobDetail02() {
     return JobBuilder.newJob().ofType(SampleJob.class)
         .storeDurably()
@@ -44,6 +44,7 @@ public class JobConfiguration {
   }
 
   @Bean
+  @Profile("docker")
   public CronTriggerFactoryBean trigger02(@Qualifier("job2") JobDetail job) {
     CronTriggerFactoryBean trigger = new CronTriggerFactoryBean();
     trigger.setJobDetail(job);
