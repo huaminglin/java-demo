@@ -39,3 +39,7 @@ Conclusion: We have to resolve the SLF4J multiple bindings conflict.
 ```
 
 Note: spring-boot-starter-logging imports logback implementation.
+
+## Use Spring Actuator to change logger level at runtime
+
+curl -i -X POST -H 'Content-Type: application/json' -d '{"configuredLevel": "TRACE"}' http://localhost:8080/actuator/loggers/huaminglin.demo.spring.boot.logging.LoggingController
