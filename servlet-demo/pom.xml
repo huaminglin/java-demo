@@ -15,5 +15,6 @@
         <module>servlet-auth-demo</module>
         <module>servlet-buffer-demo</module>
         <module>servlet-slash-encode-demo</module>
+        <module>servlet-classloader-demo</module>
     </modules>
 </project>
