@@ -96,3 +96,41 @@ Exception in thread "main" java.lang.SecurityException: Prohibited package name:
 
 Process finished with exit code 1
 ```
+
+## JavaxPackageClassLoader
+
+```
+SunPackageClassLoader.loadClass: javax.security.auth.Subject
+SunPackageClassLoader.loadClass: javax.security.auth.Subject, false
+SunPackageClassLoader.loadClass: java.io.Serializable
+SunPackageClassLoader.loadClass: java.io.Serializable, false
+SunPackageClassLoader.loadClass: java.lang.Object
+SunPackageClassLoader.loadClass: java.lang.Object, false
+SunPackageClassLoader.loadClass: java.util.Set
+SunPackageClassLoader.loadClass: java.util.Set, false
+SunPackageClassLoader.loadClass: java.lang.Throwable
+SunPackageClassLoader.loadClass: java.lang.Throwable, false
+SunPackageClassLoader.loadClass: java.lang.NullPointerException
+SunPackageClassLoader.loadClass: java.lang.NullPointerException, false
+SunPackageClassLoader.loadClass: java.util.Collection
+SunPackageClassLoader.loadClass: java.util.Collection, false
+SunPackageClassLoader.loadClass: java.lang.SecurityException
+SunPackageClassLoader.loadClass: java.lang.SecurityException, false
+SunPackageClassLoader.loadClass: java.security.Permission
+SunPackageClassLoader.loadClass: java.security.Permission, false
+SunPackageClassLoader.loadClass: javax.security.auth.AuthPermission
+SunPackageClassLoader.loadClass: javax.security.auth.AuthPermission, false
+SunPackageClassLoader.loadClass: java.security.BasicPermission
+SunPackageClassLoader.loadClass: java.security.BasicPermission, false
+SunPackageClassLoader.loadClass: java.security.PrivilegedAction
+SunPackageClassLoader.loadClass: java.security.PrivilegedAction, false
+SunPackageClassLoader.loadClass: java.lang.IllegalStateException
+SunPackageClassLoader.loadClass: java.lang.IllegalStateException, false
+SunPackageClassLoader.loadClass: java.security.ProtectionDomain
+SunPackageClassLoader.loadClass: java.security.ProtectionDomain, false
+huaminglin.demo.jdk.classloader.JavaxPackageClassLoader@1be6f5c3
+null
+false
+```
+
+Conclusion: We can load class as javax. But it's a different class from the one loaded by the bootstrap classloader.
