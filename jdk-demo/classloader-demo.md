@@ -71,3 +71,28 @@ LoggerClassLoader.loadClass: java.lang.System, false
 Note: From the above log, the loadClass is called even for "java.lang.String".
 
 This is a chance to inject a hacked version of java.lang.String.
+
+
+## java.lang.SecurityException: Prohibited package name: java.lang
+
+```
+JavaDotPackageClassLoader.loadClass: java.lang.String
+JavaDotPackageClassLoader.loadClass: java.lang.String, false
+Exception in thread "main" java.lang.SecurityException: Prohibited package name: java.lang
+	at java.base/java.lang.ClassLoader.preDefineClass(ClassLoader.java:899)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1015)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/java.net.URLClassLoader.defineClass(URLClassLoader.java:550)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:458)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:452)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:451)
+	at huaminglin.demo.jdk.classloader.JavaDotPackageClassLoader.loadClass(JavaDotPackageClassLoader.java:24)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at huaminglin.demo.jdk.classloader.JavaDotPackageClassLoader.loadClass(JavaDotPackageClassLoader.java:17)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at huaminglin.demo.jdk.classloader.JavaDotPackageClassLoader.main(JavaDotPackageClassLoader.java:43)
+
+Process finished with exit code 1
+```
