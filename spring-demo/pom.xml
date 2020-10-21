@@ -26,5 +26,6 @@
         <module>spring-post-processor-demo</module>
         <module>spring-boot-logging-demo</module>
         <module>spring-boot-log4j2-demo</module>
+        <module>spring-boot-admin-demo</module>
     </modules>
 </project>
