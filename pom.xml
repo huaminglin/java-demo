@@ -22,6 +22,7 @@
         <module>servlet-demo</module>
         <module>xml-demo</module>
         <module>jdk-demo</module>
+        <module>jvm-demo</module>
 <!--        <module>wsdl-demo</module>-->
         <module>jamon-demo</module>
         <module>mysql-demo</module>
