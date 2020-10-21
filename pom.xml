@@ -32,5 +32,6 @@
         <module>encoding-demo</module>
         <module>distributed-demo</module>
         <module>websocket-demo</module>
+        <module>jdbc-demo</module>
     </modules>
 </project>

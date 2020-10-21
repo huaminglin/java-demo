@@ -25,17 +25,29 @@
 
 The session timezone is UTC, so the value in the result is "2020-07-12 09:46:28.794486".
 
-JDBC use system timezone to parse "2020-07-12 09:46:28.794486" to Timestamp (in UTC).
+JDBC uses system timezone to parse "2020-07-12 09:46:28.794486" to Timestamp (in UTC).
 
-Conclusion (1):
+Conclusion:
 
-Session timezone is not used to parse "timestamp without timezone" in the query result.
+From the PostgreSQL server's perspective, session timezone matters.
 
-Conclusion (2):
+1) "SELECT current_timestamp", the TCP package in the response:
 
-PostgreSQL JDBC doesn't support customizing the timezone in the URL level, and it always uses the JVM time zone.
+'2020-07-12 17:46:28.773102+08' and the oid 1184 in the package
 
-Finally, I realize this actually simplify the programming model: there is only one timezone on the client side.
+org.postgresql.core.Oid: public static final int TIMESTAMPTZ = 1184;
+
+2) "SELECT localtimestamp", the TCP package in the response:
+
+'2020-07-12 17:46:28.773102' and the oid 1114 in the package
+
+org.postgresql.core.Oid: public static final int TIMESTAMP = 1114;
+
+From the JDBC's perspective, JVM timezone matters.
+
+JVM's timezone is used to generate "2020-07-12 22:43:33.114+08" in INSERT SQL.
+
+JVM's timezone is used to parse string into java.sql.Timestamp.
 
 ## JVM timezone: -Duser.timezone="Europe/London"
 
