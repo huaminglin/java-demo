@@ -1,0 +1,15 @@
+version: '3.3'
+networks:
+  jdk8:
+    driver: bridge
+services:
+  gc-demo-java8:
+    image: openjdk:8u265-jdk
+    stdin_open: true
+    tty: true
+    volumes:
+      - ../target/gc-demo-1.0-SNAPSHOT.jar:/app.jar
+      - /tmp/gc.log:/gc.log
+    entrypoint: "java -Xms256m -Xmx512m -Xloggc:/gc.log -XX:+PrintGCDetails -XX:+PrintReferenceGC -XX:+PrintGCApplicationStoppedTime -XX:+PrintTenuringDistribution -cp /app.jar huaminglin.demo.jvm.gc.GcDemo"
+    networks:
+      - jdk8

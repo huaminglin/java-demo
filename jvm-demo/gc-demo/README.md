@@ -100,3 +100,30 @@ Frequent humongous allocations can cause couple of performance issues:1. If the 
 Tenuring Summary
 Reports object aging summary in Young generation
 ```
+
+## openjdk:8u265-jdk and "java -Xms256m -Xmx512m -Xloggc:/gc.log -cp /app.jar huaminglin.demo.jvm.gc.GcDemo"
+
+./update.sh, the tty doesn't forward the input to the Java process.
+
+Then use "docker attach" to the Java process.
+
+```
+OpenJDK 64-Bit Server VM (25.265-b01) for linux-amd64 JRE (1.8.0_265-b01), built on Jul 27 2020 07:33:48 by "openjdk" with gcc 4.4.7 20120313 (Red Hat 4.4.7-23)
+Memory: 4k page, physical 15569112k(7650844k free), swap 999420k(999420k free)
+CommandLine flags: -XX:InitialHeapSize=268435456 -XX:MaxHeapSize=536870912 -XX:+PrintGC -XX:+PrintGCTimeStamps -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseParallelGC 
+48.389: [GC (Allocation Failure)  65536K->69021K(251392K), 0.0111200 secs]
+48.998: [GC (Allocation Failure)  134557K->141259K(251392K), 0.0165749 secs]
+49.014: [Full GC (Ergonomics)  141259K->126508K(348672K), 0.0458920 secs]
+49.214: [GC (Allocation Failure)  192044K->197101K(348672K), 0.0114090 secs]
+49.655: [GC (Allocation Failure)  262637K->269966K(412160K), 0.0129472 secs]
+49.668: [Full GC (Ergonomics)  269966K->254023K(489472K), 0.0626084 secs]
+52.017: [GC (Allocation Failure) -- 383047K->478719K(489472K), 0.0234673 secs]
+52.040: [Full GC (Ergonomics)  478719K->380398K(489472K), 0.0739053 secs]
+60.107: [Full GC (Ergonomics)  478638K->57952K(429568K), 0.0234742 secs]
+```
+
+
+## openjdk:8u265-jdk and "java -Xms256m -Xmx512m -Xloggc:/gc.log -XX:+PrintGCDetails -XX:+PrintReferenceGC -XX:+PrintGCApplicationStoppedTime -XX:+PrintTenuringDistribution -cp /app.jar huaminglin.demo.jvm.gc.GcDemo"
+
+gc-java8-UseParallelGC.log
+

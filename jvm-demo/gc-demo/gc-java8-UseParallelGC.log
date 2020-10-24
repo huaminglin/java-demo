@@ -1,0 +1,37 @@
+OpenJDK 64-Bit Server VM (25.265-b01) for linux-amd64 JRE (1.8.0_265-b01), built on Jul 27 2020 07:33:48 by "openjdk" with gcc 4.4.7 20120313 (Red Hat 4.4.7-23)
+Memory: 4k page, physical 15569112k(7570128k free), swap 999420k(999420k free)
+CommandLine flags: -XX:InitialHeapSize=268435456 -XX:MaxHeapSize=536870912 -XX:+PrintGC -XX:+PrintGCApplicationStoppedTime -XX:+PrintGCDetails -XX:+PrintGCTimeStamps -XX:+PrintReferenceGC -XX:+PrintTenuringDistribution -XX:+UseCompressedClassPointers -XX:+UseCompressedOops -XX:+UseParallelGC 
+1.013: Total time for which application threads were stopped: 0.0001683 seconds, Stopping threads took: 0.0000429 seconds
+4.045: Total time for which application threads were stopped: 0.0001213 seconds, Stopping threads took: 0.0000301 seconds
+15.472: [GC (Allocation Failure) 15.482: [SoftReference, 0 refs, 0.0000814 secs]15.482: [WeakReference, 184 refs, 0.0000293 secs]15.482: [FinalReference, 15 refs, 0.0000200 secs]15.482: [PhantomReference, 0 refs, 0 refs, 0.0000056 secs]15.482: [JNI Weak Reference, 0.0000159 secs]
+Desired survivor size 11010048 bytes, new threshold 7 (max 15)
+[PSYoungGen: 65536K->10741K(76288K)] 65536K->69029K(251392K), 0.0109379 secs] [Times: user=0.04 sys=0.04, real=0.01 secs] 
+15.483: Total time for which application threads were stopped: 0.0110553 seconds, Stopping threads took: 0.0000171 seconds
+16.126: [GC (Allocation Failure) 16.139: [SoftReference, 0 refs, 0.0000700 secs]16.139: [WeakReference, 138 refs, 0.0000165 secs]16.139: [FinalReference, 8 refs, 0.0000038 secs]16.139: [PhantomReference, 0 refs, 0 refs, 0.0000030 secs]16.139: [JNI Weak Reference, 0.0000094 secs]
+Desired survivor size 11010048 bytes, new threshold 7 (max 15)
+[PSYoungGen: 76277K->10747K(76288K)] 134565K->141259K(251392K), 0.0138635 secs] [Times: user=0.07 sys=0.03, real=0.01 secs] 
+16.140: [Full GC (Ergonomics) 16.158: [SoftReference, 0 refs, 0.0000499 secs]16.158: [WeakReference, 54 refs, 0.0000081 secs]16.158: [FinalReference, 1 refs, 0.0000053 secs]16.158: [PhantomReference, 0 refs, 0 refs, 0.0000031 secs]16.158: [JNI Weak Reference, 0.0000219 secs][PSYoungGen: 10747K->0K(76288K)] [ParOldGen: 130512K->126508K(281600K)] 141259K->126508K(357888K), [Metaspace: 3743K->3743K(1056768K)], 0.0448253 secs] [Times: user=0.30 sys=0.01, real=0.04 secs] 
+16.185: Total time for which application threads were stopped: 0.0590334 seconds, Stopping threads took: 0.0000286 seconds
+16.338: [GC (Allocation Failure) 16.349: [SoftReference, 0 refs, 0.0000771 secs]16.349: [WeakReference, 0 refs, 0.0000146 secs]16.349: [FinalReference, 0 refs, 0.0000033 secs]16.349: [PhantomReference, 0 refs, 0 refs, 0.0000059 secs]16.349: [JNI Weak Reference, 0.0000082 secs]
+Desired survivor size 11010048 bytes, new threshold 7 (max 15)
+[PSYoungGen: 65536K->10720K(76288K)] 192044K->197085K(357888K), 0.0116255 secs] [Times: user=0.08 sys=0.00, real=0.01 secs] 
+16.349: Total time for which application threads were stopped: 0.0117424 seconds, Stopping threads took: 0.0000162 seconds
+17.138: [GC (Allocation Failure) 17.150: [SoftReference, 0 refs, 0.0000764 secs]17.151: [WeakReference, 0 refs, 0.0000038 secs]17.151: [FinalReference, 0 refs, 0.0000032 secs]17.151: [PhantomReference, 0 refs, 0 refs, 0.0000031 secs]17.151: [JNI Weak Reference, 0.0000150 secs]
+Desired survivor size 11010048 bytes, new threshold 7 (max 15)
+[PSYoungGen: 76256K->10746K(135168K)] 262621K->269950K(416768K), 0.0130528 secs] [Times: user=0.04 sys=0.06, real=0.01 secs] 
+17.151: [Full GC (Ergonomics) 17.180: [SoftReference, 0 refs, 0.0000498 secs]17.180: [WeakReference, 67 refs, 0.0000137 secs]17.180: [FinalReference, 0 refs, 0.0000040 secs]17.180: [PhantomReference, 0 refs, 0 refs, 0.0000046 secs]17.180: [JNI Weak Reference, 0.0000107 secs][PSYoungGen: 10746K->0K(135168K)] [ParOldGen: 259204K->254023K(349696K)] 269950K->254023K(484864K), [Metaspace: 3743K->3743K(1056768K)], 0.0620885 secs] [Times: user=0.42 sys=0.01, real=0.07 secs] 
+17.213: Total time for which application threads were stopped: 0.0753494 seconds, Stopping threads took: 0.0000155 seconds
+18.066: [GC (Allocation Failure) 18.083: [SoftReference, 0 refs, 0.0000576 secs]18.083: [WeakReference, 0 refs, 0.0000150 secs]18.083: [FinalReference, 0 refs, 0.0000027 secs]18.083: [PhantomReference, 0 refs, 0 refs, 0.0000030 secs]18.083: [JNI Weak Reference, 0.0000061 secs]--[PSYoungGen: 124416K->124416K(135168K)] 378439K->474111K(484864K), 0.0230499 secs] [Times: user=0.10 sys=0.04, real=0.02 secs] 
+18.089: [Full GC (Ergonomics) 18.131: [SoftReference, 0 refs, 0.0000491 secs]18.131: [WeakReference, 67 refs, 0.0000185 secs]18.131: [FinalReference, 0 refs, 0.0000033 secs]18.131: [PhantomReference, 0 refs, 0 refs, 0.0000037 secs]18.131: [JNI Weak Reference, 0.0000156 secs][PSYoungGen: 124416K->26319K(135168K)] [ParOldGen: 349695K->349473K(349696K)] 474111K->375792K(484864K), [Metaspace: 3744K->3744K(1056768K)], 0.0726606 secs] [Times: user=0.52 sys=0.00, real=0.07 secs] 
+18.162: Total time for which application threads were stopped: 0.0959332 seconds, Stopping threads took: 0.0000154 seconds
+19.875: [Full GC (Ergonomics) 19.881: [SoftReference, 0 refs, 0.0000408 secs]19.881: [WeakReference, 73 refs, 0.0000066 secs]19.881: [FinalReference, 0 refs, 0.0000042 secs]19.881: [PhantomReference, 0 refs, 0 refs, 0.0000155 secs]19.881: [JNI Weak Reference, 0.0000052 secs][PSYoungGen: 124416K->0K(135168K)] [ParOldGen: 349473K->53212K(286720K)] 473889K->53212K(421888K), [Metaspace: 3744K->3744K(1056768K)], 0.0214586 secs] [Times: user=0.13 sys=0.00, real=0.02 secs] 
+19.896: Total time for which application threads were stopped: 0.0216318 seconds, Stopping threads took: 0.0000172 seconds
+Heap
+ PSYoungGen      total 135168K, used 55315K [0x00000000f5580000, 0x00000000fe480000, 0x0000000100000000)
+  eden space 124416K, 44% used [0x00000000f5580000,0x00000000f8b84df0,0x00000000fcf00000)
+  from space 10752K, 0% used [0x00000000fda00000,0x00000000fda00000,0x00000000fe480000)
+  to   space 10752K, 0% used [0x00000000fcf80000,0x00000000fcf80000,0x00000000fda00000)
+ ParOldGen       total 286720K, used 53212K [0x00000000e0000000, 0x00000000f1800000, 0x00000000f5580000)
+  object space 286720K, 18% used [0x00000000e0000000,0x00000000e33f73f0,0x00000000f1800000)
+ Metaspace       used 3751K, capacity 4634K, committed 4864K, reserved 1056768K
+  class space    used 398K, capacity 458K, committed 512K, reserved 1048576K
