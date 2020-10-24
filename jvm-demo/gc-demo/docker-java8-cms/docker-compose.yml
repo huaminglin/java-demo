@@ -10,6 +10,6 @@ services:
     volumes:
       - ../target/gc-demo-1.0-SNAPSHOT.jar:/app.jar
       - /tmp/gc.log:/gc.log
-    entrypoint: "java -Xms256m -Xmx512m -Xloggc:/gc.log -XX:+PrintGCDetails -XX:+PrintReferenceGC -XX:+PrintGCApplicationStoppedTime -XX:+PrintTenuringDistribution -cp /app.jar huaminglin.demo.jvm.gc.GcDemo"
+    entrypoint: "java -Xms256m -Xmx512m -Xloggc:/gc.log -XX:+PrintGCDetails -XX:+PrintReferenceGC -XX:+PrintGCApplicationStoppedTime -XX:+PrintTenuringDistribution -XX:+UseConcMarkSweepGC -cp /app.jar huaminglin.demo.jvm.gc.GcDemo"
     networks:
       - jdk8

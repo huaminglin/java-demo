@@ -127,3 +127,6 @@ CommandLine flags: -XX:InitialHeapSize=268435456 -XX:MaxHeapSize=536870912 -XX:+
 
 gc-java8-UseParallelGC.log
 
+## openjdk:8u265-jdk and "java -Xms256m -Xmx512m -Xloggc:/gc.log -XX:+PrintGCDetails -XX:+PrintReferenceGC -XX:+PrintGCApplicationStoppedTime -XX:+PrintTenuringDistribution -XX:+UseConcMarkSweepGC -cp /app.jar huaminglin.demo.jvm.gc.GcDemo
+
+gc-java8-UseConcMarkSweepGC.log
