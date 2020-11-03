@@ -9,7 +9,7 @@
     <version>2.3.4.RELEASE</version>
   </parent>
   <groupId>huaminglin.demo</groupId>
-  <artifactId>spring-kafka-boot-demo</artifactId>
+  <artifactId>spring-kafka-boot-producer-demo</artifactId>
   <version>1.0-SNAPSHOT</version>
   <dependencies>
       <dependency>
