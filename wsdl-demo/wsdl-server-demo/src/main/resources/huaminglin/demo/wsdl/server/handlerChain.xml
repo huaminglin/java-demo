@@ -1,8 +1,8 @@
 <jws:handler-chains xmlns:jws="http://java.sun.com/xml/ns/javaee">
-    <jws:handler-chain>
-        <jws:handler>
-            <jws:handler-name>LogHandler</jws:handler-name>
-            <jws:handler-class>huaminglin.demo.wsdl.server.LogHandler</jws:handler-class>
-        </jws:handler>
-    </jws:handler-chain>
+  <jws:handler-chain>
+    <jws:handler>
+      <jws:handler-class>huaminglin.demo.wsdl.server.LogHandler</jws:handler-class>
+      <jws:handler-name>LogHandler</jws:handler-name>
+    </jws:handler>
+  </jws:handler-chain>
 </jws:handler-chains>

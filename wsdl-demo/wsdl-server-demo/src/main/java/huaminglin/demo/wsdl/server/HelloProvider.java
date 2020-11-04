@@ -10,10 +10,11 @@ import javax.jws.soap.SOAPBinding;
 @SOAPBinding(style = SOAPBinding.Style.RPC)
 @HandlerChain(file = "handlerChain.xml", name = "LogChain")
 public class HelloProvider {
-    @WebMethod(operationName = "sayHello")
-    public HelloResponse sayHello(@WebParam(name = "guestname") HelloRequest guestname) {
-        HelloResponse response = new HelloResponse();
-        response.setMessage("Hello " + guestname.getName());
-        return response;
-    }
+
+  @WebMethod(operationName = "sayHello")
+  public HelloResponse sayHello(@WebParam(name = "guestname") HelloRequest guestname) {
+    HelloResponse response = new HelloResponse();
+    response.setMessage("Hello " + guestname.getName());
+    return response;
+  }
 }

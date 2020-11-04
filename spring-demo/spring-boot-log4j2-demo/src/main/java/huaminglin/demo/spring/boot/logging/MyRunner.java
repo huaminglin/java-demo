@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MyRunner implements CommandLineRunner {
+
   private static Logger LOGGER = LoggerFactory.getLogger(MyRunner.class);
 
   @Override

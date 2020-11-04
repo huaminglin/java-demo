@@ -8,14 +8,17 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class SpringBootDemo {
-    @Value("${lc.time2}")
-    private String value;
 
-    public static void main(String[] args) {
-        ConfigurableApplicationContext context = SpringApplication.run(SpringBootDemo.class, args);
-        SpringBootDemo bean = context.getBean(SpringBootDemo.class);
-        System.out.println(bean.value);
-        System.out.println("Main Thread exits: " + Thread.currentThread().getId() + ", " + Thread.currentThread().getName());
-    }
+  @Value("${lc.time2}")
+  private String value;
+
+  public static void main(String[] args) {
+    ConfigurableApplicationContext context = SpringApplication.run(SpringBootDemo.class, args);
+    SpringBootDemo bean = context.getBean(SpringBootDemo.class);
+    System.out.println(bean.value);
+    System.out.println(
+        "Main Thread exits: " + Thread.currentThread().getId() + ", " + Thread.currentThread()
+            .getName());
+  }
 
 }

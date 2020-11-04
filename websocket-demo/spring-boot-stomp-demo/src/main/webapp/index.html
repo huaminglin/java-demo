@@ -1,9 +1,9 @@
 <html>
 <head>
-    <title>Courier WebSocket</title>
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js"></script>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
-    <script type="text/javascript">
+  <title>Courier WebSocket</title>
+  <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.min.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+  <script type="text/javascript">
             var stompClient = null;
 
             function setConnected(connected) {
@@ -52,21 +52,22 @@
                   + messageOutput.location));
                 response.appendChild(p);
             }
-        </script>
+
+  </script>
 </head>
 <body onload="disconnect()">
 <div>
-    <div>
-        <button id="connect" onclick="connect();">Connect</button>
-        <button id="disconnect" disabled="disabled" onclick="disconnect();">
-            Disconnect
-        </button>
-    </div>
-    <br />
-    <div><input type="text" id="courierId" placeholder="Input a courierId"/>
-        <button id="startQuery" onclick="startQuery();">Query</button>
-        <p id="response"></p>
-    </div>
+  <div>
+    <button id="connect" onclick="connect();">Connect</button>
+    <button disabled="disabled" id="disconnect" onclick="disconnect();">
+      Disconnect
+    </button>
+  </div>
+  <br/>
+  <div><input id="courierId" placeholder="Input a courierId" type="text"/>
+    <button id="startQuery" onclick="startQuery();">Query</button>
+    <p id="response"></p>
+  </div>
 </div>
 
 </body>

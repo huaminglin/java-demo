@@ -5,11 +5,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyBean {
 
-    static {
-        System.out.println("MyBean.static");
-    }
+  static {
+    System.out.println("MyBean.static");
+  }
 
-    public MyBean() {
-        System.out.println("MyBean()");
-    }
+  public MyBean() {
+    System.out.println("MyBean()");
+  }
 }

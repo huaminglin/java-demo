@@ -8,4 +8,5 @@ import org.springframework.context.annotation.Configuration;
     "huaminglin.demo.spring.mvc.controller"
 })
 public class MyServletConfig {
+
 }

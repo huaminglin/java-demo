@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>huaminglin.demo</groupId>
-        <artifactId>java-demo</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-    <artifactId>spring-cloud-demo</artifactId>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <artifactId>spring-cloud-demo</artifactId>
+  <modelVersion>4.0.0</modelVersion>
+  <modules>
+    <module>spring-cloud-consul-demo</module>
+    <module>spring-cloud-ribbon-demo</module>
+    <module>spring-cloud-hystrix-demo</module>
+    <module>spring-cloud-gateway-demo</module>
+    <module>spring-cloud-config-demo</module>
+  </modules>
+  <packaging>pom</packaging>
+  <parent>
+    <artifactId>java-demo</artifactId>
+    <groupId>huaminglin.demo</groupId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>spring-cloud-consul-demo</module>
-        <module>spring-cloud-ribbon-demo</module>
-        <module>spring-cloud-hystrix-demo</module>
-        <module>spring-cloud-gateway-demo</module>
-        <module>spring-cloud-config-demo</module>
-    </modules>
+  </parent>
+  <version>1.0-SNAPSHOT</version>
 </project>
 

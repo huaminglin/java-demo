@@ -8,9 +8,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @EnableAdminServer
 public class SpringBootAdminDemo {
 
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(SpringBootAdminDemo.class, args);
-        System.out.println("Main Thread exits: " + Thread.currentThread().getId() + ", " + Thread.currentThread().getName());
-    }
+  public static void main(String[] args) throws Exception {
+    SpringApplication.run(SpringBootAdminDemo.class, args);
+    System.out.println(
+        "Main Thread exits: " + Thread.currentThread().getId() + ", " + Thread.currentThread()
+            .getName());
+  }
 
 }

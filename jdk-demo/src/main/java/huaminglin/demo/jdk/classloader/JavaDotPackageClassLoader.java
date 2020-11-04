@@ -8,7 +8,14 @@ import java.net.URLClassLoader;
 public class JavaDotPackageClassLoader extends URLClassLoader {
 
   public JavaDotPackageClassLoader(URL url) {
-    super(new URL[] {url}, ClassLoader.getSystemClassLoader());
+    super(new URL[]{url}, ClassLoader.getSystemClassLoader());
+  }
+
+  public static void main(String[] args) throws ClassNotFoundException, MalformedURLException {
+    URL url = new File("/tmp/rt.jar").toURI().toURL();
+    JavaDotPackageClassLoader classLoader = new JavaDotPackageClassLoader(url);
+    Class<?> aClass = Class.forName("java.lang.String", true, classLoader);
+    System.out.println(String.class.equals(aClass));
   }
 
   @Override
@@ -16,6 +23,8 @@ public class JavaDotPackageClassLoader extends URLClassLoader {
     System.out.println("JavaDotPackageClassLoader.loadClass: " + name);
     return super.loadClass(name);
   }
+
+  // public final Class<?> findLoadedClass(String name) {} // Can not override a final method.
 
   @Override
   protected Class<?> loadClass(String name, boolean resolve)
@@ -25,22 +34,13 @@ public class JavaDotPackageClassLoader extends URLClassLoader {
     return super.loadClass(name, resolve);
   }
 
-  // public final Class<?> findLoadedClass(String name) {} // Can not override a final method.
+  // protected final void resolveClass(Class<?> c) {} // Can not override a final method.
+
+  // protected final Class<?> defineClass(String name, byte[] b, int off, int len) throws ClassFormatError // Can not override a final method.
 
   @Override
   protected Class<?> findClass(String name) throws ClassNotFoundException {
     System.out.println("JavaDotPackageClassLoader.findClass: " + name);
     return super.findClass(name);
-  }
-
-  // protected final void resolveClass(Class<?> c) {} // Can not override a final method.
-
-  // protected final Class<?> defineClass(String name, byte[] b, int off, int len) throws ClassFormatError // Can not override a final method.
-
-  public static void main(String[] args) throws ClassNotFoundException, MalformedURLException {
-    URL url = new File("/tmp/rt.jar").toURI().toURL();
-    JavaDotPackageClassLoader classLoader = new JavaDotPackageClassLoader(url);
-    Class<?> aClass = Class.forName("java.lang.String", true, classLoader);
-    System.out.println(String.class.equals(aClass));
   }
 }

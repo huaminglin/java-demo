@@ -12,6 +12,8 @@ public class SpringRedisDemo {
     ConfigurableApplicationContext context = SpringApplication.run(SpringRedisDemo.class, args);
     StudentService studentService = context.getBean(StudentService.class);
     studentService.save("id1", "name1");
-    System.out.println("Main Thread exits: " + Thread.currentThread().getId() + ", " + Thread.currentThread().getName());
+    System.out.println(
+        "Main Thread exits: " + Thread.currentThread().getId() + ", " + Thread.currentThread()
+            .getName());
   }
 }

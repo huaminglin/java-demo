@@ -4,9 +4,9 @@ spring:
   cloud:
     gateway:
       routes:
-      - id: host_route
-        uri: http://127.0.0.1:9092
-        predicates:
-        - Path=/tmp
+        - id: host_route
+          uri: http://127.0.0.1:9092
+          predicates:
+            - Path=/tmp
 server:
   port: 8080

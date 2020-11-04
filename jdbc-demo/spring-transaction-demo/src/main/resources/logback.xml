@@ -1,6 +1,6 @@
 <configuration>
 
-  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+  <appender class="ch.qos.logback.core.ConsoleAppender" name="STDOUT">
     <!-- encoders are assigned the type
          ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
     <encoder>
@@ -8,15 +8,15 @@
     </encoder>
   </appender>
 
-  <appender name="FILE" class="ch.qos.logback.core.FileAppender">
-    <file>/tmp/spring-transaction-demo.log</file>
+  <appender class="ch.qos.logback.core.FileAppender" name="FILE">
     <encoder>
       <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern>
     </encoder>
+    <file>/tmp/spring-transaction-demo.log</file>
   </appender>
-  <logger name="org.postgresql" level="trace"/>
-  <logger name="org.springframework.transaction" level="trace"/>
+  <logger level="trace" name="org.postgresql"/>
+  <logger level="trace" name="org.springframework.transaction"/>
   <root level="info">
-    <appender-ref ref="FILE" />
+    <appender-ref ref="FILE"/>
   </root>
 </configuration>

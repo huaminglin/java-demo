@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>huaminglin.demo</groupId>
-        <artifactId>java-demo</artifactId>
-        <version>1.0-SNAPSHOT</version>
-    </parent>
-    <artifactId>spring-demo</artifactId>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <artifactId>spring-demo</artifactId>
+  <modelVersion>4.0.0</modelVersion>
+  <modules>
+    <module>spring-boot-demo</module>
+    <module>spring-boot-jsp-demo</module>
+    <module>spring-boot-thymeleaf-demo</module>
+    <module>spring-mybatis-h2-demo</module>
+    <module>spring-bean-javac-demo</module>
+    <module>spring-bean-demo</module>
+    <module>spring-mvc-demo</module>
+    <module>spring-kafka-demo</module>
+    <module>spring-boot-amqp-demo</module>
+    <module>spring-boot-actuator-demo</module>
+    <module>spring-boot-resttemplate-demo</module>
+    <module>spring-post-processor-demo</module>
+    <module>spring-boot-logging-demo</module>
+    <module>spring-boot-log4j2-demo</module>
+    <module>spring-boot-admin-demo</module>
+  </modules>
+  <packaging>pom</packaging>
+  <parent>
+    <artifactId>java-demo</artifactId>
+    <groupId>huaminglin.demo</groupId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>spring-boot-demo</module>
-        <module>spring-boot-jsp-demo</module>
-        <module>spring-boot-thymeleaf-demo</module>
-        <module>spring-mybatis-h2-demo</module>
-        <module>spring-bean-javac-demo</module>
-        <module>spring-bean-demo</module>
-        <module>spring-mvc-demo</module>
-        <module>spring-kafka-demo</module>
-        <module>spring-boot-amqp-demo</module>
-        <module>spring-boot-actuator-demo</module>
-        <module>spring-boot-resttemplate-demo</module>
-        <module>spring-post-processor-demo</module>
-        <module>spring-boot-logging-demo</module>
-        <module>spring-boot-log4j2-demo</module>
-        <module>spring-boot-admin-demo</module>
-    </modules>
+  </parent>
+  <version>1.0-SNAPSHOT</version>
 </project>

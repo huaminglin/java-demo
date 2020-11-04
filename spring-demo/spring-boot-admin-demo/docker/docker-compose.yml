@@ -1,25 +1,25 @@
 version: '3.3'
 networks:
-    admin:
-        driver: bridge
+  admin:
+    driver: bridge
 services:
-    admin-server:
-        image: openjdk:11-jre-slim
-        volumes:
-            - ../spring-boot-admin-server-demo/target/spring-boot-admin-server-demo-1.0-SNAPSHOT.jar:/app.jar
-        entrypoint: java -Xms256m -Xmx512m -jar /app.jar
-        ports:
-            - 8080:8080
-        networks:
-            - admin
-    admin-client:
-        image: openjdk:11-jre-slim
-        volumes:
-            - ../spring-boot-admin-client-demo/target/spring-boot-admin-client-demo-1.0-SNAPSHOT.jar:/app.jar
-        entrypoint: java -Xms256m -Xmx512m -Dserver.port=8080 -Dspring.boot.admin.client.url=http://admin-server:8080 -jar /app.jar
-        ports:
-            - 9090:8080
-        networks:
-            - admin
-        depends_on:
-            - admin-server
+  admin-server:
+    image: openjdk:11-jre-slim
+    volumes:
+      - ../spring-boot-admin-server-demo/target/spring-boot-admin-server-demo-1.0-SNAPSHOT.jar:/app.jar
+    entrypoint: java -Xms256m -Xmx512m -jar /app.jar
+    ports:
+      - 8080:8080
+    networks:
+      - admin
+  admin-client:
+    image: openjdk:11-jre-slim
+    volumes:
+      - ../spring-boot-admin-client-demo/target/spring-boot-admin-client-demo-1.0-SNAPSHOT.jar:/app.jar
+    entrypoint: java -Xms256m -Xmx512m -Dserver.port=8080 -Dspring.boot.admin.client.url=http://admin-server:8080 -jar /app.jar
+    ports:
+      - 9090:8080
+    networks:
+      - admin
+    depends_on:
+      - admin-server

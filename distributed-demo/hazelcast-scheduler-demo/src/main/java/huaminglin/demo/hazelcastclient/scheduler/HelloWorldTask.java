@@ -6,6 +6,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class HelloWorldTask implements Runnable, Serializable, HazelcastInstanceAware {
+
   static final long serialVersionUID = 234L;
 
   private String topic;

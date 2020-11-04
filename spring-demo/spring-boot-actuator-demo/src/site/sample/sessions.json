@@ -1,15 +1,15 @@
 {
-    "sessions": [
-        {
-            "id": "788681e5-d76f-49ca-bbe8-195f80ac3227",
-            "attributeNames": [
-                "count",
-                "SPRING_SECURITY_CONTEXT"
-            ],
-            "creationTime": "2019-09-28T12:43:11.208Z",
-            "lastAccessedTime": "2019-09-28T12:43:12.648Z",
-            "maxInactiveInterval": 1800,
-            "expired": false
-        }
-    ]
+  "sessions": [
+    {
+      "id": "788681e5-d76f-49ca-bbe8-195f80ac3227",
+      "attributeNames": [
+        "count",
+        "SPRING_SECURITY_CONTEXT"
+      ],
+      "creationTime": "2019-09-28T12:43:11.208Z",
+      "lastAccessedTime": "2019-09-28T12:43:12.648Z",
+      "maxInactiveInterval": 1800,
+      "expired": false
+    }
+  ]
 }

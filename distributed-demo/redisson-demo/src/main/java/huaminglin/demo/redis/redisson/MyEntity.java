@@ -3,20 +3,21 @@ package huaminglin.demo.redis.redisson;
 import java.io.Serializable;
 
 public class MyEntity implements Serializable {
-    private static final long serialVersionUID = 5952812854939081811L;
 
-    private String name;
+  private static final long serialVersionUID = 5952812854939081811L;
 
-    public MyEntity() {
-        name = "entity1";
-    }
+  private String name;
 
-    public String getName() {
-        return name;
-    }
+  public MyEntity() {
+    name = "entity1";
+  }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+  public String getName() {
+    return name;
+  }
+
+  public void setName(String name) {
+    this.name = name;
+  }
 
 }

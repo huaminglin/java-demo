@@ -18,7 +18,8 @@ public class DnsDemo {
 //      e.printStackTrace();
     }
     long duration = System.nanoTime() - start;
-    Arrays.stream(addresses).forEach(address -> System.out.println(address.toString() + ", time: " + duration));
+    Arrays.stream(addresses)
+        .forEach(address -> System.out.println(address.toString() + ", time: " + duration));
   }
 
   public static void main(String[] args) {

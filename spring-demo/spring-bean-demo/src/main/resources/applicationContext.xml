@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.springframework.org/schema/beans"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans.xsd">
-    <bean id="mybean" class="huaminglin.demo.spring.bean.xml.MyBean">
-        <property name="name"><value>TEST</value></property>
-    </bean>
+  <bean class="huaminglin.demo.spring.bean.xml.MyBean" id="mybean">
+    <property name="name">
+      <value>TEST</value>
+    </property>
+  </bean>
 </beans>
 

@@ -7,16 +7,18 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CustomBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
-    static {
-        System.out.println("CustomBeanFactoryPostProcessor.static");
-    }
 
-    public CustomBeanFactoryPostProcessor() {
-        System.out.println("CustomBeanFactoryPostProcessor()");
-    }
+  static {
+    System.out.println("CustomBeanFactoryPostProcessor.static");
+  }
 
-    @Override
-    public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
-        System.out.println("CustomBeanFactoryPostProcessor.postProcessBeanFactory");
-    }
+  public CustomBeanFactoryPostProcessor() {
+    System.out.println("CustomBeanFactoryPostProcessor()");
+  }
+
+  @Override
+  public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory)
+      throws BeansException {
+    System.out.println("CustomBeanFactoryPostProcessor.postProcessBeanFactory");
+  }
 }

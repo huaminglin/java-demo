@@ -5,6 +5,7 @@ import java.util.Base64;
 import java.util.UUID;
 
 public class Base64UrlDemo {
+
   public static byte[] getBytesFromUUID(UUID uuid) {
     ByteBuffer bb = ByteBuffer.wrap(new byte[16]);
     bb.putLong(uuid.getMostSignificantBits());

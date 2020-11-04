@@ -10,7 +10,7 @@ public class HelloWorldOffer {
   @Autowired
   private IQueue<WorkerItem> queue;
 
-  public void offer(String name , String value) throws InterruptedException {
+  public void offer(String name, String value) throws InterruptedException {
     WorkerItem item = new WorkerItem();
     item.setName(name);
     item.setValue(value);

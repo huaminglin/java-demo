@@ -11,6 +11,8 @@ public class SpringQuartzDemo {
   public static void main(String[] args) {
     ConfigurableApplicationContext context = SpringApplication.run(SpringQuartzDemo.class, args);
     context.getBean(DataSource.class);
-    System.out.println("Main Thread exits: " + Thread.currentThread().getId() + ", " + Thread.currentThread().getName());
+    System.out.println(
+        "Main Thread exits: " + Thread.currentThread().getId() + ", " + Thread.currentThread()
+            .getName());
   }
 }

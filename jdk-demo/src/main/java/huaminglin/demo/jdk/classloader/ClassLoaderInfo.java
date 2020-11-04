@@ -15,10 +15,8 @@ public class ClassLoaderInfo {
     System.out.println("Thread.currentThread().getContextClassLoader(): "
         + Thread.currentThread().getContextClassLoader());
 
-
     System.out.println("Classloader of this class: "
         + LoggerClassLoader.class.getClassLoader());
-
 
     System.out.println("Classloader of ArrayList: "
         + ArrayList.class.getClassLoader());
@@ -26,6 +24,7 @@ public class ClassLoaderInfo {
     System.out.println("Classloader of javax.management.ObjectName: "
         + ObjectName.class.getClassLoader());
   }
+
   public static void main(String[] args) throws ClassNotFoundException {
     printClassLoaders();
   }

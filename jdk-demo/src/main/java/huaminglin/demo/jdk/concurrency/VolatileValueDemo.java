@@ -3,6 +3,7 @@ package huaminglin.demo.jdk.concurrency;
 import java.util.concurrent.TimeUnit;
 
 public class VolatileValueDemo {
+
   final static int max = 5;
   static MyEntity entity = new MyEntity();
   static volatile MyEntity volatileEntity = new MyEntity();

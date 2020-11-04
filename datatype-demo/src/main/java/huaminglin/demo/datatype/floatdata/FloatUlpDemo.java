@@ -46,50 +46,53 @@ double literal: 0.10000000149011613 vs 0.10000000149011614
 0.10000000149011613326255343281445675529539585113525390625
 */
 public class FloatUlpDemo {
-    public static void main(String[] args) {
-        {
-            System.out.println("Math.nextUp(float)");
-            float f = Math.nextDown(Math.nextDown(0.1f));
-            for (int i = 0; i < 5; i++) {
-                float f2 = Math.nextUp(f);
-                System.out.println("Step: " + new BigDecimal(f2).subtract(new BigDecimal(f)).toPlainString());
-                System.out.println(f2);
-                System.out.println(new BigDecimal(f2).toPlainString());
-                f = f2;
-            }
-        }
-        {
-            System.out.println("\nMath.nextUp(double)");
-            double f = Math.nextDown(Math.nextDown(0.1));
-            for (int i = 0; i < 3; i++) {
-                double f2 = Math.nextUp(f);
-                System.out.println("Step: " + new BigDecimal(f2).subtract(new BigDecimal(f)).toPlainString());
-                System.out.println(f2);
-                System.out.println(new BigDecimal(f2).toPlainString());
-                f = f2;
-            }
-        }
-        System.out.println("\nfloat literal: 0.10000001f vs 0.100000011f");
-        {
-            float f = 0.10000001f;
-            System.out.println("0.10000001f: " + f);
-            System.out.println(new BigDecimal(f).toPlainString());
-        }
-        {
-            float f = 0.100000011f;
-            System.out.println("0.100000011f: " + f);
-            System.out.println(new BigDecimal(f).toPlainString());
-        }
-        System.out.println("\ndouble literal: 0.10000000149011613 vs 0.10000000149011614");
-        {
-            double f = 0.10000000149011613;
-            System.out.println("0.10000000149011613: " + f);
-            System.out.println(new BigDecimal(f).toPlainString());
-        }
-        {
-            double f = 0.10000000149011614;
-            System.out.println("0.10000000149011614: " + f);
-            System.out.println(new BigDecimal(f).toPlainString());
-        }
+
+  public static void main(String[] args) {
+    {
+      System.out.println("Math.nextUp(float)");
+      float f = Math.nextDown(Math.nextDown(0.1f));
+      for (int i = 0; i < 5; i++) {
+        float f2 = Math.nextUp(f);
+        System.out
+            .println("Step: " + new BigDecimal(f2).subtract(new BigDecimal(f)).toPlainString());
+        System.out.println(f2);
+        System.out.println(new BigDecimal(f2).toPlainString());
+        f = f2;
+      }
     }
+    {
+      System.out.println("\nMath.nextUp(double)");
+      double f = Math.nextDown(Math.nextDown(0.1));
+      for (int i = 0; i < 3; i++) {
+        double f2 = Math.nextUp(f);
+        System.out
+            .println("Step: " + new BigDecimal(f2).subtract(new BigDecimal(f)).toPlainString());
+        System.out.println(f2);
+        System.out.println(new BigDecimal(f2).toPlainString());
+        f = f2;
+      }
+    }
+    System.out.println("\nfloat literal: 0.10000001f vs 0.100000011f");
+    {
+      float f = 0.10000001f;
+      System.out.println("0.10000001f: " + f);
+      System.out.println(new BigDecimal(f).toPlainString());
+    }
+    {
+      float f = 0.100000011f;
+      System.out.println("0.100000011f: " + f);
+      System.out.println(new BigDecimal(f).toPlainString());
+    }
+    System.out.println("\ndouble literal: 0.10000000149011613 vs 0.10000000149011614");
+    {
+      double f = 0.10000000149011613;
+      System.out.println("0.10000000149011613: " + f);
+      System.out.println(new BigDecimal(f).toPlainString());
+    }
+    {
+      double f = 0.10000000149011614;
+      System.out.println("0.10000000149011614: " + f);
+      System.out.println(new BigDecimal(f).toPlainString());
+    }
+  }
 }

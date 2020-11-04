@@ -7,58 +7,59 @@ import java.util.ArrayList;
 
 public class GenericTypeDemo {
 
-    public static void printType(Type aType) {
-        if (aType instanceof ParameterizedType) {
-            ParameterizedType type = (ParameterizedType) aType;
-            System.out.println(
-                "ParameterizedType: " + type + ", " + type.getTypeName() + ", " + type.getOwnerType() + ", "
-                    + type.getRawType());
+  public static void printType(Type aType) {
+    if (aType instanceof ParameterizedType) {
+      ParameterizedType type = (ParameterizedType) aType;
+      System.out.println(
+          "ParameterizedType: " + type + ", " + type.getTypeName() + ", " + type.getOwnerType()
+              + ", "
+              + type.getRawType());
 
-            Type[] genericTypes = type.getActualTypeArguments();
-            for (Type genericType : genericTypes) {
-                if (genericType instanceof ParameterizedType) {
-                    printType((ParameterizedType) genericType);
-                } else {
-                    System.out.println("Actual Type Argument: " + genericType);
-                }
-            }
+      Type[] genericTypes = type.getActualTypeArguments();
+      for (Type genericType : genericTypes) {
+        if (genericType instanceof ParameterizedType) {
+          printType((ParameterizedType) genericType);
         } else {
-            System.out.println("Type: " + aType);
+          System.out.println("Actual Type Argument: " + genericType);
         }
-
+      }
+    } else {
+      System.out.println("Type: " + aType);
     }
 
-    public static void printClass(Class<?> aClass) {
-        System.out.println(aClass);
-        {
-            System.out.println("getGenericSuperclass(): ");
-            Type genericSuperclass = aClass.getGenericSuperclass();
-            printType(genericSuperclass);
-        }
-        System.out.println("getGenericInterfaces(): ");
-        for (Type type : aClass.getGenericInterfaces()) {
-            printType(type);
-        }
+  }
+
+  public static void printClass(Class<?> aClass) {
+    System.out.println(aClass);
+    {
+      System.out.println("getGenericSuperclass(): ");
+      Type genericSuperclass = aClass.getGenericSuperclass();
+      printType(genericSuperclass);
     }
-
-    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException {
-        // sun.net.www.http.KeepAliveStreamCleaner is JDK internal API and it is not available at compile timer by default.
-        // To be compatible with Java 8 compiled codes, the internal API is available at the run time.
-        // class KeepAliveStreamCleaner extends LinkedList<KeepAliveCleanerEntry> implements Runnable
-        Class<?> aClass = Class.forName("sun.net.www.http.KeepAliveStreamCleaner");
-        printClass(aClass);
-
-        System.out.println("----------------------------");
-        printClass(ArrayList.class);
-
-        System.out.println("----------------------------");
-        System.out.println("ArrayList.add.getGenericParameterTypes()");
-        Method method = ArrayList.class.getMethod("add", Object.class);
-        Type[] types = method.getGenericParameterTypes();
-        for (Type type : types) {
-            printType(type);
-        }
+    System.out.println("getGenericInterfaces(): ");
+    for (Type type : aClass.getGenericInterfaces()) {
+      printType(type);
     }
+  }
+
+  public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException {
+    // sun.net.www.http.KeepAliveStreamCleaner is JDK internal API and it is not available at compile timer by default.
+    // To be compatible with Java 8 compiled codes, the internal API is available at the run time.
+    // class KeepAliveStreamCleaner extends LinkedList<KeepAliveCleanerEntry> implements Runnable
+    Class<?> aClass = Class.forName("sun.net.www.http.KeepAliveStreamCleaner");
+    printClass(aClass);
+
+    System.out.println("----------------------------");
+    printClass(ArrayList.class);
+
+    System.out.println("----------------------------");
+    System.out.println("ArrayList.add.getGenericParameterTypes()");
+    Method method = ArrayList.class.getMethod("add", Object.class);
+    Type[] types = method.getGenericParameterTypes();
+    for (Type type : types) {
+      printType(type);
+    }
+  }
 
 /*
 class sun.net.www.http.KeepAliveStreamCleaner

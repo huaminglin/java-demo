@@ -1,14 +1,14 @@
 {
-    "cron": [],
-    "fixedDelay": [],
-    "fixedRate": [
-        {
-            "runnable": {
-                "target": "huaminglin.demo.spring.boot.scheduled.RandomScheduledTask.randomId"
-            },
-            "initialDelay": 0,
-            "interval": 5000
-        }
-    ],
-    "custom": []
+  "cron": [],
+  "fixedDelay": [],
+  "fixedRate": [
+    {
+      "runnable": {
+        "target": "huaminglin.demo.spring.boot.scheduled.RandomScheduledTask.randomId"
+      },
+      "initialDelay": 0,
+      "interval": 5000
+    }
+  ],
+  "custom": []
 }

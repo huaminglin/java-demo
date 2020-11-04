@@ -9,23 +9,24 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class SpringKafkaContainerDemo {
-    private static final Logger logger = LoggerFactory.getLogger(SpringKafkaContainerDemo.class);
 
-    @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;
+  private static final Logger logger = LoggerFactory.getLogger(SpringKafkaContainerDemo.class);
 
-    public void sendMessage(String topic, String msg) {
-        kafkaTemplate.send("test", msg);
-    }
+  @Autowired
+  private KafkaTemplate<String, String> kafkaTemplate;
 
-    public static void main(String[] args) throws Exception {
-        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-        context.scan("huaminglin.demo.spring.kafka.container");
-        context.refresh();
-        SpringKafkaContainerDemo bean = context.getBean(SpringKafkaContainerDemo.class);
-        logger.info("Sending a message to topic test ...");
-        bean.sendMessage("test", "hello");
-        Thread.sleep(10 * 1000);
-        context.close();
-    }
+  public static void main(String[] args) throws Exception {
+    AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+    context.scan("huaminglin.demo.spring.kafka.container");
+    context.refresh();
+    SpringKafkaContainerDemo bean = context.getBean(SpringKafkaContainerDemo.class);
+    logger.info("Sending a message to topic test ...");
+    bean.sendMessage("test", "hello");
+    Thread.sleep(10 * 1000);
+    context.close();
+  }
+
+  public void sendMessage(String topic, String msg) {
+    kafkaTemplate.send("test", msg);
+  }
 }

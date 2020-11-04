@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jxb:bindings version="1.0" wsdlLocation="../wsdl/hello.wsdl"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
-    xmlns:xs="http://schemas.xmlsoap.org/wsdl/">
-    <jxb:bindings schemaLocation="../wsdl/hello.xsd"
-        node="/xsd:schema">
-        <jxb:bindings node="//xsd:simpleType[@name='helloStatus']">
-            <jxb:typesafeEnumClass>
-                <jxb:typesafeEnumMember value="SUCCESS"
-                    name="success" />
-                <jxb:typesafeEnumMember value="FAILURE"
-                    name="failure" />
-            </jxb:typesafeEnumClass>
-        </jxb:bindings>
+<jxb:bindings xmlns:jxb="http://java.sun.com/xml/ns/jaxb" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  version="1.0" wsdlLocation="../wsdl/hello.wsdl"
+>
+  <jxb:bindings node="/xsd:schema"
+    schemaLocation="../wsdl/hello.xsd">
+    <jxb:bindings node="//xsd:simpleType[@name='helloStatus']">
+      <jxb:typesafeEnumClass>
+        <jxb:typesafeEnumMember name="success"
+          value="SUCCESS"/>
+        <jxb:typesafeEnumMember name="failure"
+          value="FAILURE"/>
+      </jxb:typesafeEnumClass>
     </jxb:bindings>
+  </jxb:bindings>
 </jxb:bindings>

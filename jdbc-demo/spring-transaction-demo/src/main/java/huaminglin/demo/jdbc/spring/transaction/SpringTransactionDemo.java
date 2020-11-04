@@ -15,37 +15,41 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 @SpringBootApplication
 public class SpringTransactionDemo {
-    private static Logger logger = LoggerFactory.getLogger(SpringTransactionDemo.class);
-    static {
-        SLF4JBridgeHandler.removeHandlersForRootLogger();
-        SLF4JBridgeHandler.install();
-        java.util.logging.Logger.getLogger("").setLevel(java.util.logging.Level.FINEST);
-    }
 
-    @Bean
-    public DataSource postgresqlDataSource() {
-        String url = "jdbc:postgresql://localhost:5432/pgdb";
-        Properties properties = new Properties();
+  private static Logger logger = LoggerFactory.getLogger(SpringTransactionDemo.class);
+
+  static {
+    SLF4JBridgeHandler.removeHandlersForRootLogger();
+    SLF4JBridgeHandler.install();
+    java.util.logging.Logger.getLogger("").setLevel(java.util.logging.Level.FINEST);
+  }
+
+  public static void main(String[] args) {
+    ConfigurableApplicationContext context = SpringApplication
+        .run(SpringTransactionDemo.class, args);
+    TransactionService transactionService = context.getBean(TransactionService.class);
+    transactionService.sql1();
+    transactionService.sql2();
+    transactionService.sql3();
+    transactionService.sql4();
+    transactionService.sql5();
+    logger.info(
+        "Main Thread exits: " + Thread.currentThread().getId() + ", " + Thread.currentThread()
+            .getName());
+  }
+
+  @Bean
+  public DataSource postgresqlDataSource() {
+    String url = "jdbc:postgresql://localhost:5432/pgdb";
+    Properties properties = new Properties();
 //        properties.put("loggerLevel", "TRACE");
-        DriverManagerDataSource dataSource = new DriverManagerDataSource(url, properties);
-        dataSource.setDriverClassName("org.postgresql.Driver");
-        dataSource.setUsername("pgdemo");
-        dataSource.setPassword("123456");
+    DriverManagerDataSource dataSource = new DriverManagerDataSource(url, properties);
+    dataSource.setDriverClassName("org.postgresql.Driver");
+    dataSource.setUsername("pgdemo");
+    dataSource.setPassword("123456");
 
-        DataSource dataSourceProxy = ProxyDataSourceBuilder.create(dataSource).logQueryBySlf4j(
-            SLF4JLogLevel.INFO).build();
-        return dataSourceProxy;
-    }
-
-    public static void main(String[] args) {
-        ConfigurableApplicationContext context = SpringApplication
-            .run(SpringTransactionDemo.class, args);
-        TransactionService transactionService = context.getBean(TransactionService.class);
-        transactionService.sql1();
-        transactionService.sql2();
-        transactionService.sql3();
-        transactionService.sql4();
-        transactionService.sql5();
-        logger.info("Main Thread exits: " + Thread.currentThread().getId() + ", " + Thread.currentThread().getName());
-    }
+    DataSource dataSourceProxy = ProxyDataSourceBuilder.create(dataSource).logQueryBySlf4j(
+        SLF4JLogLevel.INFO).build();
+    return dataSourceProxy;
+  }
 }

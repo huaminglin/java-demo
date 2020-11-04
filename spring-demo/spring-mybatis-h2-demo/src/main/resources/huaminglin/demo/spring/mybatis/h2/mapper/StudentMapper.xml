@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
-        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
-        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="huaminglin.demo.spring.mybatis.h2.mapper.StudentMapper">
-    <cache/>
-    <select id="getStudents" resultType="huaminglin.demo.spring.mybatis.h2.Student" useCache="true" flushCache="false">
-        select name, age from student where name = #{name}
-    </select>
-    <update id="updateAge">
-        update student set age = #{age} where name = #{name}
-    </update>
+  <cache/>
+  <select flushCache="false" id="getStudents" resultType="huaminglin.demo.spring.mybatis.h2.Student"
+    useCache="true">
+    select name, age from student where name = #{name}
+  </select>
+  <update id="updateAge">
+    update student set age = #{age} where name = #{name}
+  </update>
 </mapper>

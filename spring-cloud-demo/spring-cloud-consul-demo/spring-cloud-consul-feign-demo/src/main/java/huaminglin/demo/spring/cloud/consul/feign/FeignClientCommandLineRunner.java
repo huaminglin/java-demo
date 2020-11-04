@@ -6,13 +6,14 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class FeignClientCommandLineRunner implements CommandLineRunner {
-    @Autowired
-    private HelloServiceProxy helloServiceProxy;
 
-    @Override
-    public void run(String... args) throws Exception {
-        String result = helloServiceProxy.hello();
-        System.out.println("Feign response: " + result);
-    }
+  @Autowired
+  private HelloServiceProxy helloServiceProxy;
+
+  @Override
+  public void run(String... args) throws Exception {
+    String result = helloServiceProxy.hello();
+    System.out.println("Feign response: " + result);
+  }
 
 }

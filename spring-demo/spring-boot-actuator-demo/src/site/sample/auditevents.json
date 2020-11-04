@@ -1,78 +1,78 @@
 {
-    "events": [
-        {
-            "timestamp": "2019-09-28T06:22:43.126Z",
-            "principal": "admin",
-            "type": "AUTHENTICATION_SUCCESS",
-            "data": {
-                "details": {
-                    "remoteAddress": "192.168.1.134",
-                    "sessionId": null
-                }
-            }
-        },
-        {
-            "timestamp": "2019-09-28T06:23:23.978Z",
-            "principal": "admin2",
-            "type": "AUTHENTICATION_FAILURE",
-            "data": {
-                "details": {
-                    "remoteAddress": "192.168.1.134",
-                    "sessionId": "C368F61435003A9F507E1F2D41543599"
-                },
-                "type": "org.springframework.security.authentication.BadCredentialsException",
-                "message": "Bad credentials"
-            }
-        },
-        {
-            "timestamp": "2019-09-28T06:23:23.986Z",
-            "principal": "anonymousUser",
-            "type": "AUTHORIZATION_FAILURE",
-            "data": {
-                "details": {
-                    "remoteAddress": "192.168.1.134",
-                    "sessionId": "C368F61435003A9F507E1F2D41543599"
-                },
-                "type": "org.springframework.security.access.AccessDeniedException",
-                "message": "Access is denied"
-            }
-        },
-        {
-            "timestamp": "2019-09-28T06:23:31.334Z",
-            "principal": "admin3",
-            "type": "AUTHENTICATION_FAILURE",
-            "data": {
-                "details": {
-                    "remoteAddress": "192.168.1.134",
-                    "sessionId": "C368F61435003A9F507E1F2D41543599"
-                },
-                "type": "org.springframework.security.authentication.BadCredentialsException",
-                "message": "Bad credentials"
-            }
-        },
-        {
-            "timestamp": "2019-09-28T06:23:31.339Z",
-            "principal": "anonymousUser",
-            "type": "AUTHORIZATION_FAILURE",
-            "data": {
-                "details": {
-                    "remoteAddress": "192.168.1.134",
-                    "sessionId": "C368F61435003A9F507E1F2D41543599"
-                },
-                "type": "org.springframework.security.access.AccessDeniedException",
-                "message": "Access is denied"
-            }
-        },
-        {
-            "timestamp": "2019-09-28T06:23:36.752Z",
-            "principal": "admin",
-            "type": "AUTHENTICATION_SUCCESS",
-            "data": {
-                "details": {
-                    "remoteAddress": "192.168.1.134",
-                    "sessionId": "C368F61435003A9F507E1F2D41543599"
-                }
-            }
+  "events": [
+    {
+      "timestamp": "2019-09-28T06:22:43.126Z",
+      "principal": "admin",
+      "type": "AUTHENTICATION_SUCCESS",
+      "data": {
+        "details": {
+          "remoteAddress": "192.168.1.134",
+          "sessionId": null
         }
-    ]
+      }
+    },
+    {
+      "timestamp": "2019-09-28T06:23:23.978Z",
+      "principal": "admin2",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "192.168.1.134",
+          "sessionId": "C368F61435003A9F507E1F2D41543599"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2019-09-28T06:23:23.986Z",
+      "principal": "anonymousUser",
+      "type": "AUTHORIZATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "192.168.1.134",
+          "sessionId": "C368F61435003A9F507E1F2D41543599"
+        },
+        "type": "org.springframework.security.access.AccessDeniedException",
+        "message": "Access is denied"
+      }
+    },
+    {
+      "timestamp": "2019-09-28T06:23:31.334Z",
+      "principal": "admin3",
+      "type": "AUTHENTICATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "192.168.1.134",
+          "sessionId": "C368F61435003A9F507E1F2D41543599"
+        },
+        "type": "org.springframework.security.authentication.BadCredentialsException",
+        "message": "Bad credentials"
+      }
+    },
+    {
+      "timestamp": "2019-09-28T06:23:31.339Z",
+      "principal": "anonymousUser",
+      "type": "AUTHORIZATION_FAILURE",
+      "data": {
+        "details": {
+          "remoteAddress": "192.168.1.134",
+          "sessionId": "C368F61435003A9F507E1F2D41543599"
+        },
+        "type": "org.springframework.security.access.AccessDeniedException",
+        "message": "Access is denied"
+      }
+    },
+    {
+      "timestamp": "2019-09-28T06:23:36.752Z",
+      "principal": "admin",
+      "type": "AUTHENTICATION_SUCCESS",
+      "data": {
+        "details": {
+          "remoteAddress": "192.168.1.134",
+          "sessionId": "C368F61435003A9F507E1F2D41543599"
+        }
+      }
+    }
+  ]
 }

@@ -9,6 +9,7 @@ public class SampleJob implements Job {
 
   @Override
   public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-    System.out.println("SampleJob: " + new Date() + ", " + this + ", " + jobExecutionContext.getTrigger());
+    System.out.println(
+        "SampleJob: " + new Date() + ", " + this + ", " + jobExecutionContext.getTrigger());
   }
 }

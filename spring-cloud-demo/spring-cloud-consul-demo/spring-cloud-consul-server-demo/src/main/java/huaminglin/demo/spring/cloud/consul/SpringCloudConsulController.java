@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SpringCloudConsulController {
 
-    @RequestMapping(value = "/hello")
-    public String main() {
-        return "Hello World.";
-    }
+  @RequestMapping(value = "/hello")
+  public String main() {
+    return "Hello World.";
+  }
 }

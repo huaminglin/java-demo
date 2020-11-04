@@ -1,11 +1,11 @@
 <html>
 <head>
-    <title>Courier WebSocket</title>
-    <script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous"></script>
-    <script type="text/javascript">
+  <title>Courier WebSocket</title>
+  <script
+      crossorigin="anonymous"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript">
 	var ws;
 	function setConnected(connected) {
 		$("#connect").prop("disabled", connected);
@@ -62,16 +62,17 @@
 			sendData();
 		});
 	});
-    </script>
+
+  </script>
 </head>
 <body onload="disconnect()">
 <div>
-    <div id="courierLocation"></div>
-    <button id="connect" type="button">Connect</button>
-    <button id="disconnect" type="button" disabled="disabled">Disconnect</button>
-    <br/>
-    <input id="courierId" placeholder="Input the target courier id" required></input>
-    <button id="qeury" type="submit">Qeury</button>
+  <div id="courierLocation"></div>
+  <button id="connect" type="button">Connect</button>
+  <button disabled="disabled" id="disconnect" type="button">Disconnect</button>
+  <br/>
+  <input id="courierId" placeholder="Input the target courier id" required></input>
+  <button id="qeury" type="submit">Qeury</button>
 </div>
 
 </body>

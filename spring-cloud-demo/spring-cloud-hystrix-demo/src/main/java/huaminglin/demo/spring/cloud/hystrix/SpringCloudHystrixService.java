@@ -7,16 +7,17 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 public class SpringCloudHystrixService {
-    @Autowired
-    RestTemplate restTemplate;
 
-    @HystrixCommand(fallbackMethod = "defaultMessage")
-    public String serverLocation() {
-        return this.restTemplate.getForObject(
-          "http://localhost:9091/", String.class);
-    }
+  @Autowired
+  RestTemplate restTemplate;
 
-    private String defaultMessage() {
-        return "Default message.";
-    }
+  @HystrixCommand(fallbackMethod = "defaultMessage")
+  public String serverLocation() {
+    return this.restTemplate.getForObject(
+        "http://localhost:9091/", String.class);
+  }
+
+  private String defaultMessage() {
+    return "Default message.";
+  }
 }

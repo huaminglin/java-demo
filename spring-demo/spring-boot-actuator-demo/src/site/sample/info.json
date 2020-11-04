@@ -1,11 +1,11 @@
 {
-    "app": {
-        "name": "Spring Boot Actuator Demo",
-        "description": "This is Spring Boot Actuator Demo",
-        "version": "1.0.0"
-    },
-    "java-vendor": "Oracle Corporation",
-    "users": {
-        "active": 1
-    }
+  "app": {
+    "name": "Spring Boot Actuator Demo",
+    "description": "This is Spring Boot Actuator Demo",
+    "version": "1.0.0"
+  },
+  "java-vendor": "Oracle Corporation",
+  "users": {
+    "active": 1
+  }
 }

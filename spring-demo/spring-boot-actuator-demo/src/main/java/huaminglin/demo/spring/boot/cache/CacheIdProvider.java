@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class CacheIdProvider {
 
-    private Random rand = new Random();
+  private Random rand = new Random();
 
-    @Cacheable(value = "ids", key = "#root.methodName")
-    public int getId() {
-        return rand.nextInt(50);
-    }
+  @Cacheable(value = "ids", key = "#root.methodName")
+  public int getId() {
+    return rand.nextInt(50);
+  }
 }

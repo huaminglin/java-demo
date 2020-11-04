@@ -7,36 +7,46 @@ import java.util.stream.Collectors;
 import java.util.stream.LongStream;
 
 public class StreamParallelDemo {
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
-        long firstNum = 1;
-        long lastNum = 10;
 
-        List<Long> aList = LongStream.rangeClosed(firstNum, lastNum).boxed()
-                .collect(Collectors.toList());
-        {
-            System.out.println("stream(): ");
-            Long aLong = aList.stream().peek(a -> System.out.println(Thread.currentThread() + "/" + Thread.currentThread().getId() + ": " + a)).reduce(0L, Long::sum);
-            System.out.println(aLong);
-        }
-        {
-            System.out.println("parallelStream(): ");
-            Long aLong = aList.parallelStream().peek(a -> System.out.println(Thread.currentThread() + "/" + Thread.currentThread().getId() + ": " + a)).reduce(0L, Long::sum);
-            System.out.println(aLong);
-        }
-        {
-            System.out.println("parallelStream() round 2: ");// Check that the background thread pool is the one used above.
-            Long aLong = aList.parallelStream().peek(a -> System.out.println(Thread.currentThread() + "/" + Thread.currentThread().getId() + ": " + a)).reduce(0L, Long::sum);
-            System.out.println(aLong);
-        }
-        {
-            System.out.println("parallelStream() in customized ForkJoinPool: ");
-            ForkJoinPool customThreadPool = new ForkJoinPool(2);
-            Long aLong = customThreadPool.submit(
-                    () -> aList.parallelStream().peek(a -> System.out.println(Thread.currentThread() + "/" + Thread.currentThread().getId() + ": " + a)).reduce(0L, Long::sum)
-            ).get();
-            System.out.println(aLong);
-        }
+  public static void main(String[] args) throws ExecutionException, InterruptedException {
+    long firstNum = 1;
+    long lastNum = 10;
+
+    List<Long> aList = LongStream.rangeClosed(firstNum, lastNum).boxed()
+        .collect(Collectors.toList());
+    {
+      System.out.println("stream(): ");
+      Long aLong = aList.stream().peek(a -> System.out
+          .println(Thread.currentThread() + "/" + Thread.currentThread().getId() + ": " + a))
+          .reduce(0L, Long::sum);
+      System.out.println(aLong);
     }
+    {
+      System.out.println("parallelStream(): ");
+      Long aLong = aList.parallelStream().peek(a -> System.out
+          .println(Thread.currentThread() + "/" + Thread.currentThread().getId() + ": " + a))
+          .reduce(0L, Long::sum);
+      System.out.println(aLong);
+    }
+    {
+      System.out.println(
+          "parallelStream() round 2: ");// Check that the background thread pool is the one used above.
+      Long aLong = aList.parallelStream().peek(a -> System.out
+          .println(Thread.currentThread() + "/" + Thread.currentThread().getId() + ": " + a))
+          .reduce(0L, Long::sum);
+      System.out.println(aLong);
+    }
+    {
+      System.out.println("parallelStream() in customized ForkJoinPool: ");
+      ForkJoinPool customThreadPool = new ForkJoinPool(2);
+      Long aLong = customThreadPool.submit(
+          () -> aList.parallelStream().peek(a -> System.out
+              .println(Thread.currentThread() + "/" + Thread.currentThread().getId() + ": " + a))
+              .reduce(0L, Long::sum)
+      ).get();
+      System.out.println(aLong);
+    }
+  }
 
     /*
 stream():

@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SleepController {
 
-  @Autowired SleepService sleepService;
+  @Autowired
+  SleepService sleepService;
 
   @RequestMapping(
-      value="/sleep",
+      value = "/sleep",
       method = RequestMethod.GET,
-      produces = { MediaType.APPLICATION_JSON_VALUE, }
+      produces = {MediaType.APPLICATION_JSON_VALUE,}
   )
   @ResponseBody
   public String sleep() {

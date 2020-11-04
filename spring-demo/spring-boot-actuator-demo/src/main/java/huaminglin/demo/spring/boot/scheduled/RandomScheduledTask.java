@@ -6,11 +6,12 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class RandomScheduledTask {
-    private Random rand = new Random();
 
-    @Scheduled(fixedRate = 5000)
-    public void randomId() {
-        rand.nextInt(50);
-        // System.out.println(rand.nextInt(50));
-    }
+  private Random rand = new Random();
+
+  @Scheduled(fixedRate = 5000)
+  public void randomId() {
+    rand.nextInt(50);
+    // System.out.println(rand.nextInt(50));
+  }
 }

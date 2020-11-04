@@ -8,12 +8,12 @@ import org.springframework.web.client.RestTemplate;
 @RestController
 public class SpringCloudRibbonController {
 
-    @Autowired
-    RestTemplate restTemplate;
+  @Autowired
+  RestTemplate restTemplate;
 
-    @RequestMapping("/server")
-    public String serverLocation() {
-        return this.restTemplate.getForObject(
-          "http://demo-server/", String.class);
-    }
+  @RequestMapping("/server")
+  public String serverLocation() {
+    return this.restTemplate.getForObject(
+        "http://demo-server/", String.class);
+  }
 }

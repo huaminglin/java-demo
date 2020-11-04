@@ -4,6 +4,7 @@ import org.springframework.data.redis.core.RedisHash;
 
 @RedisHash("Student")
 public class Student {
+
   private String id;
   private String name;
 

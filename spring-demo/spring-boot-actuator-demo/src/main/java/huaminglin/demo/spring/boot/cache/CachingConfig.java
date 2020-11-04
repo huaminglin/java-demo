@@ -12,11 +12,11 @@ import org.springframework.context.annotation.Configuration;
 @EnableCaching
 public class CachingConfig {
 
-    @Bean
-    public CacheManager cacheManager() {
-        SimpleCacheManager cacheManager = new SimpleCacheManager();
-        cacheManager.setCaches(Arrays.asList(
-          new ConcurrentMapCache("ids")));
-        return cacheManager;
-    }
+  @Bean
+  public CacheManager cacheManager() {
+    SimpleCacheManager cacheManager = new SimpleCacheManager();
+    cacheManager.setCaches(Arrays.asList(
+        new ConcurrentMapCache("ids")));
+    return cacheManager;
+  }
 }

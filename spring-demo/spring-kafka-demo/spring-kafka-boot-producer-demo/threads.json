@@ -1,1538 +1,1833 @@
-[ {
-  "init" : {
-    "hid" : 1991278377,
-    "name" : "main",
-    "time" : 42142919342303,
-    "stackTrace" : [ {
-      "fileName" : "Thread.java",
-      "method" : "<init>",
-      "lineNumber" : 583,
-      "class" : "java.lang.Thread"
-    }, {
-      "fileName" : "BackgroundPreinitializer.java",
-      "method" : "performPreinitialization",
-      "lineNumber" : 90,
-      "class" : "org.springframework.boot.autoconfigure.BackgroundPreinitializer"
-    }, {
-      "fileName" : "BackgroundPreinitializer.java",
-      "method" : "onApplicationEvent",
-      "lineNumber" : 71,
-      "class" : "org.springframework.boot.autoconfigure.BackgroundPreinitializer"
-    }, {
-      "fileName" : "BackgroundPreinitializer.java",
-      "method" : "onApplicationEvent",
-      "lineNumber" : 50,
-      "class" : "org.springframework.boot.autoconfigure.BackgroundPreinitializer"
-    }, {
-      "fileName" : "SimpleApplicationEventMulticaster.java",
-      "method" : "doInvokeListener",
-      "lineNumber" : 172,
-      "class" : "org.springframework.context.event.SimpleApplicationEventMulticaster"
-    }, {
-      "fileName" : "SimpleApplicationEventMulticaster.java",
-      "method" : "invokeListener",
-      "lineNumber" : 165,
-      "class" : "org.springframework.context.event.SimpleApplicationEventMulticaster"
-    }, {
-      "fileName" : "SimpleApplicationEventMulticaster.java",
-      "method" : "multicastEvent",
-      "lineNumber" : 139,
-      "class" : "org.springframework.context.event.SimpleApplicationEventMulticaster"
-    }, {
-      "fileName" : "SimpleApplicationEventMulticaster.java",
-      "method" : "multicastEvent",
-      "lineNumber" : 127,
-      "class" : "org.springframework.context.event.SimpleApplicationEventMulticaster"
-    }, {
-      "fileName" : "EventPublishingRunListener.java",
-      "method" : "environmentPrepared",
-      "lineNumber" : 80,
-      "class" : "org.springframework.boot.context.event.EventPublishingRunListener"
-    }, {
-      "fileName" : "SpringApplicationRunListeners.java",
-      "method" : "environmentPrepared",
-      "lineNumber" : 53,
-      "class" : "org.springframework.boot.SpringApplicationRunListeners"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "prepareEnvironment",
-      "lineNumber" : 345,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 308,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 1237,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 1226,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringBootProducerDemo.java",
-      "method" : "main",
-      "lineNumber" : 21,
-      "class" : "huaminglin.demo.spring.boot.SpringBootProducerDemo"
-    }, {
-      "fileName" : "NativeMethodAccessorImpl.java",
-      "method" : "invoke0",
-      "lineNumber" : -2,
-      "class" : "jdk.internal.reflect.NativeMethodAccessorImpl"
-    }, {
-      "fileName" : "NativeMethodAccessorImpl.java",
-      "method" : "invoke",
-      "lineNumber" : 62,
-      "class" : "jdk.internal.reflect.NativeMethodAccessorImpl"
-    }, {
-      "fileName" : "DelegatingMethodAccessorImpl.java",
-      "method" : "invoke",
-      "lineNumber" : 43,
-      "class" : "jdk.internal.reflect.DelegatingMethodAccessorImpl"
-    }, {
-      "fileName" : "Method.java",
-      "method" : "invoke",
-      "lineNumber" : 566,
-      "class" : "java.lang.reflect.Method"
-    }, {
-      "fileName" : "MainMethodRunner.java",
-      "method" : "run",
-      "lineNumber" : 49,
-      "class" : "org.springframework.boot.loader.MainMethodRunner"
-    }, {
-      "fileName" : "Launcher.java",
-      "method" : "launch",
-      "lineNumber" : 107,
-      "class" : "org.springframework.boot.loader.Launcher"
-    }, {
-      "fileName" : "Launcher.java",
-      "method" : "launch",
-      "lineNumber" : 58,
-      "class" : "org.springframework.boot.loader.Launcher"
-    }, {
-      "fileName" : "JarLauncher.java",
-      "method" : "main",
-      "lineNumber" : 88,
-      "class" : "org.springframework.boot.loader.JarLauncher"
-    } ]
+[
+  {
+    "init": {
+      "hid": 1991278377,
+      "name": "main",
+      "time": 42142919342303,
+      "stackTrace": [
+        {
+          "fileName": "Thread.java",
+          "method": "<init>",
+          "lineNumber": 583,
+          "class": "java.lang.Thread"
+        },
+        {
+          "fileName": "BackgroundPreinitializer.java",
+          "method": "performPreinitialization",
+          "lineNumber": 90,
+          "class": "org.springframework.boot.autoconfigure.BackgroundPreinitializer"
+        },
+        {
+          "fileName": "BackgroundPreinitializer.java",
+          "method": "onApplicationEvent",
+          "lineNumber": 71,
+          "class": "org.springframework.boot.autoconfigure.BackgroundPreinitializer"
+        },
+        {
+          "fileName": "BackgroundPreinitializer.java",
+          "method": "onApplicationEvent",
+          "lineNumber": 50,
+          "class": "org.springframework.boot.autoconfigure.BackgroundPreinitializer"
+        },
+        {
+          "fileName": "SimpleApplicationEventMulticaster.java",
+          "method": "doInvokeListener",
+          "lineNumber": 172,
+          "class": "org.springframework.context.event.SimpleApplicationEventMulticaster"
+        },
+        {
+          "fileName": "SimpleApplicationEventMulticaster.java",
+          "method": "invokeListener",
+          "lineNumber": 165,
+          "class": "org.springframework.context.event.SimpleApplicationEventMulticaster"
+        },
+        {
+          "fileName": "SimpleApplicationEventMulticaster.java",
+          "method": "multicastEvent",
+          "lineNumber": 139,
+          "class": "org.springframework.context.event.SimpleApplicationEventMulticaster"
+        },
+        {
+          "fileName": "SimpleApplicationEventMulticaster.java",
+          "method": "multicastEvent",
+          "lineNumber": 127,
+          "class": "org.springframework.context.event.SimpleApplicationEventMulticaster"
+        },
+        {
+          "fileName": "EventPublishingRunListener.java",
+          "method": "environmentPrepared",
+          "lineNumber": 80,
+          "class": "org.springframework.boot.context.event.EventPublishingRunListener"
+        },
+        {
+          "fileName": "SpringApplicationRunListeners.java",
+          "method": "environmentPrepared",
+          "lineNumber": 53,
+          "class": "org.springframework.boot.SpringApplicationRunListeners"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "prepareEnvironment",
+          "lineNumber": 345,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 308,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 1237,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 1226,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringBootProducerDemo.java",
+          "method": "main",
+          "lineNumber": 21,
+          "class": "huaminglin.demo.spring.boot.SpringBootProducerDemo"
+        },
+        {
+          "fileName": "NativeMethodAccessorImpl.java",
+          "method": "invoke0",
+          "lineNumber": -2,
+          "class": "jdk.internal.reflect.NativeMethodAccessorImpl"
+        },
+        {
+          "fileName": "NativeMethodAccessorImpl.java",
+          "method": "invoke",
+          "lineNumber": 62,
+          "class": "jdk.internal.reflect.NativeMethodAccessorImpl"
+        },
+        {
+          "fileName": "DelegatingMethodAccessorImpl.java",
+          "method": "invoke",
+          "lineNumber": 43,
+          "class": "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+        },
+        {
+          "fileName": "Method.java",
+          "method": "invoke",
+          "lineNumber": 566,
+          "class": "java.lang.reflect.Method"
+        },
+        {
+          "fileName": "MainMethodRunner.java",
+          "method": "run",
+          "lineNumber": 49,
+          "class": "org.springframework.boot.loader.MainMethodRunner"
+        },
+        {
+          "fileName": "Launcher.java",
+          "method": "launch",
+          "lineNumber": 107,
+          "class": "org.springframework.boot.loader.Launcher"
+        },
+        {
+          "fileName": "Launcher.java",
+          "method": "launch",
+          "lineNumber": 58,
+          "class": "org.springframework.boot.loader.Launcher"
+        },
+        {
+          "fileName": "JarLauncher.java",
+          "method": "main",
+          "lineNumber": 88,
+          "class": "org.springframework.boot.loader.JarLauncher"
+        }
+      ]
+    },
+    "group.name": "main",
+    "hid": 46941357,
+    "start": {
+      "hid": 1991278377,
+      "name": "main",
+      "time": 42142919463241,
+      "stackTrace": [
+        {
+          "fileName": "Thread.java",
+          "method": "start",
+          "lineNumber": 793,
+          "class": "java.lang.Thread"
+        },
+        {
+          "fileName": "BackgroundPreinitializer.java",
+          "method": "performPreinitialization",
+          "lineNumber": 112,
+          "class": "org.springframework.boot.autoconfigure.BackgroundPreinitializer"
+        },
+        {
+          "fileName": "BackgroundPreinitializer.java",
+          "method": "onApplicationEvent",
+          "lineNumber": 71,
+          "class": "org.springframework.boot.autoconfigure.BackgroundPreinitializer"
+        },
+        {
+          "fileName": "BackgroundPreinitializer.java",
+          "method": "onApplicationEvent",
+          "lineNumber": 50,
+          "class": "org.springframework.boot.autoconfigure.BackgroundPreinitializer"
+        },
+        {
+          "fileName": "SimpleApplicationEventMulticaster.java",
+          "method": "doInvokeListener",
+          "lineNumber": 172,
+          "class": "org.springframework.context.event.SimpleApplicationEventMulticaster"
+        },
+        {
+          "fileName": "SimpleApplicationEventMulticaster.java",
+          "method": "invokeListener",
+          "lineNumber": 165,
+          "class": "org.springframework.context.event.SimpleApplicationEventMulticaster"
+        },
+        {
+          "fileName": "SimpleApplicationEventMulticaster.java",
+          "method": "multicastEvent",
+          "lineNumber": 139,
+          "class": "org.springframework.context.event.SimpleApplicationEventMulticaster"
+        },
+        {
+          "fileName": "SimpleApplicationEventMulticaster.java",
+          "method": "multicastEvent",
+          "lineNumber": 127,
+          "class": "org.springframework.context.event.SimpleApplicationEventMulticaster"
+        },
+        {
+          "fileName": "EventPublishingRunListener.java",
+          "method": "environmentPrepared",
+          "lineNumber": 80,
+          "class": "org.springframework.boot.context.event.EventPublishingRunListener"
+        },
+        {
+          "fileName": "SpringApplicationRunListeners.java",
+          "method": "environmentPrepared",
+          "lineNumber": 53,
+          "class": "org.springframework.boot.SpringApplicationRunListeners"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "prepareEnvironment",
+          "lineNumber": 345,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 308,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 1237,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 1226,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringBootProducerDemo.java",
+          "method": "main",
+          "lineNumber": 21,
+          "class": "huaminglin.demo.spring.boot.SpringBootProducerDemo"
+        },
+        {
+          "fileName": "NativeMethodAccessorImpl.java",
+          "method": "invoke0",
+          "lineNumber": -2,
+          "class": "jdk.internal.reflect.NativeMethodAccessorImpl"
+        },
+        {
+          "fileName": "NativeMethodAccessorImpl.java",
+          "method": "invoke",
+          "lineNumber": 62,
+          "class": "jdk.internal.reflect.NativeMethodAccessorImpl"
+        },
+        {
+          "fileName": "DelegatingMethodAccessorImpl.java",
+          "method": "invoke",
+          "lineNumber": 43,
+          "class": "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+        },
+        {
+          "fileName": "Method.java",
+          "method": "invoke",
+          "lineNumber": 566,
+          "class": "java.lang.reflect.Method"
+        },
+        {
+          "fileName": "MainMethodRunner.java",
+          "method": "run",
+          "lineNumber": 49,
+          "class": "org.springframework.boot.loader.MainMethodRunner"
+        },
+        {
+          "fileName": "Launcher.java",
+          "method": "launch",
+          "lineNumber": 107,
+          "class": "org.springframework.boot.loader.Launcher"
+        },
+        {
+          "fileName": "Launcher.java",
+          "method": "launch",
+          "lineNumber": 58,
+          "class": "org.springframework.boot.loader.Launcher"
+        },
+        {
+          "fileName": "JarLauncher.java",
+          "method": "main",
+          "lineNumber": 88,
+          "class": "org.springframework.boot.loader.JarLauncher"
+        }
+      ]
+    },
+    "priority": 5,
+    "daemon": false,
+    "target": "org.springframework.boot.autoconfigure.BackgroundPreinitializer$1@44b3606b",
+    "exit": 42142927793466,
+    "threadStatus": 5,
+    "contextClassLoader": "org.springframework.boot.loader.LaunchedURLClassLoader@7b993c65",
+    "stackSize": 0,
+    "name": "background-preinit",
+    "id": 15,
+    "group.hid": 1356732524
   },
-  "group.name" : "main",
-  "hid" : 46941357,
-  "start" : {
-    "hid" : 1991278377,
-    "name" : "main",
-    "time" : 42142919463241,
-    "stackTrace" : [ {
-      "fileName" : "Thread.java",
-      "method" : "start",
-      "lineNumber" : 793,
-      "class" : "java.lang.Thread"
-    }, {
-      "fileName" : "BackgroundPreinitializer.java",
-      "method" : "performPreinitialization",
-      "lineNumber" : 112,
-      "class" : "org.springframework.boot.autoconfigure.BackgroundPreinitializer"
-    }, {
-      "fileName" : "BackgroundPreinitializer.java",
-      "method" : "onApplicationEvent",
-      "lineNumber" : 71,
-      "class" : "org.springframework.boot.autoconfigure.BackgroundPreinitializer"
-    }, {
-      "fileName" : "BackgroundPreinitializer.java",
-      "method" : "onApplicationEvent",
-      "lineNumber" : 50,
-      "class" : "org.springframework.boot.autoconfigure.BackgroundPreinitializer"
-    }, {
-      "fileName" : "SimpleApplicationEventMulticaster.java",
-      "method" : "doInvokeListener",
-      "lineNumber" : 172,
-      "class" : "org.springframework.context.event.SimpleApplicationEventMulticaster"
-    }, {
-      "fileName" : "SimpleApplicationEventMulticaster.java",
-      "method" : "invokeListener",
-      "lineNumber" : 165,
-      "class" : "org.springframework.context.event.SimpleApplicationEventMulticaster"
-    }, {
-      "fileName" : "SimpleApplicationEventMulticaster.java",
-      "method" : "multicastEvent",
-      "lineNumber" : 139,
-      "class" : "org.springframework.context.event.SimpleApplicationEventMulticaster"
-    }, {
-      "fileName" : "SimpleApplicationEventMulticaster.java",
-      "method" : "multicastEvent",
-      "lineNumber" : 127,
-      "class" : "org.springframework.context.event.SimpleApplicationEventMulticaster"
-    }, {
-      "fileName" : "EventPublishingRunListener.java",
-      "method" : "environmentPrepared",
-      "lineNumber" : 80,
-      "class" : "org.springframework.boot.context.event.EventPublishingRunListener"
-    }, {
-      "fileName" : "SpringApplicationRunListeners.java",
-      "method" : "environmentPrepared",
-      "lineNumber" : 53,
-      "class" : "org.springframework.boot.SpringApplicationRunListeners"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "prepareEnvironment",
-      "lineNumber" : 345,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 308,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 1237,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 1226,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringBootProducerDemo.java",
-      "method" : "main",
-      "lineNumber" : 21,
-      "class" : "huaminglin.demo.spring.boot.SpringBootProducerDemo"
-    }, {
-      "fileName" : "NativeMethodAccessorImpl.java",
-      "method" : "invoke0",
-      "lineNumber" : -2,
-      "class" : "jdk.internal.reflect.NativeMethodAccessorImpl"
-    }, {
-      "fileName" : "NativeMethodAccessorImpl.java",
-      "method" : "invoke",
-      "lineNumber" : 62,
-      "class" : "jdk.internal.reflect.NativeMethodAccessorImpl"
-    }, {
-      "fileName" : "DelegatingMethodAccessorImpl.java",
-      "method" : "invoke",
-      "lineNumber" : 43,
-      "class" : "jdk.internal.reflect.DelegatingMethodAccessorImpl"
-    }, {
-      "fileName" : "Method.java",
-      "method" : "invoke",
-      "lineNumber" : 566,
-      "class" : "java.lang.reflect.Method"
-    }, {
-      "fileName" : "MainMethodRunner.java",
-      "method" : "run",
-      "lineNumber" : 49,
-      "class" : "org.springframework.boot.loader.MainMethodRunner"
-    }, {
-      "fileName" : "Launcher.java",
-      "method" : "launch",
-      "lineNumber" : 107,
-      "class" : "org.springframework.boot.loader.Launcher"
-    }, {
-      "fileName" : "Launcher.java",
-      "method" : "launch",
-      "lineNumber" : 58,
-      "class" : "org.springframework.boot.loader.Launcher"
-    }, {
-      "fileName" : "JarLauncher.java",
-      "method" : "main",
-      "lineNumber" : 88,
-      "class" : "org.springframework.boot.loader.JarLauncher"
-    } ]
+  {
+    "init": {
+      "hid": 1991278377,
+      "name": "main",
+      "time": 42143273683913,
+      "stackTrace": [
+        {
+          "fileName": "Thread.java",
+          "method": "<init>",
+          "lineNumber": 495,
+          "class": "java.lang.Thread"
+        },
+        {
+          "fileName": "OnClassCondition.java",
+          "method": "<init>",
+          "lineNumber": 150,
+          "class": "org.springframework.boot.autoconfigure.condition.OnClassCondition$ThreadedOutcomesResolver"
+        },
+        {
+          "fileName": "OnClassCondition.java",
+          "method": "<init>",
+          "lineNumber": 143,
+          "class": "org.springframework.boot.autoconfigure.condition.OnClassCondition$ThreadedOutcomesResolver"
+        },
+        {
+          "fileName": "OnClassCondition.java",
+          "method": "createOutcomesResolver",
+          "lineNumber": 82,
+          "class": "org.springframework.boot.autoconfigure.condition.OnClassCondition"
+        },
+        {
+          "fileName": "OnClassCondition.java",
+          "method": "resolveOutcomesThreaded",
+          "lineNumber": 65,
+          "class": "org.springframework.boot.autoconfigure.condition.OnClassCondition"
+        },
+        {
+          "fileName": "OnClassCondition.java",
+          "method": "getOutcomes",
+          "lineNumber": 53,
+          "class": "org.springframework.boot.autoconfigure.condition.OnClassCondition"
+        },
+        {
+          "fileName": "FilteringSpringBootCondition.java",
+          "method": "match",
+          "lineNumber": 49,
+          "class": "org.springframework.boot.autoconfigure.condition.FilteringSpringBootCondition"
+        },
+        {
+          "fileName": "AutoConfigurationImportSelector.java",
+          "method": "filter",
+          "lineNumber": 370,
+          "class": "org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$ConfigurationClassFilter"
+        },
+        {
+          "fileName": "AutoConfigurationImportSelector.java",
+          "method": "getAutoConfigurationEntry",
+          "lineNumber": 128,
+          "class": "org.springframework.boot.autoconfigure.AutoConfigurationImportSelector"
+        },
+        {
+          "fileName": "AutoConfigurationImportSelector.java",
+          "method": "process",
+          "lineNumber": 434,
+          "class": "org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup"
+        },
+        {
+          "fileName": "ConfigurationClassParser.java",
+          "method": "getImports",
+          "lineNumber": 879,
+          "class": "org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping"
+        },
+        {
+          "fileName": "ConfigurationClassParser.java",
+          "method": "processGroupImports",
+          "lineNumber": 809,
+          "class": "org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler"
+        },
+        {
+          "fileName": "ConfigurationClassParser.java",
+          "method": "process",
+          "lineNumber": 780,
+          "class": "org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler"
+        },
+        {
+          "fileName": "ConfigurationClassParser.java",
+          "method": "parse",
+          "lineNumber": 193,
+          "class": "org.springframework.context.annotation.ConfigurationClassParser"
+        },
+        {
+          "fileName": "ConfigurationClassPostProcessor.java",
+          "method": "processConfigBeanDefinitions",
+          "lineNumber": 319,
+          "class": "org.springframework.context.annotation.ConfigurationClassPostProcessor"
+        },
+        {
+          "fileName": "ConfigurationClassPostProcessor.java",
+          "method": "postProcessBeanDefinitionRegistry",
+          "lineNumber": 236,
+          "class": "org.springframework.context.annotation.ConfigurationClassPostProcessor"
+        },
+        {
+          "fileName": "PostProcessorRegistrationDelegate.java",
+          "method": "invokeBeanDefinitionRegistryPostProcessors",
+          "lineNumber": 280,
+          "class": "org.springframework.context.support.PostProcessorRegistrationDelegate"
+        },
+        {
+          "fileName": "PostProcessorRegistrationDelegate.java",
+          "method": "invokeBeanFactoryPostProcessors",
+          "lineNumber": 96,
+          "class": "org.springframework.context.support.PostProcessorRegistrationDelegate"
+        },
+        {
+          "fileName": "AbstractApplicationContext.java",
+          "method": "invokeBeanFactoryPostProcessors",
+          "lineNumber": 707,
+          "class": "org.springframework.context.support.AbstractApplicationContext"
+        },
+        {
+          "fileName": "AbstractApplicationContext.java",
+          "method": "refresh",
+          "lineNumber": 533,
+          "class": "org.springframework.context.support.AbstractApplicationContext"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "refresh",
+          "lineNumber": 758,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "refresh",
+          "lineNumber": 750,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "refreshContext",
+          "lineNumber": 397,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 315,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 1237,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 1226,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringBootProducerDemo.java",
+          "method": "main",
+          "lineNumber": 21,
+          "class": "huaminglin.demo.spring.boot.SpringBootProducerDemo"
+        },
+        {
+          "fileName": "NativeMethodAccessorImpl.java",
+          "method": "invoke0",
+          "lineNumber": -2,
+          "class": "jdk.internal.reflect.NativeMethodAccessorImpl"
+        },
+        {
+          "fileName": "NativeMethodAccessorImpl.java",
+          "method": "invoke",
+          "lineNumber": 62,
+          "class": "jdk.internal.reflect.NativeMethodAccessorImpl"
+        },
+        {
+          "fileName": "DelegatingMethodAccessorImpl.java",
+          "method": "invoke",
+          "lineNumber": 43,
+          "class": "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+        },
+        {
+          "fileName": "Method.java",
+          "method": "invoke",
+          "lineNumber": 566,
+          "class": "java.lang.reflect.Method"
+        },
+        {
+          "fileName": "MainMethodRunner.java",
+          "method": "run",
+          "lineNumber": 49,
+          "class": "org.springframework.boot.loader.MainMethodRunner"
+        },
+        {
+          "fileName": "Launcher.java",
+          "method": "launch",
+          "lineNumber": 107,
+          "class": "org.springframework.boot.loader.Launcher"
+        },
+        {
+          "fileName": "Launcher.java",
+          "method": "launch",
+          "lineNumber": 58,
+          "class": "org.springframework.boot.loader.Launcher"
+        },
+        {
+          "fileName": "JarLauncher.java",
+          "method": "main",
+          "lineNumber": 88,
+          "class": "org.springframework.boot.loader.JarLauncher"
+        }
+      ]
+    },
+    "group.name": "main",
+    "hid": 576894497,
+    "start": {
+      "hid": 1991278377,
+      "name": "main",
+      "time": 42143273832591,
+      "stackTrace": [
+        {
+          "fileName": "Thread.java",
+          "method": "start",
+          "lineNumber": 793,
+          "class": "java.lang.Thread"
+        },
+        {
+          "fileName": "OnClassCondition.java",
+          "method": "<init>",
+          "lineNumber": 151,
+          "class": "org.springframework.boot.autoconfigure.condition.OnClassCondition$ThreadedOutcomesResolver"
+        },
+        {
+          "fileName": "OnClassCondition.java",
+          "method": "<init>",
+          "lineNumber": 143,
+          "class": "org.springframework.boot.autoconfigure.condition.OnClassCondition$ThreadedOutcomesResolver"
+        },
+        {
+          "fileName": "OnClassCondition.java",
+          "method": "createOutcomesResolver",
+          "lineNumber": 82,
+          "class": "org.springframework.boot.autoconfigure.condition.OnClassCondition"
+        },
+        {
+          "fileName": "OnClassCondition.java",
+          "method": "resolveOutcomesThreaded",
+          "lineNumber": 65,
+          "class": "org.springframework.boot.autoconfigure.condition.OnClassCondition"
+        },
+        {
+          "fileName": "OnClassCondition.java",
+          "method": "getOutcomes",
+          "lineNumber": 53,
+          "class": "org.springframework.boot.autoconfigure.condition.OnClassCondition"
+        },
+        {
+          "fileName": "FilteringSpringBootCondition.java",
+          "method": "match",
+          "lineNumber": 49,
+          "class": "org.springframework.boot.autoconfigure.condition.FilteringSpringBootCondition"
+        },
+        {
+          "fileName": "AutoConfigurationImportSelector.java",
+          "method": "filter",
+          "lineNumber": 370,
+          "class": "org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$ConfigurationClassFilter"
+        },
+        {
+          "fileName": "AutoConfigurationImportSelector.java",
+          "method": "getAutoConfigurationEntry",
+          "lineNumber": 128,
+          "class": "org.springframework.boot.autoconfigure.AutoConfigurationImportSelector"
+        },
+        {
+          "fileName": "AutoConfigurationImportSelector.java",
+          "method": "process",
+          "lineNumber": 434,
+          "class": "org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup"
+        },
+        {
+          "fileName": "ConfigurationClassParser.java",
+          "method": "getImports",
+          "lineNumber": 879,
+          "class": "org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping"
+        },
+        {
+          "fileName": "ConfigurationClassParser.java",
+          "method": "processGroupImports",
+          "lineNumber": 809,
+          "class": "org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler"
+        },
+        {
+          "fileName": "ConfigurationClassParser.java",
+          "method": "process",
+          "lineNumber": 780,
+          "class": "org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler"
+        },
+        {
+          "fileName": "ConfigurationClassParser.java",
+          "method": "parse",
+          "lineNumber": 193,
+          "class": "org.springframework.context.annotation.ConfigurationClassParser"
+        },
+        {
+          "fileName": "ConfigurationClassPostProcessor.java",
+          "method": "processConfigBeanDefinitions",
+          "lineNumber": 319,
+          "class": "org.springframework.context.annotation.ConfigurationClassPostProcessor"
+        },
+        {
+          "fileName": "ConfigurationClassPostProcessor.java",
+          "method": "postProcessBeanDefinitionRegistry",
+          "lineNumber": 236,
+          "class": "org.springframework.context.annotation.ConfigurationClassPostProcessor"
+        },
+        {
+          "fileName": "PostProcessorRegistrationDelegate.java",
+          "method": "invokeBeanDefinitionRegistryPostProcessors",
+          "lineNumber": 280,
+          "class": "org.springframework.context.support.PostProcessorRegistrationDelegate"
+        },
+        {
+          "fileName": "PostProcessorRegistrationDelegate.java",
+          "method": "invokeBeanFactoryPostProcessors",
+          "lineNumber": 96,
+          "class": "org.springframework.context.support.PostProcessorRegistrationDelegate"
+        },
+        {
+          "fileName": "AbstractApplicationContext.java",
+          "method": "invokeBeanFactoryPostProcessors",
+          "lineNumber": 707,
+          "class": "org.springframework.context.support.AbstractApplicationContext"
+        },
+        {
+          "fileName": "AbstractApplicationContext.java",
+          "method": "refresh",
+          "lineNumber": 533,
+          "class": "org.springframework.context.support.AbstractApplicationContext"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "refresh",
+          "lineNumber": 758,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "refresh",
+          "lineNumber": 750,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "refreshContext",
+          "lineNumber": 397,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 315,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 1237,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 1226,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringBootProducerDemo.java",
+          "method": "main",
+          "lineNumber": 21,
+          "class": "huaminglin.demo.spring.boot.SpringBootProducerDemo"
+        },
+        {
+          "fileName": "NativeMethodAccessorImpl.java",
+          "method": "invoke0",
+          "lineNumber": -2,
+          "class": "jdk.internal.reflect.NativeMethodAccessorImpl"
+        },
+        {
+          "fileName": "NativeMethodAccessorImpl.java",
+          "method": "invoke",
+          "lineNumber": 62,
+          "class": "jdk.internal.reflect.NativeMethodAccessorImpl"
+        },
+        {
+          "fileName": "DelegatingMethodAccessorImpl.java",
+          "method": "invoke",
+          "lineNumber": 43,
+          "class": "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+        },
+        {
+          "fileName": "Method.java",
+          "method": "invoke",
+          "lineNumber": 566,
+          "class": "java.lang.reflect.Method"
+        },
+        {
+          "fileName": "MainMethodRunner.java",
+          "method": "run",
+          "lineNumber": 49,
+          "class": "org.springframework.boot.loader.MainMethodRunner"
+        },
+        {
+          "fileName": "Launcher.java",
+          "method": "launch",
+          "lineNumber": 107,
+          "class": "org.springframework.boot.loader.Launcher"
+        },
+        {
+          "fileName": "Launcher.java",
+          "method": "launch",
+          "lineNumber": 58,
+          "class": "org.springframework.boot.loader.Launcher"
+        },
+        {
+          "fileName": "JarLauncher.java",
+          "method": "main",
+          "lineNumber": 88,
+          "class": "org.springframework.boot.loader.JarLauncher"
+        }
+      ]
+    },
+    "priority": 5,
+    "daemon": false,
+    "target": "null",
+    "exit": 42143302194476,
+    "threadStatus": 2,
+    "contextClassLoader": "org.springframework.boot.loader.LaunchedURLClassLoader@7b993c65",
+    "stackSize": 0,
+    "name": "Thread-0",
+    "id": 16,
+    "join": {
+      "hid": 1991278377,
+      "name": "main",
+      "time": 42143308871969,
+      "stackTrace": [
+        {
+          "fileName": "Thread.java",
+          "method": "join",
+          "lineNumber": 1296,
+          "class": "java.lang.Thread"
+        },
+        {
+          "fileName": "Thread.java",
+          "method": "join",
+          "lineNumber": 1380,
+          "class": "java.lang.Thread"
+        },
+        {
+          "fileName": "OnClassCondition.java",
+          "method": "resolveOutcomes",
+          "lineNumber": 157,
+          "class": "org.springframework.boot.autoconfigure.condition.OnClassCondition$ThreadedOutcomesResolver"
+        },
+        {
+          "fileName": "OnClassCondition.java",
+          "method": "resolveOutcomesThreaded",
+          "lineNumber": 70,
+          "class": "org.springframework.boot.autoconfigure.condition.OnClassCondition"
+        },
+        {
+          "fileName": "OnClassCondition.java",
+          "method": "getOutcomes",
+          "lineNumber": 53,
+          "class": "org.springframework.boot.autoconfigure.condition.OnClassCondition"
+        },
+        {
+          "fileName": "FilteringSpringBootCondition.java",
+          "method": "match",
+          "lineNumber": 49,
+          "class": "org.springframework.boot.autoconfigure.condition.FilteringSpringBootCondition"
+        },
+        {
+          "fileName": "AutoConfigurationImportSelector.java",
+          "method": "filter",
+          "lineNumber": 370,
+          "class": "org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$ConfigurationClassFilter"
+        },
+        {
+          "fileName": "AutoConfigurationImportSelector.java",
+          "method": "getAutoConfigurationEntry",
+          "lineNumber": 128,
+          "class": "org.springframework.boot.autoconfigure.AutoConfigurationImportSelector"
+        },
+        {
+          "fileName": "AutoConfigurationImportSelector.java",
+          "method": "process",
+          "lineNumber": 434,
+          "class": "org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup"
+        },
+        {
+          "fileName": "ConfigurationClassParser.java",
+          "method": "getImports",
+          "lineNumber": 879,
+          "class": "org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping"
+        },
+        {
+          "fileName": "ConfigurationClassParser.java",
+          "method": "processGroupImports",
+          "lineNumber": 809,
+          "class": "org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler"
+        },
+        {
+          "fileName": "ConfigurationClassParser.java",
+          "method": "process",
+          "lineNumber": 780,
+          "class": "org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler"
+        },
+        {
+          "fileName": "ConfigurationClassParser.java",
+          "method": "parse",
+          "lineNumber": 193,
+          "class": "org.springframework.context.annotation.ConfigurationClassParser"
+        },
+        {
+          "fileName": "ConfigurationClassPostProcessor.java",
+          "method": "processConfigBeanDefinitions",
+          "lineNumber": 319,
+          "class": "org.springframework.context.annotation.ConfigurationClassPostProcessor"
+        },
+        {
+          "fileName": "ConfigurationClassPostProcessor.java",
+          "method": "postProcessBeanDefinitionRegistry",
+          "lineNumber": 236,
+          "class": "org.springframework.context.annotation.ConfigurationClassPostProcessor"
+        },
+        {
+          "fileName": "PostProcessorRegistrationDelegate.java",
+          "method": "invokeBeanDefinitionRegistryPostProcessors",
+          "lineNumber": 280,
+          "class": "org.springframework.context.support.PostProcessorRegistrationDelegate"
+        },
+        {
+          "fileName": "PostProcessorRegistrationDelegate.java",
+          "method": "invokeBeanFactoryPostProcessors",
+          "lineNumber": 96,
+          "class": "org.springframework.context.support.PostProcessorRegistrationDelegate"
+        },
+        {
+          "fileName": "AbstractApplicationContext.java",
+          "method": "invokeBeanFactoryPostProcessors",
+          "lineNumber": 707,
+          "class": "org.springframework.context.support.AbstractApplicationContext"
+        },
+        {
+          "fileName": "AbstractApplicationContext.java",
+          "method": "refresh",
+          "lineNumber": 533,
+          "class": "org.springframework.context.support.AbstractApplicationContext"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "refresh",
+          "lineNumber": 758,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "refresh",
+          "lineNumber": 750,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "refreshContext",
+          "lineNumber": 397,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 315,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 1237,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 1226,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringBootProducerDemo.java",
+          "method": "main",
+          "lineNumber": 21,
+          "class": "huaminglin.demo.spring.boot.SpringBootProducerDemo"
+        },
+        {
+          "fileName": "NativeMethodAccessorImpl.java",
+          "method": "invoke0",
+          "lineNumber": -2,
+          "class": "jdk.internal.reflect.NativeMethodAccessorImpl"
+        },
+        {
+          "fileName": "NativeMethodAccessorImpl.java",
+          "method": "invoke",
+          "lineNumber": 62,
+          "class": "jdk.internal.reflect.NativeMethodAccessorImpl"
+        },
+        {
+          "fileName": "DelegatingMethodAccessorImpl.java",
+          "method": "invoke",
+          "lineNumber": 43,
+          "class": "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+        },
+        {
+          "fileName": "Method.java",
+          "method": "invoke",
+          "lineNumber": 566,
+          "class": "java.lang.reflect.Method"
+        },
+        {
+          "fileName": "MainMethodRunner.java",
+          "method": "run",
+          "lineNumber": 49,
+          "class": "org.springframework.boot.loader.MainMethodRunner"
+        },
+        {
+          "fileName": "Launcher.java",
+          "method": "launch",
+          "lineNumber": 107,
+          "class": "org.springframework.boot.loader.Launcher"
+        },
+        {
+          "fileName": "Launcher.java",
+          "method": "launch",
+          "lineNumber": 58,
+          "class": "org.springframework.boot.loader.Launcher"
+        },
+        {
+          "fileName": "JarLauncher.java",
+          "method": "main",
+          "lineNumber": 88,
+          "class": "org.springframework.boot.loader.JarLauncher"
+        }
+      ]
+    },
+    "group.hid": 1356732524
   },
-  "priority" : 5,
-  "daemon" : false,
-  "target" : "org.springframework.boot.autoconfigure.BackgroundPreinitializer$1@44b3606b",
-  "exit" : 42142927793466,
-  "threadStatus" : 5,
-  "contextClassLoader" : "org.springframework.boot.loader.LaunchedURLClassLoader@7b993c65",
-  "stackSize" : 0,
-  "name" : "background-preinit",
-  "id" : 15,
-  "group.hid" : 1356732524
-}, {
-  "init" : {
-    "hid" : 1991278377,
-    "name" : "main",
-    "time" : 42143273683913,
-    "stackTrace" : [ {
-      "fileName" : "Thread.java",
-      "method" : "<init>",
-      "lineNumber" : 495,
-      "class" : "java.lang.Thread"
-    }, {
-      "fileName" : "OnClassCondition.java",
-      "method" : "<init>",
-      "lineNumber" : 150,
-      "class" : "org.springframework.boot.autoconfigure.condition.OnClassCondition$ThreadedOutcomesResolver"
-    }, {
-      "fileName" : "OnClassCondition.java",
-      "method" : "<init>",
-      "lineNumber" : 143,
-      "class" : "org.springframework.boot.autoconfigure.condition.OnClassCondition$ThreadedOutcomesResolver"
-    }, {
-      "fileName" : "OnClassCondition.java",
-      "method" : "createOutcomesResolver",
-      "lineNumber" : 82,
-      "class" : "org.springframework.boot.autoconfigure.condition.OnClassCondition"
-    }, {
-      "fileName" : "OnClassCondition.java",
-      "method" : "resolveOutcomesThreaded",
-      "lineNumber" : 65,
-      "class" : "org.springframework.boot.autoconfigure.condition.OnClassCondition"
-    }, {
-      "fileName" : "OnClassCondition.java",
-      "method" : "getOutcomes",
-      "lineNumber" : 53,
-      "class" : "org.springframework.boot.autoconfigure.condition.OnClassCondition"
-    }, {
-      "fileName" : "FilteringSpringBootCondition.java",
-      "method" : "match",
-      "lineNumber" : 49,
-      "class" : "org.springframework.boot.autoconfigure.condition.FilteringSpringBootCondition"
-    }, {
-      "fileName" : "AutoConfigurationImportSelector.java",
-      "method" : "filter",
-      "lineNumber" : 370,
-      "class" : "org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$ConfigurationClassFilter"
-    }, {
-      "fileName" : "AutoConfigurationImportSelector.java",
-      "method" : "getAutoConfigurationEntry",
-      "lineNumber" : 128,
-      "class" : "org.springframework.boot.autoconfigure.AutoConfigurationImportSelector"
-    }, {
-      "fileName" : "AutoConfigurationImportSelector.java",
-      "method" : "process",
-      "lineNumber" : 434,
-      "class" : "org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup"
-    }, {
-      "fileName" : "ConfigurationClassParser.java",
-      "method" : "getImports",
-      "lineNumber" : 879,
-      "class" : "org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping"
-    }, {
-      "fileName" : "ConfigurationClassParser.java",
-      "method" : "processGroupImports",
-      "lineNumber" : 809,
-      "class" : "org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler"
-    }, {
-      "fileName" : "ConfigurationClassParser.java",
-      "method" : "process",
-      "lineNumber" : 780,
-      "class" : "org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler"
-    }, {
-      "fileName" : "ConfigurationClassParser.java",
-      "method" : "parse",
-      "lineNumber" : 193,
-      "class" : "org.springframework.context.annotation.ConfigurationClassParser"
-    }, {
-      "fileName" : "ConfigurationClassPostProcessor.java",
-      "method" : "processConfigBeanDefinitions",
-      "lineNumber" : 319,
-      "class" : "org.springframework.context.annotation.ConfigurationClassPostProcessor"
-    }, {
-      "fileName" : "ConfigurationClassPostProcessor.java",
-      "method" : "postProcessBeanDefinitionRegistry",
-      "lineNumber" : 236,
-      "class" : "org.springframework.context.annotation.ConfigurationClassPostProcessor"
-    }, {
-      "fileName" : "PostProcessorRegistrationDelegate.java",
-      "method" : "invokeBeanDefinitionRegistryPostProcessors",
-      "lineNumber" : 280,
-      "class" : "org.springframework.context.support.PostProcessorRegistrationDelegate"
-    }, {
-      "fileName" : "PostProcessorRegistrationDelegate.java",
-      "method" : "invokeBeanFactoryPostProcessors",
-      "lineNumber" : 96,
-      "class" : "org.springframework.context.support.PostProcessorRegistrationDelegate"
-    }, {
-      "fileName" : "AbstractApplicationContext.java",
-      "method" : "invokeBeanFactoryPostProcessors",
-      "lineNumber" : 707,
-      "class" : "org.springframework.context.support.AbstractApplicationContext"
-    }, {
-      "fileName" : "AbstractApplicationContext.java",
-      "method" : "refresh",
-      "lineNumber" : 533,
-      "class" : "org.springframework.context.support.AbstractApplicationContext"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "refresh",
-      "lineNumber" : 758,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "refresh",
-      "lineNumber" : 750,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "refreshContext",
-      "lineNumber" : 397,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 315,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 1237,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 1226,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringBootProducerDemo.java",
-      "method" : "main",
-      "lineNumber" : 21,
-      "class" : "huaminglin.demo.spring.boot.SpringBootProducerDemo"
-    }, {
-      "fileName" : "NativeMethodAccessorImpl.java",
-      "method" : "invoke0",
-      "lineNumber" : -2,
-      "class" : "jdk.internal.reflect.NativeMethodAccessorImpl"
-    }, {
-      "fileName" : "NativeMethodAccessorImpl.java",
-      "method" : "invoke",
-      "lineNumber" : 62,
-      "class" : "jdk.internal.reflect.NativeMethodAccessorImpl"
-    }, {
-      "fileName" : "DelegatingMethodAccessorImpl.java",
-      "method" : "invoke",
-      "lineNumber" : 43,
-      "class" : "jdk.internal.reflect.DelegatingMethodAccessorImpl"
-    }, {
-      "fileName" : "Method.java",
-      "method" : "invoke",
-      "lineNumber" : 566,
-      "class" : "java.lang.reflect.Method"
-    }, {
-      "fileName" : "MainMethodRunner.java",
-      "method" : "run",
-      "lineNumber" : 49,
-      "class" : "org.springframework.boot.loader.MainMethodRunner"
-    }, {
-      "fileName" : "Launcher.java",
-      "method" : "launch",
-      "lineNumber" : 107,
-      "class" : "org.springframework.boot.loader.Launcher"
-    }, {
-      "fileName" : "Launcher.java",
-      "method" : "launch",
-      "lineNumber" : 58,
-      "class" : "org.springframework.boot.loader.Launcher"
-    }, {
-      "fileName" : "JarLauncher.java",
-      "method" : "main",
-      "lineNumber" : 88,
-      "class" : "org.springframework.boot.loader.JarLauncher"
-    } ]
+  {
+    "init": {
+      "hid": 324200216,
+      "name": "DestroyJavaVM",
+      "time": 42144509396743,
+      "stackTrace": [
+        {
+          "fileName": "Thread.java",
+          "method": "<init>",
+          "lineNumber": 567,
+          "class": "java.lang.Thread"
+        }
+      ]
+    },
+    "group.name": "main",
+    "hid": 324200216,
+    "priority": 5,
+    "daemon": false,
+    "target": "null",
+    "threadStatus": 0,
+    "contextClassLoader": "null",
+    "stackSize": 0,
+    "name": "DestroyJavaVM",
+    "id": 19,
+    "group.hid": 1356732524
   },
-  "group.name" : "main",
-  "hid" : 576894497,
-  "start" : {
-    "hid" : 1991278377,
-    "name" : "main",
-    "time" : 42143273832591,
-    "stackTrace" : [ {
-      "fileName" : "Thread.java",
-      "method" : "start",
-      "lineNumber" : 793,
-      "class" : "java.lang.Thread"
-    }, {
-      "fileName" : "OnClassCondition.java",
-      "method" : "<init>",
-      "lineNumber" : 151,
-      "class" : "org.springframework.boot.autoconfigure.condition.OnClassCondition$ThreadedOutcomesResolver"
-    }, {
-      "fileName" : "OnClassCondition.java",
-      "method" : "<init>",
-      "lineNumber" : 143,
-      "class" : "org.springframework.boot.autoconfigure.condition.OnClassCondition$ThreadedOutcomesResolver"
-    }, {
-      "fileName" : "OnClassCondition.java",
-      "method" : "createOutcomesResolver",
-      "lineNumber" : 82,
-      "class" : "org.springframework.boot.autoconfigure.condition.OnClassCondition"
-    }, {
-      "fileName" : "OnClassCondition.java",
-      "method" : "resolveOutcomesThreaded",
-      "lineNumber" : 65,
-      "class" : "org.springframework.boot.autoconfigure.condition.OnClassCondition"
-    }, {
-      "fileName" : "OnClassCondition.java",
-      "method" : "getOutcomes",
-      "lineNumber" : 53,
-      "class" : "org.springframework.boot.autoconfigure.condition.OnClassCondition"
-    }, {
-      "fileName" : "FilteringSpringBootCondition.java",
-      "method" : "match",
-      "lineNumber" : 49,
-      "class" : "org.springframework.boot.autoconfigure.condition.FilteringSpringBootCondition"
-    }, {
-      "fileName" : "AutoConfigurationImportSelector.java",
-      "method" : "filter",
-      "lineNumber" : 370,
-      "class" : "org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$ConfigurationClassFilter"
-    }, {
-      "fileName" : "AutoConfigurationImportSelector.java",
-      "method" : "getAutoConfigurationEntry",
-      "lineNumber" : 128,
-      "class" : "org.springframework.boot.autoconfigure.AutoConfigurationImportSelector"
-    }, {
-      "fileName" : "AutoConfigurationImportSelector.java",
-      "method" : "process",
-      "lineNumber" : 434,
-      "class" : "org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup"
-    }, {
-      "fileName" : "ConfigurationClassParser.java",
-      "method" : "getImports",
-      "lineNumber" : 879,
-      "class" : "org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping"
-    }, {
-      "fileName" : "ConfigurationClassParser.java",
-      "method" : "processGroupImports",
-      "lineNumber" : 809,
-      "class" : "org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler"
-    }, {
-      "fileName" : "ConfigurationClassParser.java",
-      "method" : "process",
-      "lineNumber" : 780,
-      "class" : "org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler"
-    }, {
-      "fileName" : "ConfigurationClassParser.java",
-      "method" : "parse",
-      "lineNumber" : 193,
-      "class" : "org.springframework.context.annotation.ConfigurationClassParser"
-    }, {
-      "fileName" : "ConfigurationClassPostProcessor.java",
-      "method" : "processConfigBeanDefinitions",
-      "lineNumber" : 319,
-      "class" : "org.springframework.context.annotation.ConfigurationClassPostProcessor"
-    }, {
-      "fileName" : "ConfigurationClassPostProcessor.java",
-      "method" : "postProcessBeanDefinitionRegistry",
-      "lineNumber" : 236,
-      "class" : "org.springframework.context.annotation.ConfigurationClassPostProcessor"
-    }, {
-      "fileName" : "PostProcessorRegistrationDelegate.java",
-      "method" : "invokeBeanDefinitionRegistryPostProcessors",
-      "lineNumber" : 280,
-      "class" : "org.springframework.context.support.PostProcessorRegistrationDelegate"
-    }, {
-      "fileName" : "PostProcessorRegistrationDelegate.java",
-      "method" : "invokeBeanFactoryPostProcessors",
-      "lineNumber" : 96,
-      "class" : "org.springframework.context.support.PostProcessorRegistrationDelegate"
-    }, {
-      "fileName" : "AbstractApplicationContext.java",
-      "method" : "invokeBeanFactoryPostProcessors",
-      "lineNumber" : 707,
-      "class" : "org.springframework.context.support.AbstractApplicationContext"
-    }, {
-      "fileName" : "AbstractApplicationContext.java",
-      "method" : "refresh",
-      "lineNumber" : 533,
-      "class" : "org.springframework.context.support.AbstractApplicationContext"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "refresh",
-      "lineNumber" : 758,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "refresh",
-      "lineNumber" : 750,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "refreshContext",
-      "lineNumber" : 397,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 315,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 1237,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 1226,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringBootProducerDemo.java",
-      "method" : "main",
-      "lineNumber" : 21,
-      "class" : "huaminglin.demo.spring.boot.SpringBootProducerDemo"
-    }, {
-      "fileName" : "NativeMethodAccessorImpl.java",
-      "method" : "invoke0",
-      "lineNumber" : -2,
-      "class" : "jdk.internal.reflect.NativeMethodAccessorImpl"
-    }, {
-      "fileName" : "NativeMethodAccessorImpl.java",
-      "method" : "invoke",
-      "lineNumber" : 62,
-      "class" : "jdk.internal.reflect.NativeMethodAccessorImpl"
-    }, {
-      "fileName" : "DelegatingMethodAccessorImpl.java",
-      "method" : "invoke",
-      "lineNumber" : 43,
-      "class" : "jdk.internal.reflect.DelegatingMethodAccessorImpl"
-    }, {
-      "fileName" : "Method.java",
-      "method" : "invoke",
-      "lineNumber" : 566,
-      "class" : "java.lang.reflect.Method"
-    }, {
-      "fileName" : "MainMethodRunner.java",
-      "method" : "run",
-      "lineNumber" : 49,
-      "class" : "org.springframework.boot.loader.MainMethodRunner"
-    }, {
-      "fileName" : "Launcher.java",
-      "method" : "launch",
-      "lineNumber" : 107,
-      "class" : "org.springframework.boot.loader.Launcher"
-    }, {
-      "fileName" : "Launcher.java",
-      "method" : "launch",
-      "lineNumber" : 58,
-      "class" : "org.springframework.boot.loader.Launcher"
-    }, {
-      "fileName" : "JarLauncher.java",
-      "method" : "main",
-      "lineNumber" : 88,
-      "class" : "org.springframework.boot.loader.JarLauncher"
-    } ]
+  {
+    "init": {
+      "hid": 1991278377,
+      "name": "main",
+      "time": 42142014252407,
+      "stackTrace": [
+        {
+          "fileName": "Thread.java",
+          "method": "<init>",
+          "lineNumber": 567,
+          "class": "java.lang.Thread"
+        }
+      ]
+    },
+    "group.name": "system",
+    "hid": 929697158,
+    "priority": 5,
+    "daemon": false,
+    "target": "null",
+    "threadStatus": 0,
+    "contextClassLoader": "jdk.internal.loader.ClassLoaders$AppClassLoader@42a57993",
+    "stackSize": 0,
+    "name": "Service Thread",
+    "id": 13,
+    "group.hid": 1819940427
   },
-  "priority" : 5,
-  "daemon" : false,
-  "target" : "null",
-  "exit" : 42143302194476,
-  "threadStatus" : 2,
-  "contextClassLoader" : "org.springframework.boot.loader.LaunchedURLClassLoader@7b993c65",
-  "stackSize" : 0,
-  "name" : "Thread-0",
-  "id" : 16,
-  "join" : {
-    "hid" : 1991278377,
-    "name" : "main",
-    "time" : 42143308871969,
-    "stackTrace" : [ {
-      "fileName" : "Thread.java",
-      "method" : "join",
-      "lineNumber" : 1296,
-      "class" : "java.lang.Thread"
-    }, {
-      "fileName" : "Thread.java",
-      "method" : "join",
-      "lineNumber" : 1380,
-      "class" : "java.lang.Thread"
-    }, {
-      "fileName" : "OnClassCondition.java",
-      "method" : "resolveOutcomes",
-      "lineNumber" : 157,
-      "class" : "org.springframework.boot.autoconfigure.condition.OnClassCondition$ThreadedOutcomesResolver"
-    }, {
-      "fileName" : "OnClassCondition.java",
-      "method" : "resolveOutcomesThreaded",
-      "lineNumber" : 70,
-      "class" : "org.springframework.boot.autoconfigure.condition.OnClassCondition"
-    }, {
-      "fileName" : "OnClassCondition.java",
-      "method" : "getOutcomes",
-      "lineNumber" : 53,
-      "class" : "org.springframework.boot.autoconfigure.condition.OnClassCondition"
-    }, {
-      "fileName" : "FilteringSpringBootCondition.java",
-      "method" : "match",
-      "lineNumber" : 49,
-      "class" : "org.springframework.boot.autoconfigure.condition.FilteringSpringBootCondition"
-    }, {
-      "fileName" : "AutoConfigurationImportSelector.java",
-      "method" : "filter",
-      "lineNumber" : 370,
-      "class" : "org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$ConfigurationClassFilter"
-    }, {
-      "fileName" : "AutoConfigurationImportSelector.java",
-      "method" : "getAutoConfigurationEntry",
-      "lineNumber" : 128,
-      "class" : "org.springframework.boot.autoconfigure.AutoConfigurationImportSelector"
-    }, {
-      "fileName" : "AutoConfigurationImportSelector.java",
-      "method" : "process",
-      "lineNumber" : 434,
-      "class" : "org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup"
-    }, {
-      "fileName" : "ConfigurationClassParser.java",
-      "method" : "getImports",
-      "lineNumber" : 879,
-      "class" : "org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping"
-    }, {
-      "fileName" : "ConfigurationClassParser.java",
-      "method" : "processGroupImports",
-      "lineNumber" : 809,
-      "class" : "org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler"
-    }, {
-      "fileName" : "ConfigurationClassParser.java",
-      "method" : "process",
-      "lineNumber" : 780,
-      "class" : "org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler"
-    }, {
-      "fileName" : "ConfigurationClassParser.java",
-      "method" : "parse",
-      "lineNumber" : 193,
-      "class" : "org.springframework.context.annotation.ConfigurationClassParser"
-    }, {
-      "fileName" : "ConfigurationClassPostProcessor.java",
-      "method" : "processConfigBeanDefinitions",
-      "lineNumber" : 319,
-      "class" : "org.springframework.context.annotation.ConfigurationClassPostProcessor"
-    }, {
-      "fileName" : "ConfigurationClassPostProcessor.java",
-      "method" : "postProcessBeanDefinitionRegistry",
-      "lineNumber" : 236,
-      "class" : "org.springframework.context.annotation.ConfigurationClassPostProcessor"
-    }, {
-      "fileName" : "PostProcessorRegistrationDelegate.java",
-      "method" : "invokeBeanDefinitionRegistryPostProcessors",
-      "lineNumber" : 280,
-      "class" : "org.springframework.context.support.PostProcessorRegistrationDelegate"
-    }, {
-      "fileName" : "PostProcessorRegistrationDelegate.java",
-      "method" : "invokeBeanFactoryPostProcessors",
-      "lineNumber" : 96,
-      "class" : "org.springframework.context.support.PostProcessorRegistrationDelegate"
-    }, {
-      "fileName" : "AbstractApplicationContext.java",
-      "method" : "invokeBeanFactoryPostProcessors",
-      "lineNumber" : 707,
-      "class" : "org.springframework.context.support.AbstractApplicationContext"
-    }, {
-      "fileName" : "AbstractApplicationContext.java",
-      "method" : "refresh",
-      "lineNumber" : 533,
-      "class" : "org.springframework.context.support.AbstractApplicationContext"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "refresh",
-      "lineNumber" : 758,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "refresh",
-      "lineNumber" : 750,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "refreshContext",
-      "lineNumber" : 397,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 315,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 1237,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 1226,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringBootProducerDemo.java",
-      "method" : "main",
-      "lineNumber" : 21,
-      "class" : "huaminglin.demo.spring.boot.SpringBootProducerDemo"
-    }, {
-      "fileName" : "NativeMethodAccessorImpl.java",
-      "method" : "invoke0",
-      "lineNumber" : -2,
-      "class" : "jdk.internal.reflect.NativeMethodAccessorImpl"
-    }, {
-      "fileName" : "NativeMethodAccessorImpl.java",
-      "method" : "invoke",
-      "lineNumber" : 62,
-      "class" : "jdk.internal.reflect.NativeMethodAccessorImpl"
-    }, {
-      "fileName" : "DelegatingMethodAccessorImpl.java",
-      "method" : "invoke",
-      "lineNumber" : 43,
-      "class" : "jdk.internal.reflect.DelegatingMethodAccessorImpl"
-    }, {
-      "fileName" : "Method.java",
-      "method" : "invoke",
-      "lineNumber" : 566,
-      "class" : "java.lang.reflect.Method"
-    }, {
-      "fileName" : "MainMethodRunner.java",
-      "method" : "run",
-      "lineNumber" : 49,
-      "class" : "org.springframework.boot.loader.MainMethodRunner"
-    }, {
-      "fileName" : "Launcher.java",
-      "method" : "launch",
-      "lineNumber" : 107,
-      "class" : "org.springframework.boot.loader.Launcher"
-    }, {
-      "fileName" : "Launcher.java",
-      "method" : "launch",
-      "lineNumber" : 58,
-      "class" : "org.springframework.boot.loader.Launcher"
-    }, {
-      "fileName" : "JarLauncher.java",
-      "method" : "main",
-      "lineNumber" : 88,
-      "class" : "org.springframework.boot.loader.JarLauncher"
-    } ]
+  {
+    "init": {
+      "hid": 1991278377,
+      "name": "main",
+      "time": 42142453981668,
+      "stackTrace": [
+        {
+          "fileName": "Thread.java",
+          "method": "<init>",
+          "lineNumber": 766,
+          "class": "java.lang.Thread"
+        },
+        {
+          "fileName": "LogManager.java",
+          "method": "<init>",
+          "lineNumber": 261,
+          "class": "java.util.logging.LogManager$Cleaner"
+        },
+        {
+          "fileName": "LogManager.java",
+          "method": "<init>",
+          "lineNumber": 301,
+          "class": "java.util.logging.LogManager"
+        },
+        {
+          "fileName": "LogManager.java",
+          "method": "<init>",
+          "lineNumber": 294,
+          "class": "java.util.logging.LogManager"
+        },
+        {
+          "fileName": "LogManager.java",
+          "method": "run",
+          "lineNumber": 248,
+          "class": "java.util.logging.LogManager$1"
+        },
+        {
+          "fileName": "LogManager.java",
+          "method": "run",
+          "lineNumber": 223,
+          "class": "java.util.logging.LogManager$1"
+        },
+        {
+          "fileName": "AccessController.java",
+          "method": "doPrivileged",
+          "lineNumber": -2,
+          "class": "java.security.AccessController"
+        },
+        {
+          "fileName": "LogManager.java",
+          "method": "<clinit>",
+          "lineNumber": 223,
+          "class": "java.util.logging.LogManager"
+        },
+        {
+          "fileName": "Slf4JLoggingSystem.java",
+          "method": "isJulUsingASingleConsoleHandlerAtMost",
+          "lineNumber": 91,
+          "class": "org.springframework.boot.logging.Slf4JLoggingSystem"
+        },
+        {
+          "fileName": "Slf4JLoggingSystem.java",
+          "method": "isBridgeJulIntoSlf4j",
+          "lineNumber": 83,
+          "class": "org.springframework.boot.logging.Slf4JLoggingSystem"
+        },
+        {
+          "fileName": "Slf4JLoggingSystem.java",
+          "method": "configureJdkLoggingBridgeHandler",
+          "lineNumber": 67,
+          "class": "org.springframework.boot.logging.Slf4JLoggingSystem"
+        },
+        {
+          "fileName": "Slf4JLoggingSystem.java",
+          "method": "beforeInitialize",
+          "lineNumber": 46,
+          "class": "org.springframework.boot.logging.Slf4JLoggingSystem"
+        },
+        {
+          "fileName": "LogbackLoggingSystem.java",
+          "method": "beforeInitialize",
+          "lineNumber": 108,
+          "class": "org.springframework.boot.logging.logback.LogbackLoggingSystem"
+        },
+        {
+          "fileName": "LoggingApplicationListener.java",
+          "method": "onApplicationStartingEvent",
+          "lineNumber": 232,
+          "class": "org.springframework.boot.context.logging.LoggingApplicationListener"
+        },
+        {
+          "fileName": "LoggingApplicationListener.java",
+          "method": "onApplicationEvent",
+          "lineNumber": 213,
+          "class": "org.springframework.boot.context.logging.LoggingApplicationListener"
+        },
+        {
+          "fileName": "SimpleApplicationEventMulticaster.java",
+          "method": "doInvokeListener",
+          "lineNumber": 172,
+          "class": "org.springframework.context.event.SimpleApplicationEventMulticaster"
+        },
+        {
+          "fileName": "SimpleApplicationEventMulticaster.java",
+          "method": "invokeListener",
+          "lineNumber": 165,
+          "class": "org.springframework.context.event.SimpleApplicationEventMulticaster"
+        },
+        {
+          "fileName": "SimpleApplicationEventMulticaster.java",
+          "method": "multicastEvent",
+          "lineNumber": 139,
+          "class": "org.springframework.context.event.SimpleApplicationEventMulticaster"
+        },
+        {
+          "fileName": "SimpleApplicationEventMulticaster.java",
+          "method": "multicastEvent",
+          "lineNumber": 127,
+          "class": "org.springframework.context.event.SimpleApplicationEventMulticaster"
+        },
+        {
+          "fileName": "EventPublishingRunListener.java",
+          "method": "starting",
+          "lineNumber": 74,
+          "class": "org.springframework.boot.context.event.EventPublishingRunListener"
+        },
+        {
+          "fileName": "SpringApplicationRunListeners.java",
+          "method": "starting",
+          "lineNumber": 47,
+          "class": "org.springframework.boot.SpringApplicationRunListeners"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 305,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 1237,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 1226,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringBootProducerDemo.java",
+          "method": "main",
+          "lineNumber": 21,
+          "class": "huaminglin.demo.spring.boot.SpringBootProducerDemo"
+        },
+        {
+          "fileName": "NativeMethodAccessorImpl.java",
+          "method": "invoke0",
+          "lineNumber": -2,
+          "class": "jdk.internal.reflect.NativeMethodAccessorImpl"
+        },
+        {
+          "fileName": "NativeMethodAccessorImpl.java",
+          "method": "invoke",
+          "lineNumber": 62,
+          "class": "jdk.internal.reflect.NativeMethodAccessorImpl"
+        },
+        {
+          "fileName": "DelegatingMethodAccessorImpl.java",
+          "method": "invoke",
+          "lineNumber": 43,
+          "class": "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+        },
+        {
+          "fileName": "Method.java",
+          "method": "invoke",
+          "lineNumber": 566,
+          "class": "java.lang.reflect.Method"
+        },
+        {
+          "fileName": "MainMethodRunner.java",
+          "method": "run",
+          "lineNumber": 49,
+          "class": "org.springframework.boot.loader.MainMethodRunner"
+        },
+        {
+          "fileName": "Launcher.java",
+          "method": "launch",
+          "lineNumber": 107,
+          "class": "org.springframework.boot.loader.Launcher"
+        },
+        {
+          "fileName": "Launcher.java",
+          "method": "launch",
+          "lineNumber": 58,
+          "class": "org.springframework.boot.loader.Launcher"
+        },
+        {
+          "fileName": "JarLauncher.java",
+          "method": "main",
+          "lineNumber": 88,
+          "class": "org.springframework.boot.loader.JarLauncher"
+        }
+      ]
+    },
+    "group.name": "main",
+    "hid": 878668275,
+    "start": {
+      "hid": 324200216,
+      "name": "DestroyJavaVM",
+      "time": 42144518014122,
+      "stackTrace": [
+        {
+          "fileName": "Thread.java",
+          "method": "start",
+          "lineNumber": 793,
+          "class": "java.lang.Thread"
+        },
+        {
+          "fileName": "ApplicationShutdownHooks.java",
+          "method": "runHooks",
+          "lineNumber": 102,
+          "class": "java.lang.ApplicationShutdownHooks"
+        },
+        {
+          "fileName": "ApplicationShutdownHooks.java",
+          "method": "run",
+          "lineNumber": 46,
+          "class": "java.lang.ApplicationShutdownHooks$1"
+        },
+        {
+          "fileName": "Shutdown.java",
+          "method": "runHooks",
+          "lineNumber": 130,
+          "class": "java.lang.Shutdown"
+        },
+        {
+          "fileName": "Shutdown.java",
+          "method": "shutdown",
+          "lineNumber": 186,
+          "class": "java.lang.Shutdown"
+        }
+      ]
+    },
+    "priority": 5,
+    "daemon": false,
+    "target": "null",
+    "threadStatus": 0,
+    "contextClassLoader": "null",
+    "stackSize": 0,
+    "name": "Logging-Cleaner",
+    "id": 14,
+    "group.hid": 1356732524
   },
-  "group.hid" : 1356732524
-}, {
-  "init" : {
-    "hid" : 324200216,
-    "name" : "DestroyJavaVM",
-    "time" : 42144509396743,
-    "stackTrace" : [ {
-      "fileName" : "Thread.java",
-      "method" : "<init>",
-      "lineNumber" : 567,
-      "class" : "java.lang.Thread"
-    } ]
+  {
+    "init": {
+      "hid": 1991278377,
+      "name": "main",
+      "time": 42143898151954,
+      "stackTrace": [
+        {
+          "fileName": "Thread.java",
+          "method": "<init>",
+          "lineNumber": 543,
+          "class": "java.lang.Thread"
+        },
+        {
+          "fileName": "AbstractApplicationContext.java",
+          "method": "<init>",
+          "lineNumber": 945,
+          "class": "org.springframework.context.support.AbstractApplicationContext$1"
+        },
+        {
+          "fileName": "AbstractApplicationContext.java",
+          "method": "registerShutdownHook",
+          "lineNumber": 945,
+          "class": "org.springframework.context.support.AbstractApplicationContext"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "refreshContext",
+          "lineNumber": 400,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 315,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 1237,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringApplication.java",
+          "method": "run",
+          "lineNumber": 1226,
+          "class": "org.springframework.boot.SpringApplication"
+        },
+        {
+          "fileName": "SpringBootProducerDemo.java",
+          "method": "main",
+          "lineNumber": 21,
+          "class": "huaminglin.demo.spring.boot.SpringBootProducerDemo"
+        },
+        {
+          "fileName": "NativeMethodAccessorImpl.java",
+          "method": "invoke0",
+          "lineNumber": -2,
+          "class": "jdk.internal.reflect.NativeMethodAccessorImpl"
+        },
+        {
+          "fileName": "NativeMethodAccessorImpl.java",
+          "method": "invoke",
+          "lineNumber": 62,
+          "class": "jdk.internal.reflect.NativeMethodAccessorImpl"
+        },
+        {
+          "fileName": "DelegatingMethodAccessorImpl.java",
+          "method": "invoke",
+          "lineNumber": 43,
+          "class": "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+        },
+        {
+          "fileName": "Method.java",
+          "method": "invoke",
+          "lineNumber": 566,
+          "class": "java.lang.reflect.Method"
+        },
+        {
+          "fileName": "MainMethodRunner.java",
+          "method": "run",
+          "lineNumber": 49,
+          "class": "org.springframework.boot.loader.MainMethodRunner"
+        },
+        {
+          "fileName": "Launcher.java",
+          "method": "launch",
+          "lineNumber": 107,
+          "class": "org.springframework.boot.loader.Launcher"
+        },
+        {
+          "fileName": "Launcher.java",
+          "method": "launch",
+          "lineNumber": 58,
+          "class": "org.springframework.boot.loader.Launcher"
+        },
+        {
+          "fileName": "JarLauncher.java",
+          "method": "main",
+          "lineNumber": 88,
+          "class": "org.springframework.boot.loader.JarLauncher"
+        }
+      ]
+    },
+    "group.name": "main",
+    "hid": 1091107430,
+    "start": {
+      "hid": 324200216,
+      "name": "DestroyJavaVM",
+      "time": 42144509474196,
+      "stackTrace": [
+        {
+          "fileName": "Thread.java",
+          "method": "start",
+          "lineNumber": 793,
+          "class": "java.lang.Thread"
+        },
+        {
+          "fileName": "ApplicationShutdownHooks.java",
+          "method": "runHooks",
+          "lineNumber": 102,
+          "class": "java.lang.ApplicationShutdownHooks"
+        },
+        {
+          "fileName": "ApplicationShutdownHooks.java",
+          "method": "run",
+          "lineNumber": 46,
+          "class": "java.lang.ApplicationShutdownHooks$1"
+        },
+        {
+          "fileName": "Shutdown.java",
+          "method": "runHooks",
+          "lineNumber": 130,
+          "class": "java.lang.Shutdown"
+        },
+        {
+          "fileName": "Shutdown.java",
+          "method": "shutdown",
+          "lineNumber": 186,
+          "class": "java.lang.Shutdown"
+        }
+      ]
+    },
+    "priority": 5,
+    "daemon": false,
+    "target": "null",
+    "threadStatus": 5,
+    "contextClassLoader": "org.springframework.boot.loader.LaunchedURLClassLoader@7b993c65",
+    "stackSize": 0,
+    "name": "SpringContextShutdownHook",
+    "id": 17,
+    "join": {
+      "hid": 324200216,
+      "name": "DestroyJavaVM",
+      "time": 42144521980521,
+      "stackTrace": [
+        {
+          "fileName": "Thread.java",
+          "method": "join",
+          "lineNumber": 1296,
+          "class": "java.lang.Thread"
+        },
+        {
+          "fileName": "Thread.java",
+          "method": "join",
+          "lineNumber": 1380,
+          "class": "java.lang.Thread"
+        },
+        {
+          "fileName": "ApplicationShutdownHooks.java",
+          "method": "runHooks",
+          "lineNumber": 107,
+          "class": "java.lang.ApplicationShutdownHooks"
+        },
+        {
+          "fileName": "ApplicationShutdownHooks.java",
+          "method": "run",
+          "lineNumber": 46,
+          "class": "java.lang.ApplicationShutdownHooks$1"
+        },
+        {
+          "fileName": "Shutdown.java",
+          "method": "runHooks",
+          "lineNumber": 130,
+          "class": "java.lang.Shutdown"
+        },
+        {
+          "fileName": "Shutdown.java",
+          "method": "shutdown",
+          "lineNumber": 186,
+          "class": "java.lang.Shutdown"
+        }
+      ]
+    },
+    "group.hid": 1356732524
   },
-  "group.name" : "main",
-  "hid" : 324200216,
-  "priority" : 5,
-  "daemon" : false,
-  "target" : "null",
-  "threadStatus" : 0,
-  "contextClassLoader" : "null",
-  "stackSize" : 0,
-  "name" : "DestroyJavaVM",
-  "id" : 19,
-  "group.hid" : 1356732524
-}, {
-  "init" : {
-    "hid" : 1991278377,
-    "name" : "main",
-    "time" : 42142014252407,
-    "stackTrace" : [ {
-      "fileName" : "Thread.java",
-      "method" : "<init>",
-      "lineNumber" : 567,
-      "class" : "java.lang.Thread"
-    } ]
-  },
-  "group.name" : "system",
-  "hid" : 929697158,
-  "priority" : 5,
-  "daemon" : false,
-  "target" : "null",
-  "threadStatus" : 0,
-  "contextClassLoader" : "jdk.internal.loader.ClassLoaders$AppClassLoader@42a57993",
-  "stackSize" : 0,
-  "name" : "Service Thread",
-  "id" : 13,
-  "group.hid" : 1819940427
-}, {
-  "init" : {
-    "hid" : 1991278377,
-    "name" : "main",
-    "time" : 42142453981668,
-    "stackTrace" : [ {
-      "fileName" : "Thread.java",
-      "method" : "<init>",
-      "lineNumber" : 766,
-      "class" : "java.lang.Thread"
-    }, {
-      "fileName" : "LogManager.java",
-      "method" : "<init>",
-      "lineNumber" : 261,
-      "class" : "java.util.logging.LogManager$Cleaner"
-    }, {
-      "fileName" : "LogManager.java",
-      "method" : "<init>",
-      "lineNumber" : 301,
-      "class" : "java.util.logging.LogManager"
-    }, {
-      "fileName" : "LogManager.java",
-      "method" : "<init>",
-      "lineNumber" : 294,
-      "class" : "java.util.logging.LogManager"
-    }, {
-      "fileName" : "LogManager.java",
-      "method" : "run",
-      "lineNumber" : 248,
-      "class" : "java.util.logging.LogManager$1"
-    }, {
-      "fileName" : "LogManager.java",
-      "method" : "run",
-      "lineNumber" : 223,
-      "class" : "java.util.logging.LogManager$1"
-    }, {
-      "fileName" : "AccessController.java",
-      "method" : "doPrivileged",
-      "lineNumber" : -2,
-      "class" : "java.security.AccessController"
-    }, {
-      "fileName" : "LogManager.java",
-      "method" : "<clinit>",
-      "lineNumber" : 223,
-      "class" : "java.util.logging.LogManager"
-    }, {
-      "fileName" : "Slf4JLoggingSystem.java",
-      "method" : "isJulUsingASingleConsoleHandlerAtMost",
-      "lineNumber" : 91,
-      "class" : "org.springframework.boot.logging.Slf4JLoggingSystem"
-    }, {
-      "fileName" : "Slf4JLoggingSystem.java",
-      "method" : "isBridgeJulIntoSlf4j",
-      "lineNumber" : 83,
-      "class" : "org.springframework.boot.logging.Slf4JLoggingSystem"
-    }, {
-      "fileName" : "Slf4JLoggingSystem.java",
-      "method" : "configureJdkLoggingBridgeHandler",
-      "lineNumber" : 67,
-      "class" : "org.springframework.boot.logging.Slf4JLoggingSystem"
-    }, {
-      "fileName" : "Slf4JLoggingSystem.java",
-      "method" : "beforeInitialize",
-      "lineNumber" : 46,
-      "class" : "org.springframework.boot.logging.Slf4JLoggingSystem"
-    }, {
-      "fileName" : "LogbackLoggingSystem.java",
-      "method" : "beforeInitialize",
-      "lineNumber" : 108,
-      "class" : "org.springframework.boot.logging.logback.LogbackLoggingSystem"
-    }, {
-      "fileName" : "LoggingApplicationListener.java",
-      "method" : "onApplicationStartingEvent",
-      "lineNumber" : 232,
-      "class" : "org.springframework.boot.context.logging.LoggingApplicationListener"
-    }, {
-      "fileName" : "LoggingApplicationListener.java",
-      "method" : "onApplicationEvent",
-      "lineNumber" : 213,
-      "class" : "org.springframework.boot.context.logging.LoggingApplicationListener"
-    }, {
-      "fileName" : "SimpleApplicationEventMulticaster.java",
-      "method" : "doInvokeListener",
-      "lineNumber" : 172,
-      "class" : "org.springframework.context.event.SimpleApplicationEventMulticaster"
-    }, {
-      "fileName" : "SimpleApplicationEventMulticaster.java",
-      "method" : "invokeListener",
-      "lineNumber" : 165,
-      "class" : "org.springframework.context.event.SimpleApplicationEventMulticaster"
-    }, {
-      "fileName" : "SimpleApplicationEventMulticaster.java",
-      "method" : "multicastEvent",
-      "lineNumber" : 139,
-      "class" : "org.springframework.context.event.SimpleApplicationEventMulticaster"
-    }, {
-      "fileName" : "SimpleApplicationEventMulticaster.java",
-      "method" : "multicastEvent",
-      "lineNumber" : 127,
-      "class" : "org.springframework.context.event.SimpleApplicationEventMulticaster"
-    }, {
-      "fileName" : "EventPublishingRunListener.java",
-      "method" : "starting",
-      "lineNumber" : 74,
-      "class" : "org.springframework.boot.context.event.EventPublishingRunListener"
-    }, {
-      "fileName" : "SpringApplicationRunListeners.java",
-      "method" : "starting",
-      "lineNumber" : 47,
-      "class" : "org.springframework.boot.SpringApplicationRunListeners"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 305,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 1237,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 1226,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringBootProducerDemo.java",
-      "method" : "main",
-      "lineNumber" : 21,
-      "class" : "huaminglin.demo.spring.boot.SpringBootProducerDemo"
-    }, {
-      "fileName" : "NativeMethodAccessorImpl.java",
-      "method" : "invoke0",
-      "lineNumber" : -2,
-      "class" : "jdk.internal.reflect.NativeMethodAccessorImpl"
-    }, {
-      "fileName" : "NativeMethodAccessorImpl.java",
-      "method" : "invoke",
-      "lineNumber" : 62,
-      "class" : "jdk.internal.reflect.NativeMethodAccessorImpl"
-    }, {
-      "fileName" : "DelegatingMethodAccessorImpl.java",
-      "method" : "invoke",
-      "lineNumber" : 43,
-      "class" : "jdk.internal.reflect.DelegatingMethodAccessorImpl"
-    }, {
-      "fileName" : "Method.java",
-      "method" : "invoke",
-      "lineNumber" : 566,
-      "class" : "java.lang.reflect.Method"
-    }, {
-      "fileName" : "MainMethodRunner.java",
-      "method" : "run",
-      "lineNumber" : 49,
-      "class" : "org.springframework.boot.loader.MainMethodRunner"
-    }, {
-      "fileName" : "Launcher.java",
-      "method" : "launch",
-      "lineNumber" : 107,
-      "class" : "org.springframework.boot.loader.Launcher"
-    }, {
-      "fileName" : "Launcher.java",
-      "method" : "launch",
-      "lineNumber" : 58,
-      "class" : "org.springframework.boot.loader.Launcher"
-    }, {
-      "fileName" : "JarLauncher.java",
-      "method" : "main",
-      "lineNumber" : 88,
-      "class" : "org.springframework.boot.loader.JarLauncher"
-    } ]
-  },
-  "group.name" : "main",
-  "hid" : 878668275,
-  "start" : {
-    "hid" : 324200216,
-    "name" : "DestroyJavaVM",
-    "time" : 42144518014122,
-    "stackTrace" : [ {
-      "fileName" : "Thread.java",
-      "method" : "start",
-      "lineNumber" : 793,
-      "class" : "java.lang.Thread"
-    }, {
-      "fileName" : "ApplicationShutdownHooks.java",
-      "method" : "runHooks",
-      "lineNumber" : 102,
-      "class" : "java.lang.ApplicationShutdownHooks"
-    }, {
-      "fileName" : "ApplicationShutdownHooks.java",
-      "method" : "run",
-      "lineNumber" : 46,
-      "class" : "java.lang.ApplicationShutdownHooks$1"
-    }, {
-      "fileName" : "Shutdown.java",
-      "method" : "runHooks",
-      "lineNumber" : 130,
-      "class" : "java.lang.Shutdown"
-    }, {
-      "fileName" : "Shutdown.java",
-      "method" : "shutdown",
-      "lineNumber" : 186,
-      "class" : "java.lang.Shutdown"
-    } ]
-  },
-  "priority" : 5,
-  "daemon" : false,
-  "target" : "null",
-  "threadStatus" : 0,
-  "contextClassLoader" : "null",
-  "stackSize" : 0,
-  "name" : "Logging-Cleaner",
-  "id" : 14,
-  "group.hid" : 1356732524
-}, {
-  "init" : {
-    "hid" : 1991278377,
-    "name" : "main",
-    "time" : 42143898151954,
-    "stackTrace" : [ {
-      "fileName" : "Thread.java",
-      "method" : "<init>",
-      "lineNumber" : 543,
-      "class" : "java.lang.Thread"
-    }, {
-      "fileName" : "AbstractApplicationContext.java",
-      "method" : "<init>",
-      "lineNumber" : 945,
-      "class" : "org.springframework.context.support.AbstractApplicationContext$1"
-    }, {
-      "fileName" : "AbstractApplicationContext.java",
-      "method" : "registerShutdownHook",
-      "lineNumber" : 945,
-      "class" : "org.springframework.context.support.AbstractApplicationContext"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "refreshContext",
-      "lineNumber" : 400,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 315,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 1237,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringApplication.java",
-      "method" : "run",
-      "lineNumber" : 1226,
-      "class" : "org.springframework.boot.SpringApplication"
-    }, {
-      "fileName" : "SpringBootProducerDemo.java",
-      "method" : "main",
-      "lineNumber" : 21,
-      "class" : "huaminglin.demo.spring.boot.SpringBootProducerDemo"
-    }, {
-      "fileName" : "NativeMethodAccessorImpl.java",
-      "method" : "invoke0",
-      "lineNumber" : -2,
-      "class" : "jdk.internal.reflect.NativeMethodAccessorImpl"
-    }, {
-      "fileName" : "NativeMethodAccessorImpl.java",
-      "method" : "invoke",
-      "lineNumber" : 62,
-      "class" : "jdk.internal.reflect.NativeMethodAccessorImpl"
-    }, {
-      "fileName" : "DelegatingMethodAccessorImpl.java",
-      "method" : "invoke",
-      "lineNumber" : 43,
-      "class" : "jdk.internal.reflect.DelegatingMethodAccessorImpl"
-    }, {
-      "fileName" : "Method.java",
-      "method" : "invoke",
-      "lineNumber" : 566,
-      "class" : "java.lang.reflect.Method"
-    }, {
-      "fileName" : "MainMethodRunner.java",
-      "method" : "run",
-      "lineNumber" : 49,
-      "class" : "org.springframework.boot.loader.MainMethodRunner"
-    }, {
-      "fileName" : "Launcher.java",
-      "method" : "launch",
-      "lineNumber" : 107,
-      "class" : "org.springframework.boot.loader.Launcher"
-    }, {
-      "fileName" : "Launcher.java",
-      "method" : "launch",
-      "lineNumber" : 58,
-      "class" : "org.springframework.boot.loader.Launcher"
-    }, {
-      "fileName" : "JarLauncher.java",
-      "method" : "main",
-      "lineNumber" : 88,
-      "class" : "org.springframework.boot.loader.JarLauncher"
-    } ]
-  },
-  "group.name" : "main",
-  "hid" : 1091107430,
-  "start" : {
-    "hid" : 324200216,
-    "name" : "DestroyJavaVM",
-    "time" : 42144509474196,
-    "stackTrace" : [ {
-      "fileName" : "Thread.java",
-      "method" : "start",
-      "lineNumber" : 793,
-      "class" : "java.lang.Thread"
-    }, {
-      "fileName" : "ApplicationShutdownHooks.java",
-      "method" : "runHooks",
-      "lineNumber" : 102,
-      "class" : "java.lang.ApplicationShutdownHooks"
-    }, {
-      "fileName" : "ApplicationShutdownHooks.java",
-      "method" : "run",
-      "lineNumber" : 46,
-      "class" : "java.lang.ApplicationShutdownHooks$1"
-    }, {
-      "fileName" : "Shutdown.java",
-      "method" : "runHooks",
-      "lineNumber" : 130,
-      "class" : "java.lang.Shutdown"
-    }, {
-      "fileName" : "Shutdown.java",
-      "method" : "shutdown",
-      "lineNumber" : 186,
-      "class" : "java.lang.Shutdown"
-    } ]
-  },
-  "priority" : 5,
-  "daemon" : false,
-  "target" : "null",
-  "threadStatus" : 5,
-  "contextClassLoader" : "org.springframework.boot.loader.LaunchedURLClassLoader@7b993c65",
-  "stackSize" : 0,
-  "name" : "SpringContextShutdownHook",
-  "id" : 17,
-  "join" : {
-    "hid" : 324200216,
-    "name" : "DestroyJavaVM",
-    "time" : 42144521980521,
-    "stackTrace" : [ {
-      "fileName" : "Thread.java",
-      "method" : "join",
-      "lineNumber" : 1296,
-      "class" : "java.lang.Thread"
-    }, {
-      "fileName" : "Thread.java",
-      "method" : "join",
-      "lineNumber" : 1380,
-      "class" : "java.lang.Thread"
-    }, {
-      "fileName" : "ApplicationShutdownHooks.java",
-      "method" : "runHooks",
-      "lineNumber" : 107,
-      "class" : "java.lang.ApplicationShutdownHooks"
-    }, {
-      "fileName" : "ApplicationShutdownHooks.java",
-      "method" : "run",
-      "lineNumber" : 46,
-      "class" : "java.lang.ApplicationShutdownHooks$1"
-    }, {
-      "fileName" : "Shutdown.java",
-      "method" : "runHooks",
-      "lineNumber" : 130,
-      "class" : "java.lang.Shutdown"
-    }, {
-      "fileName" : "Shutdown.java",
-      "method" : "shutdown",
-      "lineNumber" : 186,
-      "class" : "java.lang.Shutdown"
-    } ]
-  },
-  "group.hid" : 1356732524
-}, {
-  "init" : {
-    "hid" : 1991278377,
-    "name" : "main",
-    "time" : 42144153602568,
-    "stackTrace" : [ {
-      "fileName" : "Thread.java",
-      "method" : "<init>",
-      "lineNumber" : 583,
-      "class" : "java.lang.Thread"
-    }, {
-      "fileName" : "KafkaThread.java",
-      "method" : "<init>",
-      "lineNumber" : 43,
-      "class" : "org.apache.kafka.common.utils.KafkaThread"
-    }, {
-      "fileName" : "KafkaProducer.java",
-      "method" : "<init>",
-      "lineNumber" : 425,
-      "class" : "org.apache.kafka.clients.producer.KafkaProducer"
-    }, {
-      "fileName" : "KafkaProducer.java",
-      "method" : "<init>",
-      "lineNumber" : 287,
-      "class" : "org.apache.kafka.clients.producer.KafkaProducer"
-    }, {
-      "fileName" : "DefaultKafkaProducerFactory.java",
-      "method" : "createRawProducer",
-      "lineNumber" : 668,
-      "class" : "org.springframework.kafka.core.DefaultKafkaProducerFactory"
-    }, {
-      "fileName" : "DefaultKafkaProducerFactory.java",
-      "method" : "createKafkaProducer",
-      "lineNumber" : 542,
-      "class" : "org.springframework.kafka.core.DefaultKafkaProducerFactory"
-    }, {
-      "fileName" : "DefaultKafkaProducerFactory.java",
-      "method" : "doCreateProducer",
-      "lineNumber" : 519,
-      "class" : "org.springframework.kafka.core.DefaultKafkaProducerFactory"
-    }, {
-      "fileName" : "DefaultKafkaProducerFactory.java",
-      "method" : "createProducer",
-      "lineNumber" : 480,
-      "class" : "org.springframework.kafka.core.DefaultKafkaProducerFactory"
-    }, {
-      "fileName" : "DefaultKafkaProducerFactory.java",
-      "method" : "createProducer",
-      "lineNumber" : 474,
-      "class" : "org.springframework.kafka.core.DefaultKafkaProducerFactory"
-    }, {
-      "fileName" : "KafkaTemplate.java",
-      "method" : "getTheProducer",
-      "lineNumber" : 665,
-      "class" : "org.springframework.kafka.core.KafkaTemplate"
-    }, {
-      "fileName" : "KafkaTemplate.java",
-      "method" : "doSend",
-      "lineNumber" : 551,
-      "class" : "org.springframework.kafka.core.KafkaTemplate"
-    }, {
-      "fileName" : "KafkaTemplate.java",
-      "method" : "send",
-      "lineNumber" : 363,
-      "class" : "org.springframework.kafka.core.KafkaTemplate"
-    }, {
-      "fileName" : "SpringBootProducerDemo.java",
-      "method" : "main",
-      "lineNumber" : 23,
-      "class" : "huaminglin.demo.spring.boot.SpringBootProducerDemo"
-    }, {
-      "fileName" : "NativeMethodAccessorImpl.java",
-      "method" : "invoke0",
-      "lineNumber" : -2,
-      "class" : "jdk.internal.reflect.NativeMethodAccessorImpl"
-    }, {
-      "fileName" : "NativeMethodAccessorImpl.java",
-      "method" : "invoke",
-      "lineNumber" : 62,
-      "class" : "jdk.internal.reflect.NativeMethodAccessorImpl"
-    }, {
-      "fileName" : "DelegatingMethodAccessorImpl.java",
-      "method" : "invoke",
-      "lineNumber" : 43,
-      "class" : "jdk.internal.reflect.DelegatingMethodAccessorImpl"
-    }, {
-      "fileName" : "Method.java",
-      "method" : "invoke",
-      "lineNumber" : 566,
-      "class" : "java.lang.reflect.Method"
-    }, {
-      "fileName" : "MainMethodRunner.java",
-      "method" : "run",
-      "lineNumber" : 49,
-      "class" : "org.springframework.boot.loader.MainMethodRunner"
-    }, {
-      "fileName" : "Launcher.java",
-      "method" : "launch",
-      "lineNumber" : 107,
-      "class" : "org.springframework.boot.loader.Launcher"
-    }, {
-      "fileName" : "Launcher.java",
-      "method" : "launch",
-      "lineNumber" : 58,
-      "class" : "org.springframework.boot.loader.Launcher"
-    }, {
-      "fileName" : "JarLauncher.java",
-      "method" : "main",
-      "lineNumber" : 88,
-      "class" : "org.springframework.boot.loader.JarLauncher"
-    } ]
-  },
-  "group.name" : "main",
-  "hid" : 37400149,
-  "start" : {
-    "hid" : 1991278377,
-    "name" : "main",
-    "time" : 42144153882887,
-    "stackTrace" : [ {
-      "fileName" : "Thread.java",
-      "method" : "start",
-      "lineNumber" : 793,
-      "class" : "java.lang.Thread"
-    }, {
-      "fileName" : "KafkaProducer.java",
-      "method" : "<init>",
-      "lineNumber" : 426,
-      "class" : "org.apache.kafka.clients.producer.KafkaProducer"
-    }, {
-      "fileName" : "KafkaProducer.java",
-      "method" : "<init>",
-      "lineNumber" : 287,
-      "class" : "org.apache.kafka.clients.producer.KafkaProducer"
-    }, {
-      "fileName" : "DefaultKafkaProducerFactory.java",
-      "method" : "createRawProducer",
-      "lineNumber" : 668,
-      "class" : "org.springframework.kafka.core.DefaultKafkaProducerFactory"
-    }, {
-      "fileName" : "DefaultKafkaProducerFactory.java",
-      "method" : "createKafkaProducer",
-      "lineNumber" : 542,
-      "class" : "org.springframework.kafka.core.DefaultKafkaProducerFactory"
-    }, {
-      "fileName" : "DefaultKafkaProducerFactory.java",
-      "method" : "doCreateProducer",
-      "lineNumber" : 519,
-      "class" : "org.springframework.kafka.core.DefaultKafkaProducerFactory"
-    }, {
-      "fileName" : "DefaultKafkaProducerFactory.java",
-      "method" : "createProducer",
-      "lineNumber" : 480,
-      "class" : "org.springframework.kafka.core.DefaultKafkaProducerFactory"
-    }, {
-      "fileName" : "DefaultKafkaProducerFactory.java",
-      "method" : "createProducer",
-      "lineNumber" : 474,
-      "class" : "org.springframework.kafka.core.DefaultKafkaProducerFactory"
-    }, {
-      "fileName" : "KafkaTemplate.java",
-      "method" : "getTheProducer",
-      "lineNumber" : 665,
-      "class" : "org.springframework.kafka.core.KafkaTemplate"
-    }, {
-      "fileName" : "KafkaTemplate.java",
-      "method" : "doSend",
-      "lineNumber" : 551,
-      "class" : "org.springframework.kafka.core.KafkaTemplate"
-    }, {
-      "fileName" : "KafkaTemplate.java",
-      "method" : "send",
-      "lineNumber" : 363,
-      "class" : "org.springframework.kafka.core.KafkaTemplate"
-    }, {
-      "fileName" : "SpringBootProducerDemo.java",
-      "method" : "main",
-      "lineNumber" : 23,
-      "class" : "huaminglin.demo.spring.boot.SpringBootProducerDemo"
-    }, {
-      "fileName" : "NativeMethodAccessorImpl.java",
-      "method" : "invoke0",
-      "lineNumber" : -2,
-      "class" : "jdk.internal.reflect.NativeMethodAccessorImpl"
-    }, {
-      "fileName" : "NativeMethodAccessorImpl.java",
-      "method" : "invoke",
-      "lineNumber" : 62,
-      "class" : "jdk.internal.reflect.NativeMethodAccessorImpl"
-    }, {
-      "fileName" : "DelegatingMethodAccessorImpl.java",
-      "method" : "invoke",
-      "lineNumber" : 43,
-      "class" : "jdk.internal.reflect.DelegatingMethodAccessorImpl"
-    }, {
-      "fileName" : "Method.java",
-      "method" : "invoke",
-      "lineNumber" : 566,
-      "class" : "java.lang.reflect.Method"
-    }, {
-      "fileName" : "MainMethodRunner.java",
-      "method" : "run",
-      "lineNumber" : 49,
-      "class" : "org.springframework.boot.loader.MainMethodRunner"
-    }, {
-      "fileName" : "Launcher.java",
-      "method" : "launch",
-      "lineNumber" : 107,
-      "class" : "org.springframework.boot.loader.Launcher"
-    }, {
-      "fileName" : "Launcher.java",
-      "method" : "launch",
-      "lineNumber" : 58,
-      "class" : "org.springframework.boot.loader.Launcher"
-    }, {
-      "fileName" : "JarLauncher.java",
-      "method" : "main",
-      "lineNumber" : 88,
-      "class" : "org.springframework.boot.loader.JarLauncher"
-    } ]
-  },
-  "priority" : 5,
-  "daemon" : true,
-  "target" : "org.apache.kafka.clients.producer.internals.Sender@5f574cc2",
-  "exit" : 42144541302627,
-  "threadStatus" : 5,
-  "contextClassLoader" : "org.springframework.boot.loader.LaunchedURLClassLoader@7b993c65",
-  "stackSize" : 0,
-  "name" : "kafka-producer-network-thread | producer-1",
-  "id" : 18,
-  "join" : {
-    "hid" : 1091107430,
-    "name" : "SpringContextShutdownHook",
-    "time" : 42144524913040,
-    "stackTrace" : [ {
-      "fileName" : "Thread.java",
-      "method" : "join",
-      "lineNumber" : 1296,
-      "class" : "java.lang.Thread"
-    }, {
-      "fileName" : "KafkaProducer.java",
-      "method" : "close",
-      "lineNumber" : 1198,
-      "class" : "org.apache.kafka.clients.producer.KafkaProducer"
-    }, {
-      "fileName" : "KafkaProducer.java",
-      "method" : "close",
-      "lineNumber" : 1175,
-      "class" : "org.apache.kafka.clients.producer.KafkaProducer"
-    }, {
-      "fileName" : "DefaultKafkaProducerFactory.java",
-      "method" : "closeDelegate",
-      "lineNumber" : 900,
-      "class" : "org.springframework.kafka.core.DefaultKafkaProducerFactory$CloseSafeProducer"
-    }, {
-      "fileName" : "DefaultKafkaProducerFactory.java",
-      "method" : "destroy",
-      "lineNumber" : 427,
-      "class" : "org.springframework.kafka.core.DefaultKafkaProducerFactory"
-    }, {
-      "fileName" : "DisposableBeanAdapter.java",
-      "method" : "destroy",
-      "lineNumber" : 258,
-      "class" : "org.springframework.beans.factory.support.DisposableBeanAdapter"
-    }, {
-      "fileName" : "DefaultSingletonBeanRegistry.java",
-      "method" : "destroyBean",
-      "lineNumber" : 587,
-      "class" : "org.springframework.beans.factory.support.DefaultSingletonBeanRegistry"
-    }, {
-      "fileName" : "DefaultSingletonBeanRegistry.java",
-      "method" : "destroySingleton",
-      "lineNumber" : 559,
-      "class" : "org.springframework.beans.factory.support.DefaultSingletonBeanRegistry"
-    }, {
-      "fileName" : "DefaultListableBeanFactory.java",
-      "method" : "destroySingleton",
-      "lineNumber" : 1092,
-      "class" : "org.springframework.beans.factory.support.DefaultListableBeanFactory"
-    }, {
-      "fileName" : "DefaultSingletonBeanRegistry.java",
-      "method" : "destroySingletons",
-      "lineNumber" : 520,
-      "class" : "org.springframework.beans.factory.support.DefaultSingletonBeanRegistry"
-    }, {
-      "fileName" : "DefaultListableBeanFactory.java",
-      "method" : "destroySingletons",
-      "lineNumber" : 1085,
-      "class" : "org.springframework.beans.factory.support.DefaultListableBeanFactory"
-    }, {
-      "fileName" : "AbstractApplicationContext.java",
-      "method" : "destroyBeans",
-      "lineNumber" : 1061,
-      "class" : "org.springframework.context.support.AbstractApplicationContext"
-    }, {
-      "fileName" : "AbstractApplicationContext.java",
-      "method" : "doClose",
-      "lineNumber" : 1030,
-      "class" : "org.springframework.context.support.AbstractApplicationContext"
-    }, {
-      "fileName" : "AbstractApplicationContext.java",
-      "method" : "run",
-      "lineNumber" : 949,
-      "class" : "org.springframework.context.support.AbstractApplicationContext$1"
-    } ]
-  },
-  "group.hid" : 1356732524
-} ]
+  {
+    "init": {
+      "hid": 1991278377,
+      "name": "main",
+      "time": 42144153602568,
+      "stackTrace": [
+        {
+          "fileName": "Thread.java",
+          "method": "<init>",
+          "lineNumber": 583,
+          "class": "java.lang.Thread"
+        },
+        {
+          "fileName": "KafkaThread.java",
+          "method": "<init>",
+          "lineNumber": 43,
+          "class": "org.apache.kafka.common.utils.KafkaThread"
+        },
+        {
+          "fileName": "KafkaProducer.java",
+          "method": "<init>",
+          "lineNumber": 425,
+          "class": "org.apache.kafka.clients.producer.KafkaProducer"
+        },
+        {
+          "fileName": "KafkaProducer.java",
+          "method": "<init>",
+          "lineNumber": 287,
+          "class": "org.apache.kafka.clients.producer.KafkaProducer"
+        },
+        {
+          "fileName": "DefaultKafkaProducerFactory.java",
+          "method": "createRawProducer",
+          "lineNumber": 668,
+          "class": "org.springframework.kafka.core.DefaultKafkaProducerFactory"
+        },
+        {
+          "fileName": "DefaultKafkaProducerFactory.java",
+          "method": "createKafkaProducer",
+          "lineNumber": 542,
+          "class": "org.springframework.kafka.core.DefaultKafkaProducerFactory"
+        },
+        {
+          "fileName": "DefaultKafkaProducerFactory.java",
+          "method": "doCreateProducer",
+          "lineNumber": 519,
+          "class": "org.springframework.kafka.core.DefaultKafkaProducerFactory"
+        },
+        {
+          "fileName": "DefaultKafkaProducerFactory.java",
+          "method": "createProducer",
+          "lineNumber": 480,
+          "class": "org.springframework.kafka.core.DefaultKafkaProducerFactory"
+        },
+        {
+          "fileName": "DefaultKafkaProducerFactory.java",
+          "method": "createProducer",
+          "lineNumber": 474,
+          "class": "org.springframework.kafka.core.DefaultKafkaProducerFactory"
+        },
+        {
+          "fileName": "KafkaTemplate.java",
+          "method": "getTheProducer",
+          "lineNumber": 665,
+          "class": "org.springframework.kafka.core.KafkaTemplate"
+        },
+        {
+          "fileName": "KafkaTemplate.java",
+          "method": "doSend",
+          "lineNumber": 551,
+          "class": "org.springframework.kafka.core.KafkaTemplate"
+        },
+        {
+          "fileName": "KafkaTemplate.java",
+          "method": "send",
+          "lineNumber": 363,
+          "class": "org.springframework.kafka.core.KafkaTemplate"
+        },
+        {
+          "fileName": "SpringBootProducerDemo.java",
+          "method": "main",
+          "lineNumber": 23,
+          "class": "huaminglin.demo.spring.boot.SpringBootProducerDemo"
+        },
+        {
+          "fileName": "NativeMethodAccessorImpl.java",
+          "method": "invoke0",
+          "lineNumber": -2,
+          "class": "jdk.internal.reflect.NativeMethodAccessorImpl"
+        },
+        {
+          "fileName": "NativeMethodAccessorImpl.java",
+          "method": "invoke",
+          "lineNumber": 62,
+          "class": "jdk.internal.reflect.NativeMethodAccessorImpl"
+        },
+        {
+          "fileName": "DelegatingMethodAccessorImpl.java",
+          "method": "invoke",
+          "lineNumber": 43,
+          "class": "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+        },
+        {
+          "fileName": "Method.java",
+          "method": "invoke",
+          "lineNumber": 566,
+          "class": "java.lang.reflect.Method"
+        },
+        {
+          "fileName": "MainMethodRunner.java",
+          "method": "run",
+          "lineNumber": 49,
+          "class": "org.springframework.boot.loader.MainMethodRunner"
+        },
+        {
+          "fileName": "Launcher.java",
+          "method": "launch",
+          "lineNumber": 107,
+          "class": "org.springframework.boot.loader.Launcher"
+        },
+        {
+          "fileName": "Launcher.java",
+          "method": "launch",
+          "lineNumber": 58,
+          "class": "org.springframework.boot.loader.Launcher"
+        },
+        {
+          "fileName": "JarLauncher.java",
+          "method": "main",
+          "lineNumber": 88,
+          "class": "org.springframework.boot.loader.JarLauncher"
+        }
+      ]
+    },
+    "group.name": "main",
+    "hid": 37400149,
+    "start": {
+      "hid": 1991278377,
+      "name": "main",
+      "time": 42144153882887,
+      "stackTrace": [
+        {
+          "fileName": "Thread.java",
+          "method": "start",
+          "lineNumber": 793,
+          "class": "java.lang.Thread"
+        },
+        {
+          "fileName": "KafkaProducer.java",
+          "method": "<init>",
+          "lineNumber": 426,
+          "class": "org.apache.kafka.clients.producer.KafkaProducer"
+        },
+        {
+          "fileName": "KafkaProducer.java",
+          "method": "<init>",
+          "lineNumber": 287,
+          "class": "org.apache.kafka.clients.producer.KafkaProducer"
+        },
+        {
+          "fileName": "DefaultKafkaProducerFactory.java",
+          "method": "createRawProducer",
+          "lineNumber": 668,
+          "class": "org.springframework.kafka.core.DefaultKafkaProducerFactory"
+        },
+        {
+          "fileName": "DefaultKafkaProducerFactory.java",
+          "method": "createKafkaProducer",
+          "lineNumber": 542,
+          "class": "org.springframework.kafka.core.DefaultKafkaProducerFactory"
+        },
+        {
+          "fileName": "DefaultKafkaProducerFactory.java",
+          "method": "doCreateProducer",
+          "lineNumber": 519,
+          "class": "org.springframework.kafka.core.DefaultKafkaProducerFactory"
+        },
+        {
+          "fileName": "DefaultKafkaProducerFactory.java",
+          "method": "createProducer",
+          "lineNumber": 480,
+          "class": "org.springframework.kafka.core.DefaultKafkaProducerFactory"
+        },
+        {
+          "fileName": "DefaultKafkaProducerFactory.java",
+          "method": "createProducer",
+          "lineNumber": 474,
+          "class": "org.springframework.kafka.core.DefaultKafkaProducerFactory"
+        },
+        {
+          "fileName": "KafkaTemplate.java",
+          "method": "getTheProducer",
+          "lineNumber": 665,
+          "class": "org.springframework.kafka.core.KafkaTemplate"
+        },
+        {
+          "fileName": "KafkaTemplate.java",
+          "method": "doSend",
+          "lineNumber": 551,
+          "class": "org.springframework.kafka.core.KafkaTemplate"
+        },
+        {
+          "fileName": "KafkaTemplate.java",
+          "method": "send",
+          "lineNumber": 363,
+          "class": "org.springframework.kafka.core.KafkaTemplate"
+        },
+        {
+          "fileName": "SpringBootProducerDemo.java",
+          "method": "main",
+          "lineNumber": 23,
+          "class": "huaminglin.demo.spring.boot.SpringBootProducerDemo"
+        },
+        {
+          "fileName": "NativeMethodAccessorImpl.java",
+          "method": "invoke0",
+          "lineNumber": -2,
+          "class": "jdk.internal.reflect.NativeMethodAccessorImpl"
+        },
+        {
+          "fileName": "NativeMethodAccessorImpl.java",
+          "method": "invoke",
+          "lineNumber": 62,
+          "class": "jdk.internal.reflect.NativeMethodAccessorImpl"
+        },
+        {
+          "fileName": "DelegatingMethodAccessorImpl.java",
+          "method": "invoke",
+          "lineNumber": 43,
+          "class": "jdk.internal.reflect.DelegatingMethodAccessorImpl"
+        },
+        {
+          "fileName": "Method.java",
+          "method": "invoke",
+          "lineNumber": 566,
+          "class": "java.lang.reflect.Method"
+        },
+        {
+          "fileName": "MainMethodRunner.java",
+          "method": "run",
+          "lineNumber": 49,
+          "class": "org.springframework.boot.loader.MainMethodRunner"
+        },
+        {
+          "fileName": "Launcher.java",
+          "method": "launch",
+          "lineNumber": 107,
+          "class": "org.springframework.boot.loader.Launcher"
+        },
+        {
+          "fileName": "Launcher.java",
+          "method": "launch",
+          "lineNumber": 58,
+          "class": "org.springframework.boot.loader.Launcher"
+        },
+        {
+          "fileName": "JarLauncher.java",
+          "method": "main",
+          "lineNumber": 88,
+          "class": "org.springframework.boot.loader.JarLauncher"
+        }
+      ]
+    },
+    "priority": 5,
+    "daemon": true,
+    "target": "org.apache.kafka.clients.producer.internals.Sender@5f574cc2",
+    "exit": 42144541302627,
+    "threadStatus": 5,
+    "contextClassLoader": "org.springframework.boot.loader.LaunchedURLClassLoader@7b993c65",
+    "stackSize": 0,
+    "name": "kafka-producer-network-thread | producer-1",
+    "id": 18,
+    "join": {
+      "hid": 1091107430,
+      "name": "SpringContextShutdownHook",
+      "time": 42144524913040,
+      "stackTrace": [
+        {
+          "fileName": "Thread.java",
+          "method": "join",
+          "lineNumber": 1296,
+          "class": "java.lang.Thread"
+        },
+        {
+          "fileName": "KafkaProducer.java",
+          "method": "close",
+          "lineNumber": 1198,
+          "class": "org.apache.kafka.clients.producer.KafkaProducer"
+        },
+        {
+          "fileName": "KafkaProducer.java",
+          "method": "close",
+          "lineNumber": 1175,
+          "class": "org.apache.kafka.clients.producer.KafkaProducer"
+        },
+        {
+          "fileName": "DefaultKafkaProducerFactory.java",
+          "method": "closeDelegate",
+          "lineNumber": 900,
+          "class": "org.springframework.kafka.core.DefaultKafkaProducerFactory$CloseSafeProducer"
+        },
+        {
+          "fileName": "DefaultKafkaProducerFactory.java",
+          "method": "destroy",
+          "lineNumber": 427,
+          "class": "org.springframework.kafka.core.DefaultKafkaProducerFactory"
+        },
+        {
+          "fileName": "DisposableBeanAdapter.java",
+          "method": "destroy",
+          "lineNumber": 258,
+          "class": "org.springframework.beans.factory.support.DisposableBeanAdapter"
+        },
+        {
+          "fileName": "DefaultSingletonBeanRegistry.java",
+          "method": "destroyBean",
+          "lineNumber": 587,
+          "class": "org.springframework.beans.factory.support.DefaultSingletonBeanRegistry"
+        },
+        {
+          "fileName": "DefaultSingletonBeanRegistry.java",
+          "method": "destroySingleton",
+          "lineNumber": 559,
+          "class": "org.springframework.beans.factory.support.DefaultSingletonBeanRegistry"
+        },
+        {
+          "fileName": "DefaultListableBeanFactory.java",
+          "method": "destroySingleton",
+          "lineNumber": 1092,
+          "class": "org.springframework.beans.factory.support.DefaultListableBeanFactory"
+        },
+        {
+          "fileName": "DefaultSingletonBeanRegistry.java",
+          "method": "destroySingletons",
+          "lineNumber": 520,
+          "class": "org.springframework.beans.factory.support.DefaultSingletonBeanRegistry"
+        },
+        {
+          "fileName": "DefaultListableBeanFactory.java",
+          "method": "destroySingletons",
+          "lineNumber": 1085,
+          "class": "org.springframework.beans.factory.support.DefaultListableBeanFactory"
+        },
+        {
+          "fileName": "AbstractApplicationContext.java",
+          "method": "destroyBeans",
+          "lineNumber": 1061,
+          "class": "org.springframework.context.support.AbstractApplicationContext"
+        },
+        {
+          "fileName": "AbstractApplicationContext.java",
+          "method": "doClose",
+          "lineNumber": 1030,
+          "class": "org.springframework.context.support.AbstractApplicationContext"
+        },
+        {
+          "fileName": "AbstractApplicationContext.java",
+          "method": "run",
+          "lineNumber": 949,
+          "class": "org.springframework.context.support.AbstractApplicationContext$1"
+        }
+      ]
+    },
+    "group.hid": 1356732524
+  }
+]

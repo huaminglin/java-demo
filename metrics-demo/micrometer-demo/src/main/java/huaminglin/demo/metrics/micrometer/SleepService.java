@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class SleepService {
+
   private final Counter counter;
   private final Timer timer;
   private final Timer timerPercentile;
@@ -28,7 +29,8 @@ public class SleepService {
         .tags("dev", "performance")
         .register(registry);
     timer = registry.timer("service.sleep.timer");
-    timerPercentile = Timer.builder("service.sleep.percentile.timer").publishPercentileHistogram().register(registry);
+    timerPercentile = Timer.builder("service.sleep.percentile.timer").publishPercentileHistogram()
+        .register(registry);
     longTaskTimer = LongTaskTimer
         .builder("service.sleep.long.task.timer")
         .register(registry);
