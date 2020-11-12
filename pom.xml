@@ -26,6 +26,7 @@
     <module>distributed-demo</module>
     <module>websocket-demo</module>
     <module>jdbc-demo</module>
+    <module>concurrency-demo</module>
   </modules>
   <packaging>pom</packaging>
   <properties>
