@@ -22,7 +22,7 @@ public class SpringBootDemo {
         Thread.currentThread().getName());
   }
 
-  @KafkaListener(topics = "test", groupId = "demo")
+  @KafkaListener(topics = "${mytopic}")
   public void listen(String message) {
     logger.info("Received Messasge in group demo: {}", message);
     if (message.contains("quit")) {
