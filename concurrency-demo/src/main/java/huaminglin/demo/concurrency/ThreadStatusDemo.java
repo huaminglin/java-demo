@@ -1,5 +1,6 @@
 package huaminglin.demo.concurrency;
 
+import java.io.IOException;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -9,6 +10,19 @@ public class ThreadStatusDemo {
   static final Lock lock = new ReentrantLock();
   static final Lock conditionLock = new ReentrantLock();
   static final Condition condition = conditionLock.newCondition();
+
+
+  static class RunningThread extends Thread {
+
+    @Override
+    public void run() {
+      System.out.println("RunningThread.run()");
+      while(true) {
+
+      }
+      // System.out.println("RunningThread.run() exit");
+    }
+  }
 
 
   static class SleepingThread extends Thread {
@@ -86,10 +100,34 @@ public class ThreadStatusDemo {
     }
   }
 
+  static class ReadInThread extends Thread {
+
+    @Override
+    public void run() {
+      System.out.println("ReadInThread.run()");
+      try {
+        System.in.read();
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+      System.out.println("ReadInThread.run() exit");
+    }
+  }
+
   public static void main(String[] args) {
+    {
+      Thread thread = new RunningThread();
+      thread.setName("RunningThreadName01");
+      thread.start();
+    }
     {
       Thread thread = new SleepingThread();
       thread.setName("SleepingThreadName01");
+      thread.start();
+    }
+    {
+      Thread thread = new ReadInThread();
+      thread.setName("ReadInThreadName01");
       thread.start();
     }
     {
