@@ -106,53 +106,82 @@ Main thread which enters lock(): "Locked ownable synchronizers: - <0x00000007211
 
    Locked ownable synchronizers:
         - None
+
+"ServerSocketThreadName01" #16 prio=5 os_prio=0 cpu=0.73ms elapsed=13.05s tid=0x00007fb2682ea000 nid=0x5dab runnable  [0x00007fb23ddfc000]
+   java.lang.Thread.State: RUNNABLE
+        at java.net.PlainSocketImpl.socketAccept(java.base@11.0.9.1/Native Method)
+        at java.net.AbstractPlainSocketImpl.accept(java.base@11.0.9.1/AbstractPlainSocketImpl.java:458)
+        at java.net.ServerSocket.implAccept(java.base@11.0.9.1/ServerSocket.java:565)
+        at java.net.ServerSocket.accept(java.base@11.0.9.1/ServerSocket.java:533)
+        at huaminglin.demo.concurrency.ThreadStatusDemo$ServerSocketThread.run(ThreadStatusDemo.java:125)
+
+   Locked ownable synchronizers:
+        - None
+
+"ClientSocketThreadName01" #17 prio=5 os_prio=0 cpu=6.05ms elapsed=13.72s tid=0x00007f023833c000 nid=0x5f16 runnable  [0x00007f01f2b80000]
+   java.lang.Thread.State: RUNNABLE
+        at java.net.SocketInputStream.socketRead0(java.base@11.0.9.1/Native Method)
+        at java.net.SocketInputStream.socketRead(java.base@11.0.9.1/SocketInputStream.java:115)
+        at java.net.SocketInputStream.read(java.base@11.0.9.1/SocketInputStream.java:168)
+        at java.net.SocketInputStream.read(java.base@11.0.9.1/SocketInputStream.java:140)
+        at java.net.SocketInputStream.read(java.base@11.0.9.1/SocketInputStream.java:200)
+        at huaminglin.demo.concurrency.ThreadStatusDemo$ClientSocketThread.run(ThreadStatusDemo.java:141)
+
+   Locked ownable synchronizers:
+        - None
+
+"ServerSocketChannelThreadName01" #18 prio=5 os_prio=0 cpu=23.88ms elapsed=82.54s tid=0x00007f390032d800 nid=0x72b9 runnable  [0x00007f388bdfc000]
+   java.lang.Thread.State: RUNNABLE
+        at sun.nio.ch.EPoll.wait(java.base@11.0.9.1/Native Method)
+        at sun.nio.ch.EPollSelectorImpl.doSelect(java.base@11.0.9.1/EPollSelectorImpl.java:120)
+        at sun.nio.ch.SelectorImpl.lockAndDoSelect(java.base@11.0.9.1/SelectorImpl.java:124)
+        - locked <0x0000000720f13250> (a sun.nio.ch.Util$2)
+        - locked <0x0000000720f12ec8> (a sun.nio.ch.EPollSelectorImpl)
+        at sun.nio.ch.SelectorImpl.select(java.base@11.0.9.1/SelectorImpl.java:141)
+        at huaminglin.demo.concurrency.ThreadStatusDemo$ServerSocketChannelThread.run(ThreadStatusDemo.java:180)
+
+   Locked ownable synchronizers:
+        - None
+
 ```
 
 ## Check threads of a process with ps command
 
-ps -o s,tid,comm,stat,%cpu,%mem -T -p 23087
+ps -o s,tid,comm,stat,%cpu,%mem -T -p 30552
 
 ```
-ps -o s,tid,comm,stat,%cpu,%mem -T -p 23087
 S     TID COMMAND         STAT %CPU %MEM
-S   23087 java            Sl    0.0  0.6
-S   23089 java            Sl    0.0  0.6
-S   23095 GC Thread#0     Sl    0.0  0.6
-S   23096 G1 Main Marker  Sl    0.0  0.6
-S   23097 G1 Conc#0       Sl    0.0  0.6
-S   23100 G1 Refine#0     Sl    0.0  0.6
-S   23101 G1 Young RemSet Sl    0.0  0.6
-S   23104 VM Thread       Sl    0.0  0.6
-S   23107 Reference Handl Sl    0.0  0.6
-S   23109 Finalizer       Sl    0.0  0.6
-S   23110 Signal Dispatch Sl    0.0  0.6
-S   23111 C2 CompilerThre Sl    0.1  0.6
-S   23112 C1 CompilerThre Sl    0.0  0.6
-S   23113 Sweeper thread  Sl    0.0  0.6
-S   23117 Common-Cleaner  Sl    0.0  0.6
-S   23120 Monitor Ctrl-Br Sl    0.0  0.6
-S   23121 Service Thread  Sl    0.0  0.6
-S   23122 VM Periodic Tas Sl    0.0  0.6
-R   23123 RunningThreadNa Rl    100  0.6
-S   23124 SleepingThreadN Sl    0.0  0.6
-S   23125 ReadInThreadNam Sl    0.0  0.6
-S   23126 WaitingThreadNa Sl    0.0  0.6
-S   23127 LockThreadName0 Sl    0.0  0.6
-S   23128 ConditionAwaitT Sl    0.0  0.6
-S   23129 SynchronizedThr Sl    0.0  0.6
-S   23146 Attach Listener Sl    0.0  0.6
-S   23262 RMI TCP Accept- Sl    0.0  0.6
-S   23264 RMI TCP Connect Sl    0.1  0.6
-S   23265 RMI Scheduler(0 Sl    0.0  0.6
-S   23266 JMX server conn Sl    0.0  0.6
-S   23272 RMI TCP Connect Sl    0.1  0.6
-S   23302 GC Thread#1     Sl    0.0  0.6
-S   23303 GC Thread#2     Sl    0.0  0.6
-S   23304 GC Thread#3     Sl    0.0  0.6
-S   23305 GC Thread#4     Sl    0.0  0.6
-S   23306 GC Thread#5     Sl    0.0  0.6
-S   23307 GC Thread#6     Sl    0.0  0.6
-S   23308 GC Thread#7     Sl    0.0  0.6
+S   30552 java            Sl    0.0  0.2
+S   30557 java            Sl    0.3  0.2
+S   30560 GC Thread#0     Sl    0.0  0.2
+S   30561 G1 Main Marker  Sl    0.0  0.2
+S   30562 G1 Conc#0       Sl    0.0  0.2
+S   30564 G1 Refine#0     Sl    0.0  0.2
+S   30565 G1 Young RemSet Sl    0.0  0.2
+S   30571 VM Thread       Sl    0.0  0.2
+S   30572 Reference Handl Sl    0.0  0.2
+S   30574 Finalizer       Sl    0.0  0.2
+S   30575 Signal Dispatch Sl    0.0  0.2
+S   30576 C2 CompilerThre Sl    0.1  0.2
+S   30577 C1 CompilerThre Sl    0.3  0.2
+S   30578 Sweeper thread  Sl    0.0  0.2
+S   30582 Common-Cleaner  Sl    0.0  0.2
+S   30585 Monitor Ctrl-Br Sl    0.0  0.2
+S   30586 Service Thread  Sl    0.0  0.2
+S   30587 VM Periodic Tas Sl    0.0  0.2
+R   30588 RunningThreadNa Rl    101  0.2
+S   30589 SleepingThreadN Sl    0.0  0.2
+S   30590 ReadInThreadNam Sl    0.0  0.2
+S   30591 ServerSocketThr Sl    0.0  0.2
+S   30592 ClientSocketThr Sl    0.0  0.2
+S   30593 ServerSocketCha Sl    0.0  0.2
+S   30594 WaitingThreadNa Sl    0.0  0.2
+S   30595 LockThreadName0 Sl    0.0  0.2
+S   30596 ConditionAwaitT Sl    0.0  0.2
+S   30597 SynchronizedThr Sl    0.0  0.2
+S   30614 Attach Listener Sl    0.0  0.2
+
+
 ```
 
 
@@ -205,3 +234,5 @@ It seems the COMMAND column shows thread name.
 So threads are grouped into 4: running, sleeping, stopped, zombie.
 
 java.lang.Thread.State: RUNNABLE can be shown as "sleeping" in the perspective of kernel.
+
+## nc 127.0.0.1 9999

@@ -1,6 +1,16 @@
 package huaminglin.demo.concurrency;
 
 import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.nio.ByteBuffer;
+import java.nio.channels.SelectionKey;
+import java.nio.channels.Selector;
+import java.nio.channels.ServerSocketChannel;
+import java.nio.channels.SocketChannel;
+import java.util.Iterator;
+import java.util.Set;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -114,6 +124,100 @@ public class ThreadStatusDemo {
     }
   }
 
+  static class ServerSocketThread extends Thread {
+
+    @Override
+    public void run() {
+      System.out.println("ServerSocketThread.run()");
+      try {
+        ServerSocket s = new ServerSocket(15863);
+        while (true) {
+          if (s.accept() == null) {
+            break;
+          }
+        }
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+      System.out.println("ServerSocketThread.run() exit");
+    }
+  }
+
+  static class ClientSocketThread extends Thread {
+
+    @Override
+    public void run() {
+      System.out.println("ClientSocketThread.run()");
+      try {
+        Socket s = new Socket("localhost", 15863);
+        s.getInputStream().read();
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+      System.out.println("ClientSocketThread.run() exit");
+    }
+  }
+
+
+  static class ServerSocketChannelThread extends Thread {
+
+    @Override
+    public void run() {
+      System.out.println("ServerSocketChannelThread.run()");
+      ServerSocketChannel serverSocketChannel = null;
+      try {
+        serverSocketChannel = ServerSocketChannel.open();
+        serverSocketChannel.socket().bind(new InetSocketAddress(9999));
+        serverSocketChannel.configureBlocking(false);
+
+        Selector selector = Selector.open();
+        serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
+        ByteBuffer readBuff = ByteBuffer.allocate(1024);
+        ByteBuffer writeBuff = ByteBuffer.allocate(128);
+        writeBuff.put("received".getBytes());
+        writeBuff.flip();
+        while(true) {
+          int readyNum = selector.select();
+          if (readyNum == 0) {
+            continue;
+          }
+
+          Set<SelectionKey> selectedKeys = selector.selectedKeys();
+          Iterator<SelectionKey> it = selectedKeys.iterator();
+
+          while(it.hasNext()) {
+            SelectionKey key = it.next();
+
+            if(key.isAcceptable()) {
+              SocketChannel socketChannel = serverSocketChannel.accept();
+              socketChannel.configureBlocking(false);
+              socketChannel.register(selector, SelectionKey.OP_READ);
+            } else if (key.isReadable()) {SocketChannel socketChannel = (SocketChannel) key.channel();
+              readBuff.clear();
+              socketChannel.read(readBuff);
+
+              readBuff.flip();
+              System.out.println("received : " + new String(readBuff.array()));
+              key.interestOps(SelectionKey.OP_WRITE);
+            } else if (key.isWritable()) {
+              writeBuff.rewind();
+              SocketChannel socketChannel = (SocketChannel) key.channel();
+              socketChannel.write(writeBuff);
+              key.interestOps(SelectionKey.OP_READ);
+            }
+
+            it.remove();
+          }
+        }
+
+      } catch (IOException e) {
+        e.printStackTrace();
+      }
+
+      System.out.println("ServerSocketChannelThread.run() exit");
+    }
+  }
+
   public static void main(String[] args) {
     {
       Thread thread = new RunningThread();
@@ -128,6 +232,21 @@ public class ThreadStatusDemo {
     {
       Thread thread = new ReadInThread();
       thread.setName("ReadInThreadName01");
+      thread.start();
+    }
+    {
+      Thread thread = new ServerSocketThread();
+      thread.setName("ServerSocketThreadName01");
+      thread.start();
+    }
+    {
+      Thread thread = new ClientSocketThread();
+      thread.setName("ClientSocketThreadName01");
+      thread.start();
+    }
+    {
+      Thread thread = new ServerSocketChannelThread();
+      thread.setName("ServerSocketChannelThreadName01");
       thread.start();
     }
     {
