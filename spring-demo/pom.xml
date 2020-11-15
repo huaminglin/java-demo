@@ -15,11 +15,11 @@
     <module>spring-kafka-demo</module>
     <module>spring-boot-amqp-demo</module>
     <module>spring-boot-actuator-demo</module>
-    <module>spring-boot-resttemplate-demo</module>
     <module>spring-post-processor-demo</module>
     <module>spring-boot-logging-demo</module>
     <module>spring-boot-log4j2-demo</module>
     <module>spring-boot-admin-demo</module>
+    <module>spring-retry-demo</module>
   </modules>
   <packaging>pom</packaging>
   <parent>
