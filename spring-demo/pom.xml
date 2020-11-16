@@ -11,6 +11,7 @@
     <module>spring-mybatis-h2-demo</module>
     <module>spring-bean-javac-demo</module>
     <module>spring-bean-demo</module>
+    <module>spring-bean-annotation-demo</module>
     <module>spring-mvc-demo</module>
     <module>spring-kafka-demo</module>
     <module>spring-boot-amqp-demo</module>
