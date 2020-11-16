@@ -29,5 +29,6 @@
     <module>spring-boot-admin-demo</module>
     <module>spring-retry-demo</module>
     <module>spring-session-demo</module>
+    <module>spring-security-demo</module>
   </modules>
 </project>
