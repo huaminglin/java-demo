@@ -2,8 +2,15 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <artifactId>spring-demo</artifactId>
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>java-demo</artifactId>
+    <groupId>huaminglin.demo</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>spring-demo</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
   <modules>
     <module>spring-boot-demo</module>
     <module>spring-boot-jsp-demo</module>
@@ -21,12 +28,6 @@
     <module>spring-boot-log4j2-demo</module>
     <module>spring-boot-admin-demo</module>
     <module>spring-retry-demo</module>
+    <module>spring-session-demo</module>
   </modules>
-  <packaging>pom</packaging>
-  <parent>
-    <artifactId>java-demo</artifactId>
-    <groupId>huaminglin.demo</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
-  <version>1.0-SNAPSHOT</version>
 </project>
