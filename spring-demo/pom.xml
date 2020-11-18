@@ -30,5 +30,6 @@
     <module>spring-retry-demo</module>
     <module>spring-session-demo</module>
     <module>spring-security-demo</module>
+    <module>spring-cache-demo</module>
   </modules>
 </project>
