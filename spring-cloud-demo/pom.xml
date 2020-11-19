@@ -2,21 +2,29 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <artifactId>spring-cloud-demo</artifactId>
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>spring-cloud-starter-parent</artifactId>
+    <groupId>org.springframework.cloud</groupId>
+    <version>Greenwich.SR3</version>
+  </parent>
+  <groupId>huaminglin.demo</groupId>
+  <artifactId>spring-cloud-demo</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
   <modules>
     <module>spring-cloud-consul-demo</module>
     <module>spring-cloud-ribbon-demo</module>
     <module>spring-cloud-hystrix-demo</module>
     <module>spring-cloud-gateway-demo</module>
     <module>spring-cloud-config-demo</module>
+    <module>spring-cloud-netflix-demo</module>
   </modules>
-  <packaging>pom</packaging>
-  <parent>
-    <artifactId>java-demo</artifactId>
-    <groupId>huaminglin.demo</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
-  <version>1.0-SNAPSHOT</version>
 </project>
 

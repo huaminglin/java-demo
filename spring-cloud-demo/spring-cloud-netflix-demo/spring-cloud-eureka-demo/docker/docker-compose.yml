@@ -1,0 +1,26 @@
+version: '3.3'
+networks:
+  eureka:
+    driver: bridge
+services:
+  eureka-server01:
+    image: openjdk:11-jre-slim
+    volumes:
+      - ../spring-cloud-eureka-server-demo/target/spring-cloud-eureka-server-demo-1.0-SNAPSHOT.jar:/app.jar
+    entrypoint: java -Xms256m -Xmx512m -Dserver.port=8080 -jar /app.jar
+    ports:
+      - 8080:8080
+    networks:
+      - eureka
+  eureka-client01:
+    image: openjdk:11-jre-slim
+    volumes:
+      - ../spring-cloud-eureka-client-demo/target/spring-cloud-eureka-client-demo-1.0-SNAPSHOT.jar:/app.jar
+    entrypoint: java -Xms256m -Xmx512m -Dserver.port=9080 -jar /app.jar
+    environment:
+      EUREKA_SERVER: eureka-server01:8080
+    ports:
+      - 9080:9080
+    networks:
+      - eureka
+
