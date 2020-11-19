@@ -1,5 +1,5 @@
 server:
-  port: 8091
+  port: 9080
 spring:
   application:
     name: eureka-client
@@ -10,4 +10,4 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://${EUREKA_SERVER}/eureka/
+      defaultZone: http://${EUREKA_SERVER:localhost:8080}/eureka/
