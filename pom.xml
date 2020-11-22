@@ -2,10 +2,17 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <artifactId>java-demo</artifactId>
-
-  <groupId>huaminglin.demo</groupId>
   <modelVersion>4.0.0</modelVersion>
+  <groupId>huaminglin.demo</groupId>
+  <artifactId>java-demo</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
   <modules>
     <module>spring-demo</module>
     <module>avro-demo</module>
@@ -28,13 +35,17 @@
     <module>jdbc-demo</module>
     <module>concurrency-demo</module>
     <module>network-demo</module>
+    <module>security-demo</module>
   </modules>
-  <packaging>pom</packaging>
-  <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-  </properties>
-  <version>1.0-SNAPSHOT</version>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <type>pom</type>
+        <scope>import</scope>
+        <version>2.3.4.RELEASE</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 </project>
