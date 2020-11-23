@@ -2,9 +2,14 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <artifactId>distributed-demo</artifactId>
-  <groupId>huaminglin.demo</groupId>
   <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>java-demo</artifactId>
+    <groupId>huaminglin.demo</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>distributed-demo</artifactId>
+  <packaging>pom</packaging>
   <modules>
     <module>jedis-demo</module>
     <module>spring-redis-demo</module>
@@ -14,12 +19,6 @@
     <module>hazelcast-scheduler-demo</module>
     <module>hazelcast-queue-demo</module>
     <module>spring-quartz-demo</module>
+    <module>mongodb-demo</module>
   </modules>
-  <packaging>pom</packaging>
-  <properties>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-  <version>1.0-SNAPSHOT</version>
 </project>
