@@ -20,5 +20,6 @@
     <module>hazelcast-queue-demo</module>
     <module>spring-quartz-demo</module>
     <module>mongodb-demo</module>
+    <module>elasticsearch-demo</module>
   </modules>
 </project>
