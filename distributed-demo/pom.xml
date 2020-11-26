@@ -14,6 +14,7 @@
     <module>jedis-demo</module>
     <module>spring-redis-demo</module>
     <module>spring-redis-mq-demo</module>
+    <module>spring-redis-cache-demo</module>
     <module>redisson-demo</module>
     <module>hazelcast-client-demo</module>
     <module>hazelcast-scheduler-demo</module>
