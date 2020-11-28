@@ -36,6 +36,7 @@
     <module>concurrency-demo</module>
     <module>network-demo</module>
     <module>security-demo</module>
+    <module>rpc-demo</module>
   </modules>
   <dependencyManagement>
     <dependencies>
