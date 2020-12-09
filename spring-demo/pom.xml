@@ -31,5 +31,6 @@
     <module>spring-security-demo</module>
     <module>spring-cache-demo</module>
     <module>spring-property-source-demo</module>
+    <module>spring-type-conversion-demo</module>
   </modules>
 </project>

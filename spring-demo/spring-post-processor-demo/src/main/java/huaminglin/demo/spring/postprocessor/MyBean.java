@@ -12,4 +12,9 @@ public class MyBean {
   public MyBean() {
     System.out.println("MyBean()");
   }
+
+  @PostConstruct
+  public void init() {
+    System.out.println("init()");
+  }
 }
