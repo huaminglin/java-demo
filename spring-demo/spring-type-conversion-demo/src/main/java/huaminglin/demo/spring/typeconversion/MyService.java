@@ -6,8 +6,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class MyService {
 
-  @Value("${my.service.name}")
+  @Value("myname")
   private MyName name;
+
+  @Value("89")
+  private MyAge age;
 
   public MyName getName() {
     return name;
@@ -15,5 +18,13 @@ public class MyService {
 
   public void setName(MyName name) {
     this.name = name;
+  }
+
+  public MyAge getAge() {
+    return age;
+  }
+
+  public void setAge(MyAge age) {
+    this.age = age;
   }
 }
