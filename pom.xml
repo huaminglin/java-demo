@@ -37,6 +37,7 @@
     <module>network-demo</module>
     <module>security-demo</module>
     <module>rpc-demo</module>
+    <module>lang-demo</module>
   </modules>
   <dependencyManagement>
     <dependencies>
