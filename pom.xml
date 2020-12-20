@@ -38,6 +38,7 @@
     <module>security-demo</module>
     <module>rpc-demo</module>
     <module>lang-demo</module>
+    <module>logging-demo</module>
   </modules>
   <dependencyManagement>
     <dependencies>

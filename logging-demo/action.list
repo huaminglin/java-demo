@@ -1,0 +1,7 @@
+huaminglin.demo.*
+org.apache.logging.*
+# org.apache.logging.log4j.message
+# org.apache.logging.log4j.message.ReusableParameterizedMessage
+# org.apache.logging.log4j.message.ParameterFormatter
+# org.apache.logging.log4j.spi.LoggerContext
+# org.apache.logging.log4j.core.impl.Log4jContextFactory
