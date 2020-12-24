@@ -39,6 +39,7 @@
     <module>rpc-demo</module>
     <module>lang-demo</module>
     <module>logging-demo</module>
+    <module>disruptor-demo</module>
   </modules>
   <dependencyManagement>
     <dependencies>
@@ -48,6 +49,11 @@
         <type>pom</type>
         <scope>import</scope>
         <version>2.3.4.RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>com.lmax</groupId>
+        <artifactId>disruptor</artifactId>
+        <version>3.4.2</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
