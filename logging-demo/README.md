@@ -79,3 +79,71 @@ com.fasterxml.jackson.core/jackson-databind is required.
   "myCustomField" : "myCustomValue"
 }
 ```
+
+## CustomMessage
+
+```
+  java.lang.Thread.State: RUNNABLE
+	  at huaminglin.demo.logging.CustomMessage.getFormattedMessage(CustomMessage.java:14)
+	  at org.apache.logging.log4j.core.async.InternalAsyncUtil.makeMessageImmutable(InternalAsyncUtil.java:41)
+	  at org.apache.logging.log4j.core.impl.MutableLogEvent.setMessage(MutableLogEvent.java:217)
+	  at org.apache.logging.log4j.core.impl.ReusableLogEventFactory.createEvent(ReusableLogEventFactory.java:100)
+	  at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:457)
+	  at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+	  at org.apache.logging.log4j.core.Logger.log(Logger.java:161)
+	  at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2198)
+	  at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2152)
+	  at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2135)
+	  at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1836)
+	  at org.apache.logging.log4j.spi.AbstractLogger.error(AbstractLogger.java:710)
+	  at huaminglin.demo.logging.LoggingDemo.main(LoggingDemo.java:12)
+```
+
+```
+"main@1" prio=5 tid=0x1 nid=NA runnable
+  java.lang.Thread.State: RUNNABLE
+	  at huaminglin.demo.logging.CustomMessage.getFormattedMessage(CustomMessage.java:14)
+	  at org.apache.logging.log4j.core.jackson.MessageSerializer.serialize(MessageSerializer.java:44)
+	  at org.apache.logging.log4j.core.jackson.MessageSerializer.serialize(MessageSerializer.java:33)
+	  at com.fasterxml.jackson.databind.ser.BeanPropertyWriter.serializeAsField(BeanPropertyWriter.java:728)
+	  at com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter.serializeAsField(SimpleBeanPropertyFilter.java:208)
+	  at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFieldsFiltered(BeanSerializerBase.java:807)
+	  at com.fasterxml.jackson.databind.ser.impl.UnwrappingBeanSerializer.serialize(UnwrappingBeanSerializer.java:132)
+	  at com.fasterxml.jackson.databind.ser.impl.UnwrappingBeanPropertyWriter.serializeAsField(UnwrappingBeanPropertyWriter.java:127)
+	  at com.fasterxml.jackson.databind.ser.std.BeanSerializerBase.serializeFields(BeanSerializerBase.java:755)
+	  at com.fasterxml.jackson.databind.ser.BeanSerializer.serialize(BeanSerializer.java:178)
+	  at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider._serialize(DefaultSerializerProvider.java:480)
+	  at com.fasterxml.jackson.databind.ser.DefaultSerializerProvider.serializeValue(DefaultSerializerProvider.java:319)
+	  at com.fasterxml.jackson.databind.ObjectWriter$Prefetch.serialize(ObjectWriter.java:1516)
+	  at com.fasterxml.jackson.databind.ObjectWriter._writeValueAndClose(ObjectWriter.java:1217)
+	  at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1059)
+	  at org.apache.logging.log4j.core.layout.AbstractJacksonLayout.toSerializable(AbstractJacksonLayout.java:344)
+	  at org.apache.logging.log4j.core.layout.JsonLayout.toSerializable(JsonLayout.java:291)
+	  at org.apache.logging.log4j.core.layout.AbstractJacksonLayout.toSerializable(AbstractJacksonLayout.java:292)
+	  at org.apache.logging.log4j.core.layout.JsonLayout.toSerializable(JsonLayout.java:68)
+	  at org.apache.logging.log4j.core.layout.AbstractJacksonLayout.toSerializable(AbstractJacksonLayout.java:52)
+	  at org.apache.logging.log4j.core.layout.AbstractStringLayout.toByteArray(AbstractStringLayout.java:308)
+	  at org.apache.logging.log4j.core.layout.AbstractLayout.encode(AbstractLayout.java:210)
+	  at org.apache.logging.log4j.core.layout.AbstractLayout.encode(AbstractLayout.java:37)
+	  at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.directEncodeEvent(AbstractOutputStreamAppender.java:197)
+	  at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.tryAppend(AbstractOutputStreamAppender.java:190)
+	  at org.apache.logging.log4j.core.appender.AbstractOutputStreamAppender.append(AbstractOutputStreamAppender.java:181)
+	  at org.apache.logging.log4j.core.config.AppenderControl.tryCallAppender(AppenderControl.java:156)
+	  at org.apache.logging.log4j.core.config.AppenderControl.callAppender0(AppenderControl.java:129)
+	  at org.apache.logging.log4j.core.config.AppenderControl.callAppenderPreventRecursion(AppenderControl.java:120)
+	  at org.apache.logging.log4j.core.config.AppenderControl.callAppender(AppenderControl.java:84)
+	  at org.apache.logging.log4j.core.config.LoggerConfig.callAppenders(LoggerConfig.java:543)
+	  at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:502)
+	  at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:485)
+	  at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:460)
+	  at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+	  at org.apache.logging.log4j.core.Logger.log(Logger.java:161)
+	  at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2198)
+	  at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2152)
+	  at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2135)
+	  at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1836)
+	  at org.apache.logging.log4j.spi.AbstractLogger.error(AbstractLogger.java:710)
+	  at huaminglin.demo.logging.LoggingDemo.main(LoggingDemo.java:12)
+```
+
+Note: CustomMessage.getFormattedMessage is called twice: One from InternalAsyncUtil and the other from JsonLayout.

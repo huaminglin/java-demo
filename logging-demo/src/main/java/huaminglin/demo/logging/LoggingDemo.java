@@ -8,6 +8,7 @@ public final class LoggingDemo {
   public static void main(String[] args) {
     Logger logger = LogManager.getLogger(LoggingDemo.class);
     MyLogItem item = new MyLogItem("myitem");
-    logger.error(item);
+    CustomMessage message = new CustomMessage(item);
+    logger.error(message);
   }
 }
