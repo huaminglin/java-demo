@@ -24,3 +24,58 @@
 	  at huaminglin.demo.logging.LoggingDemo.main(LoggingDemo.java:11)
 
 ```
+## mvn -Dlog4j.configurationFile=classpath:log4j2-json.xml exec:java
+
+org.apache.logging.log4j.core.layout.JsonLayout
+
+```
+Exception in thread "main" java.lang.NoClassDefFoundError: com/fasterxml/jackson/databind/ser/FilterProvider
+	at org.apache.logging.log4j.core.layout.JsonLayout.<init>(JsonLayout.java:158)
+	at org.apache.logging.log4j.core.layout.JsonLayout.<init>(JsonLayout.java:69)
+	at org.apache.logging.log4j.core.layout.JsonLayout$Builder.build(JsonLayout.java:102)
+	at org.apache.logging.log4j.core.layout.JsonLayout$Builder.build(JsonLayout.java:77)
+	at org.apache.logging.log4j.core.config.plugins.util.PluginBuilder.build(PluginBuilder.java:122)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createPluginObject(AbstractConfiguration.java:1002)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:942)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:934)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:934)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.doConfigure(AbstractConfiguration.java:552)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.initialize(AbstractConfiguration.java:241)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.start(AbstractConfiguration.java:288)
+	at org.apache.logging.log4j.core.LoggerContext.setConfiguration(LoggerContext.java:622)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:695)
+	at org.apache.logging.log4j.core.LoggerContext.reconfigure(LoggerContext.java:712)
+	at org.apache.logging.log4j.core.LoggerContext.start(LoggerContext.java:267)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:155)
+	at org.apache.logging.log4j.core.impl.Log4jContextFactory.getContext(Log4jContextFactory.java:47)
+	at org.apache.logging.log4j.LogManager.getContext(LogManager.java:194)
+	at org.apache.logging.log4j.LogManager.getLogger(LogManager.java:602)
+	at huaminglin.demo.logging.LoggingDemo.main(LoggingDemo.java:9)
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.databind.ser.FilterProvider
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 21 more
+```
+
+com.fasterxml.jackson.core/jackson-databind is required.
+
+## JSON message sample
+
+```
+{
+  "instant" : {
+    "epochSecond" : 1609315322,
+    "nanoOfSecond" : 914315000
+  },
+  "thread" : "huaminglin.demo.logging.LoggingDemo.main()",
+  "level" : "ERROR",
+  "loggerName" : "huaminglin.demo.logging.LoggingDemo",
+  "message" : "MyLogItem{value='myitem'}",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 14,
+  "threadPriority" : 5,
+  "myCustomField" : "myCustomValue"
+}
+```

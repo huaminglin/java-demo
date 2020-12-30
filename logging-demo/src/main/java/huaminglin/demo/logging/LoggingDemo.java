@@ -1,13 +1,13 @@
 package huaminglin.demo.logging;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public final class LoggingDemo {
 
   public static void main(String[] args) {
-    Logger logger = LoggerFactory.getLogger(LoggingDemo.class);
+    Logger logger = LogManager.getLogger(LoggingDemo.class);
     MyLogItem item = new MyLogItem("myitem");
-    logger.error("{}", item);
+    logger.error(item);
   }
 }
