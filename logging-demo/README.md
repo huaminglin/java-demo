@@ -343,3 +343,7 @@ Conclusion:
 AbstractConfiguration: LoggerConfig getLoggerConfig(final String loggerName)
 
 while ((substr = NameUtil.getSubName(substr)) != null) { loggerConfig = loggerConfigs.get(substr); if (loggerConfig != null) { return loggerConfig; } }
+
+## Lookup
+
+mvn -Dlog4j.configurationFile=classpath:log4j2-lookup.xml exec:java
