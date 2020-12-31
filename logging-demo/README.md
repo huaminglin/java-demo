@@ -151,3 +151,195 @@ Note: CustomMessage.getFormattedMessage is called twice: One from InternalAsyncU
 ## CustomLayout
 
 mvn -Dlog4j.configurationFile=classpath:log4j2-custom.xml exec:java
+
+## LogConfig Hierarchy
+
+```
+12:09:04.903 [main] INFO  a - a
+INFO
+12:09:04.905 [main] INFO  a.b.c - a.b.c
+INFO
+12:09:04.906 [main] INFO  a.b - a.b
+INFO
+Level changed.
+INFO
+DEBUG
+DEBUG
+```
+
+Conclusion:
+
+1) 'a.b' is always the parent of 'a.b.c', even when the 'a.b' is created after 'a.b.c'.
+
+2) "Configurator.setLevel()" creates LoggerConfig for the target logger.
+
+3) The new created LoggerConfig is available to the descendant of the logger if it has no LoggerConfig configured.
+
+
+## LoggerConfig and Configurator.setLevel()
+
+```
+org.apache.logging.log4j.core.config.AbstractConfiguration
+
+  private ConcurrentMap<String, LoggerConfig> loggerConfigs = new ConcurrentHashMap();
+
+    public void start() {
+        // Preserve the prior behavior of initializing during start if not initialized.
+        if (getState().equals(State.INITIALIZING)) {
+            initialize();
+        }
+        LOGGER.debug("Starting configuration {}", this);
+        this.setStarting();
+        if (watchManager.getIntervalSeconds() >= 0) {
+            watchManager.start();
+        }
+        if (hasAsyncLoggers()) {
+            asyncLoggerConfigDisruptor.start();
+        }
+        final Set<LoggerConfig> alreadyStarted = new HashSet<>();
+        for (final LoggerConfig logger : loggerConfigs.values()) {
+            logger.start();
+            alreadyStarted.add(logger);
+        }
+        for (final Appender appender : appenders.values()) {
+            appender.start();
+        }
+        if (!alreadyStarted.contains(root)) { // LOG4J2-392
+            root.start(); // LOG4J2-336
+        }
+        super.start();
+        LOGGER.debug("Started configuration {} OK.", this);
+    }
+
+    public boolean stop(final long timeout, final TimeUnit timeUnit) {
+        this.setStopping();
+        super.stop(timeout, timeUnit, false);
+        LOGGER.trace("Stopping {}...", this);
+
+        // Stop the components that are closest to the application first:
+        // 1. Notify all LoggerConfigs' ReliabilityStrategy that the configuration will be stopped.
+        // 2. Stop the LoggerConfig objects (this may stop nested Filters)
+        // 3. Stop the AsyncLoggerConfigDelegate. This shuts down the AsyncLoggerConfig Disruptor
+        //    and waits until all events in the RingBuffer have been processed.
+        // 4. Stop all AsyncAppenders. This shuts down the associated thread and
+        //    waits until all events in the queue have been processed. (With optional timeout.)
+        // 5. Notify all LoggerConfigs' ReliabilityStrategy that appenders will be stopped.
+        //    This guarantees that any event received by a LoggerConfig before reconfiguration
+        //    are passed on to the Appenders before the Appenders are stopped.
+        // 6. Stop the remaining running Appenders. (It should now be safe to do so.)
+        // 7. Notify all LoggerConfigs that their Appenders can be cleaned up.
+
+    @Override
+    public LoggerConfig getLoggerConfig(final String loggerName) {
+        LoggerConfig loggerConfig = loggerConfigs.get(loggerName);
+        if (loggerConfig != null) {
+            return loggerConfig;
+        }
+        String substr = loggerName;
+        while ((substr = NameUtil.getSubName(substr)) != null) {
+            loggerConfig = loggerConfigs.get(substr);
+            if (loggerConfig != null) {
+                return loggerConfig;
+            }
+        }
+        return root;
+    }
+
+
+org.apache.logging.log4j.core.Logger
+
+    /**
+     * This method is only used for 1.x compatibility. Returns the parent of this Logger. If it doesn't already exist
+     * return a temporary Logger.
+     *
+     * @return The parent Logger.
+     */
+    public Logger getParent() {
+        final LoggerConfig lc = privateConfig.loggerConfig.getName().equals(getName()) ? privateConfig.loggerConfig
+                .getParent() : privateConfig.loggerConfig;
+        if (lc == null) {
+            return null;
+        }
+        final String lcName = lc.getName();
+        final MessageFactory messageFactory = getMessageFactory();
+        if (context.hasLogger(lcName, messageFactory)) {
+            return context.getLogger(lcName, messageFactory);
+        }
+        return new Logger(context, lcName, messageFactory);
+    }
+
+    public synchronized void setLevel(final Level level) {
+        if (level == getLevel()) {
+            return;
+        }
+        Level actualLevel;
+        if (level != null) {
+            actualLevel = level;
+        } else {
+            final Logger parent = getParent();
+            actualLevel = parent != null ? parent.getLevel() : privateConfig.loggerConfigLevel;
+        }
+        privateConfig = new PrivateConfig(privateConfig, actualLevel);
+    }
+
+    protected void updateConfiguration(final Configuration newConfig) {
+        this.privateConfig = new PrivateConfig(newConfig, this);
+    }
+org.apache.logging.log4j.core.config.Configurator
+    public static void setLevel(final String loggerName, final Level level) {
+        final LoggerContext loggerContext = LoggerContext.getContext(false);
+        if (Strings.isEmpty(loggerName)) {
+            setRootLevel(level);
+        } else {
+            if (setLevel(loggerName, level, loggerContext.getConfiguration())) {
+                loggerContext.updateLoggers();
+            }
+        }
+    }
+
+    private static boolean setLevel(final String loggerName, final Level level, final Configuration config) {
+        boolean set;
+        LoggerConfig loggerConfig = config.getLoggerConfig(loggerName);
+        if (!loggerName.equals(loggerConfig.getName())) {
+            // TODO Should additivity be inherited?
+            loggerConfig = new LoggerConfig(loggerName, level, true);
+            config.addLogger(loggerName, loggerConfig);
+            loggerConfig.setLevel(level);
+            set = true;
+        } else {
+            set = setLevel(loggerConfig, level);
+        }
+        return set;
+    }
+
+    private static boolean setLevel(final LoggerConfig loggerConfig, final Level level) {
+        final boolean set = !loggerConfig.getLevel().equals(level);
+        if (set) {
+            loggerConfig.setLevel(level);
+        }
+        return set;
+    }
+
+org.apache.logging.log4j.core.LoggerContext
+    /**
+     * Causes all Loggers to be updated against the current Configuration.
+     */
+    public void updateLoggers() {
+        updateLoggers(this.configuration);
+    }
+
+```
+
+Conclusion:
+
+1) "config.addLogger(loggerName, loggerConfig);", a new LoggerConfig is created and add to configuration if necessary.
+
+2) Causes all Loggers to be updated against the current Configuration.
+
+3) "loggerContext.updateLoggers()" create new privateConfig for all the loggers.
+
+4) How the log4j2 logger hierarchy works:
+
+AbstractConfiguration: LoggerConfig getLoggerConfig(final String loggerName)
+
+while ((substr = NameUtil.getSubName(substr)) != null) { loggerConfig = loggerConfigs.get(substr); if (loggerConfig != null) { return loggerConfig; } }
