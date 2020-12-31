@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+  <Appenders>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="${thread:threadname} %d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+    <Routing name="Routing">
+      <Routes pattern="${thread:threadname}">
+        <Route>
+          <File name="Rolling-${thread:threadname}" fileName="/tmp/other-${thread:threadname}.log">
+            <PatternLayout>
+              <pattern>%d{ISO8601} [%t] %p %c{3} - %m%n</pattern>
+            </PatternLayout>
+          </File>
+        </Route>
+      </Routes>
+    </Routing>
+  </Appenders>
+  <Loggers>
+    <Root level="info">
+      <AppenderRef ref="Console"/>
+      <AppenderRef ref="Routing"/>
+    </Root>
+  </Loggers>
+</Configuration>

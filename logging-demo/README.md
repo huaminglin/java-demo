@@ -347,3 +347,11 @@ while ((substr = NameUtil.getSubName(substr)) != null) { loggerConfig = loggerCo
 ## Lookup
 
 mvn -Dlog4j.configurationFile=classpath:log4j2-lookup.xml exec:java
+
+## Router
+
+RollingFile:
+mvn -Dlog4j.configurationFile=classpath:log4j2-router.xml exec:java
+
+File:
+mvn -Dlog4j.configurationFile=classpath:log4j2-router2.xml exec:java
