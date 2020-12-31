@@ -147,3 +147,7 @@ com.fasterxml.jackson.core/jackson-databind is required.
 ```
 
 Note: CustomMessage.getFormattedMessage is called twice: One from InternalAsyncUtil and the other from JsonLayout.
+
+## CustomLayout
+
+mvn -Dlog4j.configurationFile=classpath:log4j2-custom.xml exec:java
