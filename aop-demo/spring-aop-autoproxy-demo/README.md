@@ -33,7 +33,7 @@ Set a conditional breakpoint on org.springframework.aop.framework.autoproxy.Abst
 	  - locked <0x756> (a java.lang.Object)
 	  at huaminglin.demo.aop.spring.autoproxy.SpringAopAutoProxyDemo.main(SpringAopAutoProxyDemo.java:10)
 
-```Java
+```
 org.springframework.aop.framework.autoproxy.AbstractAutoProxyCreator.wrapIfNecessary
 		// Create proxy if we have advice.
 		Object[] specificInterceptors = getAdvicesAndAdvisorsForBean(bean.getClass(), beanName, null);

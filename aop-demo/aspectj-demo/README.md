@@ -1,6 +1,40 @@
+# aspectj demo
+
 ## Run the demo
+
 mvn exec:java
 
-## aspectj-maven-plugin version
-The built-in aspectjtools version of aspectj-maven-plugin 1.11 is 1.8.13:
-    bad version number found in /home/user1/.m2/repository/org/aspectj/aspectjrt/1.9.1/aspectjrt-1.9.1.jar expected 1.8.13 found 1.9.1
+```
+String huaminglin.demo.aspectj.BusinessLogic.myMethod(String)
+{[123]}
+```
+
+## Decompile the class file in the target/classes
+
+```
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by Fernflower decompiler)
+//
+
+package huaminglin.demo.aspectj;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.runtime.reflect.Factory;
+
+public class BusinessLogic {
+  public BusinessLogic() {
+  }
+
+  public String myMethod(String value) {
+    JoinPoint var3 = Factory.makeJP(ajc$tjp_0, this, this, value);
+    return (String)myMethod_aroundBody1$advice(this, value, var3, AOPLogic.aspectOf(), (ProceedingJoinPoint)var3, value);
+  }
+
+  static {
+    ajc$preClinit();
+  }
+}
+
+```
