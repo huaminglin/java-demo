@@ -1,7 +1,24 @@
 huaminglin.demo.*
 org.apache.logging.*
-# org.apache.logging.log4j.message
-# org.apache.logging.log4j.message.ReusableParameterizedMessage
-# org.apache.logging.log4j.message.ParameterFormatter
-# org.apache.logging.log4j.spi.LoggerContext
-# org.apache.logging.log4j.core.impl.Log4jContextFactory
+# +org.apache.logging.log4j.LogManager
+# +org.apache.logging.log4j.Logger
+# +org.apache.logging.log4j.core.LoggerContext
+# +org.apache.logging.log4j.message.Message
+# +org.apache.logging.log4j.core.config.LoggerConfig
+# +org.apache.logging.log4j.core.Layout
+# +org.apache.logging.log4j.core.Appender&&stacktrace||context
+# +org.apache.logging.log4j.core.config.Configuration
+# +org.apache.logging.log4j.core.config.ConfigurationSource
+
+# log4j provides a lot of StrLookup classes.
+# +org.apache.logging.log4j.core.lookup.StrLookup&&<init>
+
+# Check key objects
+# org.apache.logging.log4j.core.config.ConfigurationFactory.Factory&&getConfiguration
+# +org.apache.logging.log4j.core.config.Configuration&&<init>
+# org.apache.logging.log4j.core.config.LoggerConfig&&<init>
+# +org.apache.logging.log4j.core.Layout&&<init>
+# +org.apache.logging.log4j.core.Appender&&<init>
+# +org.apache.logging.log4j.spi.LoggerContext&&<init>
+# org.apache.logging.log4j.LogManager&&getLogger
+# +org.apache.logging.log4j.Logger&&<init>

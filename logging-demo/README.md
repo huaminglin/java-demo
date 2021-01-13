@@ -355,3 +355,147 @@ mvn -Dlog4j.configurationFile=classpath:log4j2-router.xml exec:java
 
 File:
 mvn -Dlog4j.configurationFile=classpath:log4j2-router2.xml exec:java
+
+## Configuration file and ThreadContextClassLoader
+
+```
+org.apache.logging.log4j.core.config.ConfigurationFactory.Factory
+        private Configuration getConfiguration(final LoggerContext loggerContext, final boolean isTest, final String name) {
+            final boolean named = Strings.isNotEmpty(name);
+            final ClassLoader loader = LoaderUtil.getThreadContextClassLoader();
+            for (final ConfigurationFactory factory : getFactories()) {
+                String configName;
+                final String prefix = isTest ? factory.getTestPrefix() : factory.getDefaultPrefix();
+                final String [] types = factory.getSupportedTypes();
+                if (types == null) {
+                    continue;
+                }
+
+                for (final String suffix : types) {
+                    if (suffix.equals(ALL_TYPES)) {
+                        continue;
+                    }
+                    configName = named ? prefix + name + suffix : prefix + suffix;
+
+                    final ConfigurationSource source = ConfigurationSource.fromResource(configName, loader);
+                    if (source != null) {
+                        if (!factory.isActive()) {
+                            LOGGER.warn("Found configuration file {} for inactive ConfigurationFactory {}", configName, factory.getClass().getName());
+                        }
+                        return factory.getConfiguration(loggerContext, source);
+                    }
+                }
+            }
+            return null;
+        }
+```
+
+## org.apache.logging.log4j.core.config.Configuration
+
+org.apache.logging.log4j.core.config.NullConfiguration
+
+org.apache.logging.log4j.core.config.DefaultConfiguration
+
+org.apache.logging.log4j.core.config.xml.XmlConfiguration
+
+Note: All the above configuration classes are loaded.
+
+```
+org.apache.logging.log4j.core.LoggerContext.NULL_CONFIGURATION
+    private static final Configuration NULL_CONFIGURATION = new NullConfiguration();
+
+org.apache.logging.log4j.core.LoggerContext.configuration
+    private volatile Configuration configuration = new DefaultConfiguration();
+```
+
+## Logger Filter; LoggerConfig Appender
+
+```
+"main@1" prio=5 tid=0x1 nid=NA runnable
+  java.lang.Thread.State: RUNNABLE
+	  at org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent(LoggerConfig.java:504)
+	  at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:485)
+	  at org.apache.logging.log4j.core.config.LoggerConfig.log(LoggerConfig.java:460)
+	  at org.apache.logging.log4j.core.config.AwaitCompletionReliabilityStrategy.log(AwaitCompletionReliabilityStrategy.java:82)
+	  at org.apache.logging.log4j.core.Logger.log(Logger.java:161)
+	  at org.apache.logging.log4j.spi.AbstractLogger.tryLogMessage(AbstractLogger.java:2198)
+	  at org.apache.logging.log4j.spi.AbstractLogger.logMessageTrackRecursion(AbstractLogger.java:2152)
+	  at org.apache.logging.log4j.spi.AbstractLogger.logMessageSafely(AbstractLogger.java:2135)
+	  at org.apache.logging.log4j.spi.AbstractLogger.logIfEnabled(AbstractLogger.java:1836)
+	  at org.apache.logging.log4j.spi.AbstractLogger.error(AbstractLogger.java:710)
+	  at huaminglin.demo.logging.LoggingDemo.main(LoggingDemo.java:12)
+```
+
+```org.apache.logging.log4j.core.config.LoggerConfig.processLogEvent
+    private void processLogEvent(final LogEvent event, final LoggerConfigPredicate predicate) {
+        event.setIncludeLocation(isIncludeLocation());
+        if (predicate.allow(this)) {
+            callAppenders(event);
+        }
+        logParent(event, predicate);
+    }
+
+    private void logParent(final LogEvent event, final LoggerConfigPredicate predicate) {
+        if (additive && parent != null) {
+            parent.log(event, predicate);
+        }
+    }
+
+    @PerformanceSensitive("allocation")
+    protected void callAppenders(final LogEvent event) {
+        final AppenderControl[] controls = appenders.get();
+        //noinspection ForLoopReplaceableByForEach
+        for (int i = 0; i < controls.length; i++) {
+            controls[i].callAppender(event);
+        }
+    }
+```
+
+Note: logParent() is used to access the appenders of the parent LoggerConfig.
+
+```org.apache.logging.log4j.spi.AbstractLogger.error
+    public void error(final Message msg) {
+        logIfEnabled(FQCN, Level.ERROR, null, msg, msg != null ? msg.getThrowable() : null);
+    }
+
+    public void logIfEnabled(final String fqcn, final Level level, final Marker marker, final Message msg,
+            final Throwable t) {
+        if (isEnabled(level, marker, msg, t)) {
+            logMessageSafely(fqcn, level, marker, msg, t);
+        }
+    }
+```
+
+```org.apache.logging.log4j.core.Logger.isEnabled
+    public boolean isEnabled(final Level level, final Marker marker, final Message message, final Throwable t) {
+        return privateConfig.filter(level, marker, message, t);
+    }
+
+org.apache.logging.log4j.core.Logger.PrivateConfig.filter
+        boolean filter(final Level level, final Marker marker, final Message msg, final Throwable t) {
+            final Filter filter = config.getFilter();
+            if (filter != null) {
+                final Filter.Result r = filter.filter(logger, level, marker, msg, t);
+                if (r != Filter.Result.NEUTRAL) {
+                    return r == Filter.Result.ACCEPT;
+                }
+            }
+            return level != null && intLevel >= level.intLevel();
+        }
+```
+
+Note: Logger.isEnabled() is used to check whether we need to forward the message to appenders.
+
+Prefer to use any Filter configured, fallback to "return level != null && intLevel >= level.intLevel()".
+
+Conclusion:
+
+"additive" is not involved in Logger.isEnabled().
+
+"additive" is used to forward message to parent LoggerConfig.
+
+LoggerConfig is used to call appenders, but not used to call any filter.
+
+Filter is called by Logger directly.
+
+Only LoggerConfig has additive; Logger has no additive.
