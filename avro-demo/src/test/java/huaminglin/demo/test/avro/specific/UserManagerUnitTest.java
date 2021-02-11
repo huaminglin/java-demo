@@ -1,6 +1,5 @@
 package huaminglin.demo.test.avro.specific;
 
-import static junit.framework.TestCase.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -9,14 +8,16 @@ import huaminglin.demo.avro.specific.UserManager;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 public class UserManagerUnitTest {
 
-  private final static char[] hexArray = "0123456789ABCDEF".toCharArray();
+  private static final char[] hexArray = "0123456789ABCDEF".toCharArray();
 
   public static String bytesToHex(byte[] bytes) {
     char[] hexChars = new char[bytes.length * 2];
@@ -46,11 +47,11 @@ public class UserManagerUnitTest {
         .build();
     byte[] userBytes = UserManager.getUserBytes(user);
     String hex = bytesToHex(userBytes);
-    assertEquals(userBytes.length, 25);
-    String rawString = new String(userBytes);
-    assertTrue(rawString.contains("Charlie"));// 436861726C6965
-    assertTrue(rawString.contains("blue"));// 626C7565
-    assertEquals(hex, "C301B2D1D8D3DE2833CE0E436861726C6965020008626C7565");
+    assertEquals(25, userBytes.length);
+    String rawString = new String(userBytes, StandardCharsets.UTF_8);
+    Assert.assertTrue(rawString.contains("Charlie"));// 436861726C6965
+    Assert.assertTrue(rawString.contains("blue"));// 626C7565
+    assertEquals("C301B2D1D8D3DE2833CE0E436861726C6965020008626C7565", hex);
     Path path = Paths.get("/tmp/user.avro");
     Files.write(path, userBytes);
   }
@@ -62,6 +63,6 @@ public class UserManagerUnitTest {
     byte[] bytes = getBytesFromInputStream(stream);
     User user = UserManager.parseUserFromBytes(bytes);
     assertNotNull(user);
-    assertEquals(user.getName().toString(), "Charlie");
+    assertEquals("Charlie", user.getName().toString());
   }
 }
