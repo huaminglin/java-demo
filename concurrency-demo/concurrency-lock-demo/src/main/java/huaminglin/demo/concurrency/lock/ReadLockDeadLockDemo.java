@@ -1,9 +1,9 @@
-package huaminglin.demo.concurrency;
+package huaminglin.demo.concurrency.lock;
 
 import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-public class ReadLockDeadLockDemo {
+public final class ReadLockDeadLockDemo {
   static final ReadWriteLock lockA = new ReentrantReadWriteLock();
   static final ReadWriteLock lockB = new ReentrantReadWriteLock();
 

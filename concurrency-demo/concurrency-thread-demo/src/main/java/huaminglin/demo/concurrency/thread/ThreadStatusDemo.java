@@ -1,4 +1,4 @@
-package huaminglin.demo.concurrency;
+package huaminglin.demo.concurrency.thread;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -15,7 +15,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class ThreadStatusDemo {
+public final class ThreadStatusDemo {
   static final Object synchronizedObject = new Object();
   static final Lock lock = new ReentrantLock();
   static final Lock conditionLock = new ReentrantLock();

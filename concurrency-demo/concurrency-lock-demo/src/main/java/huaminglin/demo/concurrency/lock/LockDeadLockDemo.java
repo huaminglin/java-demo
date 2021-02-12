@@ -1,9 +1,9 @@
-package huaminglin.demo.concurrency;
+package huaminglin.demo.concurrency.lock;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class LockDeadLockDemo {
+public final class LockDeadLockDemo {
   static final Lock lockA = new ReentrantLock();
   static final Lock lockB = new ReentrantLock();
 

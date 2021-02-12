@@ -13,5 +13,6 @@
   <modules>
     <module>concurrency-latch-demo</module>
     <module>concurrency-lock-demo</module>
+    <module>concurrency-thread-demo</module>
   </modules>
 </project>

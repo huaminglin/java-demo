@@ -1,6 +1,6 @@
-package huaminglin.demo.concurrency;
+package huaminglin.demo.concurrency.lock;
 
-public class SynchronizedDeadLockDemo {
+public final class SynchronizedDeadLockDemo {
   static final Object synchronizedA = new Object();
   static final Object synchronizedB = new Object();
 
