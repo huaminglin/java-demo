@@ -14,5 +14,6 @@
     <module>concurrency-latch-demo</module>
     <module>concurrency-lock-demo</module>
     <module>concurrency-thread-demo</module>
+    <module>concurrency-semaphore-demo</module>
   </modules>
 </project>
