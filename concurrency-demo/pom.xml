@@ -17,5 +17,6 @@
     <module>concurrency-semaphore-demo</module>
     <module>concurrency-barrier-demo</module>
     <module>concurrency-readwrite-demo</module>
+    <module>concurrency-condition-demo</module>
   </modules>
 </project>
