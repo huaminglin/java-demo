@@ -20,5 +20,6 @@
     <module>concurrency-condition-demo</module>
     <module>concurrency-stamped-demo</module>
     <module>concurrency-casvolatile-demo</module>
+    <module>concurrency-caspark-demo</module>
   </modules>
 </project>
