@@ -21,5 +21,6 @@
     <module>concurrency-stamped-demo</module>
     <module>concurrency-casvolatile-demo</module>
     <module>concurrency-caspark-demo</module>
+    <module>concurrency-casatomic-demo</module>
   </modules>
 </project>
