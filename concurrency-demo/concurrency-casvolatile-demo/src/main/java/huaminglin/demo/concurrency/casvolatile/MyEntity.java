@@ -1,4 +1,4 @@
-package huaminglin.demo.jdk.concurrency;
+package huaminglin.demo.concurrency.casvolatile;
 
 public class MyEntity {
 
