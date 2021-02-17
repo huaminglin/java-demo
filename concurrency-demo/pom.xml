@@ -22,5 +22,7 @@
     <module>concurrency-casvolatile-demo</module>
     <module>concurrency-caspark-demo</module>
     <module>concurrency-casatomic-demo</module>
+    <module>concurrency-future-demo</module>
+    <module>pool-cached-demo</module>
   </modules>
 </project>
