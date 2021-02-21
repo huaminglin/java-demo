@@ -51,16 +51,16 @@ public final class PoolCachedDemo {
   }
 
   public static void main(String[] args) {
-    Task task = new Task();// task is stateless. It ca be reused.
+    Task task = new Task();// Task is stateless. It ca be reused.
     ExecutorService executorService = Executors.newCachedThreadPool();
 
+    // The first task is executed as firstTask in "boolean addWorker(Runnable firstTask, boolean core)".
     submit(executorService, task);
 
     FutureTask futureTask = new FutureTask(task);
-    // The first task is executed as firstTask in "boolean addWorker(Runnable firstTask, boolean core)".
+    // The second task is executed through java.util.concurrent.SynchronousQueue.TransferStack.
     execute(executorService, futureTask);
 
-    // The second task is executed through java.util.concurrent.SynchronousQueue.TransferStack.
     executorService.shutdown();
   }
 }
