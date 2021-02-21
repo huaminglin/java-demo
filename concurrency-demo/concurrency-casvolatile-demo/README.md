@@ -27,3 +27,9 @@ The init_value is update ot [5]
 Reader exit()
 Updater exit()
 ```
+
+## IO operation and non volatile variable
+
+volatile sync between CPU cache and main memory.
+
+IO operation can cause the current thread out of CPU and invalidate all its CPU caches.
