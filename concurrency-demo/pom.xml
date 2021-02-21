@@ -25,5 +25,6 @@
     <module>concurrency-future-demo</module>
     <module>pool-cached-demo</module>
     <module>pool-fixed-demo</module>
+    <module>pool-bounded-demo</module>
   </modules>
 </project>
