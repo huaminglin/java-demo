@@ -1,11 +1,11 @@
-package huaminglin.demo.jdk8.stream;
+package huaminglin.demo.concurrency.pool.fork.common;
 
 import java.util.List;
 import java.util.concurrent.ForkJoinPool;
 import java.util.stream.Collectors;
 import java.util.stream.LongStream;
 
-public class CommonForkJoinPoolDemo {
+public final class CommonForkJoinPoolDemo {
 
   public static void main(String[] args) {
     System.out.println("CPU Core: " + Runtime.getRuntime().availableProcessors());
@@ -21,6 +21,7 @@ public class CommonForkJoinPoolDemo {
     long start = System.nanoTime();
     Long reduce = aList.parallelStream().peek(a -> {
       try {
+        System.out.println(Thread.currentThread().getName() + ": " + a);
         Thread.sleep(1000);
       } catch (InterruptedException e) {
         e.printStackTrace();
