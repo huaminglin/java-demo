@@ -20,15 +20,15 @@ public final class ForkJoinPoolDemo {
     TimeUnit.SECONDS);
 
     Thread thread1 = new Thread(() -> {
-      CountTaskTmp task = new CountTaskTmp("first", 1, 10);
+      CountTaskTmp task = new CountTaskTmp("first", 1, 4);
       Integer r = forkJoinPool.invoke(task);
       System.out.println("First Result: " + r);
     });
-    thread1.setName("thread2");
+    thread1.setName("thread1");
     thread1.start();
 
     Thread thread2 = new Thread(() -> {
-      CountTaskTmp task = new CountTaskTmp("second", 11, 130);
+      CountTaskTmp task = new CountTaskTmp("second", 11, 14);
       final ForkJoinTask<Integer> task1 = forkJoinPool.submit(task);
       int r = 0;
       try {

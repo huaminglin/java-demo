@@ -26,6 +26,7 @@
     <module>pool-cached-demo</module>
     <module>pool-fixed-demo</module>
     <module>pool-bounded-demo</module>
+    <module>pool-scheduled-demo</module>
     <module>pool-fork-demo</module>
     <module>pool-fork-common-demo</module>
   </modules>
