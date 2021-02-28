@@ -41,6 +41,7 @@
     <module>lang-demo</module>
     <module>logging-demo</module>
     <module>disruptor-demo</module>
+    <module>io-demo</module>
   </modules>
   <dependencyManagement>
     <dependencies>
