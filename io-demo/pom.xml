@@ -12,5 +12,6 @@
   <packaging>pom</packaging>
   <modules>
     <module>socket-server-bind-demo</module>
+    <module>socket-server-accept-demo</module>
   </modules>
 </project>
