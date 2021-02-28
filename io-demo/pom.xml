@@ -13,5 +13,6 @@
   <modules>
     <module>socket-server-bind-demo</module>
     <module>socket-server-accept-demo</module>
+    <module>socket-client-demo</module>
   </modules>
 </project>
