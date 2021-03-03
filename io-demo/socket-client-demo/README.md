@@ -46,7 +46,7 @@ cat fifo  | nc -n -k -l 9191 -v | cat  > fifo
 
 ## mvn exec:java
 
-## tcpdump -n -vvv -r javademo.pcap
+## tcpdump -n -vvv -r /tmp/javademo.pcap
 
 ```
 reading from file javademo.pcap, link-type EN10MB (Ethernet)

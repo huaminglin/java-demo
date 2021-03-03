@@ -14,5 +14,6 @@
     <module>socket-server-bind-demo</module>
     <module>socket-server-accept-demo</module>
     <module>socket-client-demo</module>
+    <module>socket-close-demo</module>
   </modules>
 </project>
