@@ -1,5 +1,26 @@
 # SocketClientDemo
 
+## Console log
+
+```
+class java.lang.Boolean/TCP_NODELAY
+class java.lang.Boolean/SO_REUSEADDR
+class java.lang.Integer/TCP_KEEPINTERVAL
+class java.lang.Integer/IP_TOS
+class java.lang.Integer/SO_LINGER
+class java.lang.Integer/TCP_KEEPCOUNT
+class java.lang.Boolean/TCP_QUICKACK
+class java.lang.Boolean/SO_REUSEPORT
+class java.lang.Integer/SO_SNDBUF
+class java.lang.Integer/SO_RCVBUF
+class java.lang.Boolean/SO_KEEPALIVE
+class java.lang.Integer/TCP_KEEPIDLE
+Got Client request 0
+Got Client request 1
+Got Client request 2
+main() exit
+```
+
 ## java.net.ConnectException: Connection refused (Connection refused)
 
 ```

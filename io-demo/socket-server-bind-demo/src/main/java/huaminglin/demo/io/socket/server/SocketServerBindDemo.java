@@ -14,6 +14,7 @@ public final class SocketServerBindDemo {
     ServerSocket serverSocket = new ServerSocket();
     serverSocket.setSoTimeout(10 * 1000);
     serverSocket.setReceiveBufferSize(1024 * 1024);
+    serverSocket.setReuseAddress(true);
     serverSocket.bind(address, 2);
     int seconds = 10;
     if (args.length > 0) {
