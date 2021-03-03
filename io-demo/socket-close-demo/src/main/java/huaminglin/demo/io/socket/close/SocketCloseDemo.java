@@ -50,7 +50,7 @@ public final class SocketCloseDemo {
   private static void closeOnServerSide() throws InterruptedException {
     Thread serverThread = new Thread(() -> {
       SocketAddress address = new InetSocketAddress("0.0.0.0", 9191);
-      ServerSocket serverSocket = null;
+      ServerSocket serverSocket;
       try {
         serverSocket = new ServerSocket();
         serverSocket.bind(address, 2);
@@ -76,6 +76,10 @@ public final class SocketCloseDemo {
         System.out.println("connect() read() ...");
         final int read = clientSocket.getInputStream().read();
         System.out.println("connect() read() got: " + read);
+        if (read < 0) {
+          System.out.println("read < 0 means server side starts to close(); sleep 1 minute");
+          Thread.sleep(1000 * 60);
+        }
       } catch (IOException | InterruptedException e) {
         e.printStackTrace();
       }
@@ -101,9 +105,13 @@ public final class SocketCloseDemo {
         System.out.println("accept() read() ...");
         final int read = clientSocket.getInputStream().read();
         System.out.println("accept() read() got: " + read);
+        if (read < 0) {
+          System.out.println("read < 0 means client side starts to close(); sleep 1 minute");
+          Thread.sleep(1000 * 60);
+        }
         serverSocket.close();
         System.out.println("serverSocket.close()");
-      } catch (IOException e) {
+      } catch (IOException | InterruptedException e) {
         e.printStackTrace();
       }
       System.out.println("serverThread exit");
@@ -142,10 +150,14 @@ public final class SocketCloseDemo {
         System.out.println("accept() read() ...");
         final int read = clientSocket.getInputStream().read();
         System.out.println("accept() read() got: " + read);
+        if (read < 0) {
+          System.out.println("read < 0 means client side starts to close(); sleep 1 minute");
+          Thread.sleep(1000 * 60);
+        }
         clientSocket.close();
         serverSocket.close();
         System.out.println("serverSocket.close()");
-      } catch (IOException e) {
+      } catch (IOException | InterruptedException e) {
         e.printStackTrace();
       }
       System.out.println("serverThread exit");
@@ -174,6 +186,6 @@ public final class SocketCloseDemo {
 //    noClose();
 //    closeOnServerSide();
 //    closeOnClientSide();
-      closeOnBothSide(); // Work well. We should call close for the sockets we create.
+      closeOnBothSide();
   }
 }
