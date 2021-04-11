@@ -13,5 +13,7 @@
   <modules>
     <module>spring-cloud-eureka-server-demo</module>
     <module>spring-cloud-eureka-client-demo</module>
+    <module>spring-cloud-eureka-producer-demo</module>
+    <module>spring-cloud-eureka-consumer-demo</module>
   </modules>
 </project>

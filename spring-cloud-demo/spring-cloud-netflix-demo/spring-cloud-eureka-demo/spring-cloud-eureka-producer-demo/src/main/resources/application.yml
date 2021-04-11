@@ -1,8 +1,8 @@
 server:
-  port: 9080
+  port: 10080
 spring:
   application:
-    name: eureka-client
+    name: eureka-producer
 eureka:
   instance:
     hostname: localhost

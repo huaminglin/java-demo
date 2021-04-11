@@ -25,3 +25,29 @@ services:
       - eureka
     depends_on:
       - eureka-server01
+  eureka-producer01:
+    image: openjdk:11-jre-slim
+    volumes:
+      - ../spring-cloud-eureka-producer-demo/target/spring-cloud-eureka-producer-demo-1.0-SNAPSHOT.jar:/app.jar
+    entrypoint: java -Xms256m -Xmx512m -Dserver.port=10080 -Deureka.instance.hostname=eureka-producer01 -jar /app.jar
+    environment:
+      EUREKA_SERVER: eureka-server01:8080
+    ports:
+      - 10080:10080
+    networks:
+      - eureka
+    depends_on:
+      - eureka-server01
+  eureka-consumer01:
+    image: openjdk:11-jre-slim
+    volumes:
+      - ../spring-cloud-eureka-consumer-demo/target/spring-cloud-eureka-consumer-demo-1.0-SNAPSHOT.jar:/app.jar
+    entrypoint: java -Xms256m -Xmx512m -Dserver.port=10180 -Deureka.instance.hostname=eureka-consumer01 -jar /app.jar
+    environment:
+      EUREKA_SERVER: eureka-server01:8080
+    ports:
+      - 10180:10180
+    networks:
+      - eureka
+    depends_on:
+      - eureka-server01
