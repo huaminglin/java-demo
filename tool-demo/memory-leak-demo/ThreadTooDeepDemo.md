@@ -234,3 +234,5 @@ RssFile:	   20208 kB
 RssShmem:	       0 kB
 
 RssAnon is about 3G. This is the memory the application actually used.
+
+Note: 1000 threads * 8 M about 8G, but RssAnon is about 3G. So the thread stack size is reserved only.

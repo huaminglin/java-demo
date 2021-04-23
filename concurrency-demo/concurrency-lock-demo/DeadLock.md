@@ -164,3 +164,7 @@ Note: Since JVM tracks write lock, if read lock is blocked by write lock and dea
 ```
 
 Note: JVM doesn't track allocated read locks. So if a read lock is allocated, the later write lock will be blocked. Then a dead lock can happens, but JVM will not detected.
+
+## LockInterruptDemo and SynchronizedInterruptDemo
+
+If java.util.concurrent.locks.Lock.lockInterruptibly, the waiting thread can act on "thread.interrupt()".
