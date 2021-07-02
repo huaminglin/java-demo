@@ -16,6 +16,13 @@ Note: -2147483648:    10000000000000000000000000000000;
 00000000000000000000000000000000;
 So negative representation is one more than positive representation.
 This is why Integer.MIN_VALUE is not -2147483647;
+
+2's Complement works like a clock.
+Right half is Clock-wise[0, 2147483647]; Left half is Anti-clock-wise[-1, -2147483648].
+If the right half, we count '1' bit; in the left half, we flip the role of '1' bit and '0' bit.
+Integer.MAX_VALUE + 1 is Integer.MIN_VALUE; this fits the clock logic.
+Integer.MAX_VALUE(it has max '1' bit) is the max in the right half, where '1' matters;
+Integer.MIN_VALUE(it has max '0' bit) is the min in the left half, where '0' matters.
 */
 public class ComplementDemo {
     public static void main(String[] args) {
