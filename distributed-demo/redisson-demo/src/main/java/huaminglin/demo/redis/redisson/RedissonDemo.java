@@ -54,6 +54,10 @@ public class RedissonDemo {
     }
   }
 
+  private static void demoLock(RedissonClient client) {
+    client.getLock("mylock");
+  }
+
   public static void main(String[] args) throws InterruptedException {
     Config config = new Config();
     config.useSingleServer().setAddress("redis://127.0.0.1:6379");
@@ -61,6 +65,7 @@ public class RedissonDemo {
     demoKeys(client);
     demoAtomicLong(client);
     demoRBucket(client);
+    demoLock(client);
     client.shutdown();
   }
 }
