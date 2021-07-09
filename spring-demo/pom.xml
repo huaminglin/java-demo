@@ -1,29 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>java-demo</artifactId>
     <groupId>huaminglin.demo</groupId>
+    <artifactId>java-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
   <artifactId>spring-demo</artifactId>
   <packaging>pom</packaging>
+  <modules>
+    <module>spring-boot-demo</module>
+    <module>spring-boot-jsp-demo</module>
+    <module>spring-boot-thymeleaf-demo</module>
+    <module>spring-mybatis-h2-demo</module>
+    <module>spring-bean-javac-demo</module>
+    <module>spring-bean-xml-demo</module>
+    <module>spring-bean-annotation-demo</module>
+    <module>spring-mvc-demo</module>
+    <module>spring-kafka-demo</module>
+    <module>spring-boot-amqp-demo</module>
+    <module>spring-boot-actuator-demo</module>
+    <module>spring-post-processor-demo</module>
+    <module>spring-boot-logging-demo</module>
+    <module>spring-boot-log4j2-demo</module>
+    <module>spring-boot-admin-demo</module>
+    <module>spring-retry-demo</module>
+    <module>spring-session-demo</module>
+    <module>spring-security-demo</module>
+    <module>spring-cache-demo</module>
+    <module>spring-property-source-demo</module>
+    <module>spring-type-conversion-demo</module>
+  </modules>
 
   <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
+        <version>2.4.4</version>
         <type>pom</type>
         <scope>import</scope>
-        <version>2.3.4.RELEASE</version>
-      </dependency>
-      <dependency>
-        <groupId>com.lmax</groupId>
-        <artifactId>disruptor</artifactId>
-        <version>3.4.2</version>
       </dependency>
       <dependency>
         <groupId>org.apache.logging.log4j</groupId>
@@ -48,20 +64,20 @@
       <dependency>
         <groupId>org.junit.vintage</groupId>
         <artifactId>junit-vintage-engine</artifactId>
-        <scope>test</scope>
         <version>5.2.0</version>
+        <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-engine</artifactId>
-        <scope>test</scope>
         <version>5.2.0</version>
+        <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.junit.platform</groupId>
         <artifactId>junit-platform-runner</artifactId>
-        <scope>test</scope>
         <version>1.2.0</version>
+        <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.apache.avro</groupId>
@@ -72,20 +88,20 @@
       <dependency>
         <groupId>org.junit.vintage</groupId>
         <artifactId>junit-vintage-engine</artifactId>
-        <scope>test</scope>
         <version>5.7.1</version>
+        <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.junit.jupiter</groupId>
         <artifactId>junit-jupiter-engine</artifactId>
-        <scope>test</scope>
         <version>5.7.1</version>
+        <scope>test</scope>
       </dependency>
       <dependency>
         <groupId>org.junit.platform</groupId>
         <artifactId>junit-platform-runner</artifactId>
-        <scope>test</scope>
         <version>1.7.1</version>
+        <scope>test</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
@@ -132,8 +148,10 @@
           <executions>
             <execution>
               <goals>
-                <goal>compile</goal><!-- to weave all your main classes -->
-                <goal>test-compile</goal><!-- to weave all your test classes -->
+                <goal>compile</goal>
+                <!-- to weave all your main classes -->
+                <goal>test-compile</goal>
+                <!-- to weave all your test classes -->
               </goals>
             </execution>
           </executions>
@@ -157,10 +175,10 @@
           <version>1.1</version>
           <executions>
             <execution>
+              <id>add-source</id>
               <goals>
                 <goal>add-source</goal>
               </goals>
-              <id>add-source</id>
               <phase>generate-sources</phase>
             </execution>
           </executions>
@@ -168,27 +186,4 @@
       </plugins>
     </pluginManagement>
   </build>
-  <modules>
-    <module>spring-boot-demo</module>
-    <module>spring-boot-jsp-demo</module>
-    <module>spring-boot-thymeleaf-demo</module>
-    <module>spring-mybatis-h2-demo</module>
-    <module>spring-bean-javac-demo</module>
-    <module>spring-bean-xml-demo</module>
-    <module>spring-bean-annotation-demo</module>
-    <module>spring-mvc-demo</module>
-    <module>spring-kafka-demo</module>
-    <module>spring-boot-amqp-demo</module>
-    <module>spring-boot-actuator-demo</module>
-    <module>spring-post-processor-demo</module>
-    <module>spring-boot-logging-demo</module>
-    <module>spring-boot-log4j2-demo</module>
-    <module>spring-boot-admin-demo</module>
-    <module>spring-retry-demo</module>
-    <module>spring-session-demo</module>
-    <module>spring-security-demo</module>
-    <module>spring-cache-demo</module>
-    <module>spring-property-source-demo</module>
-    <module>spring-type-conversion-demo</module>
-  </modules>
 </project>

@@ -3,6 +3,9 @@ package huaminglin.demo.aop.spring.autoproxy;
 import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator;
 import org.springframework.context.annotation.Bean;
 
+/*
+ This class is not used since DefaultAdvisorAutoProxyCreator needs some special care.
+ */
 public class MyConfiguration {
 
   @Bean

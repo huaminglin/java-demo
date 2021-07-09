@@ -13,7 +13,7 @@ public class MyBean {
     System.out.println("MyBean()");
   }
 
-  @PostConstruct
+//  @PostConstruct
   public void init() {
     System.out.println("init()");
   }

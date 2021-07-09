@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <artifactId>jdk-demo</artifactId>
-  <groupId>huaminglin.demo</groupId>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <groupId>huaminglin.demo</groupId>
+  <artifactId>jdk-demo</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <properties>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
   <profiles>
     <profile>
+      <id>jmxbean</id>
       <build>
         <plugins>
           <plugin>
+            <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
+            <version>1.6.0</version>
             <configuration>
               <arguments>
-                <argument>-Djava.util.logging.config.file=target/classes/logging.properties
-                </argument>
+                <argument>-Djava.util.logging.config.file=target/classes/logging.properties</argument>
                 <argument>-Dcom.sun.management.jmxremote.local.only=false</argument>
                 <argument>-Dcom.sun.management.jmxremote.ssl=false</argument>
                 <argument>-Dcom.sun.management.jmxremote.authenticate=false</argument>
@@ -25,39 +32,29 @@
                 <argument>-Dsleep.seconds=600</argument>
                 <argument>-classpath</argument>
                 <argument>huaminglin.demo.jdk.jmx.JMXDemo</argument>
-                <classpath/>
+                <classpath></classpath>
               </arguments>
               <executable>java</executable>
               <mainClass></mainClass>
             </configuration>
-            <groupId>org.codehaus.mojo</groupId>
-            <version>1.6.0</version>
           </plugin>
         </plugins>
       </build>
-      <id>jmxbean</id>
     </profile>
     <profile>
+      <id>jmxclient</id>
       <build>
         <plugins>
           <plugin>
+            <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
+            <version>1.6.0</version>
             <configuration>
               <mainClass>huaminglin.demo.jdk.jmx.client.JMXClientDemo</mainClass>
             </configuration>
-            <groupId>org.codehaus.mojo</groupId>
-            <version>1.6.0</version>
           </plugin>
         </plugins>
       </build>
-      <id>jmxclient</id>
     </profile>
   </profiles>
-  <properties>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-  </properties>
-  <version>1.0-SNAPSHOT</version>
 </project>

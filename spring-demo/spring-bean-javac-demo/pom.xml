@@ -1,137 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>huaminglin.demo</groupId>
+    <artifactId>spring-demo</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
   <artifactId>spring-bean-javac-demo</artifactId>
   <dependencies>
     <dependency>
-      <artifactId>spring-context</artifactId>
       <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
       <version>4.3.13.RELEASE</version>
     </dependency>
   </dependencies>
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <artifactId>spring-demo</artifactId>
-    <groupId>huaminglin.demo</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
   <profiles>
     <profile>
+      <id>default</id>
       <build>
         <plugins>
           <plugin>
+            <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
+            <version>1.6.0</version>
             <configuration>
               <mainClass>huaminglin.demo.spring.bean.SpringBeanDemo</mainClass>
             </configuration>
-            <groupId>org.codehaus.mojo</groupId>
-            <version>1.6.0</version>
           </plugin>
         </plugins>
       </build>
-      <id>default</id>
     </profile>
     <profile>
-      <build>
-        <plugins>
-          <plugin>
-            <artifactId>exec-maven-plugin</artifactId>
-            <configuration>
-              <mainClass>huaminglin.demo.spring.bean.SpringBeanDemo</mainClass>
-            </configuration>
-            <groupId>org.codehaus.mojo</groupId>
-            <version>1.6.0</version>
-          </plugin>
-          <plugin>
-            <artifactId>maven-compiler-plugin</artifactId>
-            <groupId>org.apache.maven.plugins</groupId>
-            <version>3.7.0</version>
-          </plugin>
-        </plugins>
-      </build>
       <id>enableParameters</id>
       <properties>
         <maven.compiler.parameters>true</maven.compiler.parameters>
       </properties>
-    </profile>
-    <profile>
       <build>
         <plugins>
           <plugin>
+            <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
+            <version>1.6.0</version>
             <configuration>
               <mainClass>huaminglin.demo.spring.bean.SpringBeanDemo</mainClass>
             </configuration>
-            <groupId>org.codehaus.mojo</groupId>
-            <version>1.6.0</version>
           </plugin>
           <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.7.0</version>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>g_none</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.6.0</version>
+            <configuration>
+              <mainClass>huaminglin.demo.spring.bean.SpringBeanDemo</mainClass>
+            </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.7.0</version>
             <configuration>
               <compilerArgs>
                 <arg>-g:none</arg>
               </compilerArgs>
             </configuration>
-            <groupId>org.apache.maven.plugins</groupId>
-            <version>3.7.0</version>
           </plugin>
         </plugins>
       </build>
-      <id>g_none</id>
     </profile>
     <profile>
+      <id>g_vars</id>
       <build>
         <plugins>
           <plugin>
+            <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
+            <version>1.6.0</version>
             <configuration>
               <mainClass>huaminglin.demo.spring.bean.SpringBeanDemo</mainClass>
             </configuration>
-            <groupId>org.codehaus.mojo</groupId>
-            <version>1.6.0</version>
           </plugin>
           <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.7.0</version>
             <configuration>
               <compilerArgs>
                 <arg>-g:vars</arg>
               </compilerArgs>
             </configuration>
-            <groupId>org.apache.maven.plugins</groupId>
-            <version>3.7.0</version>
           </plugin>
         </plugins>
       </build>
-      <id>g_vars</id>
     </profile>
     <profile>
+      <id>g_none_parameters</id>
+      <properties>
+        <maven.compiler.parameters>true</maven.compiler.parameters>
+      </properties>
       <build>
         <plugins>
           <plugin>
+            <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
+            <version>1.6.0</version>
             <configuration>
               <mainClass>huaminglin.demo.spring.bean.SpringBeanDemo</mainClass>
             </configuration>
-            <groupId>org.codehaus.mojo</groupId>
-            <version>1.6.0</version>
           </plugin>
           <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.7.0</version>
             <configuration>
               <compilerArgs>
                 <arg>-g:none</arg>
               </compilerArgs>
             </configuration>
-            <groupId>org.apache.maven.plugins</groupId>
-            <version>3.7.0</version>
           </plugin>
         </plugins>
       </build>
-      <id>g_none_parameters</id>
-      <properties>
-        <maven.compiler.parameters>true</maven.compiler.parameters>
-      </properties>
     </profile>
   </profiles>
 </project>

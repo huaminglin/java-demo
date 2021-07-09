@@ -15,7 +15,7 @@ org.springframework.boot.logging.logback.LogbackLoggingSystem
 LogbackLoggingSystem: String[] getStandardConfigLocations()
 return new String[] { "logback-test.groovy", "logback-test.xml", "logback.groovy", "logback.xml" };
 
-spring-boot-2.3.4.RELEASE.jar!/org/springframework/boot/logging/logback/defaults.xml
+spring-boot-2.4.4.jar!/org/springframework/boot/logging/logback/defaults.xml
 It seems there is no logback.xml in the classpath.
 
 org.springframework.boot.logging.java.JavaLoggingSystem

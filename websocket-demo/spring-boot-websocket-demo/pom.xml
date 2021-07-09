@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xmlns="http://maven.apache.org/POM/4.0.0"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>2.4.4</version>
+  </parent>
   <artifactId>spring-boot-websocket-demo</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-websocket</artifactId>
+    </dependency>
+  </dependencies>
   <build>
     <plugins>
       <plugin>
+        <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
         <executions>
           <execution>
@@ -14,10 +26,11 @@
             </goals>
           </execution>
         </executions>
-        <groupId>org.springframework.boot</groupId>
       </plugin>
       <plugin>
+        <groupId>com.spotify</groupId>
         <artifactId>dockerfile-maven-plugin</artifactId>
+        <version>1.4.12</version>
         <configuration>
           <buildArgs>
             <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
@@ -25,22 +38,7 @@
           <repository>huaminglin/${project.artifactId}</repository>
           <tag>${project.version}</tag>
         </configuration>
-        <groupId>com.spotify</groupId>
-        <version>1.4.12</version>
       </plugin>
     </plugins>
   </build>
-  <dependencies>
-    <dependency>
-      <artifactId>spring-boot-starter-websocket</artifactId>
-      <groupId>org.springframework.boot</groupId>
-    </dependency>
-  </dependencies>
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <groupId>org.springframework.boot</groupId>
-    <version>2.3.4.RELEASE</version>
-  </parent>
-  <version>1.0-SNAPSHOT</version>
 </project>

@@ -4,7 +4,7 @@
  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
   '  |____| .__|_| |_|_| |_\__, | / / / /
  =========|_|==============|___/=/_/_/_/
- :: Spring Boot ::        (v2.3.4.RELEASE)
+ :: Spring Boot ::        (v2.4.4)
 
 2020-10-02 14:02:43.659  INFO 9894 --- [           main] h.demo.quartz.spring.SpringQuartzDemo    : Starting SpringQuartzDemo on myname-MS-7850 with PID 9894 (/home/myname/workspace/java-demo/distributed-demo/spring-quartz-demo/target/classes started by myname in /home/myname/workspace/java-demo/distributed-demo/spring-quartz-demo)
 2020-10-02 14:02:43.660  INFO 9894 --- [           main] h.demo.quartz.spring.SpringQuartzDemo    : No active profile set, falling back to default profiles: default

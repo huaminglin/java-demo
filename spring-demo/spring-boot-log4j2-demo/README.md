@@ -27,7 +27,7 @@ Exception in thread "main" java.lang.ClassCastException: class org.apache.loggin
 
 Conclusion: We have to resolve the SLF4J multiple bindings conflict.
 
-## spring-boot-starter-log4j2-2.3.4.RELEASE.pom vs. spring-boot-starter-logging-2.3.4.RELEASE.pom
+## spring-boot-starter-log4j2-2.4.4.pom vs. spring-boot-starter-logging-2.4.4.pom
 
 ```
       <exclusions>
