@@ -1,5 +1,6 @@
 package huaminglin.demo.spring.postprocessor;
 
+import javax.annotation.PostConstruct;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -13,8 +14,8 @@ public class MyBean {
     System.out.println("MyBean()");
   }
 
-//  @PostConstruct
+  @PostConstruct
   public void init() {
-    System.out.println("init()");
+    System.out.println("@PostConstruct: init()");
   }
 }
