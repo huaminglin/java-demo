@@ -12,6 +12,7 @@
     <module>spring-aop-demo</module>
     <module>spring-aop-autoproxy-demo</module>
     <module>aspectj-demo</module>
+    <module>spring-aop-transaction-demo</module>
   </modules>
   <dependencyManagement>
     <dependencies>
