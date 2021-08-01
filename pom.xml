@@ -8,6 +8,8 @@
   <modules>
     <module>aop-demo</module>
     <module>spring-demo</module>
+    <module>spring-boot-demo</module>
+    <module>spring-cloud-demo</module>
     <!--    <module>avro-demo</module>-->
     <module>httpclient-demo</module>
     <module>jdk8-demo</module>
@@ -20,7 +22,6 @@
     <module>mysql-demo</module>
     <module>junit-demo</module>
     <module>datatype-demo</module>
-    <module>spring-cloud-demo</module>
     <module>tool-demo</module>
     <module>encoding-demo</module>
     <module>distributed-demo</module>

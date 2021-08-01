@@ -6,22 +6,17 @@
     <artifactId>java-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>spring-demo</artifactId>
+  <artifactId>spring-boot-demo</artifactId>
   <packaging>pom</packaging>
   <modules>
-    <module>spring-mybatis-h2-demo</module>
-    <module>spring-bean-javac-demo</module>
-    <module>spring-bean-xml-demo</module>
-    <module>spring-bean-annotation-demo</module>
-    <module>spring-mvc-demo</module>
-    <module>spring-kafka-demo</module>
-    <module>spring-post-processor-demo</module>
-    <module>spring-retry-demo</module>
-    <module>spring-session-demo</module>
-    <module>spring-security-demo</module>
-    <module>spring-cache-demo</module>
-    <module>spring-property-source-demo</module>
-    <module>spring-type-conversion-demo</module>
+    <module>spring-boot-simple-demo</module>
+    <module>spring-boot-actuator-demo</module>
+    <module>spring-boot-admin-demo</module>
+    <module>spring-boot-amqp-demo</module>
+    <module>spring-boot-jsp-demo</module>
+    <module>spring-boot-log4j2-demo</module>
+    <module>spring-boot-logging-demo</module>
+    <module>spring-boot-thymeleaf-demo</module>
   </modules>
 
   <dependencyManagement>
