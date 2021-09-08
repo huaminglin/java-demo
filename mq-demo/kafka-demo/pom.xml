@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>huaminglin.demo</groupId>
-    <artifactId>spring-demo</artifactId>
+    <artifactId>mq-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
-  <artifactId>spring-kafka-demo</artifactId>
+  <artifactId>kafka-demo</artifactId>
   <packaging>pom</packaging>
   <modules>
     <module>spring-kafka-standalone-demo</module>

@@ -12,7 +12,6 @@
     <module>spring-boot-simple-demo</module>
     <module>spring-boot-actuator-demo</module>
     <module>spring-boot-admin-demo</module>
-    <module>spring-boot-amqp-demo</module>
     <module>spring-boot-jsp-demo</module>
     <module>spring-boot-log4j2-demo</module>
     <module>spring-boot-logging-demo</module>
