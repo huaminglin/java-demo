@@ -17,6 +17,7 @@ public class SpringTransactionDemo {
         .run(SpringTransactionDemo.class, args);
     TransactionService transactionService = context.getBean(TransactionService.class);
     transactionService.sql1();
+    transactionService.sql2();
     logger.info("Main Thread exits: {}, {}", Thread.currentThread().getId(), Thread.currentThread()
         .getName());
   }

@@ -24,4 +24,14 @@ public class TransactionService {
     }
   }
 
+  @Transactional
+  public void sql2() {
+    logger.info("sql2()");
+    {
+      String result = jdbcTemplate.queryForObject(
+          "SELECT 'xyz'", String.class);
+      logger.info("sql2(): {}", result);
+    }
+  }
+
 }

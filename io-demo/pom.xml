@@ -13,5 +13,6 @@
     <module>socket-server-accept-demo</module>
     <module>socket-client-demo</module>
     <module>socket-close-demo</module>
+    <module>mmap-demo</module>
   </modules>
 </project>
