@@ -23,7 +23,7 @@ public class SpringBootProducerDemo {
     ConfigurableApplicationContext context = SpringApplication
         .run(SpringBootProducerDemo.class, args);
     KafkaTemplate kafkaTemplate = context.getBean(KafkaTemplate.class);
-    kafkaTemplate.send("test", message);
+    kafkaTemplate.send("my-topic", message);
     logger.info("Main Thread exits: {}, {}", Thread.currentThread().getId(),
         Thread.currentThread().getName());
   }
