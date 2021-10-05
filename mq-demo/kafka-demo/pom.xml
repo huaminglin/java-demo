@@ -14,5 +14,6 @@
     <module>spring-kafka-boot-demo</module>
     <module>spring-kafka-boot-producer-demo</module>
     <module>kafka-consumer-demo</module>
+    <module>kafka-producer-demo</module>
   </modules>
 </project>
