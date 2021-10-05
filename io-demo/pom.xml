@@ -14,5 +14,6 @@
     <module>socket-client-demo</module>
     <module>socket-close-demo</module>
     <module>mmap-demo</module>
+    <module>nio-server-demo</module>
   </modules>
 </project>
