@@ -1,0 +1,1 @@
+configurationProperties / \nsystemProperties / \nsystemEnvironment / \nrandom / \nConfig resource 'class path resource [application.properties]' via location 'optional:classpath:/' / \n

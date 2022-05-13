@@ -1,0 +1,190 @@
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776015220287, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.boot.context.ConfigurationWarningsApplicationContextInitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776015220287/9776029145382
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776056391147, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.context.ApplicationContextInitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776056391147/9776060850639
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776067775505, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.boot.context.ConfigurationWarningsApplicationContextInitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776067775505/9776068262153
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776068541350, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.context.ApplicationContextInitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776068541350/9776068899521
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776071472251, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.boot.devtools.restart.RestartScopeInitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776071472251/9776071867004
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776072153669, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.context.ApplicationContextInitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776072153669/9776072480089
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776072742565, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.boot.devtools.restart.RestartScopeInitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776072742565/9776073092027
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776073345034, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.context.ApplicationContextInitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776073345034/9776073710862
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776074208061, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.boot.rsocket.context.RSocketPortInfoApplicationContextInitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776074208061/9776074652006
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776074925529, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.context.ApplicationContextInitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776074925529/9776075283910
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776075561699, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.boot.rsocket.context.RSocketPortInfoApplicationContextInitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776075561699/9776075879299
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776076137258, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.context.ApplicationContextInitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776076137258/9776076462607
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776076768296, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.boot.web.context.ServerPortInfoApplicationContextInitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776076768296/9776077121608
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776077382867, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.context.ApplicationContextInitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776077382867/9776077700048
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776077955364, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.context.ApplicationListener
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776077955364/9776078321745
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776078598255, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.boot.web.context.ServerPortInfoApplicationContextInitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776078598255/9776078915015
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776079173001, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.context.ApplicationContextInitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776079173001/9776079493602
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776080053626, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.context.ApplicationListener
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776080053626/9776080370929
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776080697502, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776080697502/9776081048013
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776081306128, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.context.ApplicationContextInitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776081306128/9776081623007
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776081894010, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776081894010/9776082208546
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776082468455, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.context.ApplicationContextInitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776082468455/9776082802065
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776191434771, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.boot.devtools.logger.DevToolsLogFactory$Listener
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776191434771/9776192122836
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776192446153, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.context.ApplicationListener
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776192446153/9776192789892
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776193226123, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.boot.devtools.logger.DevToolsLogFactory$Listener
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776193226123/9776193601046
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776193864199, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.context.ApplicationListener
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776193864199/9776194178549
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776194478889, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.boot.ClearCachesApplicationListener
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776194478889/9776194766024
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776194998590, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.context.ApplicationListener
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776194998590/9776195281461
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776195519327, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.boot.ClearCachesApplicationListener
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776195519327/9776195797420
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776196030142, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.context.ApplicationListener
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776196030142/9776196315250
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776196652896, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.boot.liquibase.LiquibaseServiceLocatorApplicationListener
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776196652896/9776197007504
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776197238809, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.context.ApplicationListener
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776197238809/9776197513714
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776197752377, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.boot.liquibase.LiquibaseServiceLocatorApplicationListener
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776197752377/9776198023888
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776198279720, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.context.ApplicationListener
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776198279720/9776198613775
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776198906537, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.boot.autoconfigure.BackgroundPreinitializer
+    enter.argument.1/boolean/arg1=false
+    exit.return: [{"org.springframework.core.annotation.Order":{"value":-2147483627}}]
+}id=9776198906537/9776211823986
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776241979494, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=java.lang.reflect.Method@4bc6da03
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776241979494/9776242690902
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776243103852, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=org.springframework.core.annotation.Order
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776243103852/9776243595071
+org.springframework.core.annotation.AnnotationsScanner#getDeclaredAnnotations(Ljava/lang/reflect/AnnotatedElement;Z)[Ljava/lang/annotation/Annotation; { id=9776248242514, source=spring-core-5.3.5.jar
+    enter.argument.0/java.lang.reflect.AnnotatedElement/arg0=java.lang.reflect.Method@4bc6da03
+    enter.argument.1/boolean/arg1=false
+    exit.return: []
+}id=9776248242514/9776248687731

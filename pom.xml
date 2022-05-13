@@ -10,7 +10,7 @@
     <module>spring-demo</module>
     <module>spring-boot-demo</module>
     <module>spring-cloud-demo</module>
-    <!--    <module>avro-demo</module>-->
+    <module>avro-demo</module>
     <module>httpclient-demo</module>
     <module>jdk8-demo</module>
     <module>servlet-demo</module>
@@ -36,6 +36,7 @@
     <module>disruptor-demo</module>
     <module>io-demo</module>
     <module>mq-demo</module>
+    <module>byte-code-demo</module>
   </modules>
   <properties>
     <maven.compiler.source>11</maven.compiler.source>
