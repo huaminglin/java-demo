@@ -14,6 +14,8 @@
     <module>servlet-slash-encode-demo</module>
     <module>servlet-classloader-demo</module>
     <module>tomcat-demo</module>
+    <module>spring-mvc-demo</module>
+<!--    <module>spring-boot-jsp-demo</module>-->
   </modules>
 
   <dependencyManagement>

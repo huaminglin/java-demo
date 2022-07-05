@@ -23,6 +23,8 @@ public class BeanELReflectionResolver extends JinjavaBeanELResolver {
       list.set(list.size() -1, new BeanELReflectionResolver());
     } catch (NoSuchFieldException e) {
       e.printStackTrace();
+    } catch (IllegalAccessException e) {
+      throw new RuntimeException(e);
     }
   }
 

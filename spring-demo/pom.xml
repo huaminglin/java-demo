@@ -13,7 +13,6 @@
     <module>spring-bean-javac-demo</module>
     <module>spring-bean-xml-demo</module>
     <module>spring-bean-annotation-demo</module>
-    <module>spring-mvc-demo</module>
     <module>spring-post-processor-demo</module>
     <module>spring-retry-demo</module>
     <module>spring-session-demo</module>

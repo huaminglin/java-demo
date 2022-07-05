@@ -13,7 +13,6 @@
     <module>spring-boot-environment-demo</module>
     <module>spring-boot-actuator-demo</module>
     <module>spring-boot-admin-demo</module>
-    <module>spring-boot-jsp-demo</module>
     <module>spring-boot-log4j2-demo</module>
     <module>spring-boot-logging-demo</module>
     <module>spring-boot-thymeleaf-demo</module>

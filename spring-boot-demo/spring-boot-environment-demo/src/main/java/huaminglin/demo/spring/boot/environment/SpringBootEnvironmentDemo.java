@@ -23,7 +23,6 @@ public class SpringBootEnvironmentDemo {
   private static void checkConverter(ConfigurableEnvironment environment) {
     ApplicationConversionService conversionService = (ApplicationConversionService) environment.getConversionService();
     System.out.println("conversionService: " + conversionService.getClass().getName());
-    conversionService
   }
 
   public static void main(String[] args) {
