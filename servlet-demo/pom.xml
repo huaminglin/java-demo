@@ -16,6 +16,7 @@
     <module>tomcat-demo</module>
     <module>spring-mvc-demo</module>
 <!--    <module>spring-boot-jsp-demo</module>-->
+    <module>spring-boot-thymeleaf-demo</module>
   </modules>
 
   <dependencyManagement>
