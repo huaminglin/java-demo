@@ -4,6 +4,52 @@ org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration
 org.springframework.boot.autoconfigure.kafka.ConfigurationProperties
 org.springframework.boot.autoconfigure.kafka.KafkaAnnotationDrivenConfiguration
 
+## kafka-coordinator-heartbeat-thread
+
+```
+"kafka-coordinator-heartbeat-thread | kafka-intro" #21 daemon prio=5 os_prio=0 cpu=2705.74ms elapsed=1976.02s tid=0x00007ff3641254f0 nid=0x9334 waiting on condition  [0x00007ff3c016d000]
+   java.lang.Thread.State: WAITING (parking)
+        at jdk.internal.misc.Unsafe.park(java.base@17.0.5/Native Method)
+        - parking to wait for  <0x00000000840d29f8> (a java.util.concurrent.locks.ReentrantLock$FairSync)
+        at java.util.concurrent.locks.LockSupport.park(java.base@17.0.5/LockSupport.java:211)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@17.0.5/AbstractQueuedSynchronizer.java:715)
+        at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquire(java.base@17.0.5/AbstractQueuedSynchronizer.java:938)
+        at java.util.concurrent.locks.ReentrantLock$Sync.lock(java.base@17.0.5/ReentrantLock.java:153)
+        at java.util.concurrent.locks.ReentrantLock.lock(java.base@17.0.5/ReentrantLock.java:322)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:249)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.pollNoWakeup(ConsumerNetworkClient.java:306)
+        at org.apache.kafka.clients.consumer.internals.AbstractCoordinator$HeartbeatThread.run(AbstractCoordinator.java:1386)
+        - locked <0x0000000083e10b80> (a org.apache.kafka.clients.consumer.internals.ConsumerCoordinator)
+```
+
+## org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1
+
+```
+"org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1" #19 prio=5 os_prio=0 cpu=6894.69ms elapsed=1976.21s tid=0x00007ff3e0a1dcb0 nid=0x9330 runnable  [0x00007ff3c0573000]
+   java.lang.Thread.State: RUNNABLE
+        at sun.nio.ch.EPoll.wait(java.base@17.0.5/Native Method)
+        at sun.nio.ch.EPollSelectorImpl.doSelect(java.base@17.0.5/EPollSelectorImpl.java:118)
+        at sun.nio.ch.SelectorImpl.lockAndDoSelect(java.base@17.0.5/SelectorImpl.java:129)
+        - locked <0x0000000083fa9518> (a sun.nio.ch.Util$2)
+        - locked <0x0000000083f45970> (a sun.nio.ch.EPollSelectorImpl)
+        at sun.nio.ch.SelectorImpl.select(java.base@17.0.5/SelectorImpl.java:141)
+        at org.apache.kafka.common.network.Selector.select(Selector.java:873)
+        at org.apache.kafka.common.network.Selector.poll(Selector.java:465)
+        at org.apache.kafka.clients.NetworkClient.poll(NetworkClient.java:560)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:265)
+        at org.apache.kafka.clients.consumer.internals.ConsumerNetworkClient.poll(ConsumerNetworkClient.java:236)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.pollForFetches(KafkaConsumer.java:1297)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1238)
+        at org.apache.kafka.clients.consumer.KafkaConsumer.poll(KafkaConsumer.java:1211)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollConsumer(KafkaMessageListenerContainer.java:1531)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doPoll(KafkaMessageListenerContainer.java:1521)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1345)
+        at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1257)
+        at java.util.concurrent.Executors$RunnableAdapter.call(java.base@17.0.5/Executors.java:539)
+        at java.util.concurrent.FutureTask.run(java.base@17.0.5/FutureTask.java:264)
+        at java.lang.Thread.run(java.base@17.0.5/Thread.java:833)
+```
+
 ## How the @KafkaListener annotated method is invoked
 
 "org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1@4083" prio=5 tid=0x13 nid=NA runnable

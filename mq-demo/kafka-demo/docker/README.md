@@ -23,3 +23,7 @@ sudo docker exec -it docker_kafka_1 /bin/bash -c 'kafka-topics --delete --zookee
 ## Topic status
 
 sudo docker exec -it docker_kafka_1 /bin/bash -c 'kafka-run-class kafka.tools.GetOffsetShell --broker-list docker_kafka_1:9092 --topic my-topic'
+
+## kafka-consumer-groups
+
+sudo docker exec -it docker_kafka_1 /bin/bash -c 'kafka-consumer-groups --bootstrap-server docker_kafka_1:9092 --describe --group kafka-intro'

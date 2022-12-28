@@ -1,4 +1,4 @@
-package huaminglin.demo.spring.boot.cache;
+package huaminglin.demo.spring.boot.scheduled;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
