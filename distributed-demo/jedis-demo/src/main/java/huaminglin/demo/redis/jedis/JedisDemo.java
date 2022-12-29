@@ -11,11 +11,12 @@ import redis.clients.jedis.Transaction;
 
 public class JedisDemo {
 
-  private static void demoInteger(Jedis jedis) {
+  public String demoInteger(Jedis jedis) {
     System.out.println("demoInteger()");
     jedis.incr("int1");
     String value = jedis.get("int1");
     System.out.println(value);
+    return value;
   }
 
   private static void demoFloat(Jedis jedis) {
@@ -162,8 +163,13 @@ public class JedisDemo {
     // The messages published before subscription are not sent to the new subscriber.
   }
 
-  public static void main(String[] args) {
-    Jedis jedis = new Jedis("127.0.0.1", 6379);
+  public String runDemoInteger(String host, int port) {
+    Jedis jedis = new Jedis(host, port);
+    return demoInteger(jedis);
+  }
+
+  public void run(String host, int port) {
+    Jedis jedis = new Jedis(host, port);
     demoInteger(jedis);
     demoFloat(jedis);
     demoString(jedis);
@@ -178,10 +184,14 @@ public class JedisDemo {
     demoPipeline(jedis);
     demoTransaction(jedis);
     {
-      Jedis jedis2 = new Jedis("127.0.0.1", 6379);
+      Jedis jedis2 = new Jedis(host, port);
       demoCas(jedis, jedis2);
     }
 
     demoSubscriber(jedis);
+  }
+
+  public static void main(String[] args) {
+    new JedisDemo().run("127.0.0.1", 6379);
   }
 }
