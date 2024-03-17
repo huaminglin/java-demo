@@ -45,8 +45,9 @@ public class PostgresqlDemo {
     DbTimeZoneService dbTimeZoneService = context.getBean(DbTimeZoneService.class);
 //        dbTimeZoneService.jvm_timezone();
 //        dbTimeZoneService.session_timezone();
-    dbTimeZoneService.insertRows(null);
-    dbTimeZoneService.insertRows("UTC");
+//    dbTimeZoneService.insertRows(null);
+//    dbTimeZoneService.insertRows("UTC");
+    context.getBean(TableNamePlaceholderPreparedStatementService.class).execute();
     logger.info(
         "Main Thread exits: " + Thread.currentThread().getId() + ", " + Thread.currentThread()
             .getName());
